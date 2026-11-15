@@ -597,6 +597,7 @@ def main():
     open(os.path.join(OUT, "favicon.svg"), "w", encoding="utf-8").write(LOGO.replace('width="38" height="38" ', 'xmlns="http://www.w3.org/2000/svg" ').replace(' aria-hidden="true"', ""))
     open(os.path.join(OUT, "CNAME"), "w").write("mes-droits-handicap.fr\n")
     open(os.path.join(OUT, ".nojekyll"), "w").write("")
+    open(os.path.join(OUT, "googlea92d4a2fb22dcdea.html"), "w").write("google-site-verification: googlea92d4a2fb22dcdea.html")
     open(os.path.join(OUT, "robots.txt"), "w").write(f"User-agent: *\nAllow: /\n\nSitemap: {DOMAIN}/sitemap.xml\n")
     sm = "".join(f"<url><loc>{DOMAIN}{u}</loc><lastmod>{d}</lastmod></url>" for u, d in urls)
     open(os.path.join(OUT, "sitemap.xml"), "w").write(f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>\n')
