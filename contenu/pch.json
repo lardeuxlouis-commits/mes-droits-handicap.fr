@@ -1,0 +1,433 @@
+{
+  "slug": "pch",
+  "title": "PCH 2026 : tarifs, aidant familial et aides financées",
+  "description": "PCH : aide humaine jusqu'à 25 € de l'heure, aidant familial 4,93 € de l'heure au 1er juin 2026. Les 5 éléments, les plafonds et la demande.",
+  "h1": "PCH : ce que finance la prestation de compensation du handicap",
+  "chapo": "La prestation de compensation du handicap (PCH) rembourse des dépenses liées à la perte d'autonomie : aide humaine, matériel, aménagement du logement ou du véhicule, frais spécifiques, aide animalière. Au 1er juin 2026, l'aide humaine est prise en charge jusqu'à 19,92 € de l'heure en emploi direct et 25 € en service prestataire, et un aidant familial est dédommagé 4,93 € de l'heure. Elle est attribuée sans condition de ressources.",
+  "en_bref": [
+    "5 éléments : aide humaine, aides techniques, logement, véhicule et transport, charges spécifiques ou exceptionnelles, aide animalière, plus la PCH parentalité.",
+    "Aide humaine au 1er juin 2026 : 19,92 € de l'heure en emploi direct, 21,91 € en mandataire, 25 € en prestataire, 4,93 € pour un aidant familial.",
+    "Prise en charge à 100 % si vos ressources sont inférieures ou égales à 31 162,62 € par an, 80 % au-dessus.",
+    "Conditions : une difficulté absolue pour une activité du quotidien, ou une difficulté grave pour au moins deux, depuis au moins 1 an ou de façon définitive.",
+    "La MDPH décide, le conseil départemental verse, chaque mois ou ponctuellement sur justificatifs."
+  ],
+  "urgence": "Si la PCH est refusée ou si le plan d'aide vous paraît insuffisant, vous disposez de 2 mois à partir de la réception de la décision pour déposer un recours administratif préalable obligatoire (RAPO) auprès de la MDPH, avant tout recours au tribunal.",
+  "sections": [
+    {
+      "h2": "La PCH, c'est quoi et qui la verse ?",
+      "blocs": [
+        {
+          "type": "p",
+          "texte": "La PCH est une aide financière personnalisée. Elle ne remplace pas un revenu : elle paie des besoins précis liés au handicap, évalués par l'équipe de la MDPH (maison départementale des personnes handicapées)."
+        },
+        {
+          "type": "p",
+          "texte": "La décision revient à la **CDAPH** (commission des droits et de l'autonomie des personnes handicapées), au sein de la MDPH. Le paiement est assuré par le **conseil départemental**, tous les mois pour une aide continue (une auxiliaire de vie, par exemple) ou en une fois pour un achat ou des travaux."
+        },
+        {
+          "type": "p",
+          "texte": "La PCH comprend 5 éléments :"
+        },
+        {
+          "type": "liste",
+          "items": [
+            "élément 1 : l'**aide humaine** (l'aide d'une personne) ;",
+            "élément 2 : les **aides techniques** (matériel) ;",
+            "élément 3 : l'**aménagement du logement ou du véhicule** et les **surcoûts de transport** ;",
+            "élément 4 : les **charges spécifiques ou exceptionnelles** ;",
+            "élément 5 : l'**aide animalière**."
+          ]
+        },
+        {
+          "type": "p",
+          "texte": "S'y ajoute la **PCH parentalité**, pour les parents handicapés de jeunes enfants. La PCH peut être versée à domicile ou en établissement, avec des montants différents."
+        }
+      ],
+      "sources": [
+        0,
+        1
+      ]
+    },
+    {
+      "h2": "Qui peut obtenir la PCH ?",
+      "blocs": [
+        {
+          "type": "p",
+          "texte": "Il faut remplir une condition liée au handicap et des conditions administratives."
+        },
+        {
+          "type": "liste",
+          "items": [
+            "**Difficulté absolue** pour au moins une activité importante du quotidien (vous ne pouvez pas du tout la faire seul, par exemple vous laver), **ou difficulté grave** pour au moins deux (vous les faites difficilement, par exemple vous laver et marcher). Ces activités font partie d'un référentiel de 20 activités.",
+            "Ces difficultés sont **définitives ou prévues pour durer au moins 1 an**.",
+            "**Âge** : avoir moins de 60 ans au moment de la demande. Au-delà, c'est possible si vous remplissiez déjà les conditions avant 60 ans ou si vous travaillez encore.",
+            "**Résidence** stable et régulière en France. Pour une personne étrangère, un titre de séjour valide et, sauf études ou formation, au moins 3 mois de résidence."
+          ]
+        },
+        {
+          "type": "p",
+          "texte": "L'évaluation porte sur ce que vous pouvez faire sans aide. Des critères supplémentaires s'appliquent à l'aide humaine. Pour un enfant de moins de 20 ans, la PCH suppose d'avoir droit à l'[AEEH et à un complément](aeeh). Après 60 ans, si vous touchez déjà la PCH, vous pouvez la garder et choisir entre la PCH et l'APA (allocation personnalisée d'autonomie) à chaque fin de droit."
+        }
+      ],
+      "sources": [
+        0,
+        1
+      ]
+    },
+    {
+      "h2": "Vos ressources changent-elles le montant ?",
+      "blocs": [
+        {
+          "type": "p",
+          "texte": "La PCH est attribuée **sans condition de ressources**. Vos revenus servent seulement à fixer le **taux de prise en charge** des tarifs et plafonds :"
+        },
+        {
+          "type": "liste",
+          "items": [
+            "ressources annuelles **inférieures ou égales à 31 162,62 €** : prise en charge à **100 %** des montants prévus ;",
+            "ressources **supérieures** : prise en charge à **80 %**. Par exemple, 8 000 € au lieu de 10 000 € sur 10 ans pour l'aménagement du logement."
+          ]
+        },
+        {
+          "type": "p",
+          "texte": "Monparcourshandicap.gouv.fr précise que les salaires, les revenus du travail et les pensions de retraite ne sont pas retenus : ce sont surtout les revenus du patrimoine qui comptent. Les aides déjà versées par la Sécurité sociale pour le même besoin (majoration pour tierce personne, part remboursée d'un matériel) sont déduites de la PCH."
+        }
+      ],
+      "sources": [
+        0,
+        1
+      ]
+    },
+    {
+      "h2": "Aide humaine : les tarifs horaires au 1er juin 2026",
+      "blocs": [
+        {
+          "type": "p",
+          "texte": "L'aide humaine finance l'intervention d'une personne pour les actes essentiels (toilette, habillage, repas, déplacements), la surveillance, ou l'accompagnement à l'autonomie. Le tarif dépend de la façon dont l'aide est organisée."
+        },
+        {
+          "type": "tableau",
+          "entetes": [
+            "Mode d'aide",
+            "Tarif PCH par heure",
+            "Si gestes de soins ou aspirations endo-trachéales"
+          ],
+          "lignes": [
+            [
+              "Emploi direct (vous êtes l'employeur)",
+              "19,92 €",
+              "20,70 €"
+            ],
+            [
+              "Service mandataire (un organisme gère les formalités, vous restez employeur)",
+              "21,91 €",
+              "22,77 €"
+            ],
+            [
+              "Service prestataire (le service emploie l'intervenant)",
+              "25,00 € ou tarif fixé avec le département",
+              "sans objet"
+            ],
+            [
+              "Aidant familial dédommagé",
+              "4,93 €",
+              "7,39 € si l'aidant réduit ou arrête son activité professionnelle"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "texte": "Les **aspirations endo-trachéales** consistent à dégager les voies respiratoires par une sonde : le tarif majoré suppose une attestation de formation. Le dédommagement de chaque aidant familial est plafonné à **1 269,83 € par mois**, ou **1 523,80 €** dans les situations où le plafond est majoré de 20 %."
+        },
+        {
+          "type": "p",
+          "texte": "Un **aidant familial** est un proche qui vous aide sans être salarié pour cela. Il est dédommagé, pas rémunéré."
+        },
+        {
+          "type": "liste",
+          "items": [
+            "**Forfait cécité** (vision centrale nulle ou inférieure à 1/20) : 837,85 € par mois, soit 50 heures.",
+            "**Forfait surdité** (perte auditive supérieure à 70 décibels, avec besoin d'une aide à la communication) : 502,71 € par mois.",
+            "**Surdicécité** : forfait de 502,71 €, 837,85 € ou 1 340,56 € par mois selon le degré des deux déficiences (30, 50 ou 80 heures).",
+            "**Soutien à l'autonomie** pour les troubles psychiques, cognitifs, mentaux ou du neurodéveloppement : jusqu'à 3 heures par jour, sous forme de crédit d'heures sur 12 mois.",
+            "**Hébergement en établissement à temps complet** : entre 58,47 € et 116,95 € par mois (1,97 € à 3,94 € par jour) au 1er juin 2026."
+          ]
+        },
+        {
+          "type": "exemple",
+          "titre": "Exemple",
+          "texte": "Le plan d'aide prévoit 60 heures par mois assurées par un service prestataire facturant 25 € de l'heure. Avec des ressources sous le seuil, la PCH prend en charge jusqu'à 60 × 25 €, soit 1 500 € par mois. Si le service facture plus cher que le tarif retenu, la différence reste à votre charge."
+        }
+      ],
+      "sources": [
+        0,
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "h2": "Matériel, logement, véhicule : les plafonds sur 10 ans",
+      "blocs": [
+        {
+          "type": "tableau",
+          "entetes": [
+            "Élément",
+            "Prise en charge",
+            "Plafond"
+          ],
+          "lignes": [
+            [
+              "Aide technique inscrite à la liste des produits remboursables (LPPR)",
+              "100 % ou 80 % du tarif, après déduction de la part Sécurité sociale",
+              "13 200 € sur 10 ans, augmenté si une aide coûte au moins 3 000 €"
+            ],
+            [
+              "Aide technique hors LPPR",
+              "75 % du prix",
+              "13 200 € sur 10 ans"
+            ],
+            [
+              "Aménagement du logement",
+              "100 % jusqu'à 1 500 € de travaux, 50 % au-delà",
+              "10 000 € sur 10 ans"
+            ],
+            [
+              "Déménagement vers un logement accessible",
+              "frais pris en charge",
+              "3 000 € sur 10 ans"
+            ],
+            [
+              "Aménagement du véhicule",
+              "100 % jusqu'à 1 500 €, 75 % au-delà",
+              "10 000 € sur 10 ans"
+            ],
+            [
+              "Surcoûts de transport",
+              "75 %, ou 0,50 € par km en voiture",
+              "10 000 € sur 10 ans, ou 24 000 € sous conditions"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "texte": "Le plafond de 24 000 € concerne les trajets entre le domicile et le lieu de travail ou l'établissement médico-social, quand le transport est fait par un tiers ou que l'aller-retour dépasse 50 km. Pour l'aménagement du véhicule, le permis doit porter la mention d'un poste de conduite adapté. Le logement d'un proche qui vous héberge (parent, enfant, frère ou sœur, jusqu'au 4e degré) peut aussi être aménagé."
+        },
+        {
+          "type": "attention",
+          "texte": "Les taux réduits (80 % au lieu de 100 %) s'appliquent si vos ressources dépassent 31 162,62 € par an. Demandez toujours un devis détaillé avant de commander : la PCH couvre des frais réels, sur justificatifs."
+        }
+      ],
+      "sources": [
+        0,
+        2
+      ]
+    },
+    {
+      "h2": "Charges spécifiques, charges exceptionnelles et aide animalière",
+      "blocs": [
+        {
+          "type": "liste",
+          "items": [
+            "**Charges spécifiques** : dépenses régulières liées au handicap que les autres éléments ne couvrent pas, comme l'entretien d'un fauteuil roulant. Prise en charge à 75 %, dans la limite de **100 € par mois**.",
+            "**Charges exceptionnelles** : dépenses ponctuelles, comme la réparation d'un lit médicalisé ou le surcoût d'un séjour adapté. Prise en charge à 75 %, dans la limite de **6 000 € sur 10 ans**.",
+            "**Aide animalière** : achat et entretien d'un animal éduqué par des éducateurs qualifiés, comme un chien guide. Jusqu'à 100 % des frais (80 % au-dessus du seuil de ressources), dans la limite de **6 000 € sur 10 ans**."
+          ]
+        },
+        {
+          "type": "p",
+          "texte": "Pour un départ en vacances, faites une demande dédiée au moins 4 mois avant, même si vous touchez déjà la PCH : le transport du départ annuel et le surcoût d'un séjour adapté peuvent être pris en compte dans ces plafonds."
+        }
+      ],
+      "sources": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "h2": "La PCH parentalité pour les parents d'enfants de moins de 7 ans",
+      "blocs": [
+        {
+          "type": "p",
+          "texte": "Un parent handicapé qui a droit à la PCH peut recevoir des forfaits pour s'occuper de son enfant, jusqu'aux 7 ans du plus jeune. Montants publiés par la CNSA pour 2026 :"
+        },
+        {
+          "type": "tableau",
+          "entetes": [
+            "Aide",
+            "Parent en couple",
+            "Parent seul"
+          ],
+          "lignes": [
+            [
+              "Aide humaine, enfant de moins de 3 ans",
+              "900 € par mois",
+              "1 350 € par mois"
+            ],
+            [
+              "Aide humaine, enfant de 3 à 7 ans",
+              "450 € par mois",
+              "675 € par mois"
+            ],
+            [
+              "Aide technique à la naissance",
+              "1 400 €",
+              "1 400 €"
+            ],
+            [
+              "Aide technique aux 3 ans",
+              "1 200 €",
+              "1 200 €"
+            ],
+            [
+              "Aide technique aux 6 ans",
+              "1 000 €",
+              "1 000 €"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "texte": "L'aide technique couvre par exemple une table à langer ou une poussette adaptées. Une adoption est assimilée à une naissance. Signalez vos enfants dans la partie « vie quotidienne » du formulaire MDPH."
+        }
+      ],
+      "sources": [
+        2,
+        3
+      ]
+    },
+    {
+      "h2": "Demande, durée et versement : comment ça se passe ?",
+      "blocs": [
+        {
+          "type": "etapes",
+          "items": [
+            "Remplissez le formulaire unique de demande à la MDPH (Cerfa 15692*01), en ligne ou sur papier, détaillé dans notre guide du [dossier MDPH](dossier-mdph).",
+            "Joignez une pièce d'identité, un justificatif de domicile et un certificat médical de moins d'1 an, ainsi que les comptes rendus utiles.",
+            "Décrivez précisément vos difficultés au quotidien (aide : [le projet de vie](projet-de-vie-mdph)). Joignez les devis pour le matériel ou les travaux.",
+            "L'équipe de la MDPH évalue vos besoins pour chaque élément demandé.",
+            "La CDAPH décide. Le conseil départemental verse ensuite les montants."
+          ]
+        },
+        {
+          "type": "p",
+          "texte": "La réponse doit intervenir dans **4 mois**. Sans réponse au-delà, la demande est considérée comme refusée. Notre outil calcule [la date du refus implicite](outils/delai-reponse-mdph), et [le classement des délais des MDPH](delais-mdph) montre les écarts entre départements."
+        },
+        {
+          "type": "p",
+          "texte": "La PCH est accordée pour 1 à 10 ans, ou **sans limitation de durée** si le handicap ne peut pas s'améliorer. Dans ce cas, la MDPH vous informe au moins une fois tous les 10 ans de votre droit à une nouvelle évaluation."
+        },
+        {
+          "type": "attention",
+          "texte": "La PCH couvre des frais réels. Le département peut demander les justificatifs (factures, bulletins de salaire, attestations du service) : conservez-les. Les sommes versées n'ont pas à être remboursées par vos héritiers à votre décès."
+        }
+      ],
+      "sources": [
+        0,
+        1,
+        4
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "La PCH est-elle imposable ?",
+      "r": "Non pour la personne handicapée : monparcourshandicap.gouv.fr indique que tous les éléments de la PCH sont exonérés d'impôt sur le revenu."
+    },
+    {
+      "q": "Peut-on cumuler la PCH et l'AAH ?",
+      "r": "Oui. La PCH se cumule avec l'allocation aux adultes handicapés (AAH) et avec le RSA, car elle finance des besoins et non un revenu. Le fonctionnement de l'AAH est détaillé dans notre guide de l'[AAH](aah)."
+    },
+    {
+      "q": "Combien touche un aidant familial avec la PCH ?",
+      "r": "Au 1er juin 2026, le dédommagement est de 4,93 € de l'heure, ou 7,39 € si l'aidant a réduit ou arrêté son activité professionnelle. Le montant mensuel est plafonné à 1 269,83 € par aidant, ou 1 523,80 € quand le plafond est majoré. Le nombre d'heures est fixé par le plan d'aide."
+    },
+    {
+      "q": "La PCH est-elle versée si l'on vit en établissement ?",
+      "r": "Oui, la PCH peut être attribuée en établissement social, médico-social ou de santé, mais avec des montants différents. Pour l'aide humaine, les jours passés en établissement ouvrent droit à 10 % du montant prévu à domicile, avec au 1er juin 2026 un minimum de 58,47 € et un maximum de 116,95 € par mois en hébergement à temps complet."
+    },
+    {
+      "q": "Peut-on cumuler la PCH et l'AJPP ?",
+      "r": "Oui, sauf pour l'aide humaine. L'allocation journalière de présence parentale (AJPP), versée par la CAF ou la MSA quand un parent interrompt son travail pour un enfant gravement malade ou handicapé, se cumule avec les autres éléments de la PCH, mais pas avec l'élément 1, l'aide humaine."
+    },
+    {
+      "q": "Parents séparés : qui touche la PCH de l'enfant ?",
+      "r": "Pour un enfant, la PCH peut être partagée : le parent qui n'a pas la garde permanente peut percevoir une aide pour les besoins quotidiens de l'enfant, à condition qu'un accord soit signé entre les deux parents. Votre MDPH précise les modalités."
+    },
+    {
+      "q": "Que faire si la MDPH accorde moins d'heures que prévu ?",
+      "r": "Vous pouvez déposer un RAPO auprès de la MDPH dans les 2 mois suivant la réception de la décision, puis saisir le tribunal judiciaire dans les 2 mois après la réponse. La procédure est expliquée dans notre guide pour [contester une décision de la MDPH](recours-mdph). Pour un dossier précis, APF France handicap, l'Unafam, l'Unapei ou un point-justice peuvent vous accompagner."
+    }
+  ],
+  "liens_internes": [
+    {
+      "slug": "outils/delai-reponse-mdph",
+      "ancre": "calculer la date du refus implicite"
+    },
+    {
+      "slug": "delais-mdph",
+      "ancre": "le classement des délais des MDPH"
+    },
+    {
+      "slug": "aeeh",
+      "ancre": "l'AEEH et son complément"
+    },
+    {
+      "slug": "dossier-mdph",
+      "ancre": "remplir le dossier MDPH"
+    },
+    {
+      "slug": "projet-de-vie-mdph",
+      "ancre": "rédiger le projet de vie"
+    },
+    {
+      "slug": "recours-mdph",
+      "ancre": "contester une décision de la MDPH"
+    },
+    {
+      "slug": "aah",
+      "ancre": "l'allocation aux adultes handicapés"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F14202",
+      "titre": "Prestation de compensation du handicap (PCH), Service Public",
+      "date": "vérifié le 1er juillet 2026, consulté le 2026-11-15"
+    },
+    {
+      "url": "https://www.monparcourshandicap.gouv.fr/aides/la-prestation-de-compensation-du-handicap-pch",
+      "titre": "La prestation de compensation du handicap (PCH), Mon Parcours Handicap",
+      "date": "mis à jour le 06/08/2026, consulté le 2026-11-15"
+    },
+    {
+      "url": "https://www.cnsa.fr/sites/default/files/2026-06/Tarifs-PCH-1er-juin-2026_2.pdf",
+      "titre": "Tarifs et montants applicables aux différents éléments de la PCH à compter du 1er juin 2026, CNSA / DGCS",
+      "date": "1er juin 2026, consulté le 2026-11-15"
+    },
+    {
+      "url": "https://www.monparcourshandicap.gouv.fr/aides/la-prestation-de-compensation-du-handicap-pch-parentalite",
+      "titre": "La prestation de compensation du handicap (PCH) parentalité, Mon Parcours Handicap",
+      "date": "mis à jour le 10/06/2026, consulté le 2026-11-15"
+    },
+    {
+      "url": "https://www.monparcourshandicap.gouv.fr/actualite/montants-de-la-pch-prestation-de-compensation",
+      "titre": "Montants 2026 de la PCH, Mon Parcours Handicap",
+      "date": "mis à jour le 10/06/2026, consulté le 2026-11-15"
+    },
+    {
+      "url": "https://www.monparcourshandicap.gouv.fr/aides/lallocation-deducation-de-lenfant-handicape-aeeh",
+      "titre": "L'allocation d'éducation de l'enfant handicapé (AEEH) et ses compléments, Mon Parcours Handicap",
+      "date": "mis à jour le 28/07/2026, consulté le 2026-11-15"
+    }
+  ],
+  "date_verification": "2026-11-15",
+  "a_verifier": [
+    "Dédommagement de l'aidant familial qui réduit ou cesse son activité : 7,39 € de l'heure dans la grille CNSA du 1er juin 2026, 7,40 € sur service-public (vérifié le 1er juillet 2026). Le guide retient 7,39 €, source primaire.",
+    "Ressources prises en compte pour le taux 100 % / 80 % : service-public parle du revenu fiscal de référence, monparcourshandicap dit que salaires, revenus du travail et pensions ne sont pas retenus (revenus essentiellement patrimoniaux). Le guide suit monparcourshandicap ; texte de l'article R245-46 du CASF non lu (Legifrance inaccessible pendant la session).",
+    "Contrôle d'effectivité : règles précises (durée de conservation des justificatifs, suspension) non lues sur un texte officiel pendant la session, le guide reste général.",
+    "Conditions exactes de la majoration de 20 % du plafond aidant familial (1 523,80 €) non détaillées dans les sources lues.",
+    "Plafond journalier d'aide humaine (monparcourshandicap mentionne « maximum 9 h 05 par jour ») non repris faute de confirmation par un second texte."
+  ]
+}

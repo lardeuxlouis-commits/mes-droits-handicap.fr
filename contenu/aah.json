@@ -1,0 +1,415 @@
+{
+ "slug": "aah",
+ "title": "AAH 2026 : montant, plafond et cumul avec un salaire",
+ "description": "AAH : 1 041,59 € par mois au 1er avril 2026. Conditions, plafond de 12 499 € par an, couple et calcul avec un salaire.",
+ "h1": "AAH 2026 : montant, conditions et cumul avec un salaire",
+ "chapo": "L'allocation aux adultes handicapés (AAH) atteint au plus **1 041,59 € par mois** depuis le 1er avril 2026. Elle est accordée par la MDPH à partir d'un taux d'incapacité de 80 %, ou de 50 à 79 % avec une restriction d'accès à l'emploi, puis versée par la CAF ou la MSA. Le montant baisse selon vos ressources personnelles : depuis octobre 2023, les revenus du conjoint ne comptent plus.",
+ "en_bref": [
+  "Montant maximal : 1 041,59 € par mois pour les allocations dues à partir d'avril 2026.",
+  "Plafond de ressources d'une personne seule : 12 499 € par an, majoré de la moitié par enfant à charge.",
+  "Avec un salaire en milieu ordinaire : rien n'est compté pendant 6 mois, puis 20 % de la part jusqu'à 560,11 € par mois et 60 % au-delà.",
+  "Si vous travaillez, l'AAH est recalculée chaque trimestre sur la base d'une déclaration de ressources.",
+  "Durée : 1 à 10 ans, ou sans limite de durée à partir de 80 % si le handicap ne peut pas s'améliorer."
+ ],
+ "urgence": "En cas de refus d'AAH, le recours administratif préalable obligatoire (RAPO) doit être déposé auprès de la MDPH dans les 2 mois qui suivent la réception de la décision. Sans réponse de la MDPH pendant plus de 4 mois après le dépôt de la demande, celle-ci vaut refus implicite.",
+ "sections": [
+  {
+   "h2": "Qui peut toucher l'AAH ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "Quatre conditions s'additionnent : un taux d'incapacité, un âge, une résidence en France et des ressources limitées."
+    },
+    {
+     "type": "liste",
+     "items": [
+      "**Taux d'incapacité** : il est fixé par la **CDAPH** (commission des droits et de l'autonomie des personnes handicapées, qui décide au sein de la MDPH) à l'aide d'un guide barème national. Il faut au moins 80 %, ou entre 50 et 79 % avec une **restriction substantielle et durable d'accès à l'emploi**.",
+      "**Âge** : au moins 20 ans, ou 16 ans si vous n'êtes plus à la charge de vos parents pour les prestations familiales (par exemple si vous avez quitté le domicile familial).",
+      "**Résidence** : vivre en France métropolitaine ou dans un département d'outre-mer. Les ressortissants européens et étrangers doivent y résider depuis plus de 3 mois, sauf s'ils travaillent. Les étrangers hors Union européenne doivent avoir un titre de séjour valable ou un récépissé de renouvellement.",
+      "**Ressources** : ne pas dépasser un plafond annuel (voir plus bas)."
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "La restriction est **substantielle** quand vos difficultés d'accès à un emploi, dues au handicap, ne peuvent pas être compensées par des aménagements, comme un poste adapté. Elle est **durable** quand elle doit durer au moins 1 an à partir du dépôt de la demande, même si votre état de santé n'est pas stabilisé. Le code de la sécurité sociale précise qu'un travail en milieu ordinaire de moins d'un mi-temps, quand cette limite vient du handicap, reste compatible avec cette restriction, tout comme un travail en Ésat ou une formation."
+    }
+   ],
+   "sources": [
+    0,
+    5
+   ]
+  },
+  {
+   "h2": "Combien touche-t-on d'AAH en 2026 ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "Le décret n° 2026-229 du 30 mars 2026 a porté le montant mensuel de l'AAH à **1 041,59 €** pour les allocations dues à partir du mois d'avril 2026. C'est un maximum, le même que votre taux soit de 50 % ou de 80 %."
+    },
+    {
+     "type": "tableau",
+     "entetes": [
+      "Votre situation",
+      "Ce que vous recevez (au 1er avril 2026)"
+     ],
+     "lignes": [
+      [
+       "Aucune ressource",
+       "1 041,59 € par mois"
+      ],
+      [
+       "Pension ou rente (invalidité, retraite, accident du travail)",
+       "La différence entre votre pension et 1 041,59 €"
+      ],
+      [
+       "Revenus d'activité",
+       "Une AAH réduite selon le salaire, après abattements (voir plus bas)"
+      ]
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "Le droit commence le premier jour du mois qui suit le dépôt de la demande. L'AAH est payée chaque mois, à terme échu, c'est-à-dire après le mois concerné."
+    },
+    {
+     "type": "exemple",
+     "titre": "Exemple",
+     "texte": "Vous touchez une pension d'invalidité de 700 € par mois et n'avez pas d'autre revenu. L'AAH complète jusqu'au maximum : 1 041,59 € moins 700 €, soit environ 341 € par mois."
+    }
+   ],
+   "sources": [
+    0,
+    2,
+    10
+   ]
+  },
+  {
+   "h2": "Quel plafond de ressources ne pas dépasser ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "Si vous ne travaillez pas, la CAF regarde vos ressources de l'avant-dernière année : pour une demande faite en 2026, c'est la ligne « revenu net catégoriel » de l'avis d'imposition 2024 qui sert de base. Le plafond annuel vaut 12 fois le montant de l'AAH, majoré de la moitié de ce plafond pour chaque enfant à charge."
+    },
+    {
+     "type": "tableau",
+     "entetes": [
+      "Enfants à charge",
+      "Plafond annuel de ressources (personne seule ou en couple, calcul déconjugalisé)"
+     ],
+     "lignes": [
+      [
+       "0",
+       "12 499 €"
+      ],
+      [
+       "1",
+       "18 749 €"
+      ],
+      [
+       "2",
+       "24 998 €"
+      ],
+      [
+       "3",
+       "31 248 €"
+      ],
+      [
+       "4",
+       "37 497 €"
+      ]
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "Les salaires, pensions et revenus d'indépendant ne comptent que partiellement. Les loyers que vous percevez, eux, comptent en entier."
+    },
+    {
+     "type": "attention",
+     "texte": "Le plafond n'est pas un montant d'AAH. Plus vos ressources s'en approchent, plus l'allocation diminue : l'AAH mensuelle est égale au douzième de l'écart entre le plafond et vos ressources annuelles, sans dépasser 1 041,59 €."
+    }
+   ],
+   "sources": [
+    0,
+    5
+   ]
+  },
+  {
+   "h2": "En couple : est-ce que les revenus du conjoint comptent encore ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "Non, en principe. Depuis le 1er octobre 2023, l'AAH est calculée sur vos **seules ressources personnelles**. C'est la **déconjugalisation**. Toute personne devenue bénéficiaire après cette date relève automatiquement de ce calcul."
+    },
+    {
+     "type": "p",
+     "texte": "Pour les couples qui touchaient déjà l'AAH avant la réforme, l'ancien calcul (dit « conjugalisé ») est conservé tant qu'il reste plus favorable, par exemple quand vos revenus sont plus élevés que ceux de votre conjoint. Dans ce calcul, le plafond du couple est de 22 623 € par an sans enfant, et un abattement forfaitaire de 5 000 € s'applique aux revenus du conjoint, plus 1 400 € par enfant à charge."
+    },
+    {
+     "type": "p",
+     "texte": "C'est la CAF ou la MSA qui choisit le calcul le plus avantageux, sans démarche de votre part. Dès que l'ancien calcul ne vous avantage plus, l'AAH passe en calcul déconjugalisé, et ce changement est définitif."
+    }
+   ],
+   "sources": [
+    0,
+    7,
+    9
+   ]
+  },
+  {
+   "h2": "Peut-on travailler et toucher l'AAH ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "Oui. Pour un emploi en **milieu ordinaire** (une entreprise, une administration, une association, par opposition à un Ésat), trois règles s'appliquent."
+    },
+    {
+     "type": "etapes",
+     "items": [
+      "**Les 6 premiers mois ne comptent pas.** Si vous n'aviez aucun revenu d'activité le mois précédent et que vous commencez ou reprenez un travail, votre salaire n'est pas pris en compte pendant 6 mois au plus. Ce cumul intégral est limité à 6 mois par période de 12 mois glissants. Il ne joue pas pour une activité commencée avant l'ouverture du droit à l'AAH.",
+      "**Ensuite, un abattement réduit le salaire retenu.** Sur la part du salaire jusqu'à 30 % du Smic brut mensuel, soit **560,11 €** par mois avec le Smic de 1 867,02 €, 80 % sont retirés : seuls 20 % comptent. Sur la part au-delà, 40 % sont retirés : 60 % comptent. Le Smic retenu est celui en vigueur le dernier jour de la période de référence.",
+      "**Le calcul est trimestriel.** Vous déclarez vos revenus à la CAF ou à la MSA tous les 3 mois. Les ressources des 3 mois civils qui précèdent servent à calculer l'AAH des 3 mois suivants. Le plafond trimestriel vaut 3 fois l'AAH, soit 3 124,77 €, et l'AAH mensuelle est égale au tiers de l'écart entre ce plafond et vos ressources du trimestre."
+     ]
+    },
+    {
+     "type": "exemple",
+     "titre": "Exemple (personne seule, au 1er avril 2026)",
+     "texte": "Vous travaillez depuis plus de 6 mois et gagnez 1 200 € nets imposables par mois. Part retenue : 20 % de 560,11 €, soit 112,02 €, plus 60 % des 639,89 € restants, soit 383,93 €. Total retenu : environ 496 € par mois. L'AAH estimée est d'environ 1 041,59 € moins 496 €, soit environ 545 € par mois. Votre CAF peut appliquer d'autres règles selon votre dossier : seule sa notification fait foi."
+    },
+    {
+     "type": "p",
+     "texte": "Si vous réduisez votre temps de travail depuis 2 mois consécutifs, un abattement supplémentaire, égal au pourcentage de réduction arrondi à la dizaine inférieure et plafonné à 80 %, s'applique aux revenus du trimestre. Pour faire le calcul avec vos propres chiffres, utilisez notre [simulateur AAH](outils/simulateur-aah)."
+    },
+    {
+     "type": "attention",
+     "texte": "Sans déclaration trimestrielle renvoyée à temps, la CAF verse une avance égale à la moitié de la mensualité précédente, puis suspend l'allocation si la déclaration n'arrive toujours pas."
+    }
+   ],
+   "sources": [
+    1,
+    3,
+    4,
+    5,
+    6,
+    10
+   ]
+  },
+  {
+   "h2": "Et si vous travaillez en Ésat ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "En **Ésat** (établissement et service d'accompagnement par le travail), vous percevez une rémunération garantie comprise entre 55 % et 110 % du Smic horaire. L'AAH s'y ajoute, mais le total ne peut pas dépasser 100 % du Smic brut mensuel, soit 1 867,02 € pour une personne seule. Ce plafond est majoré de 15 % si vous avez un enfant ou un ascendant à charge."
+    },
+    {
+     "type": "p",
+     "texte": "La rémunération garantie est retenue après un petit abattement, de 3,5 % à 5 % selon la part financée par l'établissement. Depuis le 1er octobre 2026, avec une mise en place étalée jusqu'en décembre 2026 selon le mois d'ouverture de vos droits, l'AAH des travailleurs d'Ésat est elle aussi calculée sur les revenus du dernier trimestre, et non plus sur ceux de l'avant-dernière année. La CAF ou la MSA prévient chaque allocataire par courrier ou courriel de la date de sa première déclaration."
+    }
+   ],
+   "sources": [
+    1,
+    5
+   ]
+  },
+  {
+   "h2": "MVA et complément de ressources : les suppléments de l'AAH",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "La **majoration pour la vie autonome (MVA)** s'élève à **104,77 € par mois**. Elle est versée automatiquement avec l'AAH si vous remplissez toutes ces conditions :"
+    },
+    {
+     "type": "liste",
+     "items": [
+      "toucher l'AAH à taux plein ou en complément d'une retraite, d'une pension d'invalidité ou d'une rente d'accident du travail ;",
+      "avoir un taux d'incapacité d'au moins 80 % ;",
+      "vivre dans un logement indépendant (être hébergé chez un particulier ne compte pas, sauf chez votre conjoint) ;",
+      "percevoir une aide au logement (APL, ALF ou ALS) ;",
+      "ne pas avoir de revenu d'activité professionnelle."
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "Le **complément de ressources** (179,31 € par mois) n'est plus attribué depuis décembre 2019. Les personnes qui le touchaient à cette date le conservent tant qu'elles remplissent les conditions, pendant 10 ans au plus."
+    }
+   ],
+   "sources": [
+    8,
+    5,
+    11
+   ]
+  },
+  {
+   "h2": "Comment demander l'AAH, et pour combien de temps ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "La demande se fait auprès de la MDPH de votre département, en ligne si elle propose le téléservice ou avec le formulaire papier, accompagné des justificatifs. La démarche est gratuite. Pour remplir le formulaire, voyez notre guide du [dossier MDPH](dossier-mdph). Une demande d'AAH déclenche automatiquement une procédure de [RQTH](rqth)."
+    },
+    {
+     "type": "p",
+     "texte": "La CDAPH doit répondre dans un délai de 4 mois. Dans les faits, ce délai varie beaucoup d'un département à l'autre : consultez [le classement des délais des MDPH](delais-mdph). Une fois l'AAH accordée, c'est la CAF, ou la MSA si vous relevez du régime agricole, qui calcule et verse l'allocation."
+    },
+    {
+     "type": "tableau",
+     "entetes": [
+      "Taux d'incapacité",
+      "Durée d'attribution"
+     ],
+     "lignes": [
+      [
+       "80 % ou plus",
+       "1 à 10 ans, ou sans limitation de durée si le handicap ne peut pas évoluer favorablement"
+      ],
+      [
+       "50 à 79 %",
+       "1 à 2 ans, jusqu'à 5 ans si la situation ne peut pas s'améliorer pendant cette période"
+      ]
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "Quand l'AAH n'est pas accordée à vie, la demande de renouvellement se fait avec le même formulaire que la première demande. Pour le calendrier, voyez [le guide du renouvellement](renouvellement-mdph). Tout changement de situation (déménagement, vie de couple, travail, coordonnées bancaires) se déclare à la CAF ou à la MSA."
+    }
+   ],
+   "sources": [
+    0,
+    10
+   ]
+  }
+ ],
+ "faq": [
+  {
+   "q": "Est-ce que l'AAH continue à la retraite ?",
+   "r": "À partir de 80 % d'incapacité, oui : si votre pension de retraite est inférieure à 1 041,59 €, l'AAH verse la différence. Entre 50 et 79 %, l'AAH s'arrête à l'âge légal de départ à la retraite. Si vous n'avez jamais cotisé, elle est alors remplacée par l'allocation de solidarité aux personnes âgées (Aspa)."
+  },
+  {
+   "q": "Peut-on cumuler l'AAH et le RSA ?",
+   "r": "L'AAH n'est pas supprimée, mais elle est réduite si vous percevez une autre allocation comme le RSA ou une pension d'invalidité. En revanche, l'AAH se cumule avec la prime d'activité et la réduction sociale téléphonique. Elle ne se cumule pas avec l'allocation de solidarité spécifique (ASS), sauf pour les personnes qui touchaient les deux au 31 décembre 2016, pendant 10 ans au plus."
+  },
+  {
+   "q": "L'AAH baisse-t-elle en cas d'hospitalisation ?",
+   "r": "Pas pendant les 60 premiers jours. Au-delà, elle est réduite à 30 %, soit 312 € par mois. Cette réduction ne s'applique pas si vous payez le forfait journalier, si vous avez un enfant à charge, un ascendant à charge, ou si votre conjoint ne travaille pas pour un motif reconnu par la CDAPH. Le montant complet revient à la sortie."
+  },
+  {
+   "q": "Quel taux d'incapacité faut-il pour l'AAH ?",
+   "r": "Au moins 80 %, ou entre 50 et 79 % si la CDAPH reconnaît une restriction substantielle et durable d'accès à l'emploi. Le taux est fixé à partir du guide barème national d'évaluation des déficiences et incapacités. Il ne dépend pas d'un diagnostic, mais des conséquences du handicap sur la vie quotidienne."
+  },
+  {
+   "q": "Faut-il rembourser l'AAH après le décès du bénéficiaire ?",
+   "r": "Non. Les héritiers doivent prévenir la CAF ou la MSA du décès, par tout moyen, mais ils n'ont pas à rembourser les sommes versées au titulaire de l'AAH."
+  },
+  {
+   "q": "Que faire si la MDPH ne répond pas à ma demande d'AAH ?",
+   "r": "Au-delà de 4 mois sans réponse, le silence vaut refus implicite, ce qui ouvre la possibilité d'un recours. Les démarches de relance sont détaillées dans notre page [dossier MDPH sans réponse](dossier-mdph-trop-long), et notre outil [délai de réponse MDPH](outils/delai-reponse-mdph) calcule la date du refus implicite."
+  },
+  {
+   "q": "Comment contester un refus d'AAH ?",
+   "r": "Il faut d'abord un recours administratif préalable obligatoire (RAPO) auprès de la MDPH, dans les 2 mois après réception de la décision, en y joignant la décision. Ensuite seulement, le tribunal judiciaire peut être saisi dans un nouveau délai de 2 mois. Les étapes sont détaillées dans [contester une décision de la MDPH](recours-mdph). Pour une situation précise, une association (APF France handicap, UNAFAM, Unapei…), un point justice ou un avocat peut vous aider."
+  }
+ ],
+ "liens_internes": [
+  {
+   "slug": "outils/simulateur-aah",
+   "ancre": "simulateur AAH"
+  },
+  {
+   "slug": "delais-mdph",
+   "ancre": "le classement des délais des MDPH"
+  },
+  {
+   "slug": "dossier-mdph",
+   "ancre": "dossier MDPH"
+  },
+  {
+   "slug": "rqth",
+   "ancre": "RQTH"
+  },
+  {
+   "slug": "renouvellement-mdph",
+   "ancre": "le guide du renouvellement"
+  },
+  {
+   "slug": "recours-mdph",
+   "ancre": "contester une décision de la MDPH"
+  },
+  {
+   "slug": "dossier-mdph-trop-long",
+   "ancre": "dossier MDPH sans réponse"
+  },
+  {
+   "slug": "outils/delai-reponse-mdph",
+   "ancre": "délai de réponse MDPH"
+  }
+ ],
+ "sources": [
+  {
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F12242",
+   "titre": "Allocation aux adultes handicapés (AAH), Service Public",
+   "date": "vérifié le 14 septembre 2026, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F21615",
+   "titre": "Peut-on travailler et percevoir l'allocation aux adultes handicapés (AAH) ?, Service Public",
+   "date": "vérifié le 1er octobre 2026, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053734356",
+   "titre": "Décret n° 2026-229 du 30 mars 2026 portant revalorisation de l'allocation aux adultes handicapés, Légifrance",
+   "date": "JORF du 31 mars 2026, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000023097737",
+   "titre": "Article D821-9 du code de la sécurité sociale (abattements sur les revenus d'activité), Légifrance",
+   "date": "version en vigueur depuis le 28 juin 2026, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054333604",
+   "titre": "Article R821-4-1 du code de la sécurité sociale (trimestre de référence), Légifrance",
+   "date": "version en vigueur depuis le 28 juin 2026, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006073189/LEGISCTA000006141593/",
+   "titre": "Code de la sécurité sociale, articles D821-1 à D821-11 (taux, plafonds, MVA, Ésat), Légifrance",
+   "date": "consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2300",
+   "titre": "Salaire minimum interprofessionnel de croissance (Smic), Service Public",
+   "date": "vérifié le 1er juin 2026, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.monparcourshandicap.gouv.fr/aides/lallocation-aux-adultes-handicapes-aah",
+   "titre": "L'allocation aux adultes handicapés (AAH), Mon Parcours Handicap",
+   "date": "mis à jour le 4 décembre 2025, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F12903",
+   "titre": "Handicap : majoration pour la vie autonome (MVA), Service Public",
+   "date": "vérifié le 22 avril 2026, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.monparcourshandicap.gouv.fr/actualite/deconjugalisation-de-laah-les-reponses-vos-questions",
+   "titre": "Déconjugalisation de l'AAH : les réponses à vos questions, Mon Parcours Handicap",
+   "date": "mis à jour le 6 novembre 2024, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000006142017/",
+   "titre": "Code de la sécurité sociale, articles R821-1 et suivants (ressources, déclaration trimestrielle, durée, versement), Légifrance",
+   "date": "consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F12911",
+   "titre": "Handicap : le complément de ressources existe-t-il toujours ?, Service Public",
+   "date": "vérifié le 9 novembre 2026, consulté le 2026-11-15"
+  }
+ ],
+ "date_verification": "2026-11-15",
+ "a_verifier": [
+  "Base exacte des revenus d'activité retenus : service-public parle de « revenus nets imposables », le code (R821-4-1 renvoyant à R532-3) parle de « revenus nets catégoriels », ce qui peut inclure la déduction fiscale de 10 % pour frais professionnels. L'exemple chiffré suit la formulation de service-public.",
+  "L'exemple chiffré de service-public F21615 (salaire de 1 500 €) donne 109,38 € et 572,15 €, incohérents avec le seuil de 560,11 € qu'il affiche (calcul exact : 112,02 € et 563,93 €). Nous n'avons pas repris cet exemple.",
+  "Plafonds de cumul AAH et rémunération Ésat : service-public F21615 affiche 2 427,12 € (couple) et 2 707,17 € (couple avec enfant), alors que l'article D821-5 en vigueur depuis le 1er octobre 2023 fixe 100 % du Smic, majoré de 15 % avec un enfant ou un ascendant à charge. Le guide suit le texte réglementaire.",
+  "Date d'effet du Smic à 12,31 € de l'heure (1 867,02 € par mois) : non affichée sur la fiche service-public F2300 consultée.",
+  "Abattement de 20 % sur les « pensions et rentes viagères à titre gratuit » (article R821-4) : service-public indique que l'AAH complète une pension d'invalidité ou de retraite jusqu'au maximum, sans mentionner cet abattement. L'exemple suit service-public.",
+  "Jour précis de versement mensuel de l'AAH par la CAF : non trouvé sur une source officielle lue."
+ ]
+}

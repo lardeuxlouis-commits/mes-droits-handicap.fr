@@ -1,0 +1,53 @@
+# Mes droits handicap (mes-droits-handicap.fr)
+
+> Site d'information indépendant sur les droits liés au handicap en France : délais des MDPH par département (baromètre CNSA), AAH, PCH, AEEH, RQTH, carte mobilité inclusion, recours et renouvellement. Chiffres officiels datés et sourcés sur chaque page. Auteur : Louis Lardeux.
+
+## Données
+
+- [Délais des MDPH en 2026, classement](https://mes-droits-handicap.fr/delais-mdph/): délai moyen par territoire au 2e trimestre 2026, CSV : https://mes-droits-handicap.fr/donnees/delais-mdph-2026t2.csv
+- [MDPH de la Seine-Saint-Denis](https://mes-droits-handicap.fr/delais-mdph/seine-saint-denis-93/)
+- [MDPH des Bouches-du-Rhône](https://mes-droits-handicap.fr/delais-mdph/bouches-du-rhone-13/)
+- [MDPH du Nord](https://mes-droits-handicap.fr/delais-mdph/nord-59/)
+- [MDPH de Paris](https://mes-droits-handicap.fr/delais-mdph/paris-75/)
+- [MDPH des Hauts-de-Seine](https://mes-droits-handicap.fr/delais-mdph/hauts-de-seine-92/)
+- [MDPH de la Meurthe-et-Moselle](https://mes-droits-handicap.fr/delais-mdph/meurthe-et-moselle-54/)
+- [MDPH de l'Essonne](https://mes-droits-handicap.fr/delais-mdph/essonne-91/)
+- [MDPH de la Dordogne](https://mes-droits-handicap.fr/delais-mdph/dordogne-24/)
+- [MDPH du Rhône et de la Métropole de Lyon](https://mes-droits-handicap.fr/delais-mdph/rhone-et-metropole-de-lyon-69/)
+- [MDPH de la Gironde](https://mes-droits-handicap.fr/delais-mdph/gironde-33/)
+- [MDPH du Pas-de-Calais](https://mes-droits-handicap.fr/delais-mdph/pas-de-calais-62/)
+- [MDPH du Val-de-Marne](https://mes-droits-handicap.fr/delais-mdph/val-de-marne-94/)
+- [MDPH de la Seine-et-Marne](https://mes-droits-handicap.fr/delais-mdph/seine-et-marne-77/)
+- [MDPH des Yvelines](https://mes-droits-handicap.fr/delais-mdph/yvelines-78/)
+- [MDPH du Val-d'Oise](https://mes-droits-handicap.fr/delais-mdph/val-d-oise-95/)
+- [MDPH de la Haute-Garonne](https://mes-droits-handicap.fr/delais-mdph/haute-garonne-31/)
+- [MDPH des Alpes-Maritimes](https://mes-droits-handicap.fr/delais-mdph/alpes-maritimes-06/)
+- [MDPH de la Hérault](https://mes-droits-handicap.fr/delais-mdph/herault-34/)
+- [MDPH de la Loire-Atlantique](https://mes-droits-handicap.fr/delais-mdph/loire-atlantique-44/)
+- [MDPH de l'Isère](https://mes-droits-handicap.fr/delais-mdph/isere-38/)
+
+## Outils (calcul dans le navigateur, rien n'est enregistré)
+
+- [Simulateur AAH](https://mes-droits-handicap.fr/outils/simulateur-aah/): Votre AAH estimée selon vos ressources ou votre salaire.
+- [Calcul de l'AEEH](https://mes-droits-handicap.fr/outils/calcul-aeeh/): Montant de base et complément selon vos frais et votre temps de travail.
+- [Date de refus implicite](https://mes-droits-handicap.fr/outils/delai-reponse-mdph/): 4 mois sans réponse : la date exacte et vos délais de recours.
+- [Calendrier de renouvellement](https://mes-droits-handicap.fr/outils/fin-de-droits-mdph/): Quand redéposer pour éviter une coupure de vos droits.
+
+## Guides
+
+- [Dossier MDPH : remplir le formulaire Cerfa 15692 section par section](https://mes-droits-handicap.fr/dossier-mdph/): Le dossier MDPH, c'est le formulaire gratuit Cerfa 15692*01, à remplir sur mdphenligne.cnsa.fr ou sur papier. Partie A toujours, B pour une première demande, C et D selon l'école ou le travail. Joignez un certificat médical de moins d'un an, une pièce d'identité et un justificatif de domicile. Sans réponse en 4 mois, la demande est réputée rejetée (règle au 15 novembre 2026).
+- [Projet de vie MDPH : exemples rédigés pour chaque situation](https://mes-droits-handicap.fr/projet-de-vie-mdph/): Le projet de vie MDPH s'appelle aujourd'hui la partie B « vie quotidienne » du formulaire Cerfa 15692*01. Elle n'est pas obligatoire pour déposer le dossier, mais l'équipe d'évaluation s'en sert pour comprendre vos besoins. Le plus utile : décrire une journée type, ce que vous faites seul, avec difficulté ou avec aide, puis dire ce que vous attendez. Quatre modèles vierges suivent (règles vérifiées le 15 novembre 2026).
+- [Certificat médical MDPH (Cerfa 15695) : qui le remplit, prix et validité](https://mes-droits-handicap.fr/certificat-medical-mdph/): Le certificat médical MDPH est le Cerfa 15695*01, obligatoire pour toute demande. Il est rempli par le médecin de votre choix qui connaît votre handicap, et reste valable 12 mois. Pour une première demande, la consultation est facturée 60 € en métropole (72 € outre-mer), remboursée à 70 % par l'Assurance maladie et 30 % par la mutuelle (Mon Parcours Handicap, mis à jour le 10 août 2026).
+- [Dossier MDPH sans réponse : que faire quand c'est trop long](https://mes-droits-handicap.fr/dossier-mdph-trop-long/): La MDPH n'a pas de délai de réponse garanti, mais la règle est fixée : si la commission (CDAPH) ne s'est pas prononcée plus de 4 mois après la date où votre dossier est complet, votre demande est considérée comme rejetée (article R241-33 du code de l'action sociale et des familles, en vigueur depuis le 1er janvier 2019). Vous pouvez alors relancer, demander un examen en urgence ou contester ce refus.
+- [Contester une décision de la MDPH : recours amiable puis tribunal](https://mes-droits-handicap.fr/recours-mdph/): Pour contester une décision de la MDPH, vous devez d'abord envoyer un recours administratif préalable obligatoire (RAPO) à la MDPH, en principe dans les 2 mois suivant la notification. Si la réponse ne vous convient pas, ou sans réponse après 2 mois, vous avez de nouveau 2 mois pour saisir le tribunal judiciaire ou administratif. Depuis le 1er mars 2026, saisir le tribunal judiciaire peut coûter une contribution de 50 €.
+- [Renouvellement MDPH : quand le demander et comment éviter une rupture de droits](https://mes-droits-handicap.fr/renouvellement-mdph/): Le renouvellement n'est pas automatique, sauf pour les droits attribués sans limitation de durée. Mon Parcours Handicap conseille de déposer votre demande environ 6 mois avant la fin de vos droits, avec le même formulaire qu'une première demande et un certificat médical de moins d'un an. La MDPH a ensuite 4 mois pour répondre, au-delà desquels son silence vaut refus.
+- [AAH 2026 : montant, conditions et cumul avec un salaire](https://mes-droits-handicap.fr/aah/): L'allocation aux adultes handicapés (AAH) atteint au plus 1 041,59 € par mois depuis le 1er avril 2026. Elle est accordée par la MDPH à partir d'un taux d'incapacité de 80 %, ou de 50 à 79 % avec une restriction d'accès à l'emploi, puis versée par la CAF ou la MSA. Le montant baisse selon vos ressources personnelles : depuis octobre 2023, les revenus du conjoint ne comptent plus.
+- [RQTH : les avantages concrets et comment l'obtenir](https://mes-droits-handicap.fr/rqth/): La reconnaissance de la qualité de travailleur handicapé (RQTH) est une décision de la MDPH, pas une allocation. Elle ouvre l'accès à des aménagements de poste, à l'accompagnement de Cap emploi, aux aides de l'Agefiph ou du FIPHFP, à l'obligation d'emploi de 6 % et à un préavis doublé en cas de licenciement. Elle est accordée de 1 à 10 ans, ou à vie.
+- [AEEH : montant 2026, les 6 catégories de complément et la demande](https://mes-droits-handicap.fr/aeeh/): L'allocation d'éducation de l'enfant handicapé (AEEH) s'élève à 153,01 € par mois depuis le 1er avril 2026. Elle est versée pour un enfant de moins de 20 ans dont le taux d'incapacité atteint 80 %, ou 50 à 79 % avec un accompagnement adapté. Un complément de 114,76 € (catégorie 1) à 1 298,44 € (catégorie 6) peut s'y ajouter selon vos frais et votre temps de travail.
+- [PCH : ce que finance la prestation de compensation du handicap](https://mes-droits-handicap.fr/pch/): La prestation de compensation du handicap (PCH) rembourse des dépenses liées à la perte d'autonomie : aide humaine, matériel, aménagement du logement ou du véhicule, frais spécifiques, aide animalière. Au 1er juin 2026, l'aide humaine est prise en charge jusqu'à 19,92 € de l'heure en emploi direct et 25 € en service prestataire, et un aidant familial est dédommagé 4,93 € de l'heure. Elle est attribuée sans condition de ressources.
+- [Carte mobilité inclusion (CMI) : les 3 mentions et leurs avantages](https://mes-droits-handicap.fr/carte-mobilite-inclusion/): La carte mobilité inclusion (CMI) est gratuite et existe en trois mentions. Invalidité : à partir de 80 % d'incapacité, priorité, réductions de transport et demi-part d'impôt. Priorité : moins de 80 % avec station debout pénible, place assise et passage prioritaire. Stationnement : déplacements à pied très limités, stationnement gratuit. Les anciennes cartes cessent d'être valables au 31 décembre 2026.
+
+## Le site
+
+- [À propos](https://mes-droits-handicap.fr/a-propos/)
+- [Méthode et sources](https://mes-droits-handicap.fr/methode-et-sources/)

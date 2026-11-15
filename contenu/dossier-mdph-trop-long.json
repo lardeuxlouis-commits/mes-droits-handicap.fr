@@ -1,0 +1,311 @@
+{
+ "slug": "dossier-mdph-trop-long",
+ "title": "MDPH pas de réponse : que faire après 4 mois d'attente",
+ "description": "Sans réponse de la MDPH 4 mois après un dossier complet, c'est un refus implicite. Suivre, relancer, demander l'urgence, garder vos droits.",
+ "h1": "Dossier MDPH sans réponse : que faire quand c'est trop long",
+ "chapo": "La MDPH n'a pas de délai de réponse garanti, mais la règle est fixée : si la commission (CDAPH) ne s'est pas prononcée plus de 4 mois après la date où votre dossier est complet, votre demande est considérée comme rejetée (article R241-33 du code de l'action sociale et des familles, en vigueur depuis le 1er janvier 2019). Vous pouvez alors relancer, demander un examen en urgence ou contester ce refus.",
+ "en_bref": [
+  "Délai de référence : 4 mois après la date où le dossier est complet ; au-delà, le silence vaut refus.",
+  "Le compteur part du dossier complet : une pièce manquante (certificat médical de moins de 1 an, identité, domicile) le retarde.",
+  "En cas d'urgence, la CDAPH peut statuer en formation restreinte ; pour la PCH, le département fixe un montant provisoire sous 15 jours ouvrés.",
+  "Pendant un renouvellement, la CAF peut verser une avance d'AAH et la RQTH est prolongée jusqu'à la décision.",
+  "Contre un refus implicite, le recours préalable obligatoire se fait en général dans les 2 mois."
+ ],
+ "urgence": "Au bout de 4 mois de silence après un dossier complet, la demande vaut refus. Pour la contester, le recours administratif préalable obligatoire (RAPO) doit en principe être envoyé dans les 2 mois qui suivent, à condition que ce délai et les voies de recours figurent dans l'accusé de réception de votre demande.",
+ "sections": [
+  {
+   "h2": "Combien de temps la MDPH a-t-elle pour vous répondre ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "La décision est prise par la **CDAPH** (commission des droits et de l'autonomie des personnes handicapées), qui siège au sein de la MDPH. Le code de l'action sociale et des familles prévoit que son silence pendant **plus de 4 mois** vaut **décision de rejet** (article R241-33). Service Public le formule ainsi : « La réponse à votre demande intervient dans un délai de 4 mois. »"
+    },
+    {
+     "type": "p",
+     "texte": "Ces 4 mois ne partent pas forcément du jour où vous avez posté votre dossier. Ils partent de la date à laquelle la demande « doit être regardée comme recevable », c'est-à-dire complète. Le dossier doit contenir le formulaire de demande, un **certificat médical de moins de 1 an**, un justificatif d'identité et un justificatif de domicile. Les autres pièces se remplissent dans [le formulaire Cerfa 15692](dossier-mdph)."
+    },
+    {
+     "type": "p",
+     "texte": "Dans les faits, les délais moyens varient beaucoup d'un département à l'autre. Pour les chiffres de votre MDPH, consultez [le classement des délais des MDPH](delais-mdph)."
+    }
+   ],
+   "sources": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "h2": "Comment savoir où en est votre dossier ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "À la réception, la MDPH vous envoie un **accusé de réception**. Gardez-le précieusement : c'est lui qui prouve la date de votre demande, et c'est souvent lui qui indique les délais et les voies de recours. S'il manque des pièces, la MDPH vous les demande par ce même courrier et vous fixe un délai pour les envoyer."
+    },
+    {
+     "type": "liste",
+     "items": [
+      "**Vous avez déposé en ligne** : beaucoup de MDPH proposent un téléservice, souvent via mdphenligne.cnsa.fr, où l'état de la demande s'affiche dans votre espace.",
+      "**Vous avez envoyé un dossier papier** : appelez l'accueil de votre MDPH ou écrivez-lui en rappelant votre nom, votre date de naissance et, si vous l'avez, votre numéro de dossier.",
+      "**Vous n'avez jamais reçu d'accusé de réception** : demandez-le par écrit. Sans lui, vous ne pouvez pas prouver facilement la date de dépôt.",
+      "**Vous avez reçu une demande de pièces** : envoyez-les rapidement, avec une copie de la lettre reçue, et notez la date d'envoi."
+     ]
+    },
+    {
+     "type": "attention",
+     "texte": "Faites toujours une photocopie de votre formulaire et du certificat médical avant l'envoi. Mon Parcours Handicap le conseille, car ces documents peuvent resservir pour une relance, un recours ou un renouvellement."
+    }
+   ],
+   "sources": [
+    1,
+    2
+   ]
+  },
+  {
+   "h2": "Comment relancer la MDPH sans perdre de temps ?",
+   "blocs": [
+    {
+     "type": "etapes",
+     "items": [
+      "Vérifiez la date de dépôt sur votre accusé de réception et calculez la date des 4 mois avec [le calcul du refus implicite](outils/delai-reponse-mdph).",
+      "Appelez ou passez à l'accueil de la MDPH pour savoir si le dossier est complet, s'il est en évaluation ou s'il attend une commission.",
+      "Si la réponse reste floue, écrivez : un courrier daté (ou un message via le téléservice) qui rappelle la date de dépôt, ce que vous avez demandé et ce qui rend la situation difficile (fin de droits proche, rentrée scolaire, perte de revenus).",
+      "Envoyez ce courrier en recommandé avec avis de réception, ou déposez-le contre récépissé. Gardez une copie.",
+      "Si votre situation s'est aggravée depuis le dépôt, joignez un nouvel élément médical ou social : il sera utile à l'équipe qui évalue votre demande."
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "La relance ne change pas la règle des 4 mois, mais elle laisse une trace écrite. Cette trace sert si vous devez ensuite contester un refus ou expliquer une rupture de droits à la CAF ou au département."
+    }
+   ],
+   "sources": [
+    0,
+    2
+   ]
+  },
+  {
+   "h2": "Peut-on demander que le dossier soit traité en urgence ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "Oui. La CDAPH peut créer des **formations restreintes**, composées d'au moins trois membres, qui prennent des décisions selon une **procédure simplifiée**. Le code cite parmi leurs matières les « situations nécessitant qu'une décision soit prise en urgence » et le renouvellement d'un droit quand le handicap n'a pas évolué de façon significative (article R241-28). Dans cette procédure, vous n'êtes pas entendu ; vous pouvez la refuser en le disant au moment du dépôt."
+    },
+    {
+     "type": "p",
+     "texte": "Pour la **PCH** (prestation de compensation du handicap), une procédure d'urgence spécifique existe. En cas d'**urgence attestée**, vous pouvez joindre à tout moment une demande particulière. Le président du conseil départemental statue alors **dans un délai de 15 jours ouvrés** et fixe un **montant provisoire** de PCH (article R245-36). Pour le détail de la prestation, voir [le guide de la PCH](pch)."
+    },
+    {
+     "type": "liste",
+     "items": [
+      "Expliquez par écrit ce qui fait l'urgence : sortie d'hospitalisation, retour à domicile, perte d'un aidant, rentrée scolaire, fin de droits imminente.",
+      "Joignez un justificatif (certificat du médecin, courrier d'un service social, attestation de l'établissement).",
+      "Demandez explicitement un examen en urgence ou en procédure simplifiée."
+     ]
+    }
+   ],
+   "sources": [
+    3
+   ]
+  },
+  {
+   "h2": "Que touchez-vous pendant l'attente ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "Tout dépend de la nature de votre demande. Pour une première demande, rien n'est versé avant la décision. En revanche, pour l'AAH, l'AEEH, la MVA et la PCH, la **date de dépôt** sert à fixer la **date d'ouverture des droits** : déposer tôt compte, même si la réponse tarde."
+    },
+    {
+     "type": "p",
+     "texte": "Pour un **renouvellement**, deux protections existent dans les textes :"
+    },
+    {
+     "type": "liste",
+     "items": [
+      "**AAH** : si la CDAPH ne s'est pas prononcée à la fin de la période de versement, l'organisme payeur (CAF ou MSA) **peut** verser une **avance sur droits supposés** (article L821-7-1 du code de la sécurité sociale). Ce n'est pas automatique : contactez votre caisse avec la preuve de votre dépôt.",
+      "**RQTH** : votre demande de renouvellement **prolonge la RQTH** jusqu'à la décision de la CDAPH, selon Service Public."
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "Pour savoir quand déposer et éviter le trou entre deux décisions, voir [le guide du renouvellement MDPH](renouvellement-mdph)."
+    }
+   ],
+   "sources": [
+    2,
+    4,
+    5
+   ]
+  },
+  {
+   "h2": "Que faire quand les 4 mois sont dépassés ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "Passé ce délai, votre demande est juridiquement **rejetée**, même si vous n'avez reçu aucun courrier. On parle de **refus implicite**. Deux attitudes sont possibles, et elles se combinent."
+    },
+    {
+     "type": "liste",
+     "items": [
+      "**Attendre la décision écrite** en continuant à relancer. Une décision explicite peut encore arriver après les 4 mois, et elle doit être motivée.",
+      "**Contester le refus implicite** par un **RAPO** (recours administratif préalable obligatoire), c'est-à-dire un courrier adressé à la MDPH qui demande un nouvel examen. Pour un refus implicite, on joint la copie de l'accusé de réception de la demande (article R241-36)."
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "Le délai de recours est en principe de **2 mois**, mais il ne vous est opposable que s'il a été mentionné, avec les voies de recours, dans l'accusé de réception de votre demande (article R142-1-A du code de la sécurité sociale). Le déroulé du recours et un modèle de lettre se trouvent dans [le guide pour contester une décision de la MDPH](recours-mdph)."
+    },
+    {
+     "type": "attention",
+     "texte": "Ne laissez pas filer les dates. Notez sur votre calendrier la date des 4 mois, puis celle des 2 mois qui suivent."
+    }
+   ],
+   "sources": [
+    0,
+    6,
+    7
+   ]
+  },
+  {
+   "h2": "Vers qui vous tourner si rien ne bouge ?",
+   "blocs": [
+    {
+     "type": "liste",
+     "items": [
+      "**La MDPH elle-même** : l'équipe peut vous aider à compléter le dossier. Le CCAS de votre commune (centre communal d'action sociale) peut aussi vous accompagner.",
+      "**Une personne qualifiée pour la conciliation** : quand une décision de la CDAPH vous paraît méconnaître vos droits, vous pouvez demander l'intervention d'une personne qualifiée, choisie sur une liste établie par la MDPH (article L146-10). Cette démarche vise une décision prise, y compris un refus.",
+      "**Le Défenseur des droits** : il défend gratuitement les usagers des services publics. Vous pouvez le saisir en ligne, rencontrer un délégué près de chez vous ou appeler le 09 69 39 00 00, du lundi au vendredi de 8h30 à 19h30. Il privilégie un règlement à l'amiable.",
+      "**Une association** (APF France handicap, UNAFAM, Unapei, ou une association liée à votre handicap) : elle connaît souvent les interlocuteurs de votre MDPH."
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "Ces interlocuteurs ne remplacent pas un recours dans les délais. Si vous les sollicitez, continuez à surveiller la date des 2 mois."
+    }
+   ],
+   "sources": [
+    2,
+    8,
+    9
+   ]
+  }
+ ],
+ "faq": [
+  {
+   "q": "Comment savoir si la MDPH a accepté mon dossier ?",
+   "r": "Vous le savez par une **notification de décision** envoyée par courrier, ou affichée dans votre espace si vous avez déposé en ligne. Pour l'AAH ou l'AEEH, la CAF ou la MSA vous écrit aussi ensuite pour le versement. Tant que vous n'avez rien reçu, la demande n'est ni acceptée ni refusée, sauf si les 4 mois sont dépassés."
+  },
+  {
+   "q": "À quoi ressemble une notification de décision de la MDPH ?",
+   "r": "C'est un courrier de la CDAPH qui indique, droit par droit, ce qui est accordé ou refusé, et pour quelle durée. Les décisions doivent être **motivées**, donc expliquer les raisons. La notification mentionne aussi les **voies et délais de recours** : c'est cette mention qui fait courir le délai de 2 mois."
+  },
+  {
+   "q": "Combien de temps faut-il pour obtenir une réponse de la MDPH ?",
+   "r": "La règle nationale fixe un délai de 4 mois après le dossier complet, au-delà duquel le silence vaut refus. Le délai réel dépend beaucoup de votre département. Les moyennes par MDPH sont dans [le classement des délais](delais-mdph)."
+  },
+  {
+   "q": "Un dossier incomplet est-il refusé ?",
+   "r": "Non, il n'est pas refusé pour autant : la MDPH vous demande les pièces manquantes et fixe un délai. Mais le délai de 4 mois ne commence qu'à partir du moment où le dossier est complet, d'où l'intérêt d'envoyer tout de suite le certificat médical de moins de 1 an et les justificatifs."
+  },
+  {
+   "q": "Faut-il refaire un dossier si la MDPH ne répond pas ?",
+   "r": "Pas en général. Refaire un dossier complet ne fait pas avancer le premier. Il vaut mieux relancer par écrit et, si les 4 mois sont dépassés, envisager un recours contre le refus implicite. Si votre situation a beaucoup changé, ajoutez plutôt les nouveaux éléments à la demande en cours."
+  },
+  {
+   "q": "Peut-on saisir le tribunal directement si la MDPH ne répond pas ?",
+   "r": "Non. Pour les décisions de la CDAPH, le recours devant le juge doit être précédé d'un **recours préalable** auprès de la MDPH (RAPO). Le juge ne peut être saisi qu'après la réponse à ce recours, ou après 2 mois de silence de la MDPH sur ce recours."
+  }
+ ],
+ "liens_internes": [
+  {
+   "slug": "outils/delai-reponse-mdph",
+   "ancre": "le calcul du refus implicite"
+  },
+  {
+   "slug": "delais-mdph",
+   "ancre": "le classement des délais des MDPH"
+  },
+  {
+   "slug": "recours-mdph",
+   "ancre": "contester une décision de la MDPH"
+  },
+  {
+   "slug": "renouvellement-mdph",
+   "ancre": "le guide du renouvellement MDPH"
+  },
+  {
+   "slug": "dossier-mdph",
+   "ancre": "le formulaire Cerfa 15692"
+  },
+  {
+   "slug": "pch",
+   "ancre": "le guide de la PCH"
+  }
+ ],
+ "sources": [
+  {
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037551602",
+   "titre": "Article R241-33 du code de l'action sociale et des familles, Légifrance",
+   "date": "en vigueur depuis le 1er janvier 2019, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/R19993",
+   "titre": "Demande ou renouvellement de prestations Handicap (formulaire Cerfa 15692), Service Public",
+   "date": "vérifié le 13 juillet 2026, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.monparcourshandicap.gouv.fr/aides/le-depot-du-dossier-et-le-traitement-de-la-demande-par-la-maison-departementale-des-personnes",
+   "titre": "Le dépôt du dossier et le traitement de la demande par la MDPH, Mon Parcours Handicap",
+   "date": "consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074069/LEGISCTA000006145440/",
+   "titre": "Code de l'action sociale et des familles, partie réglementaire, personnes handicapées (articles R241-28 et R245-36), Légifrance",
+   "date": "consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006745351",
+   "titre": "Article L821-7-1 du code de la sécurité sociale (avance sur droits supposés), Légifrance",
+   "date": "en vigueur depuis le 12 février 2005, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F1650",
+   "titre": "Reconnaissance de la qualité de travailleur handicapé (RQTH), Service Public",
+   "date": "vérifié le 24 mars 2026, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000041404114",
+   "titre": "Article R142-1-A du code de la sécurité sociale (délais de recours), Légifrance",
+   "date": "en vigueur depuis le 1er janvier 2020, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074069/LEGISCTA000037540804/",
+   "titre": "Recours préalable obligatoire, articles R241-35 à R241-41 du code de l'action sociale et des familles, Légifrance",
+   "date": "consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054141072",
+   "titre": "Article L146-10 du code de l'action sociale et des familles (conciliation), Légifrance",
+   "date": "en vigueur depuis le 28 mai 2026, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.monparcourshandicap.gouv.fr/principaux-interlocuteurs/le-defenseur-des-droits",
+   "titre": "Le Défenseur des droits, Mon Parcours Handicap",
+   "date": "consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006797050",
+   "titre": "Article L241-6 du code de l'action sociale et des familles (compétences de la CDAPH), Légifrance",
+   "date": "en vigueur depuis le 17 novembre 2024, consulté le 2026-11-15"
+  }
+ ],
+ "date_verification": "2026-11-15",
+ "a_verifier": [
+  "Le point de départ exact des 4 mois dépend de la date de recevabilité (renvoi de R241-33 à R146-26) : l'article R146-26 n'a pas été lu dans cette session.",
+  "La fiche Service Public F1416 citée dans le brief renvoie une erreur 404 le 15/11/2026 ; les règles viennent de Légifrance, de la fiche R19993 et de Mon Parcours Handicap.",
+  "L'avance sur droits supposés de l'AAH (L821-7-1) est une possibilité (« peut »), pas un droit automatique : la pratique des CAF n'a pas été vérifiée.",
+  "Aucun texte national lu ne prévoit un maintien automatique de tous les droits pendant l'instruction ; seuls l'AAH (avance possible) et la RQTH (prolongation) sont couverts ici.",
+  "Pas de médiateur national propre aux MDPH trouvé dans les textes lus ; certaines MDPH locales en citent un, non vérifié.",
+  "Écart de vocabulaire : L146-10 (version du 28/05/2026) dit que la conciliation « interrompt » les délais de recours, alors que R241-38 dit qu'elle « suspend » le délai du RAPO."
+ ]
+}

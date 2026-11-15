@@ -1,0 +1,413 @@
+{
+  "slug": "aeeh",
+  "title": "AEEH 2026 : montant, 6 compléments et demande",
+  "description": "AEEH de base : 153,01 € par mois depuis le 1er avril 2026. Les 6 catégories de complément, la majoration parent isolé et la demande à la MDPH.",
+  "h1": "AEEH : montant 2026, les 6 catégories de complément et la demande",
+  "chapo": "L'allocation d'éducation de l'enfant handicapé (AEEH) s'élève à **153,01 € par mois depuis le 1er avril 2026**. Elle est versée pour un enfant de moins de 20 ans dont le taux d'incapacité atteint 80 %, ou 50 à 79 % avec un accompagnement adapté. Un complément de 114,76 € (catégorie 1) à 1 298,44 € (catégorie 6) peut s'y ajouter selon vos frais et votre temps de travail.",
+  "en_bref": [
+    "AEEH de base : 153,01 € par mois depuis le 1er avril 2026 (151,80 € en 2025).",
+    "Complément : de 114,76 € (catégorie 1) à 1 298,44 € (catégorie 6) par mois, en plus de la base.",
+    "Majoration parent isolé : de 62,16 € (catégorie 2) à 511,63 € (catégorie 6), rien en catégorie 1.",
+    "Conditions : enfant de moins de 20 ans, taux d'incapacité d'au moins 80 %, ou de 50 à 79 % avec soins ou accompagnement préconisés par la MDPH.",
+    "La MDPH décide, la CAF ou la MSA verse chaque mois. Sans réponse au bout de 4 mois, la demande est considérée comme refusée."
+  ],
+  "urgence": "Si la MDPH refuse l'AEEH ou attribue une catégorie de complément trop basse, vous disposez de 2 mois à partir de la réception de la décision pour déposer un recours administratif préalable obligatoire (RAPO) auprès de la MDPH.",
+  "sections": [
+    {
+      "h2": "À quoi sert l'AEEH et qui décide ?",
+      "blocs": [
+        {
+          "type": "p",
+          "texte": "L'AEEH est une aide financière pour les parents. Elle compense une partie des dépenses liées au handicap de l'enfant : soins, éducation, matériel, mais aussi le temps que vous ne pouvez plus consacrer à votre travail ou le salaire d'une personne qui s'occupe de votre enfant."
+        },
+        {
+          "type": "p",
+          "texte": "Deux organismes interviennent. La **MDPH** (maison départementale des personnes handicapées) reçoit le dossier. En son sein, la **CDAPH** (commission des droits et de l'autonomie des personnes handicapées) fixe le taux d'incapacité de votre enfant et décide de l'allocation et de son éventuel complément. Ensuite, c'est la **CAF**, ou la **MSA** si vous relevez du régime agricole, qui verse l'argent chaque mois."
+        },
+        {
+          "type": "p",
+          "texte": "Le **taux d'incapacité** est une évaluation, en pourcentage, des conséquences du handicap sur la vie quotidienne de l'enfant. Ce n'est pas un diagnostic médical : deux enfants avec la même maladie peuvent avoir des taux différents."
+        }
+      ],
+      "sources": [
+        0,
+        1
+      ]
+    },
+    {
+      "h2": "Votre enfant remplit-il les conditions ?",
+      "blocs": [
+        {
+          "type": "p",
+          "texte": "Selon service-public.gouv.fr (page vérifiée le 1er juin 2026), toutes les conditions suivantes doivent être réunies :"
+        },
+        {
+          "type": "liste",
+          "items": [
+            "**Âge** : l'enfant a moins de 20 ans.",
+            "**Taux d'incapacité d'au moins 80 %**, ou **entre 50 % et moins de 80 %** si l'enfant est accompagné par un établissement ou un service médico-social, un dispositif de scolarisation adapté, ou s'il reçoit des soins ou des rééducations liés à son handicap, préconisés par la CDAPH.",
+            "**Revenus de l'enfant** : s'il travaille, ses revenus professionnels ne dépassent pas 55 % du Smic mensuel brut, soit 1 026,86 €.",
+            "**Résidence** : l'enfant réside de façon permanente en France. Depuis le 1er janvier 2025, cela veut dire au moins 9 mois par année civile en France, et un titre de séjour pour les personnes de nationalité étrangère."
+          ]
+        },
+        {
+          "type": "attention",
+          "texte": "L'AEEH n'est pas versée si l'enfant est en internat avec une prise en charge intégrale des frais de séjour par l'Assurance maladie, l'État ou le département."
+        },
+        {
+          "type": "p",
+          "texte": "Il n'y a pas de condition de ressources des parents pour l'AEEH : vos revenus ne changent pas son montant."
+        }
+      ],
+      "sources": [
+        0,
+        2
+      ]
+    },
+    {
+      "h2": "Combien touche-t-on avec l'AEEH de base en 2026 ?",
+      "blocs": [
+        {
+          "type": "p",
+          "texte": "Le montant mensuel de l'AEEH de base est de **153,01 €** depuis le 1er avril 2026. En 2025, il était de 151,80 €. Ce montant est le même pour tous les enfants qui y ont droit, quel que soit le taux d'incapacité. Il est versé tous les mois et revalorisé en général au printemps."
+        },
+        {
+          "type": "p",
+          "texte": "Si vous avez plusieurs enfants handicapés, chacun ouvre son propre droit, examiné séparément par la MDPH."
+        }
+      ],
+      "sources": [
+        0,
+        2
+      ]
+    },
+    {
+      "h2": "Les 6 catégories de complément : montants au 1er avril 2026",
+      "blocs": [
+        {
+          "type": "p",
+          "texte": "Quand le handicap entraîne des frais importants ou vous oblige à réduire votre activité, la CDAPH peut ajouter un **complément**. Elle classe alors la situation dans une catégorie, de 1 à 6. Plus la catégorie est élevée, plus le complément est important. Le complément s'ajoute à la base de 153,01 €."
+        },
+        {
+          "type": "tableau",
+          "entetes": [
+            "Catégorie",
+            "Complément mensuel",
+            "Total base + complément",
+            "Majoration parent isolé en plus"
+          ],
+          "lignes": [
+            [
+              "1",
+              "114,76 €",
+              "267,77 €",
+              "aucune"
+            ],
+            [
+              "2",
+              "310,80 €",
+              "463,82 €",
+              "62,16 €"
+            ],
+            [
+              "3",
+              "439,91 €",
+              "592,92 €",
+              "86,07 €"
+            ],
+            [
+              "4",
+              "681,71 €",
+              "834,72 €",
+              "272,55 €"
+            ],
+            [
+              "5",
+              "871,26 €",
+              "1 024,27 €",
+              "349,06 €"
+            ],
+            [
+              "6",
+              "1 298,44 €",
+              "1 451,45 €",
+              "511,63 €"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "texte": "Les compléments et majorations viennent du tableau de monparcourshandicap.gouv.fr (en vigueur depuis le 1er avril 2026). Les totaux viennent de service-public.gouv.fr. Un écart d'un centime peut apparaître entre les deux sites à cause des arrondis."
+        },
+        {
+          "type": "p",
+          "texte": "Pour estimer la catégorie qui correspond à votre situation, vous pouvez utiliser notre [calcul de l'AEEH](outils/calcul-aeeh). L'estimation ne remplace pas la décision de la CDAPH."
+        }
+      ],
+      "sources": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "h2": "Ce qui détermine la catégorie : frais, temps de travail, aide extérieure",
+      "blocs": [
+        {
+          "type": "p",
+          "texte": "La CDAPH regarde trois choses : les **dépenses mensuelles** liées au handicap, la **réduction ou l'arrêt de votre activité professionnelle**, et le recours à une **tierce personne** rémunérée (une personne que vous embauchez pour s'occuper de votre enfant). Les critères ci-dessous sont ceux publiés par monparcourshandicap.gouv.fr et service-public.gouv.fr en 2026."
+        },
+        {
+          "type": "tableau",
+          "entetes": [
+            "Catégorie",
+            "Une seule de ces situations suffit"
+          ],
+          "lignes": [
+            [
+              "1",
+              "Dépenses liées au handicap d'au moins 267,77 € par mois."
+            ],
+            [
+              "2",
+              "Activité d'un parent réduite d'au moins 20 % par rapport à un temps plein ; ou tierce personne au moins 8 heures par semaine ; ou dépenses d'au moins 463,82 € par mois."
+            ],
+            [
+              "3",
+              "Activité d'un parent à mi-temps (réduite de 50 %) ; ou tierce personne au moins 20 heures par semaine ; ou réduction d'au moins 20 % ou tierce personne au moins 8 heures par semaine, avec en plus des dépenses d'au moins 282,11 € par mois ; ou dépenses d'au moins 592,92 € par mois."
+            ],
+            [
+              "4",
+              "Un parent cesse toute activité ou tierce personne à temps plein ; ou mi-temps ou tierce personne au moins 20 heures par semaine, avec des dépenses d'au moins 394,82 € par mois ; ou réduction d'au moins 20 % ou tierce personne au moins 8 heures par semaine, avec des dépenses d'au moins 523,92 € par mois ; ou dépenses d'au moins 834,72 € par mois."
+            ],
+            [
+              "5",
+              "Un parent cesse toute activité ou tierce personne à temps plein, avec des dépenses d'au moins 342,55 € par mois."
+            ],
+            [
+              "6",
+              "Un parent cesse toute activité ou tierce personne à temps plein, et l'état de l'enfant impose des contraintes permanentes de surveillance et de soins à la charge de la famille."
+            ]
+          ]
+        },
+        {
+          "type": "exemple",
+          "titre": "Exemple",
+          "texte": "Une mère passe à 80 % pour accompagner son fils à ses séances de rééducation. Sans autre frais, la situation relève en principe de la catégorie 2. Si la famille justifie en plus au moins 282,11 € de dépenses mensuelles liées au handicap (séances non remboursées, matériel, trajets), la catégorie 3 peut être envisagée. C'est la CDAPH qui tranche, au vu des justificatifs."
+        },
+        {
+          "type": "attention",
+          "texte": "Les dépenses non chiffrées ne sont pas prises en compte. Gardez les factures, les tickets et les attestations de séances non remboursées, et joignez un récapitulatif mensuel au dossier."
+        }
+      ],
+      "sources": [
+        0,
+        1
+      ]
+    },
+    {
+      "h2": "La majoration pour parent isolé",
+      "blocs": [
+        {
+          "type": "p",
+          "texte": "Si vous élevez seul votre enfant, une **majoration spécifique** s'ajoute à la base et au complément. Elle n'existe qu'**à partir de la catégorie 2**. Elle est accordée lorsque l'état de l'enfant vous oblige à cesser ou à réduire votre activité professionnelle, ou à recourir à une tierce personne rémunérée."
+        },
+        {
+          "type": "liste",
+          "items": [
+            "Catégorie 2 : 62,16 € par mois, soit 525,98 € au total avec la base et le complément.",
+            "Catégorie 3 : 86,07 €, soit 678,99 € au total.",
+            "Catégorie 4 : 272,55 €, soit 1 107,28 € au total.",
+            "Catégorie 5 : 349,06 €, soit 1 373,32 € au total.",
+            "Catégorie 6 : 511,63 €, soit 1 963,08 € au total."
+          ]
+        },
+        {
+          "type": "p",
+          "texte": "Montants en vigueur depuis le 1er avril 2026. Signalez votre situation de parent isolé dans le dossier MDPH et à la CAF, car la majoration est versée par la caisse."
+        }
+      ],
+      "sources": [
+        0,
+        2
+      ]
+    },
+    {
+      "h2": "AEEH et PCH enfant : comment choisir ?",
+      "blocs": [
+        {
+          "type": "p",
+          "texte": "La prestation de compensation du handicap (PCH) peut aussi être attribuée à un enfant, à condition qu'il ait droit à l'AEEH **et** à un complément. On parle de **droit d'option** : vous ne pouvez pas tout cumuler. Vous choisissez entre :"
+        },
+        {
+          "type": "liste",
+          "items": [
+            "l'AEEH de base avec un complément ;",
+            "l'AEEH de base avec la PCH ;",
+            "l'AEEH de base avec le 3e élément de la PCH (aménagement du logement ou du véhicule, surcoûts de transport) et un complément pour les autres frais."
+          ]
+        },
+        {
+          "type": "p",
+          "texte": "La CDAPH vous propose une comparaison chiffrée des scénarios pour vous aider à choisir. Le détail des éléments de la PCH et de ses tarifs est expliqué dans notre guide sur [la prestation de compensation du handicap](pch)."
+        }
+      ],
+      "sources": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "h2": "Comment faire la demande et combien de temps attendre ?",
+      "blocs": [
+        {
+          "type": "etapes",
+          "items": [
+            "Remplissez le formulaire unique de demande à la MDPH (Cerfa 15692*01), en ligne si votre MDPH le propose ou sur papier. Notre guide du [dossier MDPH](dossier-mdph) le reprend section par section.",
+            "Faites remplir le certificat médical par le médecin qui suit votre enfant (voir [le certificat médical MDPH](certificat-medical-mdph)).",
+            "Décrivez la vie quotidienne de votre enfant et vos besoins (aide pour écrire cette partie : [le projet de vie](projet-de-vie-mdph)). Pour un complément, chiffrez vos dépenses et précisez votre temps de travail.",
+            "Envoyez le dossier à la MDPH de votre lieu de résidence et gardez une copie.",
+            "Attendez la notification de la CDAPH, puis le premier versement de la CAF ou de la MSA."
+          ]
+        },
+        {
+          "type": "p",
+          "texte": "La réponse doit intervenir dans un délai de **4 mois**. Sans réponse au-delà, la demande est considérée comme refusée (on parle de **décision implicite de rejet**). En pratique, les délais varient beaucoup selon les départements : consultez [le classement des délais des MDPH](delais-mdph)."
+        },
+        {
+          "type": "p",
+          "texte": "Le dépôt du dossier est gratuit, directement auprès de la MDPH ou sur mdphenligne.cnsa.fr."
+        }
+      ],
+      "sources": [
+        0,
+        1
+      ]
+    },
+    {
+      "h2": "Durée d'attribution, réexamen et passage à 20 ans",
+      "blocs": [
+        {
+          "type": "liste",
+          "items": [
+            "**Taux de 80 % et plus** : AEEH attribuée pour 3 à 5 ans.",
+            "**Taux de 50 à 79 %** : AEEH attribuée pour 2 à 5 ans.",
+            "**Sans perspective d'amélioration** : l'AEEH de base peut être attribuée sans limitation de durée, jusqu'aux 20 ans de l'enfant, quel que soit le taux.",
+            "**Le complément** a sa propre durée (2 à 5 ans ou 3 à 5 ans selon le taux) et doit être redemandé à la MDPH, même si la base est attribuée sans limitation de durée."
+          ]
+        },
+        {
+          "type": "p",
+          "texte": "Pour éviter une interruption, déposez la demande de renouvellement plusieurs mois avant la date de fin indiquée sur la notification (voir [le renouvellement MDPH](renouvellement-mdph)). À 20 ans, votre enfant peut demander l'[allocation aux adultes handicapés](aah) s'il en remplit les conditions. Si votre enfant décède, l'AEEH, son complément et la majoration continuent d'être versés pendant 3 mois."
+        }
+      ],
+      "sources": [
+        0,
+        1
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Est-ce que l'AEEH dépend des revenus des parents ?",
+      "r": "Non. L'AEEH et ses compléments sont attribués sans condition de ressources des parents. Seuls les revenus professionnels de l'enfant comptent : s'il travaille, ils ne doivent pas dépasser 55 % du Smic mensuel brut, soit 1 026,86 € selon service-public.gouv.fr."
+    },
+    {
+      "q": "L'AEEH est-elle imposable ?",
+      "r": "Non. Monparcourshandicap.gouv.fr indique que le montant de l'AEEH est non imposable. Vous n'avez pas à le déclarer comme un revenu."
+    },
+    {
+      "q": "Peut-on cumuler l'AEEH et l'AJPP ?",
+      "r": "L'allocation journalière de présence parentale (AJPP), versée quand un parent interrompt son travail pour un enfant gravement malade ou handicapé, se cumule avec l'AEEH de base. En revanche, elle ne se cumule pas avec le complément d'AEEH. En attendant la décision de la MDPH, vous pouvez demander à la CAF ou à la MSA d'étudier vos droits à l'AJPP."
+    },
+    {
+      "q": "En garde alternée, qui touche l'AEEH ?",
+      "r": "L'AEEH et ses compléments ne se partagent pas. Ils sont versés à la personne qui a la charge effective de l'enfant, donc à un seul parent. La PCH, elle, peut être partagée sous réserve d'un accord signé entre les deux parents."
+    },
+    {
+      "q": "Peut-on toucher l'AEEH pour un enfant autiste ou TDAH ?",
+      "r": "L'AEEH ne dépend pas d'un diagnostic mais du taux d'incapacité fixé par la MDPH et des besoins de l'enfant. Un enfant avec un trouble du neurodéveloppement peut y avoir droit si son taux atteint 80 %, ou 50 à 79 % avec des soins, une rééducation ou une scolarisation adaptée préconisés par la CDAPH."
+    },
+    {
+      "q": "Comment contester la catégorie de complément AEEH ?",
+      "r": "Vous disposez de 2 mois après réception de la notification pour déposer un recours administratif préalable obligatoire (RAPO) auprès de la MDPH, en joignant la décision. Ensuite, vous pouvez saisir le tribunal judiciaire dans les 2 mois. Les étapes sont détaillées dans notre guide pour [contester une décision de la MDPH](recours-mdph). Pour une situation précise, une association comme APF France handicap ou Unapei, ou un point-justice, peut vous aider."
+    },
+    {
+      "q": "La loi de juin 2026 change-t-elle l'AEEH ?",
+      "r": "La loi n° 2026-492 du 12 juin 2026 prévoit une expérimentation pour raccourcir le traitement des demandes d'AEEH, avec le versement automatique d'une avance en l'absence de réponse. Selon service-public.gouv.fr, ces mesures attendent leurs textes d'application pour entrer en vigueur."
+    }
+  ],
+  "liens_internes": [
+    {
+      "slug": "outils/calcul-aeeh",
+      "ancre": "estimer l'AEEH et la catégorie de complément"
+    },
+    {
+      "slug": "pch",
+      "ancre": "la prestation de compensation du handicap"
+    },
+    {
+      "slug": "delais-mdph",
+      "ancre": "le classement des délais des MDPH"
+    },
+    {
+      "slug": "dossier-mdph",
+      "ancre": "remplir le dossier MDPH"
+    },
+    {
+      "slug": "certificat-medical-mdph",
+      "ancre": "le certificat médical MDPH"
+    },
+    {
+      "slug": "projet-de-vie-mdph",
+      "ancre": "rédiger le projet de vie"
+    },
+    {
+      "slug": "renouvellement-mdph",
+      "ancre": "renouveler ses droits MDPH"
+    },
+    {
+      "slug": "recours-mdph",
+      "ancre": "contester une décision de la MDPH"
+    },
+    {
+      "slug": "aah",
+      "ancre": "l'allocation aux adultes handicapés"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F14809",
+      "titre": "Allocation d'éducation de l'enfant handicapé (AEEH), Service Public",
+      "date": "vérifié le 1er juin 2026, consulté le 2026-11-15"
+    },
+    {
+      "url": "https://www.monparcourshandicap.gouv.fr/aides/lallocation-deducation-de-lenfant-handicape-aeeh",
+      "titre": "L'allocation d'éducation de l'enfant handicapé (AEEH) et ses compléments, Mon Parcours Handicap",
+      "date": "mis à jour le 28/07/2026, consulté le 2026-11-15"
+    },
+    {
+      "url": "https://www.monparcourshandicap.gouv.fr/actualite/montant-de-laeeh-et-complement-aeeh",
+      "titre": "AEEH et compléments : montants 2026, Mon Parcours Handicap",
+      "date": "mis à jour le 01/06/2026, consulté le 2026-11-15"
+    },
+    {
+      "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F14202",
+      "titre": "Prestation de compensation du handicap (PCH), Service Public",
+      "date": "vérifié le 1er juillet 2026, consulté le 2026-11-15"
+    },
+    {
+      "url": "https://www.monparcourshandicap.gouv.fr/aides/la-prestation-de-compensation-du-handicap-pch",
+      "titre": "La prestation de compensation du handicap (PCH), Mon Parcours Handicap",
+      "date": "mis à jour le 06/08/2026, consulté le 2026-11-15"
+    }
+  ],
+  "date_verification": "2026-11-15",
+  "a_verifier": [
+    "Page caf.fr AEEH non lisible pendant la session (rendu JavaScript) : le rôle de versement CAF/MSA est repris de monparcourshandicap.gouv.fr.",
+    "Écarts d'un centime entre les deux sources officielles : complément catégorie 2 (310,80 € sur monparcourshandicap contre 463,82 € moins 153,01 €, soit 310,81 € sur service-public), majoration catégorie 4 (272,55 € contre 272,56 €), majoration catégorie 5 (349,06 € contre 349,05 €).",
+    "Textes d'application de la loi n° 2026-492 du 12 juin 2026 (avance automatique d'AEEH) : non publiés au 15/11/2026 selon service-public, à surveiller.",
+    "Seuil de 1 026,86 € (55 % du Smic brut) : valeur affichée par service-public vérifié le 1er juin 2026, date exacte du Smic de référence non précisée."
+  ]
+}

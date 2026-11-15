@@ -1,0 +1,157 @@
+{
+  "slug": "certificat-medical-mdph",
+  "title": "Certificat médical MDPH (Cerfa 15695) : prix et validité",
+  "description": "Valable 12 mois, rempli par le médecin de votre choix : la 1re consultation est facturée 60 € et remboursée. Volets vision, audition et préparation.",
+  "h1": "Certificat médical MDPH (Cerfa 15695) : qui le remplit, prix et validité",
+  "chapo": "Le certificat médical MDPH est le Cerfa 15695*01, obligatoire pour toute demande. Il est rempli par le médecin de votre choix qui connaît votre handicap, et reste valable 12 mois. Pour une première demande, la consultation est facturée 60 € en métropole (72 € outre-mer), remboursée à 70 % par l'Assurance maladie et 30 % par la mutuelle (Mon Parcours Handicap, mis à jour le 10 août 2026).",
+  "en_bref": [
+    "Formulaire obligatoire : Cerfa 15695*01, pour une première demande comme pour un renouvellement.",
+    "Validité : moins de 12 mois au moment de la demande, depuis le décret n° 2021-391 (avant : 6 mois).",
+    "Prix de la 1re consultation : 60 € en métropole, 72 € outre-mer, soit 42 € Assurance maladie et 18 € mutuelle (août 2026).",
+    "Volet 1 audition (ORL) et volet 2 vision (ophtalmologiste) à joindre en cas de déficience sensorielle avec retentissement.",
+    "Certificat simplifié possible si rien n'a changé depuis le précédent, avec le même médecin."
+  ],
+  "urgence": "Le certificat doit avoir moins de 12 mois quand la MDPH reçoit votre demande : si le vôtre approche de cette limite, déposez le dossier sans attendre ou prévoyez une nouvelle consultation.",
+  "sections": [
+    {
+      "h2": "À quoi sert le certificat médical dans le dossier ?",
+      "blocs": [
+        {"type": "p", "texte": "Le certificat médical **Cerfa 15695*01** est une pièce réglementaire de toute demande à la MDPH, y compris un renouvellement. Il accompagne le formulaire de demande Cerfa 15692*01, détaillé sur la page [dossier MDPH](dossier-mdph). Il sert aux enfants comme aux adultes, quelle que soit la maladie ou la déficience."},
+        {"type": "p", "texte": "Il est destiné à l'**équipe pluridisciplinaire** de la MDPH, qui évalue votre situation. Ce qui compte pour elle n'est pas seulement le diagnostic, mais le **retentissement fonctionnel** : les conséquences concrètes sur la mobilité, la communication, la vie quotidienne, l'école ou le travail. La notice officielle le dit clairement : les informations sur la seule pathologie ne suffisent pas."},
+        {"type": "p", "texte": "Le médecin ne se prononce pas sur l'attribution d'une aide : cette décision revient à la CDAPH, la commission des droits et de l'autonomie des personnes handicapées."}
+      ],
+      "sources": [0, 2, 3]
+    },
+    {
+      "h2": "Qui peut remplir le certificat médical ?",
+      "blocs": [
+        {"type": "p", "texte": "Un **médecin de votre choix**, qui connaît votre handicap, après vous avoir examiné. Ce peut être votre médecin traitant ou un spécialiste (psychiatre, neurologue, pédiatre…). Le certificat doit être rempli, daté, signé et porter le **numéro RPPS** du médecin (répertoire partagé des professionnels de santé)."},
+        {"type": "liste", "items": [
+          "Le médecin vous remet le certificat en main propre. C'est vous qui le joignez au dossier, sous pli confidentiel.",
+          "Il est conseillé au médecin d'en garder une copie, et à vous aussi.",
+          "Si vous ne vous y opposez pas, le médecin de la MDPH pourra reprendre contact avec lui.",
+          "Le volet audition est rempli par un ORL, le volet vision par un ophtalmologiste."
+        ]},
+        {"type": "attention", "texte": "Vous n'arrivez pas à faire remplir le certificat ? Le formulaire de demande contient une ligne pour le signaler à la MDPH (« J'ai rencontré des difficultés pour faire remplir mon certificat médical »). Contactez aussi l'accueil de votre MDPH."}
+      ],
+      "sources": [0, 2, 3, 7]
+    },
+    {
+      "h2": "Combien coûte la consultation et est-elle remboursée ?",
+      "blocs": [
+        {"type": "p", "texte": "Pour une **première demande**, la consultation qui sert à établir le certificat est valorisée comme une « consultation très complexe MDPH ». Selon Mon Parcours Handicap (page mise à jour le 10 août 2026) :"},
+        {"type": "tableau", "entetes": ["", "Métropole", "Outre-mer (DROM)"], "lignes": [
+          ["Tarif de la consultation très complexe MDPH", "60 €", "72 €"],
+          ["Part Assurance maladie (70 %)", "42 €", "non précisé"],
+          ["Part mutuelle (30 %)", "18 €", "non précisé"]
+        ]},
+        {"type": "p", "texte": "Le **tiers payant à 100 %** par l'Assurance maladie est possible si vous êtes en affection de longue durée (ALD) en raison de votre handicap, ou en invalidité."},
+        {"type": "attention", "texte": "Ce tarif ne s'applique pas au certificat simplifié, ni aux volets ORL ou ophtalmologique. Pour un renouvellement, la consultation n'est donc pas forcément facturée à ce tarif : demandez au cabinet en prenant rendez-vous."}
+      ],
+      "sources": [0]
+    },
+    {
+      "h2": "Combien de temps le certificat est-il valable ?",
+      "blocs": [
+        {"type": "p", "texte": "Le certificat doit dater de **moins de 12 mois**. Le décret n° 2021-391 du 2 avril 2021 a porté cette durée de 6 mois à 1 an, dans l'article R. 146-26 du code de l'action sociale et des familles. Service-public.gouv.fr, Mon Parcours Handicap et MDPH en ligne indiquent tous « moins de 1 an » ou « moins de 12 mois »."},
+        {"type": "p", "texte": "Un certificat de moins de 12 mois peut resservir pour une autre demande si votre situation n'a pas évolué et que ses informations sont toujours exactes. Quand le handicap peut évoluer vite, l'équipe de la MDPH peut demander un certificat plus récent."},
+        {"type": "attention", "texte": "La notice officielle 52154 et certaines versions imprimées du formulaire de demande parlent encore de 6 mois. Ces documents n'ont pas été mis à jour : la règle en vigueur est de 12 mois."},
+        {"type": "p", "texte": "Pour caler la consultation avant une fin de droits, l'outil [calendrier de renouvellement](outils/fin-de-droits-mdph) donne la date de validité à viser, et la page [renouvellement MDPH](renouvellement-mdph) explique le reste de la démarche."}
+      ],
+      "sources": [0, 4, 5, 2]
+    },
+    {
+      "h2": "Que contient le Cerfa 15695 ?",
+      "blocs": [
+        {"type": "p", "texte": "Le certificat fait 8 pages. La première est pour vous : vous y notez votre identité, votre numéro de sécurité sociale, votre numéro de dossier MDPH et **vos principaux besoins et attentes**. Le reste est rempli par le médecin."},
+        {"type": "tableau", "entetes": ["Rubrique", "Ce que le médecin y indique"], "lignes": [
+          ["1. Pathologie motivant la demande", "Diagnostic, autres maladies, facteurs de gravité"],
+          ["2. Histoire de la pathologie", "Origine, date d'apparition, antécédents"],
+          ["3. Description clinique actuelle", "Signes invalidants et leur fréquence : permanents, plus de 15 jours par mois, ponctuels"],
+          ["4. Déficiences sensorielles", "Renvoi aux volets audition et vision"],
+          ["5. Traitements et prises en charge", "Médicaments, effets secondaires, soins de nuit, appareillages, suivis (kinésithérapeute, orthophoniste, psychologue, CMP…), perspective d'évolution"],
+          ["6. Retentissement fonctionnel ou relationnel", "Pour chaque activité : sans difficulté, avec difficulté, avec aide humaine, non réalisée. Mobilité, communication, cognition, entretien personnel, vie quotidienne, emploi, scolarité, vie sociale"],
+          ["7. Remarques", "Solutions utiles : aide humaine, aide technique, aménagement du logement"],
+          ["8. Coordonnées et signature", "Identité, RPPS, date de remise en main propre"]
+        ]},
+        {"type": "p", "texte": "Pour un enfant, la rubrique 6 se remplit par comparaison avec un enfant du même âge."}
+      ],
+      "sources": [3, 2]
+    },
+    {
+      "h2": "Les volets vision et audition : quand faut-il les joindre ?",
+      "blocs": [
+        {"type": "p", "texte": "Deux comptes rendus types complètent le certificat. Service-public.gouv.fr les classe comme facultatifs, car ils ne concernent pas tout le monde. Mais en cas de déficience auditive ou visuelle avec des répercussions dans votre vie, la notice précise que la description par un spécialiste est obligatoire."},
+        {"type": "liste", "items": [
+          "**Volet 1, bilan auditif** (annexe 15695-1) : rempli par un ORL, avec les audiogrammes.",
+          "**Volet 2, bilan ophtalmologique** (annexe 15695-2) : rempli par un ophtalmologiste, avec l'acuité visuelle.",
+          "Les bilans d'un orthoptiste ou d'un ergothérapeute spécialisé en basse vision peuvent aussi être joints."
+        ]}
+      ],
+      "sources": [1, 2, 3]
+    },
+    {
+      "h2": "Le certificat simplifié : dans quels cas ?",
+      "blocs": [
+        {"type": "p", "texte": "En bas de la page 1, une case permet au médecin d'attester qu'il n'y a « aucun changement » depuis son précédent certificat. Mon Parcours Handicap fixe quatre conditions :"},
+        {"type": "etapes", "items": [
+          "C'est le même médecin qui a rempli le dernier certificat envoyé à la MDPH.",
+          "Votre état de santé n'a pas changé.",
+          "Les retentissements dans votre vie quotidienne, sociale, scolaire ou professionnelle n'ont pas changé.",
+          "Votre prise en charge médicale n'a pas été modifiée."
+        ]},
+        {"type": "p", "texte": "Si une seule réponse change, le médecin remplit le certificat complet. La notice rappelle que toute évolution peut compter pour l'accès à un nouveau droit : en cas de doute, le certificat complet est plus prudent."}
+      ],
+      "sources": [0, 2]
+    },
+    {
+      "h2": "Comment préparer la consultation et quels comptes rendus joindre ?",
+      "blocs": [
+        {"type": "etapes", "items": [
+          "Prenez un rendez-vous dédié en précisant qu'il s'agit d'un certificat MDPH.",
+          "Remplissez la page 1 du certificat avant la consultation, surtout la question sur vos besoins et attentes.",
+          "Apportez votre brouillon de partie B « vie quotidienne » : les exemples de la page [projet de vie MDPH](projet-de-vie-mdph) aident à le préparer.",
+          "Listez vos traitements, leurs effets secondaires et leurs contraintes (déplacements, horaires, soins de nuit).",
+          "Notez la fréquence de vos symptômes et ce qui se passe les mauvais jours.",
+          "Signalez au médecin que la notice officielle 52154 l'aide à remplir le certificat."
+        ]},
+        {"type": "p", "texte": "Documents à joindre, par le médecin ou par vous : comptes rendus récents d'hospitalisation et de consultations spécialisées, bilans de psychologue, d'ergothérapeute ou d'orthophoniste, bilan d'un centre de ressources autisme, bilan UEROS, avis du médecin du travail si vous en avez un. Un bilan orthophonique est demandé en cas de troubles du langage oral ou écrit avec retentissement important. Pour les troubles psychiques, cognitifs ou neurodéveloppementaux, un questionnaire facultatif comporte une partie destinée au médecin."},
+        {"type": "p", "texte": "Vous avez le droit d'accéder aux informations médicales vous concernant (article L. 1111-7 du code de la santé publique). Gardez une copie de tout ce que vous envoyez."}
+      ],
+      "sources": [2, 3, 6]
+    }
+  ],
+  "faq": [
+    {"q": "Le médecin peut-il envoyer lui-même le certificat à la MDPH ?", "r": "Le circuit prévu est différent : le médecin remet le certificat au patient, qui le joint à son dossier sous pli confidentiel. Sur MDPH en ligne, le certificat fait partie des pièces obligatoires à déposer avec le formulaire. Renseignez-vous auprès de votre MDPH si votre médecin souhaite un autre mode d'envoi."},
+    {"q": "Le certificat médical MDPH peut-il être rempli en ligne ?", "r": "Oui, le Cerfa 15695*01 peut être téléchargé et rempli à la main, ou complété en ligne puis imprimé. Il doit ensuite être daté et signé par le médecin. MDPH en ligne précise que seul ce modèle, daté de moins de 12 mois, est accepté."},
+    {"q": "Un psychiatre peut-il remplir le certificat médical MDPH ?", "r": "Oui. Le certificat est rempli par un médecin de votre choix qui connaît votre handicap, généraliste ou spécialiste. Pour des troubles psychiques, le psychiatre qui vous suit est souvent le mieux placé pour décrire leurs conséquences au quotidien."},
+    {"q": "Faut-il un nouveau certificat pour chaque demande ?", "r": "Pas forcément. Un certificat de moins de 12 mois reste valable pour une nouvelle demande si votre situation n'a pas évolué et que son contenu est toujours exact. Si votre état a changé, un nouveau certificat permettra à la MDPH d'en tenir compte."},
+    {"q": "Le certificat médical MDPH est-il gratuit ?", "r": "Le formulaire est gratuit, mais la consultation est payante comme une consultation médicale. Pour une première demande, elle est facturée 60 € en métropole et remboursée à 70 % par l'Assurance maladie et à 30 % par la mutuelle (tarifs indiqués en août 2026). Avec une ALD liée au handicap ou une pension d'invalidité, le tiers payant à 100 % est possible."},
+    {"q": "Puis-je compléter le certificat si j'estime qu'il manque des informations ?", "r": "Le contenu médical relève du médecin, mais vous pouvez joindre vous-même d'autres comptes rendus et décrire votre quotidien dans la partie B du formulaire de demande. Si vous pensez qu'un élément important manque, parlez-en au médecin avant l'envoi. Une association comme APF France handicap ou l'UNAFAM peut vous aider à préparer ce dialogue."}
+  ],
+  "liens_internes": [
+    {"slug": "dossier-mdph", "ancre": "formulaire de demande Cerfa 15692"},
+    {"slug": "projet-de-vie-mdph", "ancre": "exemples pour la partie vie quotidienne"},
+    {"slug": "outils/fin-de-droits-mdph", "ancre": "calendrier de renouvellement"},
+    {"slug": "renouvellement-mdph", "ancre": "renouvellement MDPH"},
+    {"slug": "delais-mdph", "ancre": "délais des MDPH"}
+  ],
+  "sources": [
+    {"url": "https://www.monparcourshandicap.gouv.fr/demarches/certificat-medical-formulaire-cerfa-ndeg-1569501", "titre": "Certificat médical (formulaire Cerfa n° 15695*01), Mon Parcours Handicap", "date": "Mis à jour le 10/08/2026, consulté le 2026-11-15"},
+    {"url": "https://www.service-public.gouv.fr/particuliers/vosdroits/R19996", "titre": "Certificat médical à joindre à une demande à la MDPH, Cerfa 15695*01, Service Public", "date": "Vérifié le 8 octobre 2018, consulté le 2026-11-15"},
+    {"url": "https://www.formulaires.service-public.gouv.fr/gf/getNotice.do?cerfaNotice=52154&cerfaFormulaire=15695", "titre": "Notice 52154#01, Comprendre et bien remplir le certificat médical de la MDPH", "date": "Consulté le 2026-11-15"},
+    {"url": "https://www.formulaires.service-public.gouv.fr/gf/cerfa_15695.do", "titre": "Formulaire Cerfa 15695*01, Certificat médical à joindre à une demande à la MDPH (PDF, 8 pages)", "date": "Consulté le 2026-11-15"},
+    {"url": "https://www.service-public.gouv.fr/particuliers/vosdroits/R19993", "titre": "Demande ou renouvellement de prestations Handicap, Cerfa 15692*01, Service Public", "date": "Vérifié le 13 juillet 2026, consulté le 2026-11-15"},
+    {"url": "https://mdphenligne.cnsa.fr/", "titre": "MDPH en ligne, téléservice de la CNSA", "date": "Consulté le 2026-11-15"},
+    {"url": "https://www.monparcourshandicap.gouv.fr/aides/le-depot-du-dossier-et-le-traitement-de-la-demande-par-la-maison-departementale-des-personnes", "titre": "Le dépôt du dossier et le traitement de la demande par la MDPH, Mon Parcours Handicap", "date": "Mis à jour le 18/06/2026, consulté le 2026-11-15"},
+    {"url": "https://www.formulaires.service-public.gouv.fr/gf/cerfa_15692.do", "titre": "Formulaire Cerfa 15692*01, Demande à la MDPH (PDF)", "date": "Consulté le 2026-11-15"}
+  ],
+  "date_verification": "2026-11-15",
+  "a_verifier": [
+    "Tarif de 60 € / 72 € : lu uniquement sur Mon Parcours Handicap. La page ameli ou la circulaire CNAM correspondante n'a pas pu être lue (circulaires.ameli.fr inaccessible). Des sites tiers parlent d'une cotation « MPH » créée par l'avenant 9 à la convention médicale au 1er avril 2022, facturable une seule fois par patient : non repris faute de source officielle lue.",
+    "Répartition 42 € / 18 € non précisée pour le tarif outre-mer de 72 €.",
+    "Le décret n° 2021-391 a été lu dans sa version publiée au JO du 4 avril 2021 (copie PDF), pas sur legifrance.gouv.fr directement : ajouter l'URL Légifrance de l'article R. 146-26 du CASF si besoin.",
+    "Écart entre sources officielles : la notice 52154#01 (« durée de validité de 6 mois ») et le Cerfa 15692*01 imprimé (« certificat de moins de 6 mois ») contredisent la règle actuelle de 12 mois (service-public R19993, Mon Parcours Handicap, MDPH en ligne).",
+    "La fiche service-public R19996 affiche « Vérifié le 08 octobre 2018 » : ancienne, mais elle ne donne aucun chiffre contraire."
+  ]
+}

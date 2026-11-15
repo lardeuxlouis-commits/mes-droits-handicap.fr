@@ -1,0 +1,409 @@
+{
+ "slug": "recours-mdph",
+ "title": "Recours MDPH 2026 : RAPO, tribunal et contribution de 50 €",
+ "description": "Contester une décision MDPH : RAPO dans les 2 mois, puis tribunal judiciaire ou administratif. Modèle de lettre vierge et règles du timbre de 50 €.",
+ "h1": "Contester une décision de la MDPH : recours amiable puis tribunal",
+ "chapo": "Pour contester une décision de la MDPH, vous devez d'abord envoyer un recours administratif préalable obligatoire (RAPO) à la MDPH, en principe dans les 2 mois suivant la notification. Si la réponse ne vous convient pas, ou sans réponse après 2 mois, vous avez de nouveau 2 mois pour saisir le tribunal judiciaire ou administratif. Depuis le 1er mars 2026, saisir le tribunal judiciaire peut coûter une contribution de 50 €.",
+ "en_bref": [
+  "RAPO à la MDPH : 2 mois à compter de la notification de la décision, si ce délai y est indiqué.",
+  "Sans réponse au RAPO pendant plus de 2 mois, il est considéré comme rejeté.",
+  "Tribunal : 2 mois de plus ; tribunal judiciaire (pôle social) pour l'AAH, l'AEEH, la PCH ; tribunal administratif pour la RQTH et l'orientation professionnelle.",
+  "Contribution de 50 € pour toute instance introduite depuis le 1er mars 2026 devant un tribunal judiciaire, sauf exceptions, dont l'aide juridictionnelle.",
+  "L'avocat n'est pas obligatoire devant le tribunal pour ces recours."
+ ],
+ "urgence": "Le RAPO doit en principe parvenir à la MDPH dans les 2 mois qui suivent la notification de la décision. Passé ce délai, s'il figurait bien sur la notification, il est trop tard pour contester cette décision.",
+ "sections": [
+  {
+   "h2": "De combien de temps disposez-vous pour contester ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "Le code de la sécurité sociale fixe la règle : « le délai de recours préalable et le délai de recours contentieux sont de **deux mois** à compter de la notification de la décision contestée » (article R142-1-A). Ces délais ne vous sont opposables que s'ils ont été indiqués, avec les voies de recours, dans la notification, ou dans l'accusé de réception pour une décision implicite."
+    },
+    {
+     "type": "tableau",
+     "entetes": [
+      "Étape",
+      "Délai",
+      "Point de départ"
+     ],
+     "lignes": [
+      [
+       "RAPO auprès de la MDPH",
+       "2 mois",
+       "Notification de la décision de la CDAPH"
+      ],
+      [
+       "Réponse de la CDAPH au RAPO",
+       "Silence de plus de 2 mois = rejet",
+       "Envoi du RAPO à la MDPH"
+      ],
+      [
+       "Recours devant le tribunal",
+       "2 mois",
+       "Notification de la réponse au RAPO, ou date du rejet implicite"
+      ]
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "Si la MDPH n'a jamais répondu à votre demande initiale, voir [que faire quand le dossier MDPH reste sans réponse](dossier-mdph-trop-long). Pour poser les dates sur un calendrier, utilisez [le calcul des dates limites de recours](outils/delai-reponse-mdph)."
+    }
+   ],
+   "sources": [
+    0,
+    1
+   ]
+  },
+  {
+   "h2": "Qu'est-ce que le RAPO et pourquoi est-il obligatoire ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "Le **RAPO** (recours administratif préalable obligatoire) est un courrier qui demande à la **CDAPH** (commission des droits et de l'autonomie des personnes handicapées, qui décide au sein de la MDPH) de réexaminer sa décision. Il est obligatoire : sans lui, le tribunal ne peut pas être saisi. Il concerne les décisions qui relèvent du tribunal judiciaire et celles qui relèvent du tribunal administratif (articles R241-35 et R241-36)."
+    },
+    {
+     "type": "liste",
+     "items": [
+      "**Qui peut le faire** : toute personne ou tout organisme intéressé, donc vous, votre représentant légal, ou les parents d'un enfant.",
+      "**Comment l'envoyer** : à la MDPH, « par tout moyen lui conférant date certaine », par exemple en recommandé avec avis de réception ou en dépôt contre récépissé.",
+      "**Ce qu'il contient** : une lettre adressée à la CDAPH et une copie de la décision contestée. Pour une décision implicite, la copie de l'accusé de réception de la demande. La lettre peut exposer vos motifs et les éléments mal pris en compte.",
+      "**Ce qui se passe ensuite** : la situation peut faire l'objet d'une **nouvelle évaluation** par l'équipe pluridisciplinaire, puis la CDAPH statue comme pour une première demande (articles R241-39 et R241-40)."
+     ]
+    },
+    {
+     "type": "attention",
+     "texte": "Le RAPO ne suspend pas la décision contestée, sauf quand la personne ou son représentant conteste une décision qui désigne un établissement ou un service (article R241-37). Pendant le recours, c'est la décision de la MDPH qui s'applique."
+    }
+   ],
+   "sources": [
+    1,
+    15
+   ]
+  },
+  {
+   "h2": "Comment rédiger et envoyer votre lettre de recours ?",
+   "blocs": [
+    {
+     "type": "etapes",
+     "items": [
+      "Relisez la notification : notez la date, le droit concerné, la durée accordée et les motifs donnés.",
+      "Listez ce qui, selon vous, n'a pas été pris en compte : difficultés du quotidien, aggravation récente, besoins à l'école ou au travail.",
+      "Rassemblez des pièces nouvelles si vous en avez : compte rendu médical, bilan, attestation d'un professionnel ou d'un établissement.",
+      "Mettez les documents médicaux sous pli fermé portant la mention « secret médical ».",
+      "Envoyez le tout en recommandé avec avis de réception à la MDPH, ou déposez-le contre récépissé. Gardez une copie complète."
+     ]
+    },
+    {
+     "type": "modele",
+     "titre": "Modèle vierge de lettre de RAPO (à compléter vous-même)",
+     "texte": "[Prénom Nom]\n[Adresse]\n[Code postal, ville]\n[Numéro de dossier MDPH, si vous l'avez]\n\nMaison départementale des personnes handicapées de [département]\nÀ l'attention de la commission des droits et de l'autonomie des personnes handicapées (CDAPH)\n[Adresse de la MDPH]\n\n[Lieu], le [date]\n\nLettre recommandée avec avis de réception\n\nObjet : recours administratif préalable obligatoire contre la décision du [date de la décision] concernant [nom du droit : AAH, PCH, AEEH, orientation…]\n\nMadame, Monsieur,\n\nJe forme un recours administratif préalable obligatoire contre la décision de la CDAPH du [date], notifiée le [date de réception], qui [refuse / accorde partiellement / fixe à … ans la durée de] [nom du droit] pour [moi / mon enfant, Prénom Nom, né(e) le …].\n\n[Si la décision est implicite : J'ai déposé ma demande le [date], comme l'atteste l'accusé de réception joint. Sans réponse depuis plus de 4 mois, cette demande est réputée rejetée.]\n\nJe ne suis pas d'accord avec cette décision pour les raisons suivantes :\n[Raison 1 : élément de votre situation qui n'a pas été pris en compte ou l'a été de façon incomplète]\n[Raison 2 : changement de situation ou aggravation depuis la demande]\n[Raison 3 : difficultés concrètes de la vie quotidienne, de la scolarité ou du travail]\n\nJe demande que ma situation fasse l'objet d'un nouvel examen et, si nécessaire, d'une nouvelle évaluation par l'équipe pluridisciplinaire. [Je souhaite être reçu(e) / entendu(e) par la commission.]\n\nJe joins à ce courrier :\n[Copie de la décision contestée, ou copie de l'accusé de réception de la demande]\n[Nouveaux documents médicaux, sous pli confidentiel portant la mention « secret médical »]\n[Autres pièces : bilans, attestations, courriers de l'établissement ou de l'école]\n\nJe vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.\n\n[Signature]"
+    },
+    {
+     "type": "p",
+     "texte": "Ce modèle est une trame générale. Pour une situation précise, une association (APF France handicap, UNAFAM, Unapei ou une association spécialisée dans votre handicap), un point-justice ou un avocat peut vous aider à rédiger vos arguments."
+    }
+   ],
+   "sources": [
+    0,
+    1,
+    15
+   ]
+  },
+  {
+   "h2": "La conciliation : une autre voie avant le juge",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "En plus du RAPO, vous pouvez demander l'intervention d'une **personne qualifiée** chargée de proposer des **mesures de conciliation**, quand une décision de la CDAPH vous paraît méconnaître vos droits. La liste de ces personnes est établie par la MDPH (article L146-10)."
+    },
+    {
+     "type": "p",
+     "texte": "La conciliation ne fait pas perdre le droit au recours : selon la version de l'article L146-10 en vigueur depuis le 28 mai 2026, son engagement **interrompt les délais de recours**. L'article R241-38 indique, lui, qu'elle **suspend** le délai du RAPO. Dans les deux cas, demandez la conciliation par écrit et gardez la preuve de la date."
+    },
+    {
+     "type": "p",
+     "texte": "Le **Défenseur des droits** peut aussi être saisi gratuitement, en ligne, auprès d'un délégué ou au 09 69 39 00 00. Il privilégie un règlement à l'amiable, mais sa saisine ne remplace pas un recours dans les délais."
+    }
+   ],
+   "sources": [
+    1,
+    7,
+    16
+   ]
+  },
+  {
+   "h2": "Quel tribunal saisir selon la décision contestée ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "Le tribunal dépend du droit en cause (article L241-9 du code de l'action sociale et des familles et article L142-1 du code de la sécurité sociale). L'adresse du tribunal compétent figure sur le courrier de refus."
+    },
+    {
+     "type": "tableau",
+     "entetes": [
+      "Décision contestée",
+      "Tribunal compétent"
+     ],
+     "lignes": [
+      [
+       "AAH, complément de ressources",
+       "Tribunal judiciaire, pôle social"
+      ],
+      [
+       "AEEH et son complément",
+       "Tribunal judiciaire, pôle social"
+      ],
+      [
+       "PCH (prestation de compensation du handicap)",
+       "Tribunal judiciaire, pôle social"
+      ],
+      [
+       "Orientation d'un enfant, désignation d'un établissement ou d'un service",
+       "Tribunal judiciaire, pôle social"
+      ],
+      [
+       "CMI mentions « invalidité » et « priorité »",
+       "Tribunal judiciaire, pôle social"
+      ],
+      [
+       "RQTH (reconnaissance de la qualité de travailleur handicapé)",
+       "Tribunal administratif"
+      ],
+      [
+       "Orientation professionnelle d'un adulte, travail adapté ou protégé (Ésat)",
+       "Tribunal administratif"
+      ]
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "Devant le pôle social, le tribunal est saisi par une **requête** remise au greffe ou envoyée en recommandé avec avis de réception. Elle contient un exposé sommaire des motifs, la liste des pièces, une copie de la décision contestée et de votre RAPO. Vous pouvez y indiquer le médecin qui recevra les documents médicaux (article R142-10-1). Vous n'êtes pas obligé de prendre un avocat. Le juge peut demander une consultation médicale."
+    }
+   ],
+   "sources": [
+    2,
+    3,
+    4,
+    5,
+    6
+   ]
+  },
+  {
+   "h2": "La contribution de 50 € : qui doit la payer ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "La loi de finances pour 2026 (loi n° 2026-103 du 19 février 2026, article 128) a créé une **contribution pour l'aide juridique de 50 €**, inscrite à l'article 1635 bis Q du code général des impôts. Elle est « perçue par instance introduite en matière civile et prud'homale devant un **tribunal judiciaire** ou un conseil de prud'hommes ». Elle s'applique aux instances introduites **à compter du 1er mars 2026**. Ses modalités sont fixées par le **décret n° 2026-250 du 7 avril 2026**."
+    },
+    {
+     "type": "liste",
+     "items": [
+      "**Qui paie** : la partie qui introduit l'instance, en première instance.",
+      "**Comment** : par un timbre fiscal électronique, acheté uniquement en ligne, à joindre au dossier. Il est valable 12 mois et remboursable pendant 18 mois s'il n'a pas servi.",
+      "**En cas d'oubli** : le greffe vous invite à régulariser dans un délai d'un mois. Sans régularisation, la demande est irrecevable.",
+      "**Tribunal administratif** : l'article 1635 bis Q ne vise que le tribunal judiciaire et le conseil de prud'hommes. Un recours au tribunal administratif (RQTH, orientation professionnelle) n'entre donc pas dans son champ."
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "**Exonérations prévues par les textes nationaux** : la contribution n'est pas due par les **bénéficiaires de l'aide juridictionnelle**, totale ou partielle, ni par l'État. Elle n'est pas due non plus devant la CIVI, le juge des enfants, le juge des libertés et de la détention ou le juge des tutelles, ni pour le surendettement, le redressement et la liquidation judiciaires, les ordonnances de protection, certaines procédures électorales, l'injonction de payer et l'homologation de la convention parentale. Le décret ajoute les procédures qu'une loi déclare « sans frais » et les instances successives liées à un même litige devant la même juridiction."
+    },
+    {
+     "type": "attention",
+     "texte": "Aucune des listes nationales lues ne cite le contentieux du handicap ou de la sécurité sociale parmi les exceptions. Une question écrite au Sénat (7 mai 2026) part du principe que le pôle social est concerné, et la réponse du ministère (30 juillet 2026) ne le dément pas. Avant de saisir le pôle social, vérifiez auprès du greffe ou d'un point-justice si le timbre est exigé pour votre recours."
+    }
+   ],
+   "sources": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+   ]
+  },
+  {
+   "h2": "L'aide juridictionnelle et les autres soutiens",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "L'**aide juridictionnelle** prend en charge tout ou partie des frais d'un procès. Elle dispense aussi de la contribution de 50 €. Il suffit de joindre à la requête la décision qui l'accorde ou, si elle n'est pas encore rendue, la copie de la demande et son justificatif de dépôt. Si l'aide est ensuite refusée, vous avez un mois pour payer la contribution."
+    },
+    {
+     "type": "tableau",
+     "entetes": [
+      "Personne seule : revenu fiscal de référence annuel",
+      "Aide juridictionnelle"
+     ],
+     "lignes": [
+      [
+       "Jusqu'à 12 957 €",
+       "Totale (100 %)"
+      ],
+      [
+       "De 12 958 € à 15 316 €",
+       "Partielle (55 %)"
+      ],
+      [
+       "De 15 317 € à 19 433 €",
+       "Partielle (25 %)"
+      ]
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "Ces plafonds sont ceux affichés par Service Public pour une personne seule (fiche vérifiée le 12 juin 2026). Ils augmentent avec la taille du foyer, et le patrimoine compte aussi. Un simulateur officiel est proposé sur la fiche."
+    },
+    {
+     "type": "p",
+     "texte": "Pour être accompagné sur une situation précise, adressez-vous à une association du handicap, à un point-justice (lieu d'accès au droit gratuit) ou à un avocat. Pour les règles de l'AAH elle-même, voir [le guide de l'AAH](aah)."
+    }
+   ],
+   "sources": [
+    12,
+    14
+   ]
+  }
+ ],
+ "faq": [
+  {
+   "q": "Peut-on faire un recours MDPH par mail ?",
+   "r": "Le texte demande un envoi « par tout moyen conférant date certaine ». Un courriel simple ne le garantit pas toujours. Le recommandé avec avis de réception ou le dépôt contre récépissé restent les moyens les plus sûrs. Certaines MDPH acceptent un dépôt via leur téléservice : vérifiez qu'il délivre un accusé de réception daté."
+  },
+  {
+   "q": "Combien de temps la MDPH met-elle pour répondre à un recours ?",
+   "r": "La CDAPH a 2 mois. Au-delà, son silence vaut rejet du recours, et le délai de 2 mois pour saisir le tribunal commence à courir. Une réponse écrite peut toutefois arriver plus tard."
+  },
+  {
+   "q": "Peut-on contester seulement la durée accordée ?",
+   "r": "Oui. Une décision qui accorde un droit pour une durée plus courte que celle attendue, ou un taux différent, est une décision de la CDAPH comme une autre. Elle peut faire l'objet d'un RAPO dans les mêmes délais."
+  },
+  {
+   "q": "Peut-on refaire une demande au lieu de faire un recours ?",
+   "r": "Vous pouvez déposer une nouvelle demande, notamment si votre situation a changé. Mais une nouvelle demande ne conteste pas la décision précédente et repart sur un nouveau délai d'instruction. Le recours est la seule voie pour faire réexaminer la décision déjà rendue."
+  },
+  {
+   "q": "Faut-il un avocat pour aller au tribunal contre la MDPH ?",
+   "r": "Non, ce n'est pas obligatoire. Vous pouvez expliquer vous-même votre situation au juge. Un avocat, un point-justice ou une association peut vous aider, et l'aide juridictionnelle peut prendre en charge les honoraires selon vos ressources."
+  },
+  {
+   "q": "Le timbre de 50 € est-il remboursé si on gagne ?",
+   "r": "La circulaire du ministère de la Justice range la contribution parmi les **dépens**, c'est-à-dire les frais du procès que le juge peut mettre à la charge de la partie perdante. Le remboursement dépend donc de ce que décide le jugement."
+  }
+ ],
+ "liens_internes": [
+  {
+   "slug": "dossier-mdph-trop-long",
+   "ancre": "que faire quand le dossier MDPH reste sans réponse"
+  },
+  {
+   "slug": "outils/delai-reponse-mdph",
+   "ancre": "le calcul des dates limites de recours"
+  },
+  {
+   "slug": "aah",
+   "ancre": "le guide de l'AAH"
+  },
+  {
+   "slug": "delais-mdph",
+   "ancre": "les délais des MDPH"
+  }
+ ],
+ "sources": [
+  {
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000041404114",
+   "titre": "Article R142-1-A du code de la sécurité sociale (délais de recours de 2 mois), Légifrance",
+   "date": "en vigueur depuis le 1er janvier 2020, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074069/LEGISCTA000037540804/",
+   "titre": "Recours préalable obligatoire, articles R241-35 à R241-41 du code de l'action sociale et des familles, Légifrance",
+   "date": "consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006797053",
+   "titre": "Article L241-9 du code de l'action sociale et des familles (tribunal compétent), Légifrance",
+   "date": "en vigueur depuis le 1er janvier 2020, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006797050",
+   "titre": "Article L241-6 du code de l'action sociale et des familles (compétences de la CDAPH), Légifrance",
+   "date": "en vigueur depuis le 17 novembre 2024, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000051288452",
+   "titre": "Article L142-1 du code de la sécurité sociale (contentieux de la sécurité sociale), Légifrance",
+   "date": "version en vigueur depuis le 1er novembre 2026, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.cnsa.fr/sites/default/files/2024-03/FALC_cnsa_19-04_fiches-facilealire_voies-recours_mdph-recours_tribunal.pdf",
+   "titre": "Comment se passe un recours auprès du tribunal ? (fiche facile à lire), CNSA",
+   "date": "fiche mise à jour en octobre 2020, consultée le 2026-11-15"
+  },
+  {
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000041404220",
+   "titre": "Article R142-10-1 du code de la sécurité sociale (requête au tribunal), Légifrance",
+   "date": "en vigueur depuis le 1er janvier 2020, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054141072",
+   "titre": "Article L146-10 du code de l'action sociale et des familles (conciliation), Légifrance",
+   "date": "en vigueur depuis le 28 mai 2026, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000053547096",
+   "titre": "Article 1635 bis Q du code général des impôts (contribution pour l'aide juridique), Légifrance",
+   "date": "version en vigueur depuis le 1er juillet 2026, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053773242",
+   "titre": "Décret n° 2026-250 du 7 avril 2026 relatif à la contribution pour l'aide juridique, Journal officiel, Légifrance",
+   "date": "consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.service-public.gouv.fr/particuliers/actualites/A18826",
+   "titre": "Instauration d'une contribution pour saisir la justice, Service Public",
+   "date": "publié le 2 mars 2026, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F33227",
+   "titre": "Comment acheter un timbre fiscal pour engager une procédure civile ou faire appel d'une décision civile ?, Service Public",
+   "date": "vérifié le 10 avril 2026, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.justice.gouv.fr/sites/default/files/2026-04/JUSC2609612C.pdf",
+   "titre": "Circulaire de présentation de la contribution pour l'aide juridique (JUSC2609612C), ministère de la Justice",
+   "date": "avril 2026, consultée le 2026-11-15"
+  },
+  {
+   "url": "https://www.senat.fr/questions/base/2026/qSEQ260508667.html",
+   "titre": "Question écrite n° 08667 sur le timbre de 50 euros (pôle social) et réponse du ministère de la Justice, Sénat",
+   "date": "question du 7 mai 2026, réponse publiée le 30 juillet 2026, consultée le 2026-11-15"
+  },
+  {
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F18074",
+   "titre": "Aide juridictionnelle, Service Public",
+   "date": "vérifié le 12 juin 2026, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.monparcourshandicap.gouv.fr/sites/default/files/2020-05/recours%20aupr%C3%A8s%20de%20la%20mdph-facile%20%C3%A0%20lire%20et%20%C3%A0%20comprendre.pdf",
+   "titre": "Comment se passe un recours auprès de la MDPH ? (fiche facile à lire), Mon Parcours Handicap",
+   "date": "consultée le 2026-11-15"
+  },
+  {
+   "url": "https://www.monparcourshandicap.gouv.fr/principaux-interlocuteurs/le-defenseur-des-droits",
+   "titre": "Le Défenseur des droits, Mon Parcours Handicap",
+   "date": "consulté le 2026-11-15"
+  }
+ ],
+ "date_verification": "2026-11-15",
+ "a_verifier": [
+  "Contribution de 50 € et pôle social : aucune source nationale lue ne dit explicitement si un recours contre une décision de la CDAPH devant le tribunal judiciaire (pôle social) y est soumis. Le champ légal (« matière civile » devant le tribunal judiciaire) et la question écrite au Sénat du 07/05/2026 laissent penser que oui. Reste à savoir si une disposition législative déclare ce contentieux « sans frais » (exception de l'article 62 du code de procédure civile). Texte non trouvé, à confirmer auprès d'un greffe ou du ministère.",
+  "CMI mention « stationnement » : l'article L142-1 9° du code de la sécurité sociale ne vise que les mentions « invalidité » et « priorité » ; le tribunal compétent pour la mention stationnement n'a pas été confirmé sur une source officielle lue (souvent cité comme administratif).",
+  "Écart entre textes : L146-10 (version du 28/05/2026) dit que la conciliation « interrompt » les délais de recours, R241-38 dit qu'elle « suspend » le délai du RAPO.",
+  "La fiche Service Public F1416 citée dans le brief renvoie une erreur 404 le 15/11/2026 ; aucune fiche Service Public dédiée au recours MDPH n'a été trouvée, les règles viennent de Légifrance et des fiches CNSA et Mon Parcours Handicap.",
+  "Plafonds de l'aide juridictionnelle : seuls ceux d'une personne seule sont repris ; montants de la fiche vérifiée le 12/06/2026, année de revenus de référence non précisée ici.",
+  "La date exacte de la question écrite au Sénat (n° 08667) et son numéro sont déduits de l'URL ; contenu lu sur senat.fr."
+ ]
+}

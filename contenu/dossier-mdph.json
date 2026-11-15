@@ -1,0 +1,407 @@
+{
+  "slug": "dossier-mdph",
+  "title": "Dossier MDPH 2026 : remplir le Cerfa 15692 pas à pas",
+  "description": "Le Cerfa 15692 se remplit par parties, de A à F. Ce qu'il faut remplir selon votre cas, les 4 pièces obligatoires et comment déposer le dossier.",
+  "h1": "Dossier MDPH : remplir le formulaire Cerfa 15692 section par section",
+  "chapo": "Le dossier MDPH, c'est le formulaire gratuit Cerfa 15692*01, à remplir sur mdphenligne.cnsa.fr ou sur papier. Partie A toujours, B pour une première demande, C et D selon l'école ou le travail. Joignez un certificat médical de moins d'un an, une pièce d'identité et un justificatif de domicile. Sans réponse en 4 mois, la demande est réputée rejetée (règle au 15 novembre 2026).",
+  "en_bref": [
+    "Un seul formulaire pour toutes les demandes : Cerfa 15692*01, une vingtaine de pages, gratuit.",
+    "4 pièces obligatoires : formulaire, certificat médical de moins de 12 mois, pièce d'identité, justificatif de domicile.",
+    "Renouvellement sans changement : parties A et E seulement. Première demande : A, B, puis C ou D si besoin.",
+    "Dépôt en ligne sur mdphenligne.cnsa.fr si votre MDPH y figure, sinon par courrier, de préférence en recommandé avec avis de réception.",
+    "Réponse attendue dans un délai de 4 mois : au-delà, le silence vaut rejet."
+  ],
+  "urgence": "Sans réponse de la MDPH 4 mois après le dépôt, votre demande est considérée comme rejetée. Gardez l'accusé de réception : sa date sert de point de départ pour calculer vos délais.",
+  "sections": [
+    {
+      "h2": "Où trouver le formulaire et comment le déposer ?",
+      "blocs": [
+        {
+          "type": "p",
+          "texte": "Le formulaire de demande porte le numéro **Cerfa 15692*01**. Il sert à toutes les demandes : AAH, AEEH, PCH, carte mobilité inclusion, RQTH (reconnaissance de la qualité de travailleur handicapé), orientation vers un établissement, aides à la scolarisation. Il est disponible uniquement en français et la démarche est gratuite. Vous pouvez le télécharger sur service-public.gouv.fr ou monparcourshandicap.gouv.fr, ou le demander à l'accueil de votre MDPH (maison départementale des personnes handicapées)."
+        },
+        {
+          "type": "tableau",
+          "entetes": [
+            "Mode de dépôt",
+            "Comment faire",
+            "À savoir"
+          ],
+          "lignes": [
+            [
+              "En ligne",
+              "Créer un compte sur mdphenligne.cnsa.fr (ou FranceConnect), déposer un formulaire dans « Mon dossier », joindre les pièces, signer",
+              "Seules certaines MDPH utilisent ce service : vérifiez la liste sur le site"
+            ],
+            [
+              "Par courrier",
+              "Envoyer le formulaire et les pièces à la MDPH de votre lieu de résidence",
+              "Service-public.gouv.fr conseille la lettre recommandée avec avis de réception"
+            ],
+            [
+              "Sur place",
+              "Déposer le dossier à l'accueil de la MDPH",
+              "Appelez avant pour connaître les horaires"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "texte": "La MDPH compétente est celle de votre résidence principale, c'est-à-dire votre résidence habituelle depuis plus de trois mois (hors accueil en établissement). Si vous vous trompez de MDPH, elle transmet le dossier à la bonne et vous prévient. Sur MDPH en ligne, vous pouvez aussi créer un profil pour un autre bénéficiaire, par exemple votre enfant, et depuis le 11 juin 2026 partager l'accès à un dossier avec un proche."
+        }
+      ],
+      "sources": [
+        0,
+        1,
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "h2": "Quelles parties remplir selon votre situation ?",
+      "blocs": [
+        {
+          "type": "p",
+          "texte": "Le formulaire compte six parties repérées par une lettre et une couleur. Vous n'avez pas à tout remplir : la page 1 du Cerfa indique le chemin selon votre cas."
+        },
+        {
+          "type": "tableau",
+          "entetes": [
+            "Votre situation",
+            "Parties à remplir"
+          ],
+          "lignes": [
+            [
+              "Première demande",
+              "A et B, plus C si la demande concerne l'école ou les études, plus D si elle concerne le travail. E est conseillée pour préciser vos demandes"
+            ],
+            [
+              "Votre situation médicale, familiale, administrative ou votre projet a changé",
+              "A et B, plus C ou D si besoin"
+            ],
+            [
+              "Vous demandez une réévaluation ou une révision de vos droits",
+              "A et B, plus C ou D si besoin"
+            ],
+            [
+              "Renouvellement à l'identique, situation inchangée",
+              "A et E. Vous pouvez remplir le reste si vous le souhaitez"
+            ],
+            [
+              "Votre aidant familial veut parler de sa situation",
+              "F, en plus des autres parties"
+            ]
+          ]
+        },
+        {
+          "type": "attention",
+          "texte": "Cocher « renouvellement à l'identique » alors que votre état ou vos besoins ont changé prive l'équipe d'évaluation des informations nouvelles. Si quelque chose a changé, remplissez aussi la partie B."
+        }
+      ],
+      "sources": [
+        2,
+        5
+      ]
+    },
+    {
+      "h2": "Partie A : identité, situation urgente et signature",
+      "blocs": [
+        {
+          "type": "p",
+          "texte": "La partie A est obligatoire dans tous les cas. Elle demande l'identité de la personne concernée, son numéro de sécurité sociale, son organisme payeur (CAF ou MSA) et son numéro d'allocataire. Pour un enfant, vous indiquez qui exerce l'autorité parentale et, en cas de séparation, de délégation d'autorité parentale ou de tutelle, vous joignez la copie du jugement."
+        },
+        {
+          "type": "liste",
+          "items": [
+            "**Mesure de protection** : type de mesure (tutelle, curatelle, habilitation familiale) et coordonnées de la personne qui l'exerce.",
+            "**Aide dans vos démarches** : vous pouvez nommer un proche ou une association et accepter que la MDPH les contacte.",
+            "**Traitement rapide** : des cases à cocher si vous arrivez dans moins de 2 mois à la fin de vos droits, si vous ne pouvez plus vivre chez vous, si l'école ne peut plus accueillir l'enfant, si vous sortez d'hospitalisation sans solution, si vous risquez de perdre votre emploi ou si vous commencez bientôt un travail ou une formation.",
+            "**Procédure simplifiée** : possible pour un renouvellement sans changement, une RQTH, l'affiliation de l'aidant à l'assurance vieillesse ou une situation d'urgence. En contrepartie, vous ne pourrez pas être reçu par la CDAPH, la commission qui prend les décisions.",
+            "**Échanges avec vos professionnels** : vous acceptez ou refusez que la MDPH échange avec ceux qui vous accompagnent.",
+            "**Certificat médical difficile à obtenir** : une ligne permet de le signaler."
+          ]
+        },
+        {
+          "type": "p",
+          "texte": "La page de signature se signe par la personne concernée, son représentant légal ou les deux parents pour un mineur. Cochez la case qui certifie l'exactitude des informations."
+        }
+      ],
+      "sources": [
+        5,
+        0
+      ]
+    },
+    {
+      "h2": "Partie B : décrire votre vie quotidienne",
+      "blocs": [
+        {
+          "type": "p",
+          "texte": "La partie B remplace l'ancien « projet de vie ». Elle se remplit pour une première demande ou quand votre situation a changé. Elle n'est pas une pièce obligatoire pour que le dossier soit recevable, mais l'équipe pluridisciplinaire (médecins, travailleurs sociaux, ergothérapeutes…) évalue vos besoins en tenant compte de ce que vous y écrivez."
+        },
+        {
+          "type": "liste",
+          "items": [
+            "**B1, votre situation** : où et avec qui vous vivez, les aides et revenus perçus dans les 12 mois précédant la demande (AAH, RSA, pension d'invalidité, indemnités journalières, rente d'accident du travail…).",
+            "**B2, vos besoins** : hygiène, habillage, repas, courses, ménage, santé, budget, déplacements, vie sociale, avec les frais liés au handicap qui restent à votre charge.",
+            "**B3, vos attentes** : aide humaine, matériel, aménagement du logement ou du véhicule, aide financière, vie à domicile ou en établissement.",
+            "**Une zone libre** pour tout ce qui ne rentre pas dans les cases."
+          ]
+        },
+        {
+          "type": "p",
+          "texte": "Pour un enfant, on décrit ses besoins à lui, en les comparant à ceux d'un enfant du même âge. Les modèles de rédaction, situation par situation, sont sur la page [projet de vie MDPH](projet-de-vie-mdph)."
+        },
+        {
+          "type": "p",
+          "texte": "Justificatifs utiles pour cette partie : factures ou devis des frais déclarés, attestation d'emploi ou facture d'un service à domicile précisant les heures d'aide, justificatif de pension avec majoration tierce personne, et pour un parent qui a réduit son activité, contrat de travail, bulletin de salaire ou attestation de l'employeur."
+        }
+      ],
+      "sources": [
+        3,
+        5
+      ]
+    },
+    {
+      "h2": "Parties C et D : école, études et travail",
+      "blocs": [
+        {
+          "type": "p",
+          "texte": "**La partie C** concerne la scolarité ou les études. Vous y indiquez le type de scolarisation (milieu ordinaire, temps partagé avec un établissement médico-social, domicile, études supérieures), les aides déjà en place (aide humaine, matériel, transport, aménagements pédagogiques), l'emploi du temps de la semaine avec les soins, et les besoins pour apprendre, communiquer, se déplacer."
+        },
+        {
+          "type": "attention",
+          "texte": "Pour un enfant scolarisé, joignez le **GEVA-Sco**, un document rempli avec le directeur d'école pour une première demande ou avec l'enseignant référent pour un réexamen. Le formulaire le demande impérativement pour tout renouvellement d'aide à la scolarisation. Le directeur peut vous donner les coordonnées de l'enseignant référent."
+        },
+        {
+          "type": "p",
+          "texte": "**La partie D** concerne votre situation professionnelle : emploi actuel et aménagements de poste, arrêt de travail, visite de pré-reprise avec le médecin du travail, accompagnement par France Travail, Cap emploi ou une mission locale, parcours, diplômes et projet. Joignez si possible la dernière fiche du médecin du travail, un CV et, si vous êtes à temps partiel, une copie du contrat."
+        },
+        {
+          "type": "p",
+          "texte": "Une demande d'AAH oblige la MDPH à examiner aussi la RQTH et l'orientation professionnelle : remplissez la partie D dans ce cas. Si vous touchez déjà l'AAH, une carte mobilité inclusion mention invalidité ou une pension d'invalidité qui réduit d'au moins deux tiers votre capacité de travail, vous bénéficiez déjà de l'obligation d'emploi et la demande de RQTH est inutile, précise le formulaire. Le détail est sur la page [RQTH](rqth)."
+        }
+      ],
+      "sources": [
+        5
+      ]
+    },
+    {
+      "h2": "Parties E et F : vos demandes et la place de l'aidant",
+      "blocs": [
+        {
+          "type": "p",
+          "texte": "**La partie E** liste les droits que vous pouvez demander, classés selon l'âge. Avant 20 ans : AEEH et ses compléments, PCH, carte mobilité inclusion, affiliation gratuite des parents à l'assurance vieillesse. À partir de 20 ans : AAH, orientation vers un établissement ou service, PCH, carte mobilité inclusion. S'y ajoutent les demandes liées à l'école (E2) et au travail (E3 : RQTH, orientation vers un ESAT, emploi accompagné, centre de rééducation professionnelle)."
+        },
+        {
+          "type": "p",
+          "texte": "Cocher une case n'est pas une condition pour être évalué : à partir de ce que vous décrivez, l'équipe de la MDPH peut proposer à la CDAPH d'ouvrir des droits que vous n'avez pas cochés."
+        },
+        {
+          "type": "p",
+          "texte": "**La partie F** est facultative. Elle permet à l'aidant familial, la personne de l'entourage qui aide au quotidien, de décrire l'aide qu'il apporte et ses propres besoins : répit, remplacement en cas d'imprévu, soutien psychologique, maintien de son emploi. S'il y a plusieurs aidants, chacun remplit sa feuille."
+        }
+      ],
+      "sources": [
+        5,
+        3
+      ]
+    },
+    {
+      "h2": "Quelles pièces joindre au dossier ?",
+      "blocs": [
+        {
+          "type": "p",
+          "texte": "Sans ces pièces, le dossier n'est pas complet :"
+        },
+        {
+          "type": "liste",
+          "items": [
+            "le formulaire Cerfa 15692*01 daté et signé ;",
+            "le **certificat médical** Cerfa 15695*01 original, de moins de 12 mois, avec les volets vision ou audition si besoin (tout est expliqué sur la page [certificat médical MDPH](certificat-medical-mdph)) ;",
+            "la photocopie recto verso d'une pièce d'identité ou d'un titre de séjour, et celle du représentant légal le cas échéant ;",
+            "un justificatif de domicile : celui du représentant légal pour un enfant, et pour une personne hébergée, le justificatif de l'hébergeant avec son attestation sur l'honneur ;",
+            "l'attestation de jugement si vous êtes sous protection juridique."
+          ]
+        },
+        {
+          "type": "p",
+          "texte": "Pièces utiles, sans être obligatoires : la copie du livret de famille pour une première demande, les comptes rendus d'hospitalisation ou de bilans, le justificatif d'une pension d'invalidité. Deux questionnaires facultatifs existent aussi, l'un pour les maladies ou handicaps rares, l'autre pour les troubles psychiques, cognitifs ou neurodéveloppementaux (TND). La MDPH ne peut pas les exiger."
+        },
+        {
+          "type": "attention",
+          "texte": "Certaines versions imprimées du Cerfa 15692 mentionnent encore un certificat « de moins de 6 mois ». La règle actuelle est un certificat de moins d'un an, comme l'indiquent service-public.gouv.fr et MDPH en ligne."
+        }
+      ],
+      "sources": [
+        0,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "h2": "Après l'envoi : accusé de réception et pièces manquantes",
+      "blocs": [
+        {
+          "type": "etapes",
+          "items": [
+            "Avant d'envoyer, photocopiez le formulaire rempli et le certificat médical : ils vous resserviront.",
+            "À réception, la MDPH vous envoie un **accusé de réception**. Gardez-le.",
+            "S'il manque une pièce obligatoire, la MDPH la réclame dans l'accusé de réception et fixe un délai pour l'envoyer.",
+            "Le dossier passe ensuite à l'équipe pluridisciplinaire, qui peut vous demander un rendez-vous ou venir à domicile, puis à la CDAPH, qui décide.",
+            "La décision arrive par courrier, appelé notification."
+          ]
+        },
+        {
+          "type": "p",
+          "texte": "Pour l'AEEH, l'AAH, la majoration pour la vie autonome et la PCH, la date de dépôt sert à fixer la date d'ouverture des droits : mieux vaut déposer tôt, quitte à compléter ensuite. Pour la rentrée scolaire, la MDPH conseille de déposer entre janvier et mars. Pour un renouvellement, voir la page [renouvellement MDPH](renouvellement-mdph)."
+        },
+        {
+          "type": "p",
+          "texte": "Les délais varient beaucoup d'un département à l'autre : consultez le [classement des délais des MDPH](delais-mdph). Si le dossier n'avance pas, la page [dossier MDPH sans réponse](dossier-mdph-trop-long) explique comment relancer, et l'outil [date du refus implicite](outils/delai-reponse-mdph) calcule l'échéance des 4 mois."
+        }
+      ],
+      "sources": [
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "h2": "Les oublis qui retardent le plus souvent un dossier",
+      "blocs": [
+        {
+          "type": "liste",
+          "items": [
+            "Formulaire non signé, ou signé par un seul parent quand les deux exercent l'autorité parentale.",
+            "Certificat médical de plus de 12 mois, ou sans le numéro RPPS du médecin.",
+            "Justificatif de domicile de l'hébergeant sans son attestation sur l'honneur.",
+            "Jugement de protection ou de séparation des parents non joint.",
+            "Partie B laissée vide lors d'une première demande : rien n'interdit de déposer, mais l'équipe n'a que le certificat pour comprendre votre quotidien.",
+            "GEVA-Sco absent pour un renouvellement d'aide à la scolarisation."
+          ]
+        },
+        {
+          "type": "p",
+          "texte": "Pour vous faire aider à remplir le dossier : l'accueil de la MDPH, le CCAS (centre communal d'action sociale) de votre mairie, ou une association comme APF France handicap, l'Unapei ou l'UNAFAM. Pendant l'évaluation, vous pouvez aussi être accompagné par la personne de votre choix."
+        }
+      ],
+      "sources": [
+        0,
+        3,
+        5,
+        7
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Où avoir un dossier MDPH ?",
+      "r": "Vous pouvez le télécharger sur service-public.gouv.fr ou monparcourshandicap.gouv.fr, le demander à l'accueil de votre MDPH, ou le remplir directement sur mdphenligne.cnsa.fr si votre MDPH utilise ce service. Le formulaire est le même partout en France : Cerfa 15692*01."
+    },
+    {
+      "q": "Où puis-je trouver le formulaire Cerfa n°15695*01 ?",
+      "r": "Le Cerfa 15695*01 est le certificat médical, à ne pas confondre avec le formulaire de demande. Il se télécharge sur service-public.gouv.fr (page R19996), avec sa notice et ses deux volets vision et audition. Votre médecin peut le remplir sur papier ou en ligne avant de l'imprimer."
+    },
+    {
+      "q": "Où puis-je télécharger le formulaire de demande MDPH ?",
+      "r": "Sur la page R19993 de service-public.gouv.fr (bouton « Remplir le formulaire ») ou sur la fiche « Formulaire de demande à la MDPH » de monparcourshandicap.gouv.fr, en PDF. Le téléchargement et la démarche sont gratuits."
+    },
+    {
+      "q": "Comment savoir si on a le droit à la MDPH ?",
+      "r": "La MDPH s'occupe des aides liées à un handicap, c'est-à-dire une limitation durable dans la vie quotidienne, sociale, scolaire ou professionnelle due à une altération physique, sensorielle, mentale, cognitive ou psychique, ou à un trouble de santé invalidant. Il n'y a pas de test préalable : c'est le dépôt du dossier qui déclenche l'évaluation. Vous pouvez vous renseigner avant à l'accueil de votre MDPH, par téléphone, courrier ou e-mail."
+    },
+    {
+      "q": "Qui peut faire la demande à la place de la personne handicapée ?",
+      "r": "Pour un mineur, ce sont les parents qui remplissent le formulaire. Pour un adulte sous tutelle, le tuteur répond avec lui, et le curateur accompagne la personne sous curatelle. Selon la prestation, certains tiers peuvent aussi déposer la demande, comme l'établissement qui accueille la personne ou l'organisme payeur."
+    },
+    {
+      "q": "Combien coûte un dossier MDPH ?",
+      "r": "Le formulaire et son dépôt sont gratuits, en ligne comme sur papier. Le seul coût possible est la consultation chez le médecin pour le certificat médical, remboursée par l'Assurance maladie et la complémentaire. Le détail du tarif est sur la page consacrée au certificat médical."
+    },
+    {
+      "q": "Peut-on écrire sa demande sur papier libre ?",
+      "r": "La MDPH prend en compte une demande, même sur papier libre, dès lors que la personne concernée est identifiable. Le formulaire Cerfa reste le moyen le plus sûr de ne rien oublier, et les pièces obligatoires seront de toute façon réclamées."
+    }
+  ],
+  "liens_internes": [
+    {
+      "slug": "projet-de-vie-mdph",
+      "ancre": "exemples pour rédiger la partie vie quotidienne"
+    },
+    {
+      "slug": "certificat-medical-mdph",
+      "ancre": "le certificat médical MDPH"
+    },
+    {
+      "slug": "delais-mdph",
+      "ancre": "classement des délais des MDPH"
+    },
+    {
+      "slug": "dossier-mdph-trop-long",
+      "ancre": "dossier MDPH sans réponse"
+    },
+    {
+      "slug": "outils/delai-reponse-mdph",
+      "ancre": "calculer la date du refus implicite"
+    },
+    {
+      "slug": "renouvellement-mdph",
+      "ancre": "renouvellement MDPH"
+    },
+    {
+      "slug": "rqth",
+      "ancre": "RQTH"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/R19993",
+      "titre": "Demande ou renouvellement de prestations Handicap (AEEH, AAH, PCH, CMI, hébergement, Ésat...), Cerfa 15692*01, Service Public",
+      "date": "Vérifié le 13 juillet 2026, consulté le 2026-11-15"
+    },
+    {
+      "url": "https://www.monparcourshandicap.gouv.fr/aides/formulaire-de-demande-la-mdph-cerfa-ndeg-1569201",
+      "titre": "Formulaire de demande à la MDPH (Cerfa n° 15692*01), Mon Parcours Handicap",
+      "date": "Mis à jour le 06/08/2026, consulté le 2026-11-15"
+    },
+    {
+      "url": "https://www.cnsa.fr/sites/default/files/2024-03/FALC_cnsa_17-11_fiches-facilealire_mdph_comment-faire-demande.pdf",
+      "titre": "Comment faire une demande à la MDPH ? Fiche en facile à lire et à comprendre, CNSA",
+      "date": "Mise en ligne en mars 2024, consulté le 2026-11-15"
+    },
+    {
+      "url": "https://www.monparcourshandicap.gouv.fr/aides/le-depot-du-dossier-et-le-traitement-de-la-demande-par-la-maison-departementale-des-personnes",
+      "titre": "Le dépôt du dossier et le traitement de la demande par la MDPH, Mon Parcours Handicap",
+      "date": "Mis à jour le 18/06/2026, consulté le 2026-11-15"
+    },
+    {
+      "url": "https://mdphenligne.cnsa.fr/",
+      "titre": "MDPH en ligne, téléservice de la CNSA",
+      "date": "Consulté le 2026-11-15 (information du 11/06/2026 sur le partage d'accès)"
+    },
+    {
+      "url": "https://www.formulaires.service-public.gouv.fr/gf/cerfa_15692.do",
+      "titre": "Formulaire Cerfa 15692*01, Demande à la MDPH (PDF, 20 pages)",
+      "date": "Consulté le 2026-11-15"
+    },
+    {
+      "url": "https://www.monparcourshandicap.gouv.fr/aides/mdph-en-ligne",
+      "titre": "MDPH en ligne, Mon Parcours Handicap",
+      "date": "Mis à jour le 22/06/2026, consulté le 2026-11-15"
+    },
+    {
+      "url": "https://www.monparcourshandicap.gouv.fr/demarches/certificat-medical-formulaire-cerfa-ndeg-1569501",
+      "titre": "Certificat médical (formulaire Cerfa n° 15695*01), Mon Parcours Handicap",
+      "date": "Mis à jour le 10/08/2026, consulté le 2026-11-15"
+    }
+  ],
+  "date_verification": "2026-11-15",
+  "a_verifier": [
+    "La liste exacte des MDPH raccordées à mdphenligne.cnsa.fr (page /mdphs non lue) : le guide dit seulement « certaines MDPH ».",
+    "Le PDF du Cerfa 15692*01 diffusé porte encore la mention « certificat médical de moins de 6 mois » et « Pôle Emploi » : écart avec la règle actuelle (1 an, décret n° 2021-391), le guide suit service-public.gouv.fr et MDPH en ligne.",
+    "La signature « des deux parents » est une case du formulaire : vérifier si toutes les MDPH refusent un dossier signé par un seul parent (non affirmé dans le guide comme motif de refus, seulement comme oubli fréquent).",
+    "La conduite à tenir si la MDPH ne délivre pas d'accusé de réception n'a pas été trouvée sur une source officielle."
+  ]
+}

@@ -1,0 +1,392 @@
+{
+ "slug": "renouvellement-mdph",
+ "title": "Renouvellement MDPH : quand le demander, droits à vie",
+ "description": "Renouvellement MDPH : déposez environ 6 mois avant la fin des droits, avec un certificat médical de moins d'un an. Droits à vie et retard.",
+ "h1": "Renouvellement MDPH : quand le demander et comment éviter une rupture de droits",
+ "chapo": "Le renouvellement n'est pas automatique, sauf pour les droits attribués sans limitation de durée. Mon Parcours Handicap conseille de déposer votre demande environ 6 mois avant la fin de vos droits, avec le même formulaire qu'une première demande et un certificat médical de moins d'un an. La MDPH a ensuite 4 mois pour répondre, au-delà desquels son silence vaut refus.",
+ "en_bref": [
+  "Dépôt conseillé : environ 6 mois avant la date de fin des droits (4 mois minimum pour la RQTH selon Service Public).",
+  "Dossier : formulaire Cerfa 15692, certificat médical de moins de 1 an, pièce d'identité, justificatif de domicile.",
+  "Sans limitation de durée depuis 2019 et 2020 : AAH et CMI invalidité à partir de 80 % sans évolution favorable possible, RQTH en cas d'altération définitive.",
+  "AEEH de base jusqu'aux 20 ans de l'enfant si le taux est d'au moins 80 % sans perspective d'amélioration.",
+  "Sans décision à la fin des droits : la CAF peut avancer l'AAH, et la demande prolonge la RQTH."
+ ],
+ "urgence": "La MDPH dispose de 4 mois après un dossier complet pour statuer. Une demande de renouvellement déposée moins de 4 mois avant la fin de vos droits risque donc de ne pas être traitée à temps.",
+ "sections": [
+  {
+   "h2": "Quand faut-il déposer la demande de renouvellement ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "Mon Parcours Handicap recommande de déposer la demande **6 mois avant la fin de validité** de vos droits, pour éviter une interruption. La date de fin figure sur votre dernière notification de la CDAPH (la commission des droits et de l'autonomie des personnes handicapées, qui décide au sein de la MDPH)."
+    },
+    {
+     "type": "liste",
+     "items": [
+      "**Pourquoi 6 mois** : la MDPH a jusqu'à 4 mois pour statuer à partir d'un dossier complet, puis la caisse doit mettre la décision en paiement. Les délais réels de votre département sont dans [le classement des délais des MDPH](delais-mdph).",
+      "**RQTH** : Service Public demande de déposer le renouvellement **au moins 4 mois** avant la fin de l'attribution.",
+      "**PCH aide humaine et éléments versés chaque mois** : au moins 6 mois avant la fin de la période d'attribution, la CDAPH doit vous inviter à envoyer une demande de renouvellement (article D245-35).",
+      "**Enfant scolarisé** : pour une rentrée scolaire, le dépôt est conseillé entre janvier et mars."
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "Pour calculer votre date de dépôt et celle du certificat médical, utilisez [le calendrier de fin de droits MDPH](outils/fin-de-droits-mdph)."
+    }
+   ],
+   "sources": [
+    0,
+    1,
+    6,
+    8
+   ]
+  },
+  {
+   "h2": "Quels documents fournir pour renouveler vos droits ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "Le renouvellement se fait avec **le même formulaire** qu'une première demande, le Cerfa 15692. Service Public précise, pour l'AAH, qu'il faut « respecter la même démarche que pour la demande initiale (même formulaire à remplir et pièces à joindre) »."
+    },
+    {
+     "type": "liste",
+     "items": [
+      "Le formulaire de demande, daté et signé. La partie B « vie quotidienne » n'est à remplir que si votre situation a évolué.",
+      "Un **certificat médical de moins de 1 an**, rempli par votre médecin traitant ou un spécialiste, avec si besoin les volets auditif ou visuel. Voir [le guide du certificat médical](certificat-medical-mdph).",
+      "Une photocopie recto verso de votre pièce d'identité, et celle du représentant légal le cas échéant.",
+      "Un justificatif de domicile, et l'attestation de jugement si vous êtes sous protection juridique."
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "Envoyez le dossier à la MDPH de votre lieu de résidence, de préférence en recommandé avec avis de réception, ou déposez-le en ligne si votre MDPH le propose. Le détail des sections du formulaire est dans [le guide du dossier MDPH](dossier-mdph)."
+    },
+    {
+     "type": "attention",
+     "texte": "Faites signer le certificat médical assez tôt, mais pas trop : il doit avoir moins d'un an au moment du dépôt. Un certificat trop ancien rend le dossier incomplet et retarde le départ du délai de 4 mois."
+    }
+   ],
+   "sources": [
+    0,
+    1,
+    5
+   ]
+  },
+  {
+   "h2": "Quels droits sont accordés sans limitation de durée ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "Deux décrets ont créé des droits attribués « sans limitation de durée », souvent appelés droits à vie. Ils concernent les personnes dont le handicap n'est pas susceptible d'évoluer favorablement. Il n'y a alors plus de renouvellement à faire pour ces droits."
+    },
+    {
+     "type": "tableau",
+     "entetes": [
+      "Droit",
+      "Condition pour une attribution sans limitation de durée",
+      "Depuis"
+     ],
+     "lignes": [
+      [
+       "AAH",
+       "Taux d'incapacité d'au moins 80 % et limitations d'activité non susceptibles d'évolution favorable",
+       "1er janvier 2019"
+      ],
+      [
+       "CMI mention « invalidité »",
+       "Mêmes conditions que l'AAH",
+       "1er janvier 2019"
+      ],
+      [
+       "RQTH et orientation vers le marché du travail",
+       "Altération définitive d'une ou plusieurs fonctions qui réduit les possibilités d'obtenir ou de garder un emploi",
+       "1er janvier 2020"
+      ],
+      [
+       "AEEH de base",
+       "Taux d'au moins 80 % sans perspective d'amélioration : jusqu'aux 20 ans de l'enfant ou jusqu'à son accès à l'AAH",
+       "demandes déposées à partir du 1er janvier 2019"
+      ]
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "Le décret n° 2019-1501 du 30 décembre 2019 permet en plus à la CDAPH et au président du conseil départemental de **proroger ces droits sans nouvelle demande** quand les conditions sont remplies. Ils prorogent alors aussi vos autres droits, dans la limite des durées maximales. La notification doit préciser que vous pouvez demander à tout moment un nouvel examen de votre situation."
+    },
+    {
+     "type": "p",
+     "texte": "Les règles propres à chaque droit sont détaillées dans les guides de [l'AAH](aah), de [la RQTH](rqth), de [la carte mobilité inclusion](carte-mobilite-inclusion) et de [l'AEEH](aeeh)."
+    }
+   ],
+   "sources": [
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "h2": "Combien de temps durent les autres droits ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "En règle générale, une décision de la CDAPH vaut **au moins 1 an et au plus 10 ans**, sauf texte particulier (article R241-31, dans sa rédaction issue du décret de 2018)."
+    },
+    {
+     "type": "tableau",
+     "entetes": [
+      "Droit",
+      "Durée d'attribution"
+     ],
+     "lignes": [
+      [
+       "AAH, taux d'au moins 80 %",
+       "1 à 10 ans, ou à vie"
+      ],
+      [
+       "AAH, taux de 50 à 79 %",
+       "1 à 2 ans, ou jusqu'à 5 ans si le handicap ne peut pas évoluer favorablement sur la période"
+      ],
+      [
+       "RQTH",
+       "1 à 10 ans, ou à vie"
+      ],
+      [
+       "CMI",
+       "Définitive, ou de 1 an à 20 ans"
+      ],
+      [
+       "AEEH, taux de 50 à 79 %",
+       "2 ans au moins, 5 ans au plus (base et complément)"
+      ],
+      [
+       "Complément d'AEEH",
+       "3 ans au moins"
+      ]
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "Quand vous avez plusieurs droits et qu'une attribution à vie n'est pas possible, la CDAPH les accorde en principe **pour la durée la plus longue** des droits concernés. Elle peut aussi raccourcir certaines durées pour que tous vos droits arrivent à échéance à la même date. Vous n'avez alors qu'un seul renouvellement à préparer."
+    }
+   ],
+   "sources": [
+    2,
+    4,
+    5,
+    6
+   ]
+  },
+  {
+   "h2": "Que se passe-t-il si la décision n'est pas rendue à la fin de vos droits ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "Il n'existe pas de règle générale qui maintienne tous les droits jusqu'à la décision. Certaines protections existent, droit par droit :"
+    },
+    {
+     "type": "liste",
+     "items": [
+      "**AAH** : si la CDAPH ne s'est pas prononcée à la fin de la période de versement, la CAF ou la MSA **peut** vous verser une **avance sur droits supposés** (article L821-7-1 du code de la sécurité sociale). Contactez votre caisse avec la preuve de votre dépôt.",
+      "**RQTH** : votre demande de renouvellement **prolonge la RQTH** jusqu'à la décision de la CDAPH.",
+      "**CMI** : en cas de renouvellement, la nouvelle carte est attribuée à compter de la date de la demande, ou de la date de fin de validité des anciens droits si elle est plus tardive (article R241-14).",
+      "**Renouvellement à l'identique** : quand votre handicap ou votre situation n'a pas évolué de façon significative, la CDAPH peut statuer en **formation restreinte**, selon une procédure simplifiée (article R241-28)."
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "Si le dossier reste bloqué, voir [que faire quand la MDPH tarde à répondre](dossier-mdph-trop-long)."
+    }
+   ],
+   "sources": [
+    6,
+    7,
+    8
+   ]
+  },
+  {
+   "h2": "Vous avez laissé passer la date : que faire ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "Déposez la demande sans attendre. Un droit arrivé à échéance n'est pas prolongé tout seul, sauf s'il a été accordé sans limitation de durée ou prorogé par la CDAPH. Plus le dépôt est tardif, plus le risque de période sans versement est grand."
+    },
+    {
+     "type": "p",
+     "texte": "Pour l'AAH, l'AEEH, la MVA (majoration pour la vie autonome) et la PCH, Mon Parcours Handicap précise que la **date de dépôt** de la demande sert à fixer la **date d'ouverture des droits**. Chaque semaine de retard dans le dépôt peut donc compter."
+    },
+    {
+     "type": "etapes",
+     "items": [
+      "Faites établir rapidement un certificat médical, ou vérifiez que le vôtre a moins d'un an.",
+      "Déposez le dossier complet, en ligne ou en recommandé, et gardez l'accusé de réception.",
+      "Prévenez votre CAF, votre MSA ou le département que le renouvellement est en cours, preuve de dépôt à l'appui.",
+      "Si une perte de revenus vous met en difficulté, signalez-le par écrit à la MDPH et demandez si un examen en urgence est possible."
+     ]
+    }
+   ],
+   "sources": [
+    0,
+    7,
+    8
+   ]
+  },
+  {
+   "h2": "Votre situation change avant la fin de vos droits ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "Vous n'êtes pas obligé d'attendre l'échéance. Une demande peut être déposée à tout moment en raison d'une **évolution du handicap ou de la situation**, ou pour un réexamen d'une décision. Pour une orientation, l'adulte, ses parents ou son représentant légal, ou l'établissement peuvent demander sa **révision** quand l'évolution de l'état ou de la situation le justifie (article L241-6)."
+    },
+    {
+     "type": "liste",
+     "items": [
+      "Aggravation de l'état de santé : un nouveau dossier avec un certificat médical récent permet une nouvelle évaluation.",
+      "Changement de vie (emploi, logement, scolarité, aidant) : il peut ouvrir de nouveaux besoins, par exemple une PCH ou une orientation différente.",
+      "Droits à vie : même avec un droit sans limitation de durée, vous pouvez solliciter à tout moment un nouvel examen."
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "Remplissez alors la partie B « vie quotidienne » du formulaire : elle n'est demandée que lorsque la situation a évolué, et c'est elle qui permet à l'équipe de comprendre ce qui a changé. Des exemples de rédaction sont dans [le guide du projet de vie](projet-de-vie-mdph)."
+    }
+   ],
+   "sources": [
+    0,
+    3,
+    9
+   ]
+  }
+ ],
+ "faq": [
+  {
+   "q": "Le renouvellement de l'AAH est-il automatique ?",
+   "r": "Non, sauf si l'AAH vous a été accordée sans limitation de durée ou si la CDAPH proroge vos droits d'elle-même. Dans les autres cas, il faut refaire une demande à la MDPH avant la fin de la période d'attribution, avec le même formulaire et les mêmes pièces qu'une première demande."
+  },
+  {
+   "q": "Peut-on renouveler son dossier MDPH en ligne ?",
+   "r": "Oui, si votre MDPH propose le téléservice, souvent accessible depuis mdphenligne.cnsa.fr. Vous y saisissez le formulaire et déposez les pièces scannées, dont le certificat médical. La démarche est gratuite."
+  },
+  {
+   "q": "Faut-il refaire le projet de vie à chaque renouvellement ?",
+   "r": "Non. La partie B « vie quotidienne » n'est à remplir que pour une première demande ou si votre situation a évolué. Quand rien n'a changé de façon significative, la CDAPH peut statuer en procédure simplifiée."
+  },
+  {
+   "q": "Peut-on déposer son renouvellement trop tôt ?",
+   "r": "Le conseil officiel est d'environ 6 mois avant l'échéance. Un dépôt beaucoup plus précoce oblige à fournir un certificat médical qui doit encore avoir moins d'un an au dépôt. Visez plutôt la fenêtre des 6 mois."
+  },
+  {
+   "q": "Que faire si le renouvellement est refusé ?",
+   "r": "Un refus de renouvellement est une décision de la CDAPH comme une autre. Vous pouvez la contester par un recours préalable auprès de la MDPH, en principe dans les 2 mois suivant la notification. La démarche est expliquée dans [le guide pour contester une décision de la MDPH](recours-mdph)."
+  },
+  {
+   "q": "Les droits à vie peuvent-ils être retirés ?",
+   "r": "Ils sont attribués parce que le handicap n'est pas susceptible d'évoluer favorablement. Les conditions de ressources propres à certaines prestations continuent toutefois de s'appliquer : c'est le cas de l'AAH, dont le montant dépend des revenus déclarés à la CAF ou à la MSA. Et vous gardez la possibilité de demander vous-même un nouvel examen."
+  }
+ ],
+ "liens_internes": [
+  {
+   "slug": "outils/fin-de-droits-mdph",
+   "ancre": "le calendrier de fin de droits MDPH"
+  },
+  {
+   "slug": "delais-mdph",
+   "ancre": "le classement des délais des MDPH"
+  },
+  {
+   "slug": "dossier-mdph-trop-long",
+   "ancre": "que faire quand la MDPH tarde à répondre"
+  },
+  {
+   "slug": "recours-mdph",
+   "ancre": "contester une décision de la MDPH"
+  },
+  {
+   "slug": "certificat-medical-mdph",
+   "ancre": "le guide du certificat médical"
+  },
+  {
+   "slug": "dossier-mdph",
+   "ancre": "le guide du dossier MDPH"
+  },
+  {
+   "slug": "aah",
+   "ancre": "l'AAH"
+  },
+  {
+   "slug": "rqth",
+   "ancre": "la RQTH"
+  },
+  {
+   "slug": "carte-mobilite-inclusion",
+   "ancre": "la carte mobilité inclusion"
+  },
+  {
+   "slug": "aeeh",
+   "ancre": "l'AEEH"
+  },
+  {
+   "slug": "projet-de-vie-mdph",
+   "ancre": "le guide du projet de vie"
+  }
+ ],
+ "sources": [
+  {
+   "url": "https://www.monparcourshandicap.gouv.fr/aides/le-depot-du-dossier-et-le-traitement-de-la-demande-par-la-maison-departementale-des-personnes",
+   "titre": "Le dépôt du dossier et le traitement de la demande par la MDPH, Mon Parcours Handicap",
+   "date": "consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/R19993",
+   "titre": "Demande ou renouvellement de prestations Handicap (formulaire Cerfa 15692), Service Public",
+   "date": "vérifié le 13 juillet 2026, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000037852195",
+   "titre": "Décret n° 2018-1222 du 24 décembre 2018 portant diverses mesures de simplification dans le champ du handicap, Légifrance",
+   "date": "consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000039696471",
+   "titre": "Décret n° 2019-1501 du 30 décembre 2019 relatif à la prorogation de droits sans limitation de durée pour les personnes handicapées, Légifrance",
+   "date": "consulté le 2026-11-15"
+  },
+  {
+   "url": "https://handicap.gouv.fr/ouverture-de-droits-vie-pour-les-personnes-handicapees",
+   "titre": "Ouverture de droits à vie pour les personnes handicapées, handicap.gouv.fr",
+   "date": "publié le 9 janvier 2019, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F12242",
+   "titre": "Allocation aux adultes handicapés (AAH), Service Public",
+   "date": "vérifié le 14 septembre 2026, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F1650",
+   "titre": "Reconnaissance de la qualité de travailleur handicapé (RQTH), Service Public",
+   "date": "vérifié le 24 mars 2026, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006745351",
+   "titre": "Article L821-7-1 du code de la sécurité sociale (avance sur droits supposés), Légifrance",
+   "date": "en vigueur depuis le 12 février 2005, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006074069/LEGISCTA000006145440/",
+   "titre": "Code de l'action sociale et des familles, partie réglementaire, personnes handicapées (articles R241-14, R241-28 et D245-35), Légifrance",
+   "date": "consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006797050",
+   "titre": "Article L241-6 du code de l'action sociale et des familles (révision des décisions), Légifrance",
+   "date": "en vigueur depuis le 17 novembre 2024, consulté le 2026-11-15"
+  }
+ ],
+ "date_verification": "2026-11-15",
+ "a_verifier": [
+  "Le délai de « 6 mois avant » est une recommandation (Mon Parcours Handicap), pas une obligation légale ; aucun texte lu n'interdit un dépôt plus précoce ni n'impose une date limite. Service Public demande « 4 mois avant » pour la RQTH.",
+  "Le texte réglementaire sur l'AEEH sans limitation de durée (décret « du 27 décembre 2018 » cité par handicap.gouv.fr) n'a pas été lu sur Légifrance ; les règles AEEH viennent de handicap.gouv.fr (page du 09/01/2019).",
+  "Aucun texte national lu ne prévoit un maintien général des droits pendant l'instruction d'un renouvellement ; l'avance AAH (L821-7-1) est une faculté de la caisse, pas un droit automatique.",
+  "La version actuelle de l'article R241-31 (durée 1 à 10 ans) a été lue dans le décret de 2018, pas dans sa version consolidée de novembre 2026.",
+  "Il n'a pas été vérifié si toutes les MDPH appliquent la prorogation sans nouvelle demande (décret 2019-1501) de la même manière."
+ ]
+}

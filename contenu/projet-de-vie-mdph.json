@@ -1,0 +1,275 @@
+{
+  "slug": "projet-de-vie-mdph",
+  "title": "Projet de vie MDPH : exemples et modèles à compléter",
+  "description": "Le projet de vie s'écrit dans la partie B « vie quotidienne » du dossier. La méthode de la journée type et 4 modèles vierges à compléter.",
+  "h1": "Projet de vie MDPH : exemples rédigés pour chaque situation",
+  "chapo": "Le projet de vie MDPH s'appelle aujourd'hui la partie B « vie quotidienne » du formulaire Cerfa 15692*01. Elle n'est pas obligatoire pour déposer le dossier, mais l'équipe d'évaluation s'en sert pour comprendre vos besoins. Le plus utile : décrire une journée type, ce que vous faites seul, avec difficulté ou avec aide, puis dire ce que vous attendez. Quatre modèles vierges suivent (règles vérifiées le 15 novembre 2026).",
+  "en_bref": [
+    "Le « projet de vie » est devenu la partie B « vie quotidienne » du Cerfa 15692*01.",
+    "Pas obligatoire pour la recevabilité, mais l'évaluation tient compte des souhaits que vous y exprimez.",
+    "On peut l'écrire dans le formulaire ou sur papier libre, et la MDPH peut aider à le rédiger.",
+    "Pour un enfant : ses besoins à lui, comparés à ceux d'un enfant du même âge.",
+    "À remplir pour une première demande ou quand la situation a changé ; pas pour un renouvellement à l'identique."
+  ],
+  "urgence": null,
+  "sections": [
+    {
+      "h2": "Le projet de vie existe-t-il encore dans le dossier MDPH ?",
+      "blocs": [
+        {
+          "type": "p",
+          "texte": "Oui, sous un autre nom. Depuis le formulaire Cerfa 15692*01, la partie « projet de vie » a été renommée : c'est la **partie B, « Votre vie quotidienne »**, avec une zone libre « autres renseignements importants (situation, attentes, projets) ». On l'appelle aussi « expression des attentes et des besoins »."
+        },
+        {
+          "type": "p",
+          "texte": "Cette partie n'est pas une pièce obligatoire : un dossier sans elle reste recevable. Elle est pourtant très utile, car elle permet de comprendre vos besoins et vos attentes. Vous pouvez l'écrire directement dans le formulaire ou sur papier libre joint au dossier. Sur demande, l'équipe de la MDPH peut vous aider à la rédiger."
+        },
+        {
+          "type": "p",
+          "texte": "Elle se remplit pour une première demande, quand votre situation a changé ou pour une réévaluation. Pour un renouvellement à l'identique, les parties A et E suffisent. Le remplissage des autres parties du formulaire est expliqué sur la page [dossier MDPH](dossier-mdph)."
+        }
+      ],
+      "sources": [
+        0,
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "h2": "À quoi sert cette partie pour l'équipe d'évaluation ?",
+      "blocs": [
+        {
+          "type": "p",
+          "texte": "Votre dossier est étudié par l'**équipe pluridisciplinaire** de la MDPH, des professionnels de plusieurs métiers (médecin, ergothérapeute, travailleur social…). Elle évalue vos besoins de compensation en tenant compte des souhaits exprimés en partie B, et de toute votre situation : matérielle, familiale, scolaire, professionnelle, psychologique. Elle fait ensuite des propositions à la **CDAPH** (commission des droits et de l'autonomie des personnes handicapées), qui décide en s'appuyant sur ces éléments et sur votre projet de vie."
+        },
+        {
+          "type": "p",
+          "texte": "Le diagnostic seul ne suffit pas. La notice officielle du certificat médical le rappelle : deux personnes atteintes de la même maladie peuvent obtenir un taux d'incapacité et des aides différents, selon les conséquences concrètes dans leur vie. Votre texte apporte ce que le médecin ne voit pas en consultation : le quotidien, la fatigue, les mauvais jours, l'aide des proches."
+        },
+        {
+          "type": "p",
+          "texte": "Le formulaire le précise : ce que vous écrivez correspond à vos besoins ressentis. L'équipe réalise ensuite sa propre évaluation, sur dossier, en rendez-vous ou par une visite à domicile."
+        }
+      ],
+      "sources": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "h2": "Comment décrire une journée type ?",
+      "blocs": [
+        {
+          "type": "p",
+          "texte": "Le formulaire et le certificat médical utilisent la même logique : pour chaque activité, est-elle faite sans difficulté, avec difficulté mais seul, avec l'aide de quelqu'un (aide directe ou simple stimulation), ou pas du tout ? Reprendre cette logique rend votre texte facile à rapprocher du certificat."
+        },
+        {
+          "type": "etapes",
+          "items": [
+            "Découpez la journée : lever et matin, midi, après-midi, soir, nuit. C'est le découpage de l'emploi du temps demandé en partie C.",
+            "Pour chaque moment, notez les gestes concernés : se lever, se laver, s'habiller, préparer et prendre les repas, prendre son traitement, se déplacer, communiquer, travailler ou aller à l'école.",
+            "Pour chaque geste, dites qui fait quoi : seul, seul mais lentement ou avec douleur, avec l'aide d'un proche (précisez qui et combien de temps), impossible.",
+            "Donnez des fréquences et des durées : « 3 nuits sur 7 », « 45 minutes pour la toilette », « 2 rendez-vous de soins par semaine ».",
+            "Décrivez un mauvais jour en plus d'un jour ordinaire si vos troubles varient.",
+            "Terminez par vos attentes concrètes : aide humaine, matériel, aménagement, aide financière, orientation, scolarité, emploi."
+          ]
+        },
+        {
+          "type": "exemple",
+          "titre": "Exemple de formulation (fictif)",
+          "texte": "Plutôt que « J'ai des difficultés pour me laver », écrivez : « Je peux me laver seul le haut du corps, assis. Pour les jambes et les pieds, mon conjoint m'aide chaque matin, environ 20 minutes. Je ne peux plus entrer dans la baignoire. »"
+        }
+      ],
+      "sources": [
+        1,
+        5
+      ]
+    },
+    {
+      "h2": "Modèle vierge : enfant scolarisé",
+      "blocs": [
+        {
+          "type": "p",
+          "texte": "Pour un enfant, on décrit ses besoins à lui, pas ceux des parents, en les comparant à un enfant du même âge sans handicap. Les besoins des parents trouvent leur place dans la partie F (aidant familial). Pensez au GEVA-Sco, à remplir avec l'école."
+        },
+        {
+          "type": "modele",
+          "titre": "Modèle vierge à compléter : enfant scolarisé",
+          "texte": "Partie B, autres renseignements importants\n\n[Prénom], [âge] ans, est scolarisé en [classe] à [école ou collège], [à temps plein / à temps partiel : nombre d'heures par semaine].\n\nLe matin : [ce qu'il fait seul / avec rappels / avec notre aide : lever, toilette, habillage, petit déjeuner]. Il faut en moyenne [durée] pour qu'il soit prêt, contre [durée] pour un enfant de son âge.\n\nÀ l'école : [difficultés constatées par l'enseignant : attention, écriture, consignes, relations, fatigue, crises]. Aides en place : [AESH, matériel, aménagements, aucune].\n\nAprès l'école : [devoirs, soins, rééducations : orthophonie, psychomotricité, kinésithérapie, avec la fréquence et le lieu]. Trajets : [qui accompagne, combien de temps].\n\nLe soir et la nuit : [repas, coucher, réveils, surveillance].\n\nLoisirs et vie sociale : [activités possibles, impossibles, adaptations].\n\nCe que nous attendons : [aide humaine à l'école, matériel, orientation, aide financière pour les frais, autre].\n\nDocuments joints : [GEVA-Sco, bilans, comptes rendus]."
+        }
+      ],
+      "sources": [
+        1
+      ]
+    },
+    {
+      "h2": "Modèle vierge : adulte qui travaille",
+      "blocs": [
+        {
+          "type": "modele",
+          "titre": "Modèle vierge à compléter : adulte en emploi",
+          "texte": "Partie B, autres renseignements importants\n\nJe travaille comme [poste] chez [employeur], en [CDI / CDD / temps partiel à X %] depuis [date].\n\nAvant le travail : [lever, toilette, habillage, traitement, temps nécessaire, aide éventuelle].\n\nTrajet : [moyen de transport, durée, difficultés : marche, station debout, foule, conduite].\n\nAu travail : [tâches devenues difficiles ou impossibles, pauses nécessaires, douleur, fatigue, concentration]. Aménagements déjà obtenus : [poste, horaires, télétravail, aucun]. Avis du médecin du travail : [date et contenu, si connu].\n\nAprès le travail : [ce que je n'arrive plus à faire : courses, ménage, repas, vie sociale, et qui le fait à ma place].\n\nArrêts de travail sur les 12 derniers mois : [nombre et durée].\n\nCe que j'attends : [RQTH, aménagement de poste, maintien dans l'emploi, aide humaine, matériel, autre]."
+        },
+        {
+          "type": "p",
+          "texte": "Pour ce profil, remplissez aussi la partie D. Les effets concrets d'une RQTH sont détaillés sur la page [RQTH](rqth)."
+        }
+      ],
+      "sources": [
+        1
+      ]
+    },
+    {
+      "h2": "Modèle vierge : adulte sans emploi",
+      "blocs": [
+        {
+          "type": "modele",
+          "titre": "Modèle vierge à compléter : adulte sans emploi",
+          "texte": "Partie B, autres renseignements importants\n\nJe vis [seul / en couple / chez mes parents / hébergé par …] à [type de logement]. Je ne travaille plus depuis [date], parce que [raison liée à la santé, licenciement, inaptitude, autre].\n\nMa journée ordinaire : [heure de lever, toilette, repas, ce que je fais seul, ce pour quoi j'ai besoin d'aide, temps de repos].\n\nUn mauvais jour : [ce qui change, combien de jours par semaine ou par mois].\n\nTâches de la maison : [courses, ménage, linge, repas, budget, papiers : qui les fait].\n\nDéplacements : [distance possible à pied, transports utilisés ou impossibles, besoin d'accompagnement].\n\nSoins : [rendez-vous, fréquence, contraintes, effets du traitement].\n\nParcours professionnel : [derniers emplois, formations, accompagnement par France Travail, Cap emploi ou une mission locale].\n\nCe que j'attends : [revenu minimum, bilan des capacités, orientation professionnelle, formation, aide humaine, logement adapté, autre]."
+        },
+        {
+          "type": "p",
+          "texte": "Si vous demandez une aide financière pour assurer un revenu minimum, le formulaire demande de compléter aussi la partie D. Les conditions de l'allocation sont sur la page [AAH](aah), et vous pouvez [estimer votre AAH](outils/simulateur-aah)."
+        }
+      ],
+      "sources": [
+        1
+      ]
+    },
+    {
+      "h2": "Modèle vierge : maladie évolutive ou troubles psychiques",
+      "blocs": [
+        {
+          "type": "p",
+          "texte": "Quand les troubles varient d'un jour à l'autre (sclérose en plaques, maladie chronique, troubles psychiques, troubles neurodéveloppementaux), le risque est de décrire seulement un bon jour. Le certificat médical demande d'ailleurs au médecin si les troubles sont permanents, réguliers ou ponctuels, et une perspective d'évolution."
+        },
+        {
+          "type": "modele",
+          "titre": "Modèle vierge à compléter : troubles fluctuants",
+          "texte": "Partie B, autres renseignements importants\n\nMa maladie évolue par [poussées / phases / crises]. Sur un mois, j'ai en moyenne [nombre] jours ordinaires et [nombre] jours difficiles.\n\nUn jour ordinaire : [ce que je fais seul, ce qui demande un effort, ce que je ne fais plus].\n\nUn jour difficile : [ce qui devient impossible : sortir, se laver, manger, répondre au téléphone, gérer les papiers, et qui prend le relais].\n\nCe qui déclenche ou aggrave : [fatigue, stress, bruit, chaleur, changement de traitement].\n\nHospitalisations ou suivis : [dates, durée, CMP, hôpital de jour, fréquence des consultations].\n\nEffets du traitement : [somnolence, prise de poids, ralentissement, autres contraintes].\n\nEntourage : [qui m'aide, comment, combien de temps par semaine, ce qui se passe quand cette personne est absente].\n\nCe que j'attends : [aide humaine, accompagnement à domicile, orientation, aménagement de travail ou d'études, autre]."
+        },
+        {
+          "type": "p",
+          "texte": "Pour les altérations des fonctions mentales, cognitives ou psychiques, y compris les TND, un questionnaire complémentaire facultatif existe, avec une partie pour le médecin et une pour la personne ou un proche. La MDPH ne peut pas l'exiger, mais il aide à décrire le quotidien."
+        }
+      ],
+      "sources": [
+        0,
+        5
+      ]
+    },
+    {
+      "h2": "Ce qu'il vaut mieux éviter",
+      "blocs": [
+        {
+          "type": "liste",
+          "items": [
+            "**Rester général** : « je suis souvent fatigué » dit peu. Une durée, une fréquence et un exemple disent beaucoup.",
+            "**Minimiser** par pudeur ou par habitude : ce que vos proches font pour vous compte, même si cela vous paraît normal.",
+            "**Recopier le diagnostic** : il figure déjà dans le certificat médical. Votre partie parle des conséquences.",
+            "**Contredire le certificat** : relisez les deux ensemble. La première page du certificat vous demande d'indiquer à votre médecin vos principaux besoins et attentes : utilisez la même liste.",
+            "**Écrire un texte très long** : quelques paragraphes organisés par moment de la journée se lisent mieux qu'une longue lettre.",
+            "**Oublier de garder une copie** : elle vous servira pour un renouvellement ou un recours."
+          ]
+        },
+        {
+          "type": "p",
+          "texte": "Les modèles ci-dessus sont des trames d'information générale, à adapter entièrement à votre situation. Pour une aide personnalisée à la rédaction, adressez-vous à l'accueil de votre MDPH, au CCAS de votre mairie ou à une association comme APF France handicap, l'UNAFAM ou l'Unapei. Le certificat médical, de son côté, est expliqué sur la page [certificat médical MDPH](certificat-medical-mdph)."
+        }
+      ],
+      "sources": [
+        0,
+        5,
+        2
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Combien de pages pour un projet de vie MDPH ?",
+      "r": "Aucune longueur n'est fixée par les textes. La partie B du formulaire offre une zone libre, et vous pouvez joindre une feuille en plus. Un texte organisé par moment de la journée, avec des exemples précis, est en général plus utile qu'un texte long."
+    },
+    {
+      "q": "Le projet de vie est-il obligatoire pour la MDPH ?",
+      "r": "Non. La partie B « vie quotidienne » n'est pas une pièce obligatoire pour que le dossier soit recevable. Elle reste l'endroit où vous expliquez vos besoins avec vos mots, et l'équipe d'évaluation en tient compte."
+    },
+    {
+      "q": "Qui peut écrire le projet de vie à ma place ?",
+      "r": "Vous pouvez être aidé par un proche, une association ou l'équipe de la MDPH, qui peut aider à la rédaction sur demande. Pour un enfant, ce sont les parents qui écrivent. Le texte doit refléter la situation et les souhaits de la personne concernée."
+    },
+    {
+      "q": "Peut-on écrire le projet de vie à la main sur papier libre ?",
+      "r": "Oui. La MDPH accepte qu'il soit rédigé sur papier libre et joint au dossier. Indiquez votre nom, votre prénom et, si vous en avez un, votre numéro de dossier MDPH sur chaque page."
+    },
+    {
+      "q": "Faut-il refaire le projet de vie à chaque renouvellement ?",
+      "r": "Pas si votre situation est inchangée : pour un renouvellement à l'identique, le formulaire demande seulement les parties A et E. Si votre état, vos besoins ou votre projet ont évolué, remplissez de nouveau la partie B pour que la MDPH en tienne compte."
+    },
+    {
+      "q": "L'aidant peut-il écrire ses propres difficultés ?",
+      "r": "Oui, dans la partie F du formulaire, facultative, réservée à l'aidant familial. Il y décrit l'aide qu'il apporte et ses besoins : répit, remplacement, soutien, maintien de son emploi. Chaque aidant peut remplir sa propre feuille."
+    }
+  ],
+  "liens_internes": [
+    {
+      "slug": "dossier-mdph",
+      "ancre": "remplir les autres parties du dossier MDPH"
+    },
+    {
+      "slug": "certificat-medical-mdph",
+      "ancre": "certificat médical MDPH"
+    },
+    {
+      "slug": "outils/simulateur-aah",
+      "ancre": "estimer votre AAH"
+    },
+    {
+      "slug": "aah",
+      "ancre": "AAH"
+    },
+    {
+      "slug": "rqth",
+      "ancre": "RQTH"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.monparcourshandicap.gouv.fr/aides/le-depot-du-dossier-et-le-traitement-de-la-demande-par-la-maison-departementale-des-personnes",
+      "titre": "Le dépôt du dossier et le traitement de la demande par la MDPH, Mon Parcours Handicap",
+      "date": "Mis à jour le 18/06/2026, consulté le 2026-11-15"
+    },
+    {
+      "url": "https://www.formulaires.service-public.gouv.fr/gf/cerfa_15692.do",
+      "titre": "Formulaire Cerfa 15692*01, Demande à la MDPH (PDF, parties B et F)",
+      "date": "Consulté le 2026-11-15"
+    },
+    {
+      "url": "https://www.cnsa.fr/sites/default/files/2024-03/FALC_cnsa_17-11_fiches-facilealire_mdph_comment-faire-demande.pdf",
+      "titre": "Comment faire une demande à la MDPH ? Fiche en facile à lire et à comprendre, CNSA",
+      "date": "Mise en ligne en mars 2024, consulté le 2026-11-15"
+    },
+    {
+      "url": "https://www.formulaires.service-public.gouv.fr/gf/getNotice.do?cerfaNotice=52154&cerfaFormulaire=15695",
+      "titre": "Notice 52154#01, Comprendre et bien remplir le certificat médical de la MDPH",
+      "date": "Consulté le 2026-11-15"
+    },
+    {
+      "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/R19993",
+      "titre": "Demande ou renouvellement de prestations Handicap, Cerfa 15692*01, Service Public",
+      "date": "Vérifié le 13 juillet 2026, consulté le 2026-11-15"
+    },
+    {
+      "url": "https://www.formulaires.service-public.gouv.fr/gf/cerfa_15695.do",
+      "titre": "Formulaire Cerfa 15695*01, Certificat médical à joindre à une demande à la MDPH (PDF)",
+      "date": "Consulté le 2026-11-15"
+    }
+  ],
+  "date_verification": "2026-11-15",
+  "a_verifier": [
+    "Aucune source officielle ne fixe de longueur pour la partie B : la FAQ le dit sans donner de chiffre.",
+    "La date exacte à laquelle le « projet de vie » a été renommé « vie quotidienne » n'est pas donnée par Mon Parcours Handicap (le Cerfa 15692*01 s'est déployé entre le 1er septembre 2017 et le 1er mai 2019 selon sa page 1).",
+    "Les questions de la FAQ ne viennent pas du relevé PAA (vide pour « projet de vie mdph ») ni d'une recherche Firecrawl détaillée : formulées à partir des pages en tête de résultats."
+  ]
+}

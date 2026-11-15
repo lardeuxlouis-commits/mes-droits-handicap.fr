@@ -1,0 +1,368 @@
+{
+ "slug": "carte-mobilite-inclusion",
+ "title": "Carte mobilité inclusion (CMI) : mentions et avantages",
+ "description": "CMI invalidité, priorité ou stationnement : critères, stationnement gratuit, demi-part d'impôt, durée, duplicata à 10 € et fin des anciennes cartes.",
+ "h1": "Carte mobilité inclusion (CMI) : les 3 mentions et leurs avantages",
+ "chapo": "La carte mobilité inclusion (CMI) est gratuite et existe en trois mentions. **Invalidité** : à partir de 80 % d'incapacité, priorité, réductions de transport et demi-part d'impôt. **Priorité** : moins de 80 % avec station debout pénible, place assise et passage prioritaire. **Stationnement** : déplacements à pied très limités, stationnement gratuit. Les anciennes cartes cessent d'être valables au 31 décembre 2026.",
+ "en_bref": [
+  "Mention invalidité : taux d'incapacité d'au moins 80 % ou pension d'invalidité de 3e catégorie.",
+  "Mention stationnement : gratuité sur toutes les places publiques, sans limite de durée, la commune pouvant fixer un maximum d'au moins 12 heures.",
+  "Demi-part fiscale avec la mention invalidité : avantage plafonné à 3 608 € (impôt sur les revenus 2025).",
+  "Durée : de 1 à 20 ans, ou définitive dans certains cas.",
+  "Duplicata en cas de perte ou de vol : 10 €, à commander en ligne auprès de l'Imprimerie nationale."
+ ],
+ "urgence": "Les anciennes cartes d'invalidité, de priorité et de stationnement ne sont plus valables après le 31 décembre 2026, même celles délivrées « à titre définitif ». Si vous en avez encore une, demandez la CMI dès maintenant auprès de la MDPH, ou du département si vous touchez l'APA.",
+ "sections": [
+  {
+   "h2": "Les 3 mentions de la CMI : laquelle correspond à votre situation ?",
+   "blocs": [
+    {
+     "type": "tableau",
+     "entetes": [
+      "Mention",
+      "Pour qui",
+      "Ce qu'elle apporte"
+     ],
+     "lignes": [
+      [
+       "Invalidité",
+       "Taux d'incapacité permanente d'au moins 80 %, ou pension d'invalidité de 3e catégorie",
+       "Priorité pour les places assises et dans les files d'attente, réductions dans certains transports, demi-part d'impôt, accès aux droits des travailleurs handicapés"
+      ],
+      [
+       "Priorité",
+       "Taux d'incapacité inférieur à 80 %, avec une station debout pénible",
+       "Place assise dans les transports en commun et les salles d'attente, priorité dans les files d'attente"
+      ],
+      [
+       "Stationnement",
+       "Capacité de déplacement à pied réduite de façon importante et durable, ou besoin d'être accompagné, quel que soit le taux",
+       "Stationnement gratuit et sans limite de durée sur les places ouvertes au public"
+      ]
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "Le taux d'incapacité est fixé par la **CDAPH** (commission des droits et de l'autonomie des personnes handicapées) de la MDPH, à l'aide d'un guide barème national. La mention priorité et la mention invalidité ne se cumulent pas. En revanche, la mention stationnement peut s'ajouter à l'une ou à l'autre : vous recevez alors **deux cartes**, une à placer derrière le pare-brise et une à garder sur vous."
+    },
+    {
+     "type": "p",
+     "texte": "Il faut aussi être de nationalité française, ressortissant de l'Espace économique européen ou titulaire d'un titre de séjour valable, et résider dans le département où vous déposez la demande."
+    }
+   ],
+   "sources": [
+    0,
+    7
+   ]
+  },
+  {
+   "h2": "CMI stationnement : où peut-on se garer gratuitement ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "La carte permet à son titulaire, et à la personne qui l'accompagne, de stationner **gratuitement et sans limitation de durée** sur toutes les places ouvertes au public de la voirie, et pas seulement sur les places réservées aux personnes handicapées. Elle est valable en France et dans les autres pays de l'Union européenne."
+    },
+    {
+     "type": "liste",
+     "items": [
+      "La commune peut limiter la durée du stationnement gratuit, mais jamais à moins de **12 heures**.",
+      "Une redevance peut être demandée dans les parcs de stationnement équipés de bornes d'entrée et de sortie accessibles depuis le véhicule.",
+      "La carte se fixe contre le pare-brise, bien visible, et se retire quand vous n'utilisez plus le véhicule.",
+      "À Paris, la gratuité est prise en compte lors des contrôles si le véhicule dispose d'un ticket virtuel « Handi », valable 2 ans, après référencement du véhicule dans la base Handi'Stat."
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "Les critères visent une réduction importante de la capacité et de l'autonomie de déplacement à pied, ou le besoin d'être accompagné par une tierce personne à cause d'une altération d'une fonction mentale, cognitive, psychique ou visuelle. La difficulté doit être définitive ou durer au moins un an. Les personnes âgées classées en groupe 1 ou 2 de la grille Aggir (les niveaux de perte d'autonomie les plus élevés) au titre de l'APA peuvent aussi l'obtenir."
+    }
+   ],
+   "sources": [
+    0,
+    2,
+    7
+   ]
+  },
+  {
+   "h2": "CMI priorité : places assises et files d'attente",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "La mention priorité donne droit à une **place assise** dans les transports en commun, les espaces et salles d'attente, les établissements et manifestations accueillant du public, et à la **priorité dans les files d'attente**. La personne qui vous accompagne bénéficie des mêmes avantages."
+    },
+    {
+     "type": "p",
+     "texte": "Elle concerne un taux d'incapacité inférieur à 80 % quand rester debout est pénible. Cette pénibilité est évaluée par l'équipe pluridisciplinaire de la MDPH (médecins, ergothérapeutes, psychologues, travailleurs sociaux). Si votre situation s'aggrave, vous pouvez déposer une nouvelle demande pour la mention invalidité, selon la même procédure."
+    }
+   ],
+   "sources": [
+    0,
+    3
+   ]
+  },
+  {
+   "h2": "CMI invalidité : transports, travail et sous-mentions",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "La mention invalidité reprend les avantages de la mention priorité et en ajoute d'autres :"
+    },
+    {
+     "type": "liste",
+     "items": [
+      "**des réductions dans les transports**, sous conditions, par exemple à la RATP, à la SNCF ou chez Air France, ainsi que dans certains lieux culturels : les conditions dépendent de chaque organisme ;",
+      "**les droits des travailleurs handicapés**, sans avoir à demander la [RQTH](rqth) : vous êtes bénéficiaire de l'obligation d'emploi ;",
+      "**des avantages fiscaux**, dont la demi-part supplémentaire d'impôt sur le revenu (voir ci-dessous)."
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "La carte peut porter deux sous-mentions :"
+    },
+    {
+     "type": "liste",
+     "items": [
+      "**besoin d'accompagnement** : avant 20 ans, si l'enfant perçoit un complément de l'[AEEH](aeeh) de la 3e à la 6e catégorie ; après 20 ans, si vous percevez l'aide humaine de la [PCH](pch), la majoration pour tierce personne, une pension d'invalidité de 3e catégorie ou l'allocation compensatrice pour tierce personne. Elle peut ouvrir des réductions ou la gratuité pour l'accompagnateur, notamment dans le train ;",
+      "**cécité** : si votre vision centrale est inférieure à 1/20e de la normale après correction."
+     ]
+    }
+   ],
+   "sources": [
+    0,
+    1,
+    7,
+    8
+   ]
+  },
+  {
+   "h2": "La demi-part d'impôt avec la CMI invalidité",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "La CMI mention invalidité donne droit à une **demi-part supplémentaire** de quotient familial pour l'impôt sur le revenu. Pour la déclarer, cochez la **case P** dans la rubrique « situation du foyer fiscal ». Pour un couple marié ou pacsé, cochez P pour le déclarant 1 et F pour le déclarant 2. Si vous êtes tous les deux titulaires, le couple a droit à une part supplémentaire."
+    },
+    {
+     "type": "p",
+     "texte": "L'avantage est plafonné. Pour l'impôt sur les revenus de 2025, la demi-part d'une personne seule invalide est limitée à 1 807 €, complétée si besoin d'une réduction de 1 801 €, soit **3 608 € au maximum**. Pour un couple, l'avantage de la demi-part est limité à 3 608 €."
+    },
+    {
+     "type": "p",
+     "texte": "Une personne invalide qui vit sous votre toit et possède la CMI invalidité vous donne droit à une majoration d'une part, sans condition de parenté, d'âge ou de revenu."
+    },
+    {
+     "type": "attention",
+     "texte": "Pour l'impôt sur les revenus de 2025, la demi-part est accordée dès lors que la CMI invalidité a été demandée avant le 1er janvier 2026, même si elle n'était pas encore attribuée. Si elle est finalement refusée, il faut déposer une déclaration rectificative. La notification d'attribution a la même valeur que la carte."
+    }
+   ],
+   "sources": [
+    4,
+    5,
+    6
+   ]
+  },
+  {
+   "h2": "Comment demander la CMI et combien de temps faut-il pour la recevoir ?",
+   "blocs": [
+    {
+     "type": "etapes",
+     "items": [
+      "**Déposez la demande.** Sans APA, c'est auprès de la MDPH, avec le même formulaire que les autres droits (Cerfa 15692*01), en ligne ou sur papier, gratuitement. Voir notre guide du [dossier MDPH](dossier-mdph). Si vous demandez l'APA en même temps, la CMI se demande sur le formulaire d'APA ; si vous touchez déjà l'APA, un formulaire est à retirer auprès du département.",
+      "**La CDAPH examine le dossier**, puis transmet son avis au président du conseil départemental, qui décide. Avec l'APA, c'est directement le département qui instruit.",
+      "**L'Imprimerie nationale vous écrit.** Le courrier contient un code d'accès au site de suivi de la CMI, un coupon et une enveloppe pour envoyer une photo d'identité de moins de 6 mois. Vous pouvez aussi l'envoyer en ligne.",
+      "**La carte arrive en 10 jours environ** après la réception d'une photo valide. Tant que le statut affiche « en attente photo », la fabrication n'a pas commencé."
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "Le délai qui pèse le plus est celui de l'instruction par la MDPH. Il varie selon les départements : consultez [le classement des délais des MDPH](delais-mdph)."
+    }
+   ],
+   "sources": [
+    0,
+    3
+   ]
+  },
+  {
+   "h2": "CMI à vie ou pour 1 à 20 ans ?",
+   "blocs": [
+    {
+     "type": "tableau",
+     "entetes": [
+      "Situation",
+      "Durée"
+     ],
+     "lignes": [
+      [
+       "Mention invalidité, taux d'au moins 80 % et handicap qui ne peut pas évoluer favorablement",
+       "Définitive"
+      ],
+      [
+       "APA avec classement en groupe 1 ou 2 de la grille Aggir",
+       "Définitive"
+      ],
+      [
+       "Autres cas, toutes mentions",
+       "De 1 à 20 ans"
+      ]
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "Le renouvellement se demande avec le même formulaire que la première fois. Pour la mention invalidité, Mon Parcours Handicap conseille de le faire 4 à 6 mois avant l'expiration. Le guide du [renouvellement MDPH](renouvellement-mdph) et notre outil [fin de droits MDPH](outils/fin-de-droits-mdph) aident à fixer la date."
+    }
+   ],
+   "sources": [
+    0,
+    1
+   ]
+  },
+  {
+   "h2": "Perte, vol ou ancienne carte : que faire ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "En cas de perte, de vol ou de destruction d'une CMI, commandez un **duplicata** sur le téléservice de suivi et de gestion de la CMI (carte-mobilite-inclusion.fr), géré par l'Imprimerie nationale. La refabrication coûte **10 €**, et la nouvelle carte annule l'ancienne. Le même service permet de demander un **second exemplaire** dans certains cas, par exemple pour un enfant dont les parents sont séparés."
+    },
+    {
+     "type": "p",
+     "texte": "Si vous perdez une **ancienne carte** (délivrée avant 2017), il n'y a pas de duplicata : il faut demander une CMI auprès de la MDPH, ou du département si vous touchez l'APA. Ces anciennes cartes restent utilisables jusqu'à leur date d'expiration, et au plus tard jusqu'au 31 décembre 2026."
+    }
+   ],
+   "sources": [
+    0,
+    4,
+    7
+   ]
+  },
+  {
+   "h2": "Que faire en cas de refus de la CMI ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "C'est le président du conseil départemental qui décide. Le recours commence donc par un **recours administratif préalable obligatoire (RAPO)** adressé à lui, par courrier de préférence recommandé avec avis de réception ou déposé à l'accueil du département. Joignez la décision contestée et, si vous le souhaitez, des documents complémentaires. Il a 2 mois pour répondre."
+    },
+    {
+     "type": "p",
+     "texte": "En cas de désaccord persistant, vous avez 2 mois après sa réponse pour saisir le tribunal. Selon service-public.fr, c'est le **tribunal administratif** pour la mention stationnement, et le **tribunal judiciaire** pour les mentions priorité et invalidité. Les étapes générales sont détaillées dans [contester une décision de la MDPH](recours-mdph). Pour une situation précise, une association (APF France handicap, UNAFAM, Unapei…), un point justice ou un avocat peut vous aider."
+    }
+   ],
+   "sources": [
+    0
+   ]
+  }
+ ],
+ "faq": [
+  {
+   "q": "La carte mobilité inclusion est-elle payante ?",
+   "r": "Non, la CMI est gratuite, comme la demande à la MDPH. Seul le duplicata, en cas de perte, de vol ou de destruction, coûte 10 €."
+  },
+  {
+   "q": "Peut-on utiliser la CMI stationnement dans la voiture de quelqu'un d'autre ?",
+   "r": "Oui. La CMI stationnement est attribuée à une personne et non à un véhicule. Vous pouvez l'utiliser dans n'importe quelle voiture, que vous soyez propriétaire ou non, conducteur ou passager, à condition d'être à bord."
+  },
+  {
+   "q": "Que risque-t-on en utilisant la carte handicapé d'un autre ?",
+   "r": "L'usage indu d'une CMI mention invalidité ou stationnement est puni d'une amende de 5e classe, jusqu'à 1 500 €. La CMI est un titre sécurisé, fabriqué par l'Imprimerie nationale pour être difficile à falsifier."
+  },
+  {
+   "q": "Un enfant peut-il avoir une carte mobilité inclusion ?",
+   "r": "Oui, les critères ne fixent pas d'âge minimum. Un enfant qui perçoit un complément de l'AEEH de la 3e à la 6e catégorie peut obtenir la sous-mention besoin d'accompagnement sur sa CMI invalidité. Si les parents sont séparés, un second exemplaire de la carte peut être demandé."
+  },
+  {
+   "q": "La CMI donne-t-elle droit à l'assistance à l'aéroport ?",
+   "r": "L'assistance dans les aéroports et les avions n'est pas réservée aux titulaires d'une CMI : toute personne handicapée ou à mobilité réduite peut la demander sans justificatif. Elle est gratuite pour les vols au départ d'un aéroport européen."
+  },
+  {
+   "q": "Quels sont les avantages d'une carte d'invalidité à 80 % ?",
+   "r": "La CMI invalidité, qui a remplacé l'ancienne carte d'invalidité, donne la priorité pour les places assises et dans les files d'attente, des réductions possibles dans les transports, une demi-part d'impôt et le statut de bénéficiaire de l'obligation d'emploi des travailleurs handicapés. Elle ne donne pas à elle seule le droit de se garer gratuitement : il faut aussi la mention stationnement."
+  }
+ ],
+ "liens_internes": [
+  {
+   "slug": "rqth",
+   "ancre": "RQTH"
+  },
+  {
+   "slug": "aeeh",
+   "ancre": "AEEH"
+  },
+  {
+   "slug": "pch",
+   "ancre": "PCH"
+  },
+  {
+   "slug": "dossier-mdph",
+   "ancre": "dossier MDPH"
+  },
+  {
+   "slug": "delais-mdph",
+   "ancre": "le classement des délais des MDPH"
+  },
+  {
+   "slug": "renouvellement-mdph",
+   "ancre": "renouvellement MDPH"
+  },
+  {
+   "slug": "outils/fin-de-droits-mdph",
+   "ancre": "fin de droits MDPH"
+  },
+  {
+   "slug": "recours-mdph",
+   "ancre": "contester une décision de la MDPH"
+  }
+ ],
+ "sources": [
+  {
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F34049",
+   "titre": "Carte mobilité inclusion (CMI), Service Public",
+   "date": "vérifié le 28 avril 2026, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.monparcourshandicap.gouv.fr/aides/la-carte-mobilite-inclusion-mention-invalidite",
+   "titre": "La carte mobilité inclusion, mention « invalidité », Mon Parcours Handicap",
+   "date": "mis à jour le 9 octobre 2026, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.monparcourshandicap.gouv.fr/aides/la-carte-mobilite-inclusion-mention-stationnement",
+   "titre": "La carte mobilité inclusion, mention « stationnement », Mon Parcours Handicap",
+   "date": "mis à jour le 29 août 2025, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.monparcourshandicap.gouv.fr/aides/la-carte-mobilite-inclusion-mention-priorite",
+   "titre": "La carte mobilité inclusion, mention « priorité », Mon Parcours Handicap",
+   "date": "mis à jour le 29 juillet 2026, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.impots.gouv.fr/particulier/questions/jai-une-carte-dinvalidite-comment-la-declarer",
+   "titre": "J'ai une carte d'invalidité ou une carte mobilité inclusion mention « invalidité », comment la déclarer ?, impots.gouv.fr",
+   "date": "modifié le 1er avril 2026, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2702",
+   "titre": "Impôt sur le revenu : quotient familial d'une personne seule, Service Public",
+   "date": "vérifié le 15 avril 2026, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2705",
+   "titre": "Impôt sur le revenu : quotient familial d'un couple marié ou pacsé, Service Public",
+   "date": "vérifié le 15 avril 2026, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://handicap.gouv.fr/la-carte-mobilite-inclusion-questionsreponses",
+   "titre": "La carte mobilité inclusion : questions/réponses, ministère chargé des personnes handicapées",
+   "date": "mis à jour le 19 septembre 2024, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.monparcourshandicap.gouv.fr/aides/lobligation-demploi-des-travailleurs-handicapes-oeth",
+   "titre": "L'obligation d'emploi des travailleurs handicapés (OETH), Mon Parcours Handicap",
+   "date": "mis à jour le 6 mars 2025, consulté le 2026-11-15"
+  }
+ ],
+ "date_verification": "2026-11-15",
+ "a_verifier": [
+  "Fin de validité des anciennes cartes : service-public et impots.gouv indiquent le 31 décembre 2026, la page questions/réponses de handicap.gouv.fr (mise à jour en 2024) indique une demande « avant le 30 décembre 2026 ». Le guide retient le 31 décembre 2026.",
+  "Juridiction compétente après RAPO : service-public F34049 indique le tribunal administratif pour la mention stationnement et le tribunal judiciaire pour les mentions priorité et invalidité. À confirmer avec la page recours-mdph.",
+  "Montant des réductions SNCF, RATP ou Air France liées à la CMI : non publié sur les pages officielles lues, chaque transporteur fixe ses conditions.",
+  "Durée définitive avec l'APA en GIR 1 ou 2 pour la mention invalidité : service-public la mentionne pour les mentions stationnement et priorité, la page invalidité ne cite que le taux de 80 % avec un handicap non évolutif.",
+  "Service-public F34049 évoque une possible attribution automatique de la mention stationnement et une expérimentation, sans en préciser les conditions."
+ ]
+}

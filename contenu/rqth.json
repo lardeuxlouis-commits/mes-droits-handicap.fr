@@ -1,0 +1,308 @@
+{
+ "slug": "rqth",
+ "title": "RQTH : avantages concrets, durée et demande en 2026",
+ "description": "La RQTH donne accès aux aménagements de poste, à Cap emploi, aux aides Agefiph et à un préavis doublé. Durée de 1 à 10 ans ou à vie.",
+ "h1": "RQTH : les avantages concrets et comment l'obtenir",
+ "chapo": "La reconnaissance de la qualité de travailleur handicapé (RQTH) est une décision de la MDPH, pas une allocation. Elle ouvre l'accès à des aménagements de poste, à l'accompagnement de Cap emploi, aux aides de l'Agefiph ou du FIPHFP, à l'obligation d'emploi de 6 % et à un préavis doublé en cas de licenciement. Elle est accordée de 1 à 10 ans, ou à vie.",
+ "en_bref": [
+  "Dès 16 ans (15 ans pour un apprentissage), sans taux d'incapacité minimum : il suffit que le handicap réduise vos chances d'obtenir ou de garder un emploi.",
+  "Aucune somme versée, mais des aménagements, des formations et des aides, dont jusqu'à 12 000 € sur 12 mois de l'Agefiph pour les déplacements liés à l'emploi.",
+  "Vous n'êtes jamais obligé d'en parler à votre employeur.",
+  "Durée : 1 à 10 ans, ou sans limite si la situation ne peut pas s'améliorer. Le renouvellement se demande 4 mois avant l'échéance.",
+  "Toute demande d'AAH déclenche automatiquement une procédure de RQTH."
+ ],
+ "urgence": "Si votre RQTH n'est pas accordée à vie, demandez son renouvellement 4 mois avant la date de fin indiquée sur la notification : la demande prolonge la RQTH jusqu'à la nouvelle décision, ce qui évite une coupure de droits.",
+ "sections": [
+  {
+   "h2": "La RQTH, à quoi ça sert concrètement ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "La RQTH est une **décision administrative** prise par la **CDAPH** (commission des droits et de l'autonomie des personnes handicapées) au sein de la MDPH. Elle reconnaît que votre handicap réduit vos possibilités d'obtenir ou de conserver un emploi."
+    },
+    {
+     "type": "p",
+     "texte": "Elle ne verse aucune somme d'argent. Son rôle est d'ouvrir la porte à un ensemble de mesures, que vous soyez salarié du privé, agent public, demandeur d'emploi, en formation ou en création d'entreprise. Elle n'est pas obligatoire pour travailler ou se former : c'est un outil que vous utilisez si vous en avez besoin."
+    },
+    {
+     "type": "p",
+     "texte": "Avec la RQTH, la notification reçue précise aussi une orientation : vers le milieu ordinaire de travail, vers un **Ésat** (établissement et service d'accompagnement par le travail) ou vers un centre de rééducation professionnelle."
+    }
+   ],
+   "sources": [
+    0,
+    1
+   ]
+  },
+  {
+   "h2": "Quels avantages quand on a déjà un emploi ?",
+   "blocs": [
+    {
+     "type": "liste",
+     "items": [
+      "**Des aménagements de poste ou d'horaires** : horaires adaptés, siège ergonomique, téléphone ou logiciel spécialisé.",
+      "**Un financement de ces aménagements** : l'employeur peut se faire aider par l'**Agefiph** dans le privé ou le **FIPHFP** dans la fonction publique. Pour un siège ergonomique, par exemple, l'Agefiph prend en charge la différence entre le prix d'un siège ordinaire et celui du siège adapté, après préconisation du médecin du travail.",
+      "**Un accompagnement pour garder son emploi** : si vous risquez un licenciement pour inaptitude, **Cap emploi** (organisme de placement spécialisé) peut chercher avec vous et votre employeur une solution de maintien ou de reclassement.",
+      "**Un préavis doublé en cas de licenciement**, dans la limite de 3 mois."
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "La RQTH ne change ni votre contrat de travail, ni votre salaire, ni vos primes. Si vous percevez la [PCH](pch), certaines aides techniques et certains frais de transport ou d'aménagement de véhicule pour aller au travail peuvent aussi être financés en partie par cette prestation."
+    }
+   ],
+   "sources": [
+    0,
+    1,
+    3
+   ]
+  },
+  {
+   "h2": "Quels avantages quand on cherche un emploi ou une formation ?",
+   "blocs": [
+    {
+     "type": "liste",
+     "items": [
+      "**Un accompagnement spécialisé** par Cap emploi, France Travail ou les missions locales.",
+      "**Un accès prioritaire à des formations** financées par votre compte personnel de formation (CPF), par l'Agefiph ou par le FIPHFP, et à un bilan de compétences adapté.",
+      "**Des dispositifs réservés** : stage de réadaptation ou de rééducation professionnelle, contrat d'apprentissage aménagé, emploi accompagné, contrats aidés du parcours emploi compétences (PEC), aide à la création ou à la reprise d'entreprise.",
+      "**Une entrée facilitée dans la fonction publique** : concours aménagé ou recrutement contractuel spécifique, sans concours.",
+      "**Une aide aux déplacements de l'Agefiph**, jusqu'à 12 000 € sur 12 mois, pour aménager un véhicule ou payer un taxi ou un transport adapté quand le handicap empêche de prendre les transports en commun. Elle ne finance pas l'achat d'un véhicule."
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "Les aides de l'Agefiph viennent en complément de la PCH et des autres financements. L'aide aux déplacements se demande par vous-même ; l'aide à l'adaptation du poste est demandée par l'employeur, ou par le travailleur s'il est indépendant."
+    }
+   ],
+   "sources": [
+    1,
+    4,
+    3
+   ]
+  },
+  {
+   "h2": "L'obligation d'emploi de 6 % : ce que la RQTH change pour l'employeur",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "Les employeurs privés et publics d'**au moins 20 salariés** doivent employer des travailleurs handicapés à hauteur de **6 % de leur effectif**. C'est l'**obligation d'emploi des travailleurs handicapés (OETH)**. S'ils n'atteignent pas ce taux, ils versent une contribution à l'Urssaf ou à la MSA, reversée à l'Agefiph ou au FIPHFP. Depuis le 1er janvier 2020, toutes les entreprises, même de moins de 20 salariés, déclarent leurs travailleurs handicapés."
+    },
+    {
+     "type": "p",
+     "texte": "Votre RQTH vous fait compter dans ces 6 %, que vous soyez en CDI, en CDD, à temps partiel, en intérim, en alternance ou en stage. Votre employeur peut aussi recevoir des aides pour votre accueil, l'adaptation de votre poste ou votre formation."
+    },
+    {
+     "type": "p",
+     "texte": "La RQTH n'est pas la seule porte d'entrée. Sont aussi bénéficiaires de l'obligation d'emploi, avec les mêmes droits : les titulaires de l'AAH, de la [carte mobilité inclusion](carte-mobilite-inclusion) mention invalidité, d'une pension d'invalidité réduisant d'au moins deux tiers la capacité de travail, ou d'une rente d'accident du travail ou de maladie professionnelle pour une incapacité d'au moins 10 %."
+    }
+   ],
+   "sources": [
+    2
+   ]
+  },
+  {
+   "h2": "Faut-il dire à son employeur qu'on a la RQTH ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "Non, ce n'est jamais obligatoire, ni à l'embauche ni ensuite. C'est vous qui décidez. Sans information, votre employeur ne peut pas mettre en place d'aménagement ni demander d'aide pour vous. Avec l'information, il peut adapter votre poste et vous compter dans son obligation d'emploi."
+    },
+    {
+     "type": "p",
+     "texte": "Pour les bénéficiaires de la RQTH, la notification de la MDPH sert d'attestation. Ce document écrit et officiel permet de faire valoir votre statut sans avoir à entrer dans le détail de votre situation."
+    },
+    {
+     "type": "modele",
+     "titre": "Modèle vierge de courrier pour informer votre employeur",
+     "texte": "[Prénom Nom]\n[Adresse]\n[Service ou poste occupé]\n\n[Nom de l'employeur ou du service ressources humaines]\n[Adresse]\n\n[Ville], le [date]\n\nObjet : information sur ma reconnaissance de la qualité de travailleur handicapé\n\nMadame, Monsieur,\n\nJe vous informe que je bénéficie d'une reconnaissance de la qualité de travailleur handicapé (RQTH), accordée par la CDAPH de [département] pour la période du [date de début] au [date de fin ou « sans limitation de durée »]. Vous trouverez ci-joint une copie de la notification.\n\nJe souhaite [échanger sur d'éventuels aménagements de mon poste / être reçu(e) par le médecin du travail / simplement vous en informer].\n\nJe vous prie d'agréer, Madame, Monsieur, mes salutations distinguées.\n\n[Signature]\n\nPièce jointe : copie de la notification de RQTH"
+    },
+    {
+     "type": "p",
+     "texte": "Pour une situation de travail difficile, une association (APF France handicap, UNAFAM, Unapei…), un point justice, un syndicat ou un avocat peut vous conseiller."
+    }
+   ],
+   "sources": [
+    0,
+    2
+   ]
+  },
+  {
+   "h2": "Qui peut obtenir la RQTH ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "Deux conditions suffisent :"
+    },
+    {
+     "type": "liste",
+     "items": [
+      "vos possibilités d'obtenir ou de garder un emploi sont réduites à cause de la dégradation d'au moins une fonction physique, sensorielle, mentale ou psychique ;",
+      "vous avez plus de 16 ans, ou 15 ans si vous êtes autorisé à commencer un apprentissage, et vous n'êtes plus soumis à l'obligation scolaire."
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "Ces critères ne fixent pas de taux d'incapacité minimum. Ce qui compte, ce sont les conséquences du handicap ou de la maladie sur votre vie professionnelle, comparées à ce que demande un emploi."
+    },
+    {
+     "type": "p",
+     "texte": "Entre 15 et 20 ans, certaines décisions **valent RQTH** sans demande à faire : l'[AEEH](aeeh), la PCH, un projet personnalisé de scolarisation (PPS) ou une orientation vers un Ésat ou un établissement de réadaptation professionnelle."
+    }
+   ],
+   "sources": [
+    0,
+    1
+   ]
+  },
+  {
+   "h2": "Comment faire la demande de RQTH ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "La demande est personnelle : vous la faites vous-même, ou votre représentant légal. Votre employeur ne peut pas la faire à votre place. Elle est gratuite."
+    },
+    {
+     "type": "etapes",
+     "items": [
+      "Remplissez le formulaire de demande à la MDPH (Cerfa 15692*01), en ligne si votre MDPH propose le téléservice ou sur papier. Notre guide du [dossier MDPH](dossier-mdph) le détaille section par section.",
+      "Remplissez la partie D « votre situation professionnelle » et cochez la case RQTH dans la partie E3.",
+      "Joignez une pièce d'identité, un justificatif de domicile et le [certificat médical MDPH](certificat-medical-mdph) (Cerfa 15695*01) rempli par votre médecin.",
+      "Ajoutez si vous le souhaitez un CV ou d'autres documents utiles pour comprendre votre parcours.",
+      "Déposez ou envoyez le dossier à la MDPH de votre domicile, après en avoir gardé une copie."
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "Si vous demandez l'AAH, première demande ou renouvellement, une procédure de RQTH est engagée automatiquement : rien à cocher en plus. La CDAPH doit répondre dans un délai de 4 mois, un silence plus long valant refus. Les délais réels varient selon les départements : voyez [le classement des délais des MDPH](delais-mdph)."
+    },
+    {
+     "type": "attention",
+     "texte": "En cas de refus, le recours administratif préalable obligatoire (RAPO) se fait auprès de la MDPH dans les 2 mois après réception de la décision. Ensuite, la contestation de la RQTH relève du tribunal administratif, et non du tribunal judiciaire comme pour l'AAH. Voir [contester une décision de la MDPH](recours-mdph)."
+    }
+   ],
+   "sources": [
+    0,
+    1
+   ]
+  },
+  {
+   "h2": "Combien de temps dure la RQTH, et peut-on l'avoir à vie ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "La RQTH est accordée pour **1 à 10 ans**, ou **sans limitation de durée** si votre handicap ne peut pas évoluer favorablement. La notification précise la durée. Le droit commence à la date de la décision de la CDAPH, et non à la date de dépôt."
+    },
+    {
+     "type": "p",
+     "texte": "Le renouvellement n'est pas automatique. Il se demande avec le même formulaire et un certificat médical, **4 mois avant la date d'échéance**. Votre demande prolonge la RQTH jusqu'à la nouvelle décision. Notre outil [fin de droits MDPH](outils/fin-de-droits-mdph) vous aide à fixer la bonne date, et le guide du [renouvellement MDPH](renouvellement-mdph) détaille la marche à suivre."
+    }
+   ],
+   "sources": [
+    0,
+    1
+   ]
+  }
+ ],
+ "faq": [
+  {
+   "q": "Est-ce que la RQTH donne droit à une retraite anticipée ?",
+   "r": "Non, pas à elle seule. L'accès à la retraite anticipée des travailleurs handicapés dépend de l'évaluation du handicap, notamment du taux d'incapacité reconnu. La RQTH ne suffit donc pas pour partir plus tôt."
+  },
+  {
+   "q": "Est-ce que la RQTH donne de l'argent ?",
+   "r": "Non, la RQTH n'est pas une aide financière. Elle ouvre en revanche des aides ciblées, par exemple pour aménager un poste, se former ou se déplacer pour travailler. Pour un revenu, c'est l'[AAH](aah) qui joue ce rôle, sous conditions de taux et de ressources."
+  },
+  {
+   "q": "Mon employeur peut-il savoir que j'ai demandé la RQTH ?",
+   "r": "La demande de RQTH est strictement personnelle : seuls vous ou votre représentant légal pouvez la déposer, jamais l'employeur. Le déclarer à l'employeur n'est pas obligatoire, c'est donc à vous de décider si vous lui transmettez la notification."
+  },
+  {
+   "q": "Que faire si la RQTH est refusée ?",
+   "r": "Vous pouvez contester la décision par un RAPO dans les 2 mois. Si la CDAPH estime que vos difficultés ne sont pas liées à un handicap, vous gardez l'accès aux dispositifs ouverts à tous les salariés et demandeurs d'emploi : votre conseiller France Travail ou le service des ressources humaines peut vous orienter."
+  },
+  {
+   "q": "La RQTH est-elle valable dans la fonction publique ?",
+   "r": "Oui. La RQTH ouvre l'accès aux concours aménagés et au recrutement contractuel spécifique, et les aides aux aménagements de poste des agents publics passent par le FIPHFP au lieu de l'Agefiph. Les employeurs publics d'au moins 20 agents sont aussi soumis à l'obligation d'emploi de 6 %."
+  },
+  {
+   "q": "Peut-on avoir la RQTH en étant étudiant ?",
+   "r": "Oui, dès lors que vous avez au moins 16 ans et que votre handicap réduit vos chances d'accéder à un emploi. Entre 15 et 20 ans, l'AEEH, la PCH ou un PPS valent déjà RQTH. Elle peut servir pour un stage, une alternance ou une première embauche."
+  }
+ ],
+ "liens_internes": [
+  {
+   "slug": "aah",
+   "ancre": "AAH"
+  },
+  {
+   "slug": "carte-mobilite-inclusion",
+   "ancre": "carte mobilité inclusion"
+  },
+  {
+   "slug": "dossier-mdph",
+   "ancre": "dossier MDPH"
+  },
+  {
+   "slug": "certificat-medical-mdph",
+   "ancre": "certificat médical MDPH"
+  },
+  {
+   "slug": "delais-mdph",
+   "ancre": "le classement des délais des MDPH"
+  },
+  {
+   "slug": "recours-mdph",
+   "ancre": "contester une décision de la MDPH"
+  },
+  {
+   "slug": "outils/fin-de-droits-mdph",
+   "ancre": "fin de droits MDPH"
+  },
+  {
+   "slug": "renouvellement-mdph",
+   "ancre": "renouvellement MDPH"
+  },
+  {
+   "slug": "pch",
+   "ancre": "PCH"
+  },
+  {
+   "slug": "aeeh",
+   "ancre": "AEEH"
+  }
+ ],
+ "sources": [
+  {
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F1650",
+   "titre": "Qu'est-ce que la reconnaissance de la qualité de travailleur handicapé (RQTH) ?, Service Public",
+   "date": "vérifié le 24 mars 2026, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.monparcourshandicap.gouv.fr/aides/la-reconnaissance-de-la-qualite-de-travailleur-handicape-rqth",
+   "titre": "La reconnaissance de la qualité de travailleur handicapé (RQTH), Mon Parcours Handicap",
+   "date": "mis à jour le 15 avril 2025, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.monparcourshandicap.gouv.fr/aides/lobligation-demploi-des-travailleurs-handicapes-oeth",
+   "titre": "L'obligation d'emploi des travailleurs handicapés (OETH), Mon Parcours Handicap",
+   "date": "mis à jour le 6 mars 2025, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.agefiph.fr/aides-financieres/aide-ladaptation-des-situations-de-travail",
+   "titre": "Aide à l'adaptation des situations de travail, Agefiph",
+   "date": "consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.agefiph.fr/aides-financieres/aide-aux-deplacements",
+   "titre": "Aide aux déplacements, Agefiph",
+   "date": "consulté le 2026-11-15"
+  }
+ ],
+ "date_verification": "2026-11-15",
+ "a_verifier": [
+  "Conditions exactes de la retraite anticipée des travailleurs handicapés (taux requis, durées d'assurance) : non détaillées ici, service-public F1650 indique seulement que la RQTH seule ne suffit pas.",
+  "Montant et conditions de la contribution OETH des employeurs : non chiffrés sur les pages lues.",
+  "Délai de renouvellement : service-public et monparcourshandicap indiquent 4 mois avant l'échéance pour la RQTH, alors que le plan du site évoque jusqu'à 6 mois avant la fin pour les droits MDPH en général. À harmoniser avec la page renouvellement-mdph."
+ ]
+}
