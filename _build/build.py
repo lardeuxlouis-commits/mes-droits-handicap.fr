@@ -12,7 +12,7 @@ SITE = "Mes droits handicap"
 LANCEMENT = "2026-11-15"
 MAJ_DONNEES = "2026-11-15"          # date du dernier relevé des sources (donnees.py)
 GOATCOUNTER = ""                    # ex. "https://mesdroitshandicap.goatcounter.com/count" ; vide = aucun compteur
-PRODUIT = None                      # emplacement du futur produit payant : rien n'est affiché tant que None (relecture avocat)
+PRODUIT = None                      # lien Stripe du « Kit dossier MDPH, 19 € » (https://buy.stripe.com/...) ; None = rien n'est affiché (relecture avocat)
 AUTEUR = "Louis Lardeux"
 
 E = lambda s: html.escape(str(s if s is not None else ""), quote=True)
@@ -47,7 +47,8 @@ ALT = {
     "mobilite": "Une jeune femme en fauteuil roulant monte dans un tramway par une rampe d'accès",
 }
 CSS = open(os.path.join(ROOT, "_build", "style.css"), encoding="utf-8").read()
-ASSET_V = hashlib.md5((CSS + open(os.path.join(ROOT, "_build", "outils.js"), encoding="utf-8").read()).encode()).hexdigest()[:8]
+SITE_JS = open(os.path.join(ROOT, "_build", "site.js"), encoding="utf-8").read()
+ASSET_V = hashlib.md5((CSS + SITE_JS + open(os.path.join(ROOT, "_build", "outils.js"), encoding="utf-8").read()).encode()).hexdigest()[:8]
 SLUGS = set(GUIDES) | {v[0] for v in OUTILS.values()} | {"delais-mdph", "a-propos", "methode-et-sources", "mentions-legales", "confidentialite"}
 
 
@@ -72,9 +73,9 @@ def url(slug):
     return "/" if not slug else f"/{slug}/"
 
 
-LOGO = ('<svg width="38" height="38" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="14" fill="#4a2f7e"/>'
-        '<path d="M14 31c4-9 8-13 10-13s6 4 10 13" fill="none" stroke="#f0b23c" stroke-width="4.5" stroke-linecap="round"/>'
-        '<circle cx="24" cy="12.5" r="3.6" fill="#fff"/><path d="M12 36h24" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".85"/></svg>')
+LOGO = ('<svg width="40" height="40" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24" fill="#1f3b63"/>'
+        '<path d="M13.5 31.5c4-9 8-13 10.5-13s6.5 4 10.5 13" fill="none" stroke="#e8b06a" stroke-width="4.2" stroke-linecap="round"/>'
+        '<circle cx="24" cy="12.8" r="3.5" fill="#fbf7f0"/><path d="M13 36.5h22" stroke="#fbf7f0" stroke-width="2.8" stroke-linecap="round" opacity=".8"/></svg>')
 
 
 def header(actif=None):
@@ -87,7 +88,8 @@ def header(actif=None):
     lis += f'<li><a class="mdh-nav-cta" href="/outils/simulateur-aah/">Estimer mon AAH</a></li>'
     return (f'<header class="mdh-top"><div class="mdh-w mdh-bar"><a class="mdh-logo" href="/">{LOGO}'
             f'<span><b>mes droits <i>handicap</i></b><small>Site d\'information indépendant</small></span></a>'
-            f'<nav class="mdh-nav" aria-label="Menu principal"><ul>{lis}</ul></nav></div></header>')
+            f'<button class="mdh-menu" type="button" aria-expanded="false" aria-controls="mdh-nav"><span aria-hidden="true"></span>Menu</button>'
+            f'<nav class="mdh-nav" id="mdh-nav" aria-label="Menu principal"><ul>{lis}</ul></nav></div></header>')
 
 
 def footer():
@@ -122,6 +124,12 @@ def urgences(keys):
     return '<ul class="mdh-urg">' + "".join(f'<li><b>{E(U[k][0])}</b><span>{E(U[k][1])}</span><a href="{U[k][2]}">{E(U[k][3])} →</a></li>' for k in keys) + "</ul>"
 
 
+def insecables(h):
+    """Espace insécable avant : ; ? ! dans le texte visible (hors balises et scripts) : la ponctuation ne tombe plus en début de ligne."""
+    parts = re.split(r"(<script.*?</script>|<[^>]+>)", h, flags=re.S)
+    return "".join(x if x.startswith("<") else re.sub(r" ([:;?!])(?=\s|$|<|\u00a0)", "\u00a0\\1", x) for x in parts)
+
+
 def page(title, desc, path, body, schema, image="accueil", actif=None, sticky=None, kind="contenu", robots=None):
     canon = DOMAIN + path
     ld = "".join(f'<script type="application/ld+json">{json.dumps(s, ensure_ascii=False)}</script>' for s in schema)
@@ -149,17 +157,20 @@ def page(title, desc, path, body, schema, image="accueil", actif=None, sticky=No
 <meta property="og:image" content="{DOMAIN}/img/{image}.jpg">
 <meta property="og:image:width" content="1600"><meta property="og:image:height" content="1067">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#4a2f7e">
+<meta name="theme-color" content="#f8f5ef">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/fonts/lexend-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script>document.documentElement.classList.add("js")</script>
 <link rel="stylesheet" href="/style.css?v={ASSET_V}">
+<script src="/site.js?v={ASSET_V}" defer></script>
 {ld}{js}{gc}
 </head>
 <body>
 <a class="mdh-skip" href="#contenu">Aller au contenu</a>
 {header(actif)}
 <main id="contenu">
-{body}
+{insecables(body)}
 </main>
 {FOOTER}
 {st}
@@ -214,8 +225,11 @@ def cta(outil, titre=None, texte=None):
 
 def produit_slot():
     """Emplacement réservé au futur produit payant : vide tant que PRODUIT vaut None."""
-    if not PRODUIT: return ""
-    return f'<aside class="mdh-offre" hidden>{PRODUIT}</aside>'
+    if not PRODUIT or not str(PRODUIT).startswith("https://") or "stripe.com" not in str(PRODUIT): return ""
+    return (f'<aside class="mdh-offre" aria-label="Offre optionnelle"><div class="mdh-offre-t"><p class="mdh-lab">Optionnel, pour aller plus vite</p>'
+            f'<p class="mdh-ctat">Kit dossier MDPH, 19 €</p><p>Check-list des pièces, calendrier et modèles vierges à compléter, réunis en un seul dossier. '
+            f'Les guides et les outils du site restent gratuits ; le dépôt auprès de la MDPH est toujours gratuit.</p></div>'
+            f'<a class="mdh-btn" href="{E(PRODUIT)}" rel="noopener">Découvrir le kit</a></aside>')
 
 
 # --------------------------------------------------------------------------- guides
@@ -331,7 +345,6 @@ def classement():
     plus4 = sum(1 for r in rows if r["global"] > 4)
     med = sorted(r["global"] for r in rows)[n // 2]
     top = rows[0]; bas = rows[-1]
-    opts = "".join(f'<option value="{E(r["nom"].lower())} {r["code"].lower()}">{E(r["nom"])}{" (" + r["code"] + ")" if r["code"].isdigit() else ""}</option>' for r in sorted(rows, key=lambda r: r["nom"]))
     pages20 = "".join(f'<li><a href="/delais-mdph/{DP.DEPS[c]["slug"]}/">MDPH {E(DP.de(DP.DEPS[c]["nom"]))} ({c})</a></li>' for c in DP.PAGES_DEP)
     faq = [
         ("Quelle est la MDPH la plus lente en 2026 ?", f"Au {DP.tlab(DP.DERNIER)}, le délai moyen le plus long est celui {DP.de(top['nom'])} ({DP.mois_txt(top['global'])}), d'après le baromètre de la CNSA. C'est une moyenne sur tous les dossiers du trimestre."),
@@ -347,16 +360,18 @@ def classement():
 <p class="mdh-chapo">Au {DP.tlab(DP.DERNIER)}, une MDPH met en moyenne <b>{DP.mois_txt(gn)}</b> à traiter une demande. Mais l'écart va de {DP.mois_txt(bas['global'])} {DP.dans(bas['nom'])} à {DP.mois_txt(top['global'])} {DP.dans(top['nom'])}. Retrouvez le délai de votre MDPH pour l'AAH, la PCH, les enfants et les adultes.</p>
 {trust(4)}
 </header>
-<div class="mdh-filter" role="search"><label for="q" class="mdh-lab" style="width:100%">Trouver ma MDPH</label><select id="q" aria-label="Choisir un département"><option value="">Choisissez votre département</option>{opts}</select><input id="q2" type="search" placeholder="ou tapez un nom ou un numéro" aria-label="Rechercher un département"></div>
-<p id="q-res" class="mdh-local" hidden></p>
+<div class="mdh-filter mdh-search" role="search"><label for="q2" class="mdh-lab">Trouver ma MDPH</label><div class="mdh-sfield"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5 20 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><input id="q2" type="search" autocomplete="off" placeholder="Nom ou numéro, par exemple Gironde ou 33"></div></div>
+<div id="q-res" class="mdh-qres" aria-live="polite" hidden></div>
 <ul class="mdh-kpis">
 <li><b>{DP.fr(gn)} mois</b><span>délai moyen national au {DP.tlab(DP.DERNIER)}</span></li>
 <li><b>{plus4} sur {n}</b><span>territoires au-delà de 4 mois, seuil du refus implicite</span></li>
 <li><b>{DP.fr(med)} mois</b><span>délai médian : la moitié des MDPH font mieux</span></li>
 <li><b>{DP.fr(DP.nat('global', hi))} mois</b><span>pic national, au {DP.tlab(hi)}</span></li>
 </ul>
+{DP.repartition()}
 <section aria-labelledby="tableau"><h2 id="tableau">Le classement complet</h2>
 <p>Cliquez sur un intitulé de colonne pour trier. Les départements en lien ont une page détaillée (évolution sur 6 trimestres, droits à vie, allocataires, contacts).</p>
+<div class="mdh-sortbar" role="group" aria-label="Trier le classement"><button type="button" data-k="2" data-dir="desc" aria-pressed="true">Plus long d'abord</button><button type="button" data-k="2" data-dir="asc" aria-pressed="false">Plus court d'abord</button><button type="button" data-k="1" data-dir="asc" aria-pressed="false">De A à Z</button></div>
 {table}
 {DP.src_line("delais")}
 </section>
@@ -466,9 +481,11 @@ def page_dep(code):
 {trust(5, lieu=DP.de(nom))}
 </header>
 {urg}
+{DP.repartition(("69M", "69D") if code == "69" else (code,), nomc) if g is not None else ""}
 <nav aria-label="Sommaire"><p class="mdh-lab">Sur cette page</p><ul class="mdh-toc">{"".join(toc)}<li><a href="#faq">Questions fréquentes</a></li></ul></nav>
 {"".join(corps)}
 {urg_dep(code, nom, g)}
+{produit_slot()}
 {faq_html(p["faq"])}
 <p class="mdh-src">Dates, définitions et limites de chaque chiffre {E(DP.de(nom))} sur la page <a href="/methode-et-sources/">méthode et sources</a>.</p>
 <section class="mdh-next" aria-labelledby="suite"><h2 id="suite">Pour aller plus loin</h2><ul>{nxt}</ul></section>
@@ -513,37 +530,57 @@ def page_outil(cle):
 def accueil():
     gn = DP.nat("global")
     rows = DP.classement_rows()
-    opts = "".join(f'<option value="{r["lien"] or "/delais-mdph/#" + r["code"]}">{E(r["nom"])}{" (" + r["code"] + ")" if r["code"].isdigit() else ""} : {DP.fr(r["global"])} mois</option>' for r in sorted(rows, key=lambda r: r["nom"]))
-    tools = "".join(f'<li><a class="mdh-tile mdh-tool" href="{url(v[0])}"><b>{E(v[2])}</b><span>{E(v[3])}</span><em>{E(v[1])} →</em></a></li>' for v in OUTILS.values())
+    data = [[r["nom"] + (" (" + r["code"] + ")" if r["code"].isdigit() else ""), r["code"], round(r["global"], 1), r["lien"] or "", DP.de(r["nom"])] for r in sorted(rows, key=lambda r: r["nom"])]
+    dj = '<script type="application/json" id="mdh-deps">' + json.dumps(data, ensure_ascii=False) + "</script>"
+    ico = {"aah": '<path d="M15.5 8.5A5 5 0 1 0 15.5 15.5M7 10.5h6M7 13.5h6"/>', "aeeh": '<circle cx="12" cy="7" r="2.6"/><path d="M7 20c0-4 2.2-7 5-7s5 3 5 7"/>',
+           "delai": '<path d="M7 4h10M7 20h10M8 4c0 5 8 6 8 8s-8 3-8 8M16 4c0 5-8 6-8 8"/>', "fin": '<rect x="4" y="6" width="16" height="14" rx="3"/><path d="M8 3.5v4M16 3.5v4M4 10.5h16M10 15l2 2 3.5-3.5"/>'}
+    tools = "".join(f'<li><a class="mdh-tile mdh-tool" href="{url(v[0])}"><i aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">{ico[k]}</svg></i><b>{E(v[2])}</b><span>{E(v[3])}</span><em>{E(v[1])} →</em></a></li>' for k, v in OUTILS.items())
     guides = "".join(f'<li><a class="mdh-tile" href="{url(s)}"><b>{E(v[0])}</b><span>{E(CONTENUS[s].get("description", ""))}</span></a></li>' for s, v in GUIDES.items() if s in CONTENUS)
     deps = "".join(f'<li><a href="/delais-mdph/{DP.DEPS[c]["slug"]}/">{E(DP.DEPS[c]["nom"])} ({c})</a></li>' for c in sorted(DP.PAGES_DEP, key=lambda c: DP.DEPS[c]["nom"]))
+    ico_s = '<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5 20 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>'
+
+    def find(fid, ph):
+        return (f'<form class="mdh-find" data-go action="/delais-mdph/" method="get" role="search"><div class="mdh-sfield">{ico_s}'
+                f'<input id="{fid}" type="search" autocomplete="off" placeholder="{E(ph)}"><button class="mdh-btn mdh-find-go" type="submit">Voir le délai</button></div>'
+                f'<ul class="mdh-sugg" hidden></ul></form><div class="mdh-find-res" aria-live="polite" hidden></div>')
+    T = ["2025T1", "2025T2", "2025T3", "2025T4", "2026T1", "2026T2"]
+    sv = [DP.nat("global", t) for t in T]
+    lo, hi_ = min(sv), max(sv)
+    sp = " ".join(f"{6 + i * 37.6:.1f},{36 - 28 * (v - lo) / ((hi_ - lo) or 1):.1f}" for i, v in enumerate(sv))
     body = f"""<section class="mdh-hero"><div class="mdh-w mdh-hgrid">
-<div><span class="mdh-badge">AAH · PCH · AEEH · RQTH · CMI</span>
+<div class="mdh-hcopy"><span class="mdh-badge">AAH · PCH · AEEH · RQTH · CMI</span>
 <h1>Vos droits liés au handicap : délais des MDPH, outils et démarches</h1>
 <p class="mdh-lead">Le délai réel de votre MDPH, une estimation de votre AAH, les dates à ne pas manquer et des guides pas à pas pour un dossier complet. Gratuit, sans inscription, avec les chiffres officiels de la CNSA, de la CAF et de service-public.</p>
-<p class="mdh-btns"><a class="mdh-btn" href="/delais-mdph/">Voir le délai de ma MDPH</a><a class="mdh-btn mdh-sun" href="/outils/simulateur-aah/">Estimer mon AAH en 1 minute</a></p>
-{trust(None)}
+<div class="mdh-hsearch"><label for="hq" class="mdh-hs-l">Votre département</label>{find("hq", "Nom ou numéro, par exemple Nord ou 59")}</div>
+<p class="mdh-btns"><a class="mdh-btn" href="/delais-mdph/">Voir le délai de ma MDPH</a><a class="mdh-btn mdh-sun" href="/outils/simulateur-aah/">Estimer mon AAH en 1 minute</a><a class="mdh-btn mdh-alt" href="/dossier-mdph/">Préparer mon dossier pas à pas</a></p>
+{trust(None, outil=True)}
 </div>
-<figure>{img_html("accueil", "(max-width: 860px) 100vw, 500px", True)}</figure>
+<div class="mdh-hvis"><figure>{img_html("accueil", "(max-width: 860px) 100vw, 520px", True)}</figure>
+<div class="mdh-float mdh-float-a" aria-hidden="true"><p class="mdh-lab">Délai moyen national</p><p class="mdh-fl-n"><b>{DP.fr(gn)}</b> mois</p>
+<svg viewBox="0 0 200 42" width="200" height="42"><polyline points="{sp}" fill="none" stroke="#1f3b63" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="194" cy="{36 - 28 * (sv[-1] - lo) / ((hi_ - lo) or 1):.1f}" r="3.6" fill="#e8b06a"/></svg>
+<p class="mdh-fl-s">{DP.tlab(DP.DERNIER)}, baromètre CNSA</p></div>
+<div class="mdh-float mdh-float-b" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#4f8a7b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/></svg>Rien n'est enregistré</div>
+</div>
 </div></section>
 <div class="mdh-w">
 <section class="mdh-sec" aria-labelledby="h-delai"><h2 id="h-delai">Combien de temps va attendre votre dossier ?</h2>
 <p>Au {DP.tlab(DP.DERNIER)}, les MDPH ont mis en moyenne <b>{DP.mois_txt(gn)}</b> pour répondre, mais de {DP.mois_txt(rows[-1]['global'])} à {DP.mois_txt(rows[0]['global'])} selon le département. Choisissez le vôtre :</p>
-<div class="mdh-filter"><select id="go-dep" aria-label="Choisir mon département"><option value="">Mon département</option>{opts}</select><button class="mdh-btn" type="button" id="go-btn">Voir</button></div>
+<div class="mdh-hsearch mdh-hsearch-2">{find("hq2", "Tapez le nom ou le numéro de votre département")}</div>
 {urgences(["4mois", "2mois", "6mois"])}
 </section>
 <section class="mdh-sec" id="outils" aria-labelledby="h-outils"><h2 id="h-outils">Les outils</h2>
 <p>Tout se calcule dans votre navigateur : vos réponses ne sont ni envoyées ni enregistrées.</p>
 <ul class="mdh-grid2">{tools}</ul></section>
+{produit_slot()}
 <section class="mdh-sec" id="guides" aria-labelledby="h-guides"><h2 id="h-guides">Les guides pas à pas</h2>
 <ul class="mdh-grid3">{guides}</ul></section>
 <section class="mdh-sec" aria-labelledby="h-deps"><h2 id="h-deps">Les MDPH en détail</h2>
 <p>Délais sur six trimestres, droits à vie, allocataires de l'AAH et de l'AEEH, coordonnées officielles. Les autres départements figurent dans <a href="/delais-mdph/">le classement complet</a>.</p>
 <ul class="mdh-deps">{deps}</ul></section>
-<section class="mdh-sec" aria-labelledby="h-qui"><h2 id="h-qui">À qui sert ce site</h2>
+<section class="mdh-sec mdh-qui" aria-labelledby="h-qui"><h2 id="h-qui">À qui sert ce site</h2>
 <p>Aux personnes en situation de handicap, aux parents d'un enfant handicapé et aux proches qui les aident. Il explique les règles et donne des repères chiffrés ; il ne remplace pas la MDPH, qui reçoit les dossiers gratuitement, ni un conseil personnalisé. <a href="/a-propos/">Qui écrit ce site et comment il est financé</a>.</p></section>
 </div>
-<script>(function(){{var s=document.getElementById('go-dep'),b=document.getElementById('go-btn');function go(){{if(s.value)location.href=s.value}}b.addEventListener('click',go);s.addEventListener('change',go)}})();</script>"""
+{dj}"""
     schema = [{"@context": "https://schema.org", "@type": "WebSite", "name": SITE, "url": DOMAIN + "/", "inLanguage": "fr-FR", "publisher": {"@type": "Organization", "name": SITE}}, org(),
               {"@context": "https://schema.org", **person(), "jobTitle": "Auteur et éditeur de mes-droits-handicap.fr"}]
     return page("Droits handicap : délais des MDPH, AAH, PCH, aides (2026)", "Délai de votre MDPH, simulateur AAH, calcul de l'AEEH, dates de recours et de renouvellement : vos droits liés au handicap, avec les chiffres officiels.",
@@ -592,6 +629,8 @@ def main():
     shutil.copy(os.path.join(ROOT, "_build", "outils.js"), os.path.join(OUT, "outils.js"))
     os.makedirs(os.path.join(OUT, "fonts"), exist_ok=True)
     shutil.copy(os.path.join(ROOT, "_build", "fonts", "lexend-latin.woff2"), os.path.join(OUT, "fonts", "lexend-latin.woff2"))
+    shutil.copy(os.path.join(ROOT, "_build", "fonts", "fraunces-latin.woff2"), os.path.join(OUT, "fonts", "fraunces-latin.woff2"))
+    open(os.path.join(OUT, "site.js"), "w", encoding="utf-8").write(SITE_JS)
     os.makedirs(os.path.join(OUT, "donnees"), exist_ok=True)
     open(os.path.join(OUT, "donnees", f"delais-mdph-{DP.DERNIER.lower()}.csv"), "w", encoding="utf-8").write(csv_delais())
     open(os.path.join(OUT, "favicon.svg"), "w", encoding="utf-8").write(LOGO.replace('width="38" height="38" ', 'xmlns="http://www.w3.org/2000/svg" ').replace(' aria-hidden="true"', ""))

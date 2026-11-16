@@ -185,6 +185,8 @@ def bloc_delais(code, codes, nom):
                ("Rhône hors Métropole", G.C["alert"], [b["delais"]["global"].get(t) for t in TRIM], False),
                ("Moyenne nationale", G.C["sun"], [nat("global", t) for t in TRIM], True)]
         out.append(G.lignes(ser, [tlab(t, True) for t in TRIM], "Délai moyen de traitement, toutes demandes"))
+        out.append(G.compare([(lab, a["delais"][k].get(DERNIER), nat(k)) for k, lab in (("global", "Toutes"), ("aah", "AAH"), ("pch", "PCH"), ("enfants", "Enfants"), ("adultes", "Adultes"))],
+                             f"Délais de la Métropole de Lyon et moyenne nationale par type de demande au {tlab(DERNIER)}", "Métropole de Lyon"))
         rows = []
         for t in TRIM:
             rows.append(f"<tr><td>{tlab(t)}</td>" + "".join(f'<td class="mdh-n">{fr(x) if x is not None else "n.c."}</td>' for x in (a["delais"]["aah"].get(t), b["delais"]["aah"].get(t), a["delais"]["pch"].get(t), b["delais"]["pch"].get(t))) + "</tr>")
@@ -262,6 +264,8 @@ def bloc_delais(code, codes, nom):
     ser = [("Toutes demandes", G.C["brand"], [D["global"].get(t) for t in TRIM], False), ("AAH", G.C["alert"], [D["aah"].get(t) for t in TRIM], False),
            ("PCH", G.C["ok"], [D["pch"].get(t) for t in TRIM], False), ("Moyenne nationale", G.C["sun"], [nat("global", t) for t in TRIM], True)]
     out.append(G.lignes(ser, [tlab(t, True) for t in TRIM], f"Délais moyens de traitement {de(nom)}, 6 derniers trimestres"))
+    out.append(G.compare([(lab, D[k].get(DERNIER), nat(k)) for k, lab in (("global", "Toutes"), ("aah", "AAH"), ("pch", "PCH"), ("enfants", "Enfants"), ("adultes", "Adultes"))],
+                         f"Délais {de(nom)} et moyenne nationale par type de demande au {tlab(DERNIER)}", "MDPH " + de(nom)))
     rows = "".join(f"<tr><td>{tlab(t)}</td>" + "".join(f'<td class="mdh-n">{fr(D[k].get(t)) if D[k].get(t) is not None else "n.c."}</td>' for k in ("global", "aah", "pch", "enfants", "adultes")) + "</tr>" for t in TRIM)
     out.append('<div class="mdh-tw"><table><thead><tr><th>Trimestre</th><th class="mdh-n">Toutes</th><th class="mdh-n">AAH</th><th class="mdh-n">PCH</th><th class="mdh-n">Enfants</th><th class="mdh-n">Adultes</th></tr></thead><tbody>' + rows + "</tbody></table></div>")
     out.append(f'<p class="mdh-note">Délais {de(nom)} en mois, du dépôt du dossier complet à la décision (n.c. : chiffre non transmis).</p>')
@@ -509,3 +513,10 @@ def classement_rows():
         rows.append(r)
     rows.sort(key=lambda r: -r["global"])
     return rows
+
+
+def repartition(hl=(), lab=None):
+    """Essaim des délais moyens de tous les territoires au dernier trimestre, territoire(s) mis en avant."""
+    pts = [(c, DEPS[c]["delais"]["global"][DERNIER]) for c in TERR]
+    t = f"Délai moyen de chacun des {len(pts)} territoires au {tlab(DERNIER)}" + (f", {lab} en bleu foncé" if lab else "")
+    return G.repartition(pts, t, nat("global"), hl, lab)
