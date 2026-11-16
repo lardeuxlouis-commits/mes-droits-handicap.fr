@@ -4,15 +4,17 @@ import json, glob, os, re, html, shutil, sys, hashlib, csv, io, datetime as dt
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import departements as DP
 import graph as G
+import kit as KIT
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OUT = os.path.join(ROOT, "docs")
+OUT = os.environ.get("MDH_OUT") or os.path.join(ROOT, "docs")   # MDH_OUT : dossier de sortie temporaire pour les tests
 DOMAIN = "https://mes-droits-handicap.fr"
 SITE = "Mes droits handicap"
 LANCEMENT = "2026-11-15"
 MAJ_DONNEES = "2026-11-15"          # date du dernier relevé des sources (donnees.py)
 GOATCOUNTER = ""                    # ex. "https://mesdroitshandicap.goatcounter.com/count" ; vide = aucun compteur
 PRODUIT = None                      # lien Stripe du « Kit dossier MDPH, 19 € » (https://buy.stripe.com/...) ; None = rien n'est affiché (relecture avocat)
+KIT_PDF_URL = None                  # lien du PDF payant hébergé HORS GitHub (Drive, R2) ; None = /merci/ annonce un envoi par e-mail sous 24 h
 AUTEUR = "Louis Lardeux"
 
 E = lambda s: html.escape(str(s if s is not None else ""), quote=True)
@@ -49,6 +51,7 @@ ALT = {
 CSS = open(os.path.join(ROOT, "_build", "style.css"), encoding="utf-8").read()
 SITE_JS = open(os.path.join(ROOT, "_build", "site.js"), encoding="utf-8").read()
 ASSET_V = hashlib.md5((CSS + SITE_JS + open(os.path.join(ROOT, "_build", "outils.js"), encoding="utf-8").read()).encode()).hexdigest()[:8]
+KIT_STYLE = "<style>" + open(os.path.join(ROOT, "_build", "kit.css"), encoding="utf-8").read() + "</style>"   # pages du kit seulement
 SLUGS = set(GUIDES) | {v[0] for v in OUTILS.values()} | {"delais-mdph", "a-propos", "methode-et-sources", "mentions-legales", "confidentialite"}
 
 
@@ -101,7 +104,8 @@ def footer():
             f'<div><h2>Les délais</h2><ul><li><a href="/delais-mdph/">Classement des MDPH en 2026</a></li><li><a href="/methode-et-sources/">D\'où viennent les chiffres</a></li></ul><h2 style="margin-top:18px">Outils</h2><ul>{o}</ul></div>'
             f'<div><h2>Guides</h2><ul>{g}</ul></div>'
             f'<div><h2>Le site</h2><ul><li><a href="/a-propos/">À propos et financement</a></li><li><a href="/methode-et-sources/">Méthode et sources</a></li>'
-            f'<li><a href="/mentions-legales/">Mentions légales</a></li><li><a href="/confidentialite/">Confidentialité</a></li></ul></div>'
+            f'<li><a href="/mentions-legales/">Mentions légales</a></li><li><a href="/confidentialite/">Confidentialité</a></li>'
+            + (f'<li><a href="/{KIT.SLUG}/">Kit dossier MDPH</a></li><li><a href="/{KIT.CGV}/">Conditions de vente</a></li>' if KIT.actif(PRODUIT) else "") + '</ul></div>'
             f'</div></div></footer>')
 
 
@@ -130,7 +134,7 @@ def insecables(h):
     return "".join(x if x.startswith("<") else re.sub(r" ([:;?!])(?=\s|$|<|\u00a0)", "\u00a0\\1", x) for x in parts)
 
 
-def page(title, desc, path, body, schema, image="accueil", actif=None, sticky=None, kind="contenu", robots=None):
+def page(title, desc, path, body, schema, image="accueil", actif=None, sticky=None, kind="contenu", robots=None, extra_head=""):
     canon = DOMAIN + path
     ld = "".join(f'<script type="application/ld+json">{json.dumps(s, ensure_ascii=False)}</script>' for s in schema)
     st = ""
@@ -164,7 +168,7 @@ def page(title, desc, path, body, schema, image="accueil", actif=None, sticky=No
 <script>document.documentElement.classList.add("js")</script>
 <link rel="stylesheet" href="/style.css?v={ASSET_V}">
 <script src="/site.js?v={ASSET_V}" defer></script>
-{ld}{js}{gc}
+{ld}{js}{gc}{extra_head}
 </head>
 <body>
 <a class="mdh-skip" href="#contenu">Aller au contenu</a>
@@ -223,13 +227,18 @@ def cta(outil, titre=None, texte=None):
             f'<a class="mdh-btn" href="{url(s)}">{E(btn)}</a></aside>')
 
 
-def produit_slot():
-    """Emplacement réservé au futur produit payant : vide tant que PRODUIT vaut None."""
-    if not PRODUIT or not str(PRODUIT).startswith("https://") or "stripe.com" not in str(PRODUIT): return ""
+def produit_slot(court=False):
+    """Emplacement réservé au futur produit payant : vide tant que PRODUIT vaut None. court=True : version brève (pages départements, anti-gabarit)."""
+    if not KIT.actif(PRODUIT): return ""
+    if court:
+        return (f'<aside class="mdh-offre" aria-label="Offre optionnelle"><div class="mdh-offre-t"><p class="mdh-lab">Optionnel</p><p class="mdh-ctat">Kit dossier MDPH, 19 €</p>'
+                f'<p>Checklists, Cerfa expliqué et modèles vierges. Le dépôt reste gratuit.</p></div><a class="mdh-btn" href="/{KIT.SLUG}/">Voir le kit</a></aside>')
     return (f'<aside class="mdh-offre" aria-label="Offre optionnelle"><div class="mdh-offre-t"><p class="mdh-lab">Optionnel, pour aller plus vite</p>'
-            f'<p class="mdh-ctat">Kit dossier MDPH, 19 €</p><p>Check-list des pièces, calendrier et modèles vierges à compléter, réunis en un seul dossier. '
-            f'Les guides et les outils du site restent gratuits ; le dépôt auprès de la MDPH est toujours gratuit.</p></div>'
-            f'<a class="mdh-btn" href="{E(PRODUIT)}" rel="noopener">Découvrir le kit</a></aside>')
+            f'<p class="mdh-ctat">Préparez votre dossier MDPH sans rien oublier</p><p>Le Kit dossier MDPH réunit en 26 pages tout ce qu\'il faut pour préparer votre dossier : '
+            f'checklists des pièces, Cerfa expliqué de A à F, grilles pour le projet de vie, fiche pour votre médecin, délais de votre MDPH et modèle vierge de recours.</p>'
+            f'<p><b>19 €</b> · téléchargement immédiat · remboursé sous 14 jours sur simple demande · <a href="{KIT.EXTRAIT}">Lire l\'extrait gratuit</a></p>'
+            f'<p class="mdh-note">Guide indépendant. Le dépôt du dossier est gratuit auprès de votre MDPH.</p></div>'
+            f'<a class="mdh-btn" href="/{KIT.SLUG}/">Voir le kit</a></aside>')
 
 
 # --------------------------------------------------------------------------- guides
@@ -485,7 +494,7 @@ def page_dep(code):
 <nav aria-label="Sommaire"><p class="mdh-lab">Sur cette page</p><ul class="mdh-toc">{"".join(toc)}<li><a href="#faq">Questions fréquentes</a></li></ul></nav>
 {"".join(corps)}
 {urg_dep(code, nom, g)}
-{produit_slot()}
+{produit_slot(True)}
 {faq_html(p["faq"])}
 <p class="mdh-src">Dates, définitions et limites de chaque chiffre {E(DP.de(nom))} sur la page <a href="/methode-et-sources/">méthode et sources</a>.</p>
 <section class="mdh-next" aria-labelledby="suite"><h2 id="suite">Pour aller plus loin</h2><ul>{nxt}</ul></section>
@@ -617,10 +626,15 @@ def main():
             path, h = guide(CONTENUS[s]); write(path, h); urls.append((path, CONTENUS[s].get("date_verification", LANCEMENT)))
     for k in OUTILS:
         path, h = page_outil(k); write(path, h); urls.append((path, OP.PAGES[k]["verif"]))
-    for s, (t, dsc, h1, b, schema_extra) in CF.pages(SITE, AUTEUR, DOMAIN).items():
+    for s, (t, dsc, h1, b, schema_extra) in CF.pages(SITE, AUTEUR, DOMAIN, KIT.actif(PRODUIT)).items():
         body = f'<div class="mdh-w mdh-prose">{crumbs([(h1, None)])}<h1>{E(h1)}</h1>{b}</div>'
         sch = [bc_schema([(h1, url(s))])] + schema_extra
         write(url(s), page(t, dsc, url(s), body, sch, "accueil")); urls.append((url(s), LANCEMENT))
+    if KIT.actif(PRODUIT):   # Kit dossier MDPH : rien de tout cela n'existe tant que PRODUIT vaut None
+        KIT.extrait(ROOT, OUT)
+        path, h = KIT.page_vente(sys.modules[__name__], KIT.apercus(ROOT, OUT)); write(path, h); urls.append((path, MAJ_DONNEES))
+        path, h = KIT.page_cgv(sys.modules[__name__]); write(path, h); urls.append((path, KIT.CGV_DATE))
+        path, h = KIT.page_merci(sys.modules[__name__]); write(path, h)   # noindex, hors sitemap, jamais liée
     open(os.path.join(OUT, "404.html"), "w", encoding="utf-8").write(
         page("Page introuvable | Mes droits handicap", "Cette page n'existe pas ou a été déplacée.", "/404.html",
              '<div class="mdh-w mdh-prose"><h1>Page introuvable</h1><p>Cette adresse n\'existe pas ou plus. Vous cherchiez peut-être :</p><ul><li><a href="/delais-mdph/">le délai de votre MDPH</a></li><li><a href="/outils/simulateur-aah/">le simulateur AAH</a></li><li><a href="/dossier-mdph/">le guide du dossier MDPH</a></li><li><a href="/">l\'accueil</a></li></ul></div>',
@@ -646,7 +660,9 @@ def main():
     llms += [f"- [MDPH {DP.de(DP.DEPS[c]['nom'])}]({DOMAIN}/delais-mdph/{DP.DEPS[c]['slug']}/)" for c in DP.PAGES_DEP]
     llms += ["", "## Outils (calcul dans le navigateur, rien n'est enregistré)", ""] + [f"- [{v[2]}]({DOMAIN}{url(v[0])}): {v[3]}" for v in OUTILS.values()]
     llms += ["", "## Guides", ""] + [f"- [{strip(CONTENUS[s]['h1'])}]({DOMAIN}{url(s)}): {strip(CONTENUS[s].get('chapo', ''))}" for s in GUIDES if s in CONTENUS]
-    llms += ["", "## Le site", "", f"- [À propos]({DOMAIN}/a-propos/)", f"- [Méthode et sources]({DOMAIN}/methode-et-sources/)", ""]
+    llms += ["", "## Le site", "", f"- [À propos]({DOMAIN}/a-propos/)", f"- [Méthode et sources]({DOMAIN}/methode-et-sources/)"]
+    if KIT.actif(PRODUIT): llms += [f"- [Kit dossier MDPH, guide pratique payant (19 €)]({DOMAIN}/{KIT.SLUG}/)", f"- [Conditions de vente]({DOMAIN}/{KIT.CGV}/)"]
+    llms += [""]
     open(os.path.join(OUT, "llms.txt"), "w", encoding="utf-8").write("\n".join(llms))
     print(len(CONTENUS), "guides,", len(urls), "URL ->", OUT)
 

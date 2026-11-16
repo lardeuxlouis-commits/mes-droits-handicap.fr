@@ -5,10 +5,14 @@ import departements as DP
 CONTACT = "contact@mes-droits-handicap.fr"
 
 
-def pages(SITE, AUTEUR, DOMAIN):
+def pages(SITE, AUTEUR, DOMAIN, kit=False):
+    """kit=True seulement quand le Kit dossier MDPH est en vente (PRODUIT renseigné dans build.py) : sinon les textes restent identiques."""
     S = DP.SRC
     mail = f'<a href="mailto:{CONTACT}">{CONTACT}</a>'
     sources_li = "".join(f'<li><b>{s["titre"]}</b> : {s["periode"] + ", " if s.get("periode") else ""}{s["publie"]}. <a href="{s["url"]}" rel="noopener" target="_blank">Lien</a></li>' for s in S.values())
+    FIN = "<p>Aujourd'hui, le site n'a aucune source de revenus : pas de publicité, pas d'affiliation, rien à vendre. Il est possible qu'à l'avenir un service payant optionnel soit proposé (par exemple une aide à l'organisation de son dossier) ; il ne le sera qu'après relecture par un avocat, il sera clairement présenté comme tel et ne changera jamais le contenu gratuit des guides ni des outils.</p>"
+    FIN_KIT = ("<p>Le site n'affiche pas de publicité et ne fait pas d'affiliation. Il est financé par la vente d'un guide pratique optionnel, le <a href=\"/kit-dossier-mdph/\">Kit dossier MDPH</a> (19 €), "
+               "clairement présenté comme payant. Les guides et les outils du site restent gratuits et complets, et le dépôt du dossier est toujours gratuit auprès de votre MDPH.</p>")
     apropos = f"""<div class="mdh-author"><span class="mdh-ini" aria-hidden="true">LL</span><span><b>{AUTEUR}</b><br>Auteur et éditeur de mes-droits-handicap.fr</span></div>
 <p><b>Ce site n'est pas un service public.</b> Il n'est rattaché à aucune MDPH, à aucun département, à la CAF ni à la CNSA. Toutes les démarches sont gratuites sur le site officiel de votre MDPH et sur <a href="https://mdphenligne.cnsa.fr/" rel="noopener" target="_blank">mdphenligne.cnsa.fr</a> : personne n'a besoin de payer un intermédiaire pour déposer un dossier.</p>
 <h2>Pourquoi ce site</h2>
@@ -21,7 +25,7 @@ def pages(SITE, AUTEUR, DOMAIN):
 <li>Les <b>outils</b> reprennent les barèmes officiels ; chacun a été vérifié à la main sur plusieurs cas avant publication.</li>
 <li>Les <b>délais par département</b> sont mis à jour à chaque publication trimestrielle du baromètre de la CNSA. Détail : <a href="/methode-et-sources/">méthode et sources</a>.</li></ul>
 <h2>Comment le site est financé</h2>
-<p>Aujourd'hui, le site n'a aucune source de revenus : pas de publicité, pas d'affiliation, rien à vendre. Il est possible qu'à l'avenir un service payant optionnel soit proposé (par exemple une aide à l'organisation de son dossier) ; il ne le sera qu'après relecture par un avocat, il sera clairement présenté comme tel et ne changera jamais le contenu gratuit des guides ni des outils.</p>
+{FIN_KIT if kit else FIN}
 <h2>Vos données</h2>
 <p>Les outils calculent tout dans votre navigateur : vos réponses, qui peuvent concerner votre santé, ne sont ni envoyées ni enregistrées. Détail : <a href="/confidentialite/">confidentialité</a>.</p>
 <h2>Une erreur ?</h2>
@@ -50,10 +54,13 @@ def pages(SITE, AUTEUR, DOMAIN):
 <h2>Nature du site</h2><p>mes-droits-handicap.fr est un site d'information indépendant. Il n'est pas un service public et n'est rattaché à aucune MDPH, collectivité, caisse ou administration. Les démarches sont gratuites auprès de la MDPH et sur mdphenligne.cnsa.fr. Les contenus ont une vocation d'information générale : ils ne constituent ni un conseil juridique ni un avis médical, et ne remplacent pas la décision de l'organisme compétent, qui seul fait foi.</p>
 <h2>Données publiques réutilisées</h2><p>Les données de la CNSA, de la CNAF, de la DREES, de l'Insee et de l'annuaire de l'administration sont réutilisées dans le respect de leurs conditions (Licence Ouverte d'Etalab), avec mention de la source et de la date.</p>
 <h2>Illustrations</h2><p>Les photos d'illustration sont générées par intelligence artificielle. Elles ne représentent pas de personnes réelles et ne sont pas des témoignages.</p>"""
+    ACHAT = ("<h2>Achat du Kit dossier MDPH</h2><p>Le paiement du kit est traité par Stripe, sur sa propre page : nous ne voyons pas votre numéro de carte. Stripe nous transmet votre adresse e-mail, "
+             "votre nom et le montant payé, conservés pour la comptabilité et pour vous renvoyer le kit si besoin. Aucune information de santé n'est demandée. "
+             "Après le paiement, la page de téléchargement garde sur votre appareil (stockage local du navigateur) l'identifiant de la commande, pour que vous puissiez y revenir ; rien n'est envoyé.</p>")
     confid = f"""<p>Ce site ne dépose aucun cookie, n'affiche aucune publicité et ne vous demande aucune donnée pour être consulté.</p>
 <h2>Les outils</h2><p>Les quatre outils (simulateur AAH, calcul de l'AEEH, date de refus implicite, calendrier de renouvellement) fonctionnent entièrement dans votre navigateur. Les informations que vous saisissez, y compris celles qui touchent à votre santé ou à votre handicap, ne sont ni envoyées à un serveur, ni enregistrées, ni mesurées. Aucun script externe n'est chargé sur ces pages. Le rappel d'agenda (.ics) est créé sur votre appareil.</p>
 <h2>Mesure d'audience</h2><p>Sur les pages d'information (guides, délais), un compteur de visites sans cookie et anonyme peut être utilisé (GoatCounter) : il compte les pages vues, sans vous identifier et sans suivre vos réponses aux outils. Il n'est jamais chargé sur les pages des outils.</p>
-<h2>Polices de caractères</h2><p>La police Lexend est hébergée sur le site lui-même : aucun serveur tiers n'est contacté pour l'afficher.</p>
+{ACHAT if kit else ""}<h2>Polices de caractères</h2><p>La police Lexend est hébergée sur le site lui-même : aucun serveur tiers n'est contacté pour l'afficher.</p>
 <h2>Vos droits</h2><p>Le site ne détenant aucune donnée personnelle vous concernant, il n'y a rien à consulter ni à effacer. Pour toute question : {mail}. Vous pouvez aussi saisir la CNIL.</p>"""
     return {
         "a-propos": ("À propos : qui écrit ce site et son financement", "Qui écrit mes-droits-handicap.fr, comment chaque information est vérifiée, comment le site est financé et ce qu'il n'est pas.", "À propos de ce site", apropos,

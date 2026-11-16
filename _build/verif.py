@@ -2,7 +2,7 @@
 """Contrôles SEO, qualité et anti-gabarit sur docs/ : à lancer après build.py. Sortie non nulle s'il y a une erreur."""
 import glob, os, re, json, collections, html, statistics, sys
 
-OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "docs")
+OUT = os.environ.get("MDH_OUT") or os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "docs")
 DOMAIN = "https://mes-droits-handicap.fr"
 pb = []; titres = collections.Counter(); descs = collections.Counter(); h1s = collections.Counter()
 existe = lambda p: p == "/" or os.path.exists(os.path.join(OUT, p.strip("/"), "index.html")) or os.path.exists(os.path.join(OUT, p.strip("/")))
