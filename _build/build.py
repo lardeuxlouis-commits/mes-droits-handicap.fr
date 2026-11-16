@@ -112,7 +112,7 @@ def footer():
 def trust(nb_src=None, maj=MAJ_DONNEES, outil=False, lieu=None):
     li = [f"<li>Données officielles {'CNSA, CAF et Insee ' + lieu if lieu else 'CNSA, CAF et service-public'}, vérifiées le {date_fr(maj)}</li>"]
     if nb_src: li.append(f"<li>{nb_src} sources officielles citées</li>")
-    li.append(f'<li>Par {AUTEUR}, <a href="/methode-et-sources/">méthode publiée</a></li>')
+    li.append('<li>Gratuit, sans inscription, <a href="/methode-et-sources/">méthode et sources publiées</a></li>')
     if outil: li.append("<li>Vos réponses restent sur votre appareil, rien n'est enregistré</li>")
     return '<ul class="mdh-trust">' + "".join(li) + "</ul>"
 
