@@ -16,6 +16,7 @@ GOATCOUNTER = ""                    # ex. "https://mesdroitshandicap.goatcounter
 PRODUIT = None                      # lien Stripe du « Kit dossier MDPH, 19 € » (https://buy.stripe.com/...) ; None = rien n'est affiché (relecture avocat)
 KIT_PDF_URL = None                  # lien du PDF payant hébergé HORS GitHub (Drive, R2) ; None = /merci/ annonce un envoi par e-mail sous 24 h
 AUTEUR = "Louis Lardeux"
+INDEXNOW = "50f1cb133c1a8499537462019c5a94c2"             # clé IndexNow, servie à la racine dans <clé>.txt
 
 E = lambda s: html.escape(str(s if s is not None else ""), quote=True)
 date_fr = lambda iso: dt.date.fromisoformat(iso).strftime("%d/%m/%Y")
@@ -300,6 +301,10 @@ def guide(d):
     sources = "".join(f'<li><a href="{E(x["url"])}" rel="noopener" target="_blank">{E(x.get("titre") or x["url"])}</a>' + (f" ({E(x['date'])})" if x.get("date") else "") + "</li>" for x in srcs)
     keys = {"delai": ["delai", "4mois", "2mois"], "fin": ["6mois", "delai", "2mois"], "aah": ["delai", "4mois", "6mois"], "aeeh": ["delai", "4mois", "6mois"]}[outil]
     if slug == "recours-mdph": keys = ["2mois", "4mois", "delai"]
+    deps_html = ""
+    if slug == "dossier-mdph-trop-long":
+        lis = "".join(f'<li><a href="/delais-mdph/{DP.DEPS[c]["slug"]}/">{E(DP.DEPS[c]["nom"])} ({c})</a></li>' for c in sorted(DP.PAGES_DEP, key=lambda c: DP.DEPS[c]["nom"]))
+        deps_html = f'<section class="mdh-next" aria-labelledby="delais-dep"><h2 id="delais-dep">Délais par département</h2><p>Le délai de traitement varie d\'une MDPH à l\'autre. Voici les pages qui détaillent le délai moyen de chaque département suivi :</p><ul>{lis}</ul></section>\n'
     body = f"""<div class="mdh-w"><div class="mdh-art">
 {crumbs([("Guides", "/#guides"), (court, None)])}
 <header class="mdh-head"><span class="mdh-badge">Guide pratique</span>
@@ -316,7 +321,7 @@ def guide(d):
 {urgences(keys)}
 {faq_html(faq)}
 {produit_slot()}
-<section class="mdh-next" aria-labelledby="suite"><h2 id="suite">Pour aller plus loin</h2><ul>{nxt}</ul></section>
+{deps_html}<section class="mdh-next" aria-labelledby="suite"><h2 id="suite">Pour aller plus loin</h2><ul>{nxt}</ul></section>
 <section class="mdh-sources" aria-labelledby="sources"><h2 id="sources">Sources</h2><p>Informations vérifiées le {date_fr(verif)} sur les sites officiels. Les montants changent en général au 1er janvier ou au 1er avril : en cas de doute, l'organisme qui verse l'aide fait foi.</p><ul>{sources}</ul></section>
 </div></div>"""
     schema = [{"@context": "https://schema.org", "@type": "Article", "headline": strip(d["h1"])[:110], "description": d.get("description", ""),
@@ -649,6 +654,7 @@ def main():
     open(os.path.join(OUT, "donnees", f"delais-mdph-{DP.DERNIER.lower()}.csv"), "w", encoding="utf-8").write(csv_delais())
     open(os.path.join(OUT, "favicon.svg"), "w", encoding="utf-8").write(LOGO.replace('width="38" height="38" ', 'xmlns="http://www.w3.org/2000/svg" ').replace(' aria-hidden="true"', ""))
     open(os.path.join(OUT, "CNAME"), "w").write("mes-droits-handicap.fr\n")
+    open(os.path.join(OUT, INDEXNOW + ".txt"), "w").write(INDEXNOW)
     open(os.path.join(OUT, ".nojekyll"), "w").write("")
     open(os.path.join(OUT, "googlea92d4a2fb22dcdea.html"), "w").write("google-site-verification: googlea92d4a2fb22dcdea.html")
     open(os.path.join(OUT, "robots.txt"), "w").write(f"User-agent: *\nAllow: /\n\nSitemap: {DOMAIN}/sitemap.xml\n")
