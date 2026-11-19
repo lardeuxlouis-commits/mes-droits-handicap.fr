@@ -1,12 +1,12 @@
 {
   "slug": "pch",
   "title": "PCH 2026 : tarifs, aidant familial et aides financées",
-  "description": "PCH : aide humaine jusqu'à 25 € de l'heure, aidant familial 4,93 € de l'heure au 1er juin 2026. Les 5 éléments, les plafonds et la demande.",
+  "description": "PCH : aide humaine jusqu'à 25 € de l'heure, aidant familial 4,96 € de l'heure au 1er novembre 2026. Les 5 éléments, les plafonds et la demande.",
   "h1": "PCH : ce que finance la prestation de compensation du handicap",
-  "chapo": "La prestation de compensation du handicap (PCH) rembourse des dépenses liées à la perte d'autonomie : aide humaine, matériel, aménagement du logement ou du véhicule, frais spécifiques, aide animalière. Au 1er juin 2026, l'aide humaine est prise en charge jusqu'à 19,92 € de l'heure en emploi direct et 25 € en service prestataire, et un aidant familial est dédommagé 4,93 € de l'heure. Elle est attribuée sans condition de ressources.",
+  "chapo": "La prestation de compensation du handicap (PCH) rembourse des dépenses liées à la perte d'autonomie : aide humaine, matériel, aménagement du logement ou du véhicule, frais spécifiques, aide animalière. Au 1er novembre 2026, l'aide humaine est prise en charge jusqu'à 20,04 € de l'heure en emploi direct et 25 € en service prestataire, et un aidant familial est dédommagé 4,96 € de l'heure. Elle est attribuée sans condition de ressources.",
   "en_bref": [
     "5 éléments : aide humaine, aides techniques, logement, véhicule et transport, charges spécifiques ou exceptionnelles, aide animalière, plus la PCH parentalité.",
-    "Aide humaine au 1er juin 2026 : 19,92 € de l'heure en emploi direct, 21,91 € en mandataire, 25 € en prestataire, 4,93 € pour un aidant familial.",
+    "Aide humaine au 1er novembre 2026 : 20,04 € de l'heure en emploi direct, 22,04 € en mandataire, 25 € en prestataire, 4,96 € pour un aidant familial.",
     "Prise en charge à 100 % si vos ressources sont inférieures ou égales à 31 162,62 € par an, 80 % au-dessus.",
     "Conditions : une difficulté absolue pour une activité du quotidien, ou une difficulté grave pour au moins deux, depuis au moins 1 an ou de façon définitive.",
     "La MDPH décide, le conseil départemental verse, chaque mois ou ponctuellement sur justificatifs."
@@ -99,7 +99,7 @@
       ]
     },
     {
-      "h2": "Aide humaine : les tarifs horaires au 1er juin 2026",
+      "h2": "Aide humaine : les tarifs horaires au 1er novembre 2026",
       "blocs": [
         {
           "type": "p",
@@ -115,13 +115,13 @@
           "lignes": [
             [
               "Emploi direct (vous êtes l'employeur)",
-              "19,92 €",
-              "20,70 €"
+              "20,04 €",
+              "20,82 €"
             ],
             [
               "Service mandataire (un organisme gère les formalités, vous restez employeur)",
-              "21,91 €",
-              "22,77 €"
+              "22,04 €",
+              "22,90 €"
             ],
             [
               "Service prestataire (le service emploie l'intervenant)",
@@ -130,14 +130,14 @@
             ],
             [
               "Aidant familial dédommagé",
-              "4,93 €",
-              "7,39 € si l'aidant réduit ou arrête son activité professionnelle"
+              "4,96 €",
+              "7,43 € si l'aidant réduit ou arrête son activité professionnelle"
             ]
           ]
         },
         {
           "type": "p",
-          "texte": "Les **aspirations endo-trachéales** consistent à dégager les voies respiratoires par une sonde : le tarif majoré suppose une attestation de formation. Le dédommagement de chaque aidant familial est plafonné à **1 269,83 € par mois**, ou **1 523,80 €** dans les situations où le plafond est majoré de 20 %."
+          "texte": "Les **aspirations endo-trachéales** consistent à dégager les voies respiratoires par une sonde : le tarif majoré suppose une attestation de formation. Le dédommagement de chaque aidant familial est plafonné à **1 277,56 € par mois**, ou **1 533,07 €** dans les situations où le plafond est majoré de 20 %."
         },
         {
           "type": "p",
@@ -146,11 +146,11 @@
         {
           "type": "liste",
           "items": [
-            "**Forfait cécité** (vision centrale nulle ou inférieure à 1/20) : 837,85 € par mois, soit 50 heures.",
-            "**Forfait surdité** (perte auditive supérieure à 70 décibels, avec besoin d'une aide à la communication) : 502,71 € par mois.",
-            "**Surdicécité** : forfait de 502,71 €, 837,85 € ou 1 340,56 € par mois selon le degré des deux déficiences (30, 50 ou 80 heures).",
+            "**Forfait cécité** (vision centrale nulle ou inférieure à 1/20) : 843,05 € par mois, soit 50 heures.",
+            "**Forfait surdité** (perte auditive supérieure à 70 décibels, avec besoin d'une aide à la communication) : 505,83 € par mois.",
+            "**Surdicécité** : forfait de 505,83 €, 843,05 € ou 1 348,88 € par mois selon le degré des deux déficiences (30, 50 ou 80 heures).",
             "**Soutien à l'autonomie** pour les troubles psychiques, cognitifs, mentaux ou du neurodéveloppement : jusqu'à 3 heures par jour, sous forme de crédit d'heures sur 12 mois.",
-            "**Hébergement en établissement à temps complet** : entre 58,47 € et 116,95 € par mois (1,97 € à 3,94 € par jour) au 1er juin 2026."
+            "**Hébergement en établissement à temps complet** : entre 58,47 € et 116,95 € par mois (1,97 € à 3,94 € par jour) au 1er novembre 2026."
           ]
         },
         {
@@ -341,11 +341,11 @@
     },
     {
       "q": "Combien touche un aidant familial avec la PCH ?",
-      "r": "Au 1er juin 2026, le dédommagement est de 4,93 € de l'heure, ou 7,39 € si l'aidant a réduit ou arrêté son activité professionnelle. Le montant mensuel est plafonné à 1 269,83 € par aidant, ou 1 523,80 € quand le plafond est majoré. Le nombre d'heures est fixé par le plan d'aide."
+      "r": "Au 1er novembre 2026, le dédommagement est de 4,96 € de l'heure, ou 7,43 € si l'aidant a réduit ou arrêté son activité professionnelle. Le montant mensuel est plafonné à 1 277,56 € par aidant, ou 1 533,07 € quand le plafond est majoré. Le nombre d'heures est fixé par le plan d'aide."
     },
     {
       "q": "La PCH est-elle versée si l'on vit en établissement ?",
-      "r": "Oui, la PCH peut être attribuée en établissement social, médico-social ou de santé, mais avec des montants différents. Pour l'aide humaine, les jours passés en établissement ouvrent droit à 10 % du montant prévu à domicile, avec au 1er juin 2026 un minimum de 58,47 € et un maximum de 116,95 € par mois en hébergement à temps complet."
+      "r": "Oui, la PCH peut être attribuée en établissement social, médico-social ou de santé, mais avec des montants différents. Pour l'aide humaine, les jours passés en établissement ouvrent droit à 10 % du montant prévu à domicile, avec au 1er novembre 2026 un minimum de 58,47 € et un maximum de 116,95 € par mois en hébergement à temps complet."
     },
     {
       "q": "Peut-on cumuler la PCH et l'AJPP ?",
@@ -402,9 +402,9 @@
       "date": "mis à jour le 06/08/2026, consulté le 2026-11-15"
     },
     {
-      "url": "https://www.cnsa.fr/sites/default/files/2026-06/Tarifs-PCH-1er-juin-2026_2.pdf",
-      "titre": "Tarifs et montants applicables aux différents éléments de la PCH à compter du 1er juin 2026, CNSA / DGCS",
-      "date": "1er juin 2026, consulté le 2026-11-15"
+      "url": "https://www.cnsa.fr/sites/default/files/2026-11/Tarifs-PCH-1er-novembre-2026.pdf",
+      "titre": "Tarifs et montants applicables aux différents éléments de la PCH à compter du 1er novembre 2026, CNSA / DGCS",
+      "date": "1er novembre 2026, consulté le 2026-11-19"
     },
     {
       "url": "https://www.monparcourshandicap.gouv.fr/aides/la-prestation-de-compensation-du-handicap-pch-parentalite",
@@ -414,20 +414,26 @@
     {
       "url": "https://www.monparcourshandicap.gouv.fr/actualite/montants-de-la-pch-prestation-de-compensation",
       "titre": "Montants 2026 de la PCH, Mon Parcours Handicap",
-      "date": "mis à jour le 10/06/2026, consulté le 2026-11-15"
+      "date": "mis à jour le 17/11/2026, consulté le 2026-11-19"
     },
     {
       "url": "https://www.monparcourshandicap.gouv.fr/aides/lallocation-deducation-de-lenfant-handicape-aeeh",
       "titre": "L'allocation d'éducation de l'enfant handicapé (AEEH) et ses compléments, Mon Parcours Handicap",
       "date": "mis à jour le 28/07/2026, consulté le 2026-11-15"
+    },
+    {
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054939317",
+      "titre": "Arrêté du 29 septembre 2026 portant extension d'un avenant à la convention collective de la branche du secteur des particuliers employeurs et de l'emploi à domicile (n° 3239), Légifrance",
+      "date": "JORF du 2 octobre 2026, consulté le 2026-11-19"
     }
   ],
-  "date_verification": "2026-11-15",
+  "date_verification": "2026-11-19",
   "a_verifier": [
-    "Dédommagement de l'aidant familial qui réduit ou cesse son activité : 7,39 € de l'heure dans la grille CNSA du 1er juin 2026, 7,40 € sur service-public (vérifié le 1er juillet 2026). Le guide retient 7,39 €, source primaire.",
+    "Dédommagement de l'aidant familial qui réduit ou cesse son activité : 7,43 € de l'heure dans la grille DGCS du 1er novembre 2026 (7,39 € au 1er juin). La page monparcourshandicap du 17/11/2026 écrit « 20,4 € » pour l'emploi direct et « 503,83 € » pour la surdicécité : fautes de frappe, la grille DGCS donne 20,04 € (mandataire 22,04 € = emploi direct + 10 %) et 505,83 €. Le guide suit la grille DGCS.",
     "Ressources prises en compte pour le taux 100 % / 80 % : service-public parle du revenu fiscal de référence, monparcourshandicap dit que salaires, revenus du travail et pensions ne sont pas retenus (revenus essentiellement patrimoniaux). Le guide suit monparcourshandicap ; texte de l'article R245-46 du CASF non lu (Legifrance inaccessible pendant la session).",
     "Contrôle d'effectivité : règles précises (durée de conservation des justificatifs, suspension) non lues sur un texte officiel pendant la session, le guide reste général.",
-    "Conditions exactes de la majoration de 20 % du plafond aidant familial (1 523,80 €) non détaillées dans les sources lues.",
-    "Plafond journalier d'aide humaine (monparcourshandicap mentionne « maximum 9 h 05 par jour ») non repris faute de confirmation par un second texte."
+    "Conditions exactes de la majoration de 20 % du plafond aidant familial (1 533,07 €) non détaillées dans les sources lues.",
+    "Plafond journalier d'aide humaine (monparcourshandicap mentionne « maximum 9 h 05 par jour ») non repris faute de confirmation par un second texte.",
+    "Les tarifs de l'aidant familial suivent le Smic net des emplois familiaux : à revoir après la hausse du Smic annoncée pour le 1er décembre 2026."
   ]
 }
