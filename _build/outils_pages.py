@@ -2,8 +2,10 @@
 outils.js ne fait aucune requête réseau."""
 import json
 import departements as DP
+import smic as SM   # Smic et seuils : un seul endroit, à mettre à jour au 01/12/2026 dès parution du décret
 
 VERIF = "2026-11-15"
+VERIF_AAH = "2026-11-19"   # simulateur AAH corrigé le 19/11/2026 (revenu net catégoriel, règle Ésat trimestrielle)
 
 # Paramètres officiels (sources en bas de chaque page outil). À revoir au 1er avril (revalorisation AAH et AEEH).
 PARAMS = {
@@ -11,10 +13,16 @@ PARAMS = {
     "aah": {
         "max": 1041.59, "date": "1er avril 2026",       # service-public F12242
         "majEnfant": 0.5,                               # plafond majoré de 50 % par enfant à charge
-        "smicBrut": 1867.02, "seuilPart": 0.3,          # D821-9 : seuil = 30 % du Smic brut mensuel (12,31 €/h x 151,67 h), soit 560,11 €
+        "smicBrut": SM.SMIC_MENSUEL, "seuilPart": SM.SEUIL_AAH_PART,   # D821-9 : seuil = 30 % du Smic brut mensuel (voir smic.py)
+        "smicDate": SM.SMIC_DATE,
         "ab1": 0.8, "ab2": 0.4,                         # 80 % jusqu'au seuil, 40 % au-delà
-        "abNet": 0.1,                                   # personnes sans activité : revenus de l'année N-2, abattement forfaitaire de 10 %
+        # Sans activité : le revenu saisi est le « revenu net catégoriel » de l'avis d'impôt, DÉJÀ net de la déduction
+        # fiscale de 10 % : aucun abattement n'est appliqué (correction du 19/11/2026, l'outil retirait 10 % une 2e fois).
         "anneeRef": "2024",
+        # Ésat, depuis le 1er octobre 2026 : revenus du dernier trimestre, abattement de 3,5 à 5 % sur la rémunération garantie
+        # selon la part payée par l'Ésat (D821-10 CSS en vigueur depuis le 28/06/2026), cumul plafonné (D821-5).
+        "esatAb": [0.035, 0.04, 0.045, 0.05],
+        "esatCumul": SM.ESAT_CUMUL_PART, "esatCumulMaj": SM.ESAT_CUMUL_MAJ,
     },
     "aeeh": {
         "base": 153.01, "date": "1er avril 2026",
@@ -133,15 +141,16 @@ PAGES = {
         "img": "travail", "urg": ["delai", "4mois", "6mois"],
         "avant": params_js(),
         "corps": f"""<section aria-labelledby="calcul"><h2 id="calcul">Comment l'estimation est calculée</h2>
-<ul><li><b>Vous ne travaillez pas</b> : la CAF retient vos revenus de l'année N-2 (ici {A['anneeRef']}) après un abattement forfaitaire de 10 %. L'AAH complète vos ressources jusqu'au plafond, sans dépasser {eur(A['max'])} par mois.</li>
-<li><b>Vous travaillez en milieu ordinaire</b> : vos revenus sont déclarés chaque trimestre. Si vous commencez ou reprenez un travail en touchant déjà l'AAH, le salaire n'est pas compté pendant 6 mois au plus. Votre salaire n'est compté qu'en partie : abattement de {round(A['ab1'] * 100)} % jusqu'à 30 % du Smic brut ({eur(A['smicBrut'] * A['seuilPart'])} par mois), puis de {round(A['ab2'] * 100)} % au-delà.</li>
+<ul><li><b>Vous ne travaillez pas</b> : la CAF retient vos revenus de l'année N-2 (ici {A['anneeRef']}), c'est-à-dire la ligne « revenu net catégoriel » de votre avis d'impôt. Ce montant tient déjà compte de la déduction fiscale de 10 % : l'outil ne retire donc rien de plus. L'AAH complète vos ressources jusqu'au plafond, sans dépasser {eur(A['max'])} par mois.</li>
+<li><b>Vous travaillez en milieu ordinaire</b> : vos revenus sont déclarés chaque trimestre. Si vous commencez ou reprenez un travail en touchant déjà l'AAH, le salaire n'est pas compté pendant 6 mois au plus. Votre salaire n'est compté qu'en partie : abattement de {round(A['ab1'] * 100)} % jusqu'à 30 % du Smic brut ({eur(A['smicBrut'] * A['seuilPart'])} par mois), puis de {round(A['ab2'] * 100)} % au-delà. Seuil calculé avec le Smic en vigueur au {A['smicDate']}.</li>
+<li><b>Vous travaillez en Ésat</b> : depuis le 1er octobre 2026, la CAF retient la rémunération du dernier trimestre, après un abattement de 3,5 à 5 % selon la part payée par l'Ésat. L'AAH et la rémunération garantie ensemble ne peuvent pas dépasser {eur(A['smicBrut'] * A['esatCumul'])} par mois, ou {eur(A['smicBrut'] * A['esatCumul'] * (1 + A['esatCumulMaj']))} avec un enfant ou un ascendant à charge (Smic au {A['smicDate']}). Si vous ne connaissez pas la part payée par l'Ésat, l'outil retient 3,5 %, ce qui donne l'estimation la plus basse.</li>
 <li><b>Enfants à charge</b> : le plafond de ressources ({eur(A['max'] * 12)} par an pour une personne) augmente de {round(A['majEnfant'] * 100)} % par enfant.</li>
 <li><b>Le conjoint</b> : ses revenus ne sont plus pris en compte depuis le 1er octobre 2023 (déconjugalisation).</li></ul></section>
 <section aria-labelledby="exemple"><h2 id="exemple">Exemples</h2>
-<aside class="mdh-ex"><p class="mdh-lab">Sans activité</p><p>Revenus de {A['anneeRef']} : 3 000 € (une petite rente). Après abattement de 10 %, 2 700 € sont retenus, soit 225 € par mois. AAH estimée : {eur(A['max'])} moins 225 €, soit {eur(A['max'] - 225)} par mois.</p></aside>
-<aside class="mdh-ex"><p class="mdh-lab">Avec un salaire</p><p>Salaire net de 900 € par mois. Les {eur(A['smicBrut'] * A['seuilPart'])} premiers ne comptent que pour {round((1 - A['ab1']) * 100)} % ({eur(A['smicBrut'] * A['seuilPart'] * (1 - A['ab1']))}), le reste pour {round((1 - A['ab2']) * 100)} % ({eur((900 - A['smicBrut'] * A['seuilPart']) * (1 - A['ab2']))}). Revenu retenu : {eur(A['smicBrut'] * A['seuilPart'] * (1 - A['ab1']) + (900 - A['smicBrut'] * A['seuilPart']) * (1 - A['ab2']))} par mois. AAH estimée : {eur(A['max'] - (A['smicBrut'] * A['seuilPart'] * (1 - A['ab1']) + (900 - A['smicBrut'] * A['seuilPart']) * (1 - A['ab2'])))} par mois, en plus du salaire.</p></aside></section>
+<aside class="mdh-ex"><p class="mdh-lab">Sans activité</p><p>Revenu net catégoriel de {A['anneeRef']} : 8 400 € (une pension d'invalidité de 700 € par mois après la déduction fiscale). 700 € par mois sont retenus. AAH estimée : {eur(A['max'])} moins 700 €, soit {eur(A['max'] - 700)} par mois, comme dans <a href="/aah/">le guide de l'AAH</a>.</p></aside>
+<aside class="mdh-ex"><p class="mdh-lab">Avec un salaire (Smic au {A['smicDate']})</p><p>Salaire net de 900 € par mois. Les {eur(A['smicBrut'] * A['seuilPart'])} premiers ne comptent que pour {round((1 - A['ab1']) * 100)} % ({eur(A['smicBrut'] * A['seuilPart'] * (1 - A['ab1']))}), le reste pour {round((1 - A['ab2']) * 100)} % ({eur((900 - A['smicBrut'] * A['seuilPart']) * (1 - A['ab2']))}). Revenu retenu : {eur(A['smicBrut'] * A['seuilPart'] * (1 - A['ab1']) + (900 - A['smicBrut'] * A['seuilPart']) * (1 - A['ab2']))} par mois. AAH estimée : {eur(A['max'] - (A['smicBrut'] * A['seuilPart'] * (1 - A['ab1']) + (900 - A['smicBrut'] * A['seuilPart']) * (1 - A['ab2'])))} par mois, en plus du salaire.</p></aside></section>
 <section aria-labelledby="limites"><h2 id="limites">Les limites de cette estimation</h2>
-<p>La CAF applique d'autres règles que l'outil ne connaît pas : abattements particuliers (chômage, cessation d'activité), pension d'invalidité, hospitalisation ou séjour en établissement de plus de 60 jours, rémunération en ESAT. Pour un calcul complet, utilisez le <a href="https://www.mesdroitssociaux.gouv.fr/" rel="noopener" target="_blank">simulateur officiel mesdroitssociaux.gouv.fr</a>. Les conditions de taux d'incapacité et de résidence sont expliquées dans <a href="/aah/">le guide de l'AAH</a>.</p></section>""",
+<p>La CAF applique d'autres règles que l'outil ne connaît pas : abattements particuliers (chômage, cessation d'activité), hospitalisation ou séjour en établissement de plus de 60 jours, et pour l'Ésat certaines déductions propres à votre dossier. Pour un calcul complet, utilisez le <a href="https://www.mesdroitssociaux.gouv.fr/" rel="noopener" target="_blank">simulateur officiel mesdroitssociaux.gouv.fr</a>. Les conditions de taux d'incapacité et de résidence sont expliquées dans <a href="/aah/">le guide de l'AAH</a>.</p></section>""",
         "faq": [("Quel est le montant de l'AAH en 2026 ?", f"{eur(A['max'])} par mois au maximum depuis le {A['date']}. Le montant versé est réduit si vous avez d'autres ressources."),
                 ("Peut-on cumuler l'AAH et un salaire ?", "Oui. Une partie seulement du salaire est prise en compte grâce aux abattements, si bien que travailler augmente toujours le revenu total."),
                 ("Les revenus du conjoint comptent-ils pour l'AAH ?", "Non, plus depuis le 1er octobre 2023. Seules vos propres ressources sont prises en compte."),
@@ -151,7 +160,10 @@ PAGES = {
                     ("Décret n° 2026-229 du 30 mars 2026 portant revalorisation de l'AAH (Légifrance)", "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053734356"),
                     ("Code de la sécurité sociale, article D821-9 (abattements sur les revenus d'activité)", "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000023097737"),
                     ("Code de la sécurité sociale, article R821-4-1 (calcul trimestriel)", "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054333604"),
+                    ("Code de la sécurité sociale, article D821-10 (abattement Ésat, en vigueur depuis le 28 juin 2026)", "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054339259"),
+                    ("Service-public.fr, travailler et percevoir l'AAH (milieu ordinaire et Ésat), F21615", SP + "F21615"),
+                    SM.SMIC_SOURCE,
                     ("Mes droits sociaux, simulateur officiel", "https://www.mesdroitssociaux.gouv.fr/")],
-        "verif": VERIF,
+        "verif": VERIF_AAH,
     },
 }

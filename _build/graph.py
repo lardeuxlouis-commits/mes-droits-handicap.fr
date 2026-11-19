@@ -65,11 +65,11 @@ def _lignes_svg(series, labels, titre, w, h, ymin, mob):
     vals = [v for _, _, s, _ in series for v in s if v is not None]
     k = next(_id)
     ymax = max(max(vals) * 1.15, 1)
-    L, R, T, B = (26, 34, 14, 30) if mob else (34, 54, 18, 34)
+    L, R, T, B = (32, 44, 16, 38) if mob else (34, 54, 18, 34)   # mobile : marges pour un texte de 17 unités (au moins 14 px rendus)
     n = len(labels)
     X = lambda i: L + (w - L - R) * (i / max(n - 1, 1))
     Y = lambda v: T + (h - T - B) * (1 - (v - ymin) / (ymax - ymin))
-    step = 1 if ymax <= 8 else 2 if ymax <= 16 else 5
+    step = (1 if ymax <= 5 else 2 if ymax <= 10 else 4 if ymax <= 20 else 5) if mob else (1 if ymax <= 8 else 2 if ymax <= 16 else 5)
     g = _hgrid(L, w - R + 6, Y, ymax, step, L - 7)
     nl = 4 if mob else 7
     every = max(1, -(-(n - 1) // (nl - 1)))
@@ -96,7 +96,7 @@ def _lignes_svg(series, labels, titre, w, h, ymin, mob):
             ends.append([X(last), Y(s[last]), s[last], col])
             pts.append(f'<circle cx="{X(last):.1f}" cy="{Y(s[last]):.1f}" r="{3.2 if dash else 4}" fill="#fff" stroke="{col}" stroke-width="2.2"/>')
     ends.sort(key=lambda e: e[1])
-    gap = 15 if mob else 13
+    gap = 22 if mob else 18
     for a in range(1, len(ends)):
         if ends[a][1] - ends[a - 1][1] < gap: ends[a][1] = ends[a - 1][1] + gap
     labs = "".join(f'<text x="{x + 8:.1f}" y="{ly + 4:.1f}" class="g-v" fill="{col}">{fr(v)}</text>' for x, ly, v, col in ends)
@@ -118,20 +118,20 @@ def _barres_svg(items, titre, ref, ref_lab, w, hl, mob):
     vmax = max([v for _, v, _ in items] + ([ref] if ref else [])) * 1.06
     g = []
     if mob:   # étiquette au-dessus de chaque barre
-        rh, L, R = 40, 0, 40
+        rh, L, R = 48, 0, 40   # texte de 17 unités sur mobile (au moins 14 px rendus)
         X = lambda v: L + (w - L - R) * v / vmax
         for i, (lab, v, lien) in enumerate(items):
             y = 4 + i * rh
-            t = f'<text x="{L}" y="{y + 13}" class="g-l">{E(lab)}</text>'
+            t = f'<text x="{L}" y="{y + 15}" class="g-l">{E(lab)}</text>'
             if lien: t = f'<a href="{E(lien)}">{t}</a>'
             col = C["alert"] if hl and lab == hl else C["brand"]
-            g.append(t + f'<rect x="{L}" y="{y + 20}" width="{w - R - L}" height="10" rx="5" class="g-track"/>'
-                     f'<rect x="{L}" y="{y + 20}" width="{max(X(v) - L, 10):.1f}" height="10" rx="5" fill="{col}" class="g-bar" style="--i:{i}"/>'
-                     f'<text x="{X(v) + 6:.1f}" y="{y + 29.5}" class="g-v g-late" fill="{C["ink"]}">{fr(v)}</text>')
-        h = 4 + rh * len(items) + (26 if ref else 4)
-        top, bot = 2, h - 26
+            g.append(t + f'<rect x="{L}" y="{y + 26}" width="{w - R - L}" height="10" rx="5" class="g-track"/>'
+                     f'<rect x="{L}" y="{y + 26}" width="{max(X(v) - L, 10):.1f}" height="10" rx="5" fill="{col}" class="g-bar" style="--i:{i}"/>'
+                     f'<text x="{X(v) + 6:.1f}" y="{y + 37}" class="g-v g-late" fill="{C["ink"]}">{fr(v)}</text>')
+        h = 4 + rh * len(items) + (30 if ref else 4)
+        top, bot = 2, h - 30
     else:
-        rh, L, R = 30, 210, 56
+        rh, L, R = 30, 250, 56
         X = lambda v: L + (w - L - R) * v / vmax
         for i, (lab, v, lien) in enumerate(items):
             y = 6 + i * rh
@@ -146,7 +146,7 @@ def _barres_svg(items, titre, ref, ref_lab, w, hl, mob):
     if ref:
         xr = X(ref)
         g.append(f'<line x1="{xr:.1f}" x2="{xr:.1f}" y1="{top}" y2="{bot}" stroke="{C["sun"]}" stroke-width="1.6" stroke-dasharray="3 4"/>'
-                 f'<text x="{min(max(xr, L + 80), w - 80):.1f}" y="{h - 6}" text-anchor="middle" class="g-t" fill="#8a5a1c">{E(ref_lab)} : {fr(ref)}</text>')
+                 f'<text x="{min(max(xr, L + (110 if mob else 80)), w - (110 if mob else 80)):.1f}" y="{h - 6}" text-anchor="middle" class="g-t" fill="#8a5a1c">{E(ref_lab)} : {fr(ref)}</text>')
     return _svg("g-m" if mob else "g-d", w, h, titre, "".join(g))
 
 
@@ -158,12 +158,12 @@ def barres(items, titre, ref=None, ref_lab="moyenne nationale", w=WD, unite="moi
 
 # --------------------------------------------------------------------------- colonnes local / national
 def _compare_svg(rows, titre, w, mob):
-    h, L, R, T, B = (220, 24, 4, 24, 34) if mob else (250, 34, 12, 26, 40)
+    h, L, R, T, B = (220, 32, 4, 24, 34) if mob else (250, 34, 12, 26, 40)
     vmax = max(max(a, b) for _, a, b in rows) * 1.18
     Y = lambda v: T + (h - T - B) * (1 - v / vmax)
     band = (w - L - R) / len(rows)
     bw = min(34, band * (.3 if mob else .28))
-    g = _hgrid(L, w - R, Y, vmax, 1 if vmax <= 8 else 2, L - 7)
+    g = _hgrid(L, w - R, Y, vmax, (1 if vmax <= 5 else 2 if vmax <= 10 else 4) if mob else (1 if vmax <= 8 else 2), L - 7)
     for i, (lab, a, b) in enumerate(rows):
         cx = L + band * (i + .5)
         gap = 3 if mob else 6
@@ -200,7 +200,7 @@ def _repartition_svg(points, titre, ref, hl, hl_lab, seuil, w, mob):
             k += 1
         placed.append((x, off, c, v))
     nl = max(abs(o) for _, o, _, _ in placed)
-    mid = T + 16 + nl * (2 * rad + 1)
+    mid = T + 16 + (26 if mob else 20) + nl * (2 * rad + 1)   # mobile : place pour l'étiquette mise en avant sous les titres du haut
     h = int(mid + nl * (2 * rad + 1) + 46)
     ax = h - 32
     g = [f'<line x1="{L}" x2="{w - R}" y1="{ax}" y2="{ax}" class="g-h" style="stroke-dasharray:none"/>']

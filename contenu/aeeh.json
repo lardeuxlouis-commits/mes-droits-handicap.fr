@@ -46,7 +46,7 @@
           "items": [
             "**Âge** : l'enfant a moins de 20 ans.",
             "**Taux d'incapacité d'au moins 80 %**, ou **entre 50 % et moins de 80 %** si l'enfant est accompagné par un établissement ou un service médico-social, un dispositif de scolarisation adapté, ou s'il reçoit des soins ou des rééducations liés à son handicap, préconisés par la CDAPH.",
-            "**Revenus de l'enfant** : s'il travaille, ses revenus professionnels ne dépassent pas 55 % du Smic mensuel brut, soit 1 026,86 €.",
+            "**Revenus de l'enfant** : s'il travaille, ses revenus professionnels ne dépassent pas 55 % du Smic mensuel brut, soit {{SEUIL_AEEH}} (Smic en vigueur au {{SMIC_DATE}}).",
             "**Résidence** : l'enfant réside de façon permanente en France. Depuis le 1er janvier 2025, cela veut dire au moins 9 mois par année civile en France, et un titre de séjour pour les personnes de nationalité étrangère."
           ]
         },
@@ -311,7 +311,7 @@
   "faq": [
     {
       "q": "Est-ce que l'AEEH dépend des revenus des parents ?",
-      "r": "Non. L'AEEH et ses compléments sont attribués sans condition de ressources des parents. Seuls les revenus professionnels de l'enfant comptent : s'il travaille, ils ne doivent pas dépasser 55 % du Smic mensuel brut, soit 1 026,86 € selon service-public.gouv.fr."
+      "r": "Non. L'AEEH et ses compléments sont attribués sans condition de ressources des parents. Seuls les revenus professionnels de l'enfant comptent : s'il travaille, ils ne doivent pas dépasser 55 % du Smic mensuel brut, soit {{SEUIL_AEEH}} avec le Smic en vigueur au {{SMIC_DATE}}, selon service-public.gouv.fr."
     },
     {
       "q": "L'AEEH est-elle imposable ?",
@@ -403,7 +403,7 @@
       "date": "mis à jour le 06/08/2026, consulté le 2026-11-15"
     }
   ],
-  "date_verification": "2026-11-15",
+  "date_verification": "2026-11-19",
   "a_verifier": [
     "Page caf.fr AEEH non lisible pendant la session (rendu JavaScript) : le rôle de versement CAF/MSA est repris de monparcourshandicap.gouv.fr.",
     "Écarts d'un centime entre les deux sources officielles : complément catégorie 2 (310,80 € sur monparcourshandicap contre 463,82 € moins 153,01 €, soit 310,81 € sur service-public), majoration catégorie 4 (272,55 € contre 272,56 €), majoration catégorie 5 (349,06 € contre 349,05 €).",

@@ -5,7 +5,13 @@ import glob, os, re, json, collections, html, statistics, sys
 OUT = os.environ.get("MDH_OUT") or os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "docs")
 DOMAIN = "https://mes-droits-handicap.fr"
 pb = []; titres = collections.Counter(); descs = collections.Counter(); h1s = collections.Counter()
-existe = lambda p: p == "/" or os.path.exists(os.path.join(OUT, p.strip("/"), "index.html")) or os.path.exists(os.path.join(OUT, p.strip("/")))
+def existe(p):
+    """Un lien vers un dossier (« /outils/ ») n'est valide que si ce dossier contient un index.html (audit du 19/11/2026 :
+    /outils/ renvoyait 404 alors que le dossier existait). Un lien vers un fichier doit pointer un fichier réel."""
+    if p == "/": return os.path.exists(os.path.join(OUT, "index.html"))
+    cible = os.path.join(OUT, p.strip("/"))
+    if p.endswith("/") or os.path.isdir(cible): return os.path.isfile(os.path.join(cible, "index.html"))
+    return os.path.isfile(cible)
 infos = {}
 
 
@@ -46,8 +52,14 @@ for f in sorted(glob.glob(OUT + "/**/index.html", recursive=True)):
     if p.startswith("/outils/"):
         if re.search(r'<script[^>]+src="(https?:)?//', h): pb.append((p, "script tiers sur une page outil"))
         if "goatcounter" in h: pb.append((p, "compteur sur une page outil"))
+        if "clarity" in h.lower(): pb.append((p, "Clarity sur une page outil"))
     txt = texte_main(h)
     infos[p] = {"mots": len(re.findall(r"\w+", txt)), "txt": txt}
+
+for racine, dossiers, fichiers in os.walk(OUT):
+    rel = os.path.relpath(racine, OUT)
+    if rel == "." or rel.split(os.sep)[0] in ("img", "fonts", "donnees", "telechargements", ".git"): continue
+    if "index.html" not in fichiers and dossiers: pb.append(("/" + rel.replace(os.sep, "/") + "/", "dossier sans index.html (404)"))
 
 for c, txt in ((titres, "title"), (descs, "description"), (h1s, "H1")):
     for k, v in c.items():

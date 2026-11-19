@@ -3,9 +3,15 @@
 import departements as DP
 
 CONTACT = "contact@mes-droits-handicap.fr"
+# Téléphone de l'éditeur, exigé par la LCEN (art. 6 III) pour une personne physique : À COMPLÉTER PAR LOUIS.
+# None = la ligne n'est pas affichée (rien d'incomplet n'apparaît en ligne). Exemple : TEL_EDITEUR = "06 00 00 00 00"
+TEL_EDITEUR = None
+# Téléphone de GitHub, Inc. : numéro de l'équipe commerciale, seul numéro publié par GitHub (ancienne documentation
+# docs.github.com, Enterprise Server 3.0, « call +1 (877) 448-4820 »). GitHub précise ne pas faire de support par téléphone.
+TEL_HEBERGEUR = "+1 877 448 4820"
 
 
-def pages(SITE, AUTEUR, DOMAIN, kit=False):
+def pages(SITE, AUTEUR, DOMAIN, kit=False, clarity=None):
     """kit=True seulement quand le Kit dossier MDPH est en vente (PRODUIT renseigné dans build.py) : sinon les textes restent identiques."""
     S = DP.SRC
     mail = f'<a href="mailto:{CONTACT}">{CONTACT}</a>'
@@ -49,19 +55,31 @@ def pages(SITE, AUTEUR, DOMAIN, kit=False):
 <p>Les données sont relevées par un script public dans le dépôt du site (<code>_build/donnees.py</code>), relancé à chaque nouvelle publication : baromètre CNSA chaque trimestre, données CAF chaque mois, montants des prestations à chaque revalorisation. Dernier relevé : 15/11/2026. Le classement est téléchargeable en CSV depuis <a href="/delais-mdph/">la page des délais</a>.</p>
 <h2>Les textes et les montants</h2>
 <p>Les montants (AAH, AEEH, PCH), les délais légaux (4 mois, 2 mois, 6 mois) et les formulaires (Cerfa 15692*01 et 15695*01) sont vérifiés sur service-public.gouv.fr, monparcourshandicap.gouv.fr, la CNSA et Légifrance. Chaque guide liste ses sources avec leur date.</p>"""
-    mentions = f"""<h2>Éditeur</h2><p>Louis Lardeux, entrepreneur individuel (micro-entreprise), SIREN 999 443 880, 63 rue Dostoïevski, A 307, 06560 Valbonne Sophia Antipolis. Contact : {mail}. Directeur de la publication : Louis Lardeux.</p>
-<h2>Hébergement</h2><p>GitHub Pages, GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.</p>
+    tel_ed = f", téléphone : {TEL_EDITEUR}" if TEL_EDITEUR else ""
+    mentions = f"""<h2>Éditeur</h2><p>Louis Lardeux, entrepreneur individuel (micro-entreprise), SIREN 999 443 880, 63 rue Dostoïevski, A 307, 06560 Valbonne Sophia Antipolis. Contact : {mail}{tel_ed}.</p>
+<p>Directeur de la publication : Louis Lardeux.</p>
+<h2>Hébergement</h2><p>GitHub Pages, service de GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis. Téléphone (standard commercial) : {TEL_HEBERGEUR}. Contact : <a href="https://support.github.com/contact" rel="noopener" target="_blank">support.github.com/contact</a>.</p>
 <h2>Nature du site</h2><p>mes-droits-handicap.fr est un site d'information indépendant. Il n'est pas un service public et n'est rattaché à aucune MDPH, collectivité, caisse ou administration. Les démarches sont gratuites auprès de la MDPH et sur mdphenligne.cnsa.fr. Les contenus ont une vocation d'information générale : ils ne constituent ni un conseil juridique ni un avis médical, et ne remplacent pas la décision de l'organisme compétent, qui seul fait foi.</p>
 <h2>Données publiques réutilisées</h2><p>Les données de la CNSA, de la CNAF, de la DREES, de l'Insee et de l'annuaire de l'administration sont réutilisées dans le respect de leurs conditions (Licence Ouverte d'Etalab), avec mention de la source et de la date.</p>
 <h2>Illustrations</h2><p>Les photos d'illustration sont générées par intelligence artificielle. Elles ne représentent pas de personnes réelles et ne sont pas des témoignages.</p>"""
     ACHAT = ("<h2>Achat du Kit dossier MDPH</h2><p>Le paiement du kit est traité par Stripe, sur sa propre page : nous ne voyons pas votre numéro de carte. Stripe nous transmet votre adresse e-mail, "
              "votre nom et le montant payé, conservés pour la comptabilité et pour vous renvoyer le kit si besoin. Aucune information de santé n'est demandée. "
              "Après le paiement, la page de téléchargement garde sur votre appareil (stockage local du navigateur) l'identifiant de la commande, pour que vous puissiez y revenir ; rien n'est envoyé.</p>")
-    confid = f"""<p>Ce site ne dépose aucun cookie, n'affiche aucune publicité et ne vous demande aucune donnée pour être consulté.</p>
+    if clarity:
+        audience = ("<h2>Mesure d'audience</h2><p>Sur les pages d'information (guides, délais), et seulement si vous cliquez sur « Accepter » dans le bandeau, "
+                    "Microsoft Clarity mesure la navigation (clics, défilement) pour améliorer les guides. Tout le texte des pages est masqué et aucune saisie n'est enregistrée. "
+                    "Clarity n'est jamais chargé sur les pages des outils. Si vous refusez, rien n'est chargé. Votre choix est gardé 6 mois dans votre navigateur.</p>")
+        intro = "<p>Ce site n'affiche aucune publicité et ne vous demande aucune donnée pour être consulté. Il ne dépose de cookie de mesure d'audience que si vous l'acceptez.</p>"
+    else:
+        audience = ("<h2>Mesure d'audience</h2><p>Aujourd'hui, aucune mesure d'audience n'est installée : aucun compteur, aucun outil de statistiques, aucun cookie. "
+                    "Si cela change un jour, cette page sera mise à jour avant, et tout outil qui en aurait besoin ne serait chargé qu'avec votre accord.</p>")
+        intro = "<p>Ce site ne dépose aucun cookie, n'affiche aucune publicité et ne vous demande aucune donnée pour être consulté.</p>"
+    confid = f"""{intro}
 <h2>Les outils</h2><p>Les quatre outils (simulateur AAH, calcul de l'AEEH, date de refus implicite, calendrier de renouvellement) fonctionnent entièrement dans votre navigateur. Les informations que vous saisissez, y compris celles qui touchent à votre santé ou à votre handicap, ne sont ni envoyées à un serveur, ni enregistrées, ni mesurées. Aucun script externe n'est chargé sur ces pages. Le rappel d'agenda (.ics) est créé sur votre appareil.</p>
-<h2>Mesure d'audience</h2><p>Sur les pages d'information (guides, délais), un compteur de visites sans cookie et anonyme peut être utilisé (GoatCounter) : il compte les pages vues, sans vous identifier et sans suivre vos réponses aux outils. Il n'est jamais chargé sur les pages des outils.</p>
-{ACHAT if kit else ""}<h2>Polices de caractères</h2><p>La police Lexend est hébergée sur le site lui-même : aucun serveur tiers n'est contacté pour l'afficher.</p>
-<h2>Vos droits</h2><p>Le site ne détenant aucune donnée personnelle vous concernant, il n'y a rien à consulter ni à effacer. Pour toute question : {mail}. Vous pouvez aussi saisir la CNIL.</p>"""
+{audience}
+{ACHAT if kit else ""}<h2>Polices de caractères</h2><p>Les polices Lexend et Fraunces sont hébergées sur le site lui-même : aucun serveur tiers n'est contacté pour les afficher.</p>
+<h2>Hébergement et journaux techniques</h2><p>Le site est hébergé par GitHub Pages. Comme tout hébergeur, GitHub enregistre dans ses journaux techniques l'adresse IP des visiteurs, pour la sécurité et le bon fonctionnement du service. L'éditeur du site n'a pas accès à ces journaux. Détail : <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" rel="noopener" target="_blank">déclaration de confidentialité de GitHub</a>.</p>
+<h2>Vos droits</h2><p>L'éditeur du site ne détient aucune donnée personnelle vous concernant : il n'y a rien à consulter ni à effacer de son côté. Si vous nous écrivez, votre message est conservé dans notre messagerie le temps de vous répondre. Pour toute question : {mail}. Vous pouvez aussi saisir la CNIL.</p>"""
     return {
         "a-propos": ("À propos : qui écrit ce site et son financement", "Qui écrit mes-droits-handicap.fr, comment chaque information est vérifiée, comment le site est financé et ce qu'il n'est pas.", "À propos de ce site", apropos,
                      [{"@context": "https://schema.org", "@type": "AboutPage", "name": "À propos", "url": DOMAIN + "/a-propos/", "mainEntity": {"@type": "Person", "name": AUTEUR, "url": DOMAIN + "/a-propos/", "jobTitle": "Auteur et éditeur de mes-droits-handicap.fr"}}]),

@@ -5,6 +5,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import departements as DP
 import graph as G
 import kit as KIT
+import smic as SM   # Smic et seuils dépendants : un seul endroit (_build/smic.py), à mettre à jour au 01/12/2026 dès parution du décret
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.environ.get("MDH_OUT") or os.path.join(ROOT, "docs")   # MDH_OUT : dossier de sortie temporaire pour les tests
@@ -17,6 +18,15 @@ PRODUIT = None                      # lien Stripe du « Kit dossier MDPH, 19 €
 KIT_PDF_URL = None                  # lien du PDF payant hébergé HORS GitHub (Drive, R2) ; None = /merci/ annonce un envoi par e-mail sous 24 h
 AUTEUR = "Louis Lardeux"
 INDEXNOW = "50f1cb133c1a8499537462019c5a94c2"             # clé IndexNow, servie à la racine dans <clé>.txt
+# Microsoft Clarity, PRÉPARÉ MAIS INACTIF. None = rien n'est chargé et la confidentialité dit qu'il n'y a aucune mesure d'audience.
+# Pour l'activer : mettre l'ID du projet (chaîne), régler le masquage sur « Strict » dans le tableau de bord Clarity,
+# vérifier la doc de l'API de consentement (consentv2), puis rebuild. Chargé seulement sur les pages de contenu,
+# jamais sur les outils, et seulement après un clic sur « Accepter » dans le bandeau.
+CLARITY_ID = None
+# Pages réellement modifiées (date de dernière modification du sitemap et du JSON-LD). Ne mettre une date que si la page a changé.
+MODIFS = {"/": "2026-11-19", "/delais-mdph/": "2026-11-19", "/outils/": "2026-11-19", "/dossier-mdph-trop-long/": "2026-11-19", "/recours-mdph/": "2026-11-19",
+          "/mentions-legales/": "2026-11-19", "/confidentialite/": "2026-11-19"}
+MODIF_DEPS = "2026-11-19"           # les 20 pages départements (accord « de l'Hérault », intertitres, doublon supprimé)
 
 E = lambda s: html.escape(str(s if s is not None else ""), quote=True)
 date_fr = lambda iso: dt.date.fromisoformat(iso).strftime("%d/%m/%Y")
@@ -53,7 +63,7 @@ CSS = open(os.path.join(ROOT, "_build", "style.css"), encoding="utf-8").read()
 SITE_JS = open(os.path.join(ROOT, "_build", "site.js"), encoding="utf-8").read()
 ASSET_V = hashlib.md5((CSS + SITE_JS + open(os.path.join(ROOT, "_build", "outils.js"), encoding="utf-8").read()).encode()).hexdigest()[:8]
 KIT_STYLE = "<style>" + open(os.path.join(ROOT, "_build", "kit.css"), encoding="utf-8").read() + "</style>"   # pages du kit seulement
-SLUGS = set(GUIDES) | {v[0] for v in OUTILS.values()} | {"delais-mdph", "a-propos", "methode-et-sources", "mentions-legales", "confidentialite"}
+SLUGS = set(GUIDES) | {v[0] for v in OUTILS.values()} | {"outils", "delais-mdph", "a-propos", "methode-et-sources", "mentions-legales", "confidentialite"}
 
 
 def inline(s):
@@ -83,7 +93,7 @@ LOGO = ('<svg width="40" height="40" viewBox="0 0 48 48" aria-hidden="true"><cir
 
 
 def header(actif=None):
-    items = [("delais-mdph", "Délais des MDPH"), ("#outils", "Outils"), ("#guides", "Guides"), ("a-propos", "À propos")]
+    items = [("delais-mdph", "Délais des MDPH"), ("outils", "Outils"), ("#guides", "Guides"), ("a-propos", "À propos")]
     lis = ""
     for s, t in items:
         href = "/" + s if s.startswith("#") else url(s)
@@ -102,12 +112,32 @@ def footer():
     return (f'<footer class="mdh-foot"><div class="mdh-w"><div class="mdh-fcols">'
             f'<div><h2>mes-droits-handicap.fr</h2><p>Des explications claires sur l\'AAH, la PCH, l\'AEEH, la RQTH et les délais des MDPH, avec les chiffres officiels et leurs sources.</p>'
             f'<p>Rédigé et vérifié par {AUTEUR}. Ce site n\'est rattaché à aucune MDPH ni à aucune administration : votre dossier se dépose auprès de votre MDPH ou sur <a href="https://mdphenligne.cnsa.fr/" rel="noopener" target="_blank">mdphenligne.cnsa.fr</a>.</p></div>'
-            f'<div><h2>Les délais</h2><ul><li><a href="/delais-mdph/">Classement des MDPH en 2026</a></li><li><a href="/methode-et-sources/">D\'où viennent les chiffres</a></li></ul><h2 style="margin-top:18px">Outils</h2><ul>{o}</ul></div>'
+            f'<div><h2>Les délais</h2><ul><li><a href="/delais-mdph/">Classement des MDPH en 2026</a></li><li><a href="/methode-et-sources/">D\'où viennent les chiffres</a></li></ul><h2 style="margin-top:18px"><a href="/outils/">Outils</a></h2><ul>{o}</ul></div>'
             f'<div><h2>Guides</h2><ul>{g}</ul></div>'
             f'<div><h2>Le site</h2><ul><li><a href="/a-propos/">À propos et financement</a></li><li><a href="/methode-et-sources/">Méthode et sources</a></li>'
             f'<li><a href="/mentions-legales/">Mentions légales</a></li><li><a href="/confidentialite/">Confidentialité</a></li>'
             + (f'<li><a href="/{KIT.SLUG}/">Kit dossier MDPH</a></li><li><a href="/{KIT.CGV}/">Conditions de vente</a></li>' if KIT.actif(PRODUIT) else "") + '</ul></div>'
-            f'</div></div></footer>')
+            f'</div>{aide_urgente(pied=True)}</div></footer>')
+
+
+URGENCES = [  # intitulés vérifiés le 19/11/2026 (service-public F33954 vérifiée le 25/08/2026, solidarites.gouv.fr, 3114.fr, allo119.gouv.fr)
+    ("15", "Samu, urgence médicale", "gratuit, 24 h/24"),
+    ("114", "urgence par SMS, application ou internet pour les personnes sourdes, malentendantes ou aphasiques", "gratuit, 24 h/24"),
+    ("3114", "numéro national de prévention du suicide", "gratuit, 24 h/24 et 7 j/7"),
+    ("3133", "maltraitances envers les personnes âgées et les adultes en situation de handicap (il remplace le 3977 depuis le 1er mars 2026)", "gratuit, tous les jours de 9 h à 20 h"),
+    ("119", "Allô enfance en danger", "gratuit et confidentiel, 24 h/24"),
+]
+
+
+def aide_urgente(pied=False):
+    """Encart sobre « urgence ou détresse » : dans le pied de page de tout le site, et plus visible sur les guides concernés."""
+    lis = "".join(f'<li><a href="tel:{n}"><b>{n}</b></a> {E(t)} <span>({E(h)})</span></li>' for n, t, h in URGENCES)
+    src = ('<p class="mdh-src">Sources : <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F33954" rel="noopener" target="_blank">service-public.gouv.fr, numéros d\'urgence et d\'écoute</a> (vérifié le 25/08/2026) ; '
+           '<a href="https://solidarites.gouv.fr/3133-maltraitances" rel="noopener" target="_blank">solidarites.gouv.fr, le 3133</a> (mis à jour le 01/06/2026), consultés le 19/11/2026.</p>')
+    if pied:
+        return f'<aside class="mdh-sos mdh-sos-pied" aria-label="Urgence ou détresse"><p><b>Urgence ou détresse ?</b> Ces numéros sont gratuits :</p><ul>{lis}</ul></aside>'
+    return (f'<aside class="mdh-sos" aria-labelledby="sos-t"><p class="mdh-lab" id="sos-t">Urgence ou détresse</p><p>L\'attente d\'une décision ou un refus peuvent peser très lourd. Si vous ou un proche êtes en danger, ou si vous n\'en pouvez plus, appelez :</p>'
+            f'<ul>{lis}</ul>{src}</aside>')
 
 
 def trust(nb_src=None, maj=MAJ_DONNEES, outil=False, lieu=None):
@@ -143,6 +173,7 @@ def page(title, desc, path, body, schema, image="accueil", actif=None, sticky=No
         s_slug, s_txt = sticky
         st = f'<div class="mdh-sticky"><a href="{url(s_slug)}">{E(s_txt)}</a></div>'
     gc = f'<script data-goatcounter="{GOATCOUNTER}" async src="//gc.zgo.at/count.js"></script>' if GOATCOUNTER and kind == "contenu" else ""
+    cl = clarity_html() if CLARITY_ID and kind == "contenu" else ""
     js = f'<script src="/outils.js?v={ASSET_V}" defer></script>' if kind in ("outil", "classement") else ""
     rob = f'<meta name="robots" content="{robots}">' if robots else ""
     return f"""<!doctype html>
@@ -171,16 +202,30 @@ def page(title, desc, path, body, schema, image="accueil", actif=None, sticky=No
 <script src="/site.js?v={ASSET_V}" defer></script>
 {ld}{js}{gc}{extra_head}
 </head>
-<body>
+<body{' data-clarity-mask="true"' if cl else ''}>
 <a class="mdh-skip" href="#contenu">Aller au contenu</a>
 {header(actif)}
 <main id="contenu">
 {insecables(body)}
 </main>
 {FOOTER}
-{st}
+{st}{cl}
 </body>
 </html>"""
+
+
+def clarity_html():
+    """Bandeau de consentement + chargement différé de Clarity. Rien n'est chargé avant « Accepter ». « Refuser » est aussi visible.
+    Le choix est gardé dans le navigateur (localStorage, 6 mois). Masquage strict : data-clarity-mask sur <body> et réglage « Strict »."""
+    cid = json.dumps(str(CLARITY_ID))
+    return ('<div class="mdh-consent" id="mdh-consent" role="region" aria-label="Mesure d\'audience" hidden style="position:fixed;left:12px;right:12px;bottom:12px;z-index:30;max-width:640px;margin:0 auto;background:var(--papier);border:1px solid var(--filet2);border-radius:16px;padding:16px 18px;box-shadow:0 10px 30px rgba(29,39,53,.15)">'
+            '<p style="margin:0 0 10px">Acceptez-vous une mesure d\'audience anonyme (Microsoft Clarity) pour améliorer les guides ? Tout le texte est masqué, les outils ne sont jamais mesurés. <a href="/confidentialite/">En savoir plus</a></p>'
+            '<p class="mdh-btns" style="margin:0"><button type="button" class="mdh-btn" data-c="1">Accepter</button><button type="button" class="mdh-btn" data-c="0">Refuser</button></p></div>'
+            '<script>(function(){var K="mdh-consent",b=document.getElementById(K),v=null;try{v=JSON.parse(localStorage.getItem(K)||"null")}catch(e){}'
+            'function go(){(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script",' + cid + ');'
+            'window.clarity("consentv2",{ad_Storage:"denied",analytics_Storage:"granted"})}'
+            'if(v&&v.t>Date.now()-15552e6){if(v.ok)go();return}b.hidden=false;b.addEventListener("click",function(e){var x=e.target.getAttribute("data-c");if(x===null)return;'
+            'try{localStorage.setItem(K,JSON.stringify({ok:x==="1",t:Date.now()}))}catch(e){}b.hidden=true;if(x==="1")go()})})();</script>')
 
 
 def img_html(nom, sizes="(max-width: 860px) 100vw, 780px", prio=False):
@@ -319,13 +364,14 @@ def guide(d):
 <nav aria-label="Sommaire"><p class="mdh-lab">Dans ce guide</p><ul class="mdh-toc">{toc}{'<li><a href="#faq">Questions fréquentes</a></li>' if faq else ''}</ul></nav>
 {''.join(corps)}
 {urgences(keys)}
+{aide_urgente() if slug in ("dossier-mdph-trop-long", "recours-mdph") else ""}
 {faq_html(faq)}
 {produit_slot()}
 {deps_html}<section class="mdh-next" aria-labelledby="suite"><h2 id="suite">Pour aller plus loin</h2><ul>{nxt}</ul></section>
 <section class="mdh-sources" aria-labelledby="sources"><h2 id="sources">Sources</h2><p>Informations vérifiées le {date_fr(verif)} sur les sites officiels. Les montants changent en général au 1er janvier ou au 1er avril : en cas de doute, l'organisme qui verse l'aide fait foi.</p><ul>{sources}</ul></section>
 </div></div>"""
     schema = [{"@context": "https://schema.org", "@type": "Article", "headline": strip(d["h1"])[:110], "description": d.get("description", ""),
-               "image": f"{DOMAIN}/img/{img}.jpg", "datePublished": LANCEMENT, "dateModified": verif, "inLanguage": "fr-FR",
+               "image": f"{DOMAIN}/img/{img}.jpg", "datePublished": LANCEMENT, "dateModified": max(verif, MODIFS.get(path, verif)), "inLanguage": "fr-FR",
                "author": person(), "publisher": {"@type": "Organization", "name": SITE, "url": DOMAIN + "/", "logo": {"@type": "ImageObject", "url": DOMAIN + "/favicon.svg"}},
                "mainEntityOfPage": DOMAIN + path, "citation": [x["url"] for x in srcs]},
               bc_schema([("Guides", "/"), (court, path)])]
@@ -420,7 +466,7 @@ def classement():
          "isBasedOn": "https://www.cnsa.fr/donnees/barometre-des-mdph", "temporalCoverage": "2021-04/2026-06", "spatialCoverage": "France",
          "dateModified": MAJ_DONNEES, "inLanguage": "fr-FR", "license": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
          "distribution": [{"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": f"{DOMAIN}/donnees/delais-mdph-{DP.DERNIER.lower()}.csv"}]},
-        {"@context": "https://schema.org", "@type": "Article", "headline": f"Délais des MDPH en 2026 : le classement des {n} territoires", "datePublished": LANCEMENT, "dateModified": MAJ_DONNEES,
+        {"@context": "https://schema.org", "@type": "Article", "headline": f"Délais des MDPH en 2026 : le classement des {n} territoires", "datePublished": LANCEMENT, "dateModified": MODIFS.get("/delais-mdph/", MAJ_DONNEES),
          "author": person(), "publisher": {"@type": "Organization", "name": SITE, "url": DOMAIN + "/"}, "image": f"{DOMAIN}/img/demarches.jpg", "mainEntityOfPage": DOMAIN + path, "inLanguage": "fr-FR"},
         bc_schema([("Délais des MDPH en 2026", path)]), faq_schema(faq)]
     return path, page(f"Délais MDPH 2026 : le classement des {n} territoires", f"Délai moyen de chaque MDPH au {DP.tlab(DP.DERNIER)} (CNSA) : de {DP.mois_txt(bas['global'])} à {DP.mois_txt(top['global'])}. AAH, PCH, enfants, adultes, évolution sur un an.",
@@ -504,7 +550,7 @@ def page_dep(code):
 <p class="mdh-src">Dates, définitions et limites de chaque chiffre {E(DP.de(nom))} sur la page <a href="/methode-et-sources/">méthode et sources</a>.</p>
 <section class="mdh-next" aria-labelledby="suite"><h2 id="suite">Pour aller plus loin</h2><ul>{nxt}</ul></section>
 </div></div>"""
-    schema = [{"@context": "https://schema.org", "@type": "Article", "headline": h1, "description": desc, "datePublished": LANCEMENT, "dateModified": MAJ_DONNEES, "inLanguage": "fr-FR",
+    schema = [{"@context": "https://schema.org", "@type": "Article", "headline": h1, "description": desc, "datePublished": LANCEMENT, "dateModified": MODIF_DEPS, "inLanguage": "fr-FR",
                "author": person(), "publisher": {"@type": "Organization", "name": SITE, "url": DOMAIN + "/"}, "image": f"{DOMAIN}/img/demarches.jpg", "mainEntityOfPage": DOMAIN + path,
                "about": {"@type": "AdministrativeArea", "name": nom}},
               bc_schema([("Délais des MDPH", "/delais-mdph/"), (nom, path)]), faq_schema(p["faq"])]
@@ -520,7 +566,7 @@ def page_outil(cle):
     slug = OUTILS[cle][0]
     path = url(slug)
     body = f"""<div class="mdh-w"><div class="mdh-art">
-{crumbs([("Outils", "/#outils"), (OUTILS[cle][2], None)])}
+{crumbs([("Outils", "/outils/"), (OUTILS[cle][2], None)])}
 <header class="mdh-head"><span class="mdh-badge">Outil gratuit</span>
 <h1>{E(o['h1'])}</h1>
 <p class="mdh-chapo">{o['chapo']}</p>
@@ -536,8 +582,47 @@ def page_outil(cle):
 </div></div>"""
     schema = [{"@context": "https://schema.org", "@type": "WebApplication", "name": o["h1"], "url": DOMAIN + path, "applicationCategory": "UtilityApplication", "operatingSystem": "Tous navigateurs",
                "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "inLanguage": "fr-FR", "author": person(), "dateModified": o["verif"]},
-              bc_schema([("Outils", "/"), (OUTILS[cle][2], path)]), faq_schema(o["faq"])]
+              bc_schema([("Outils", "/outils/"), (OUTILS[cle][2], path)]), faq_schema(o["faq"])]
     return path, page(o["title"], o["desc"], path, body, schema, o["img"], None, None, "outil")
+
+
+# --------------------------------------------------------------------------- index des outils
+ICO = {"aah": '<path d="M15.5 8.5A5 5 0 1 0 15.5 15.5M7 10.5h6M7 13.5h6"/>', "aeeh": '<circle cx="12" cy="7" r="2.6"/><path d="M7 20c0-4 2.2-7 5-7s5 3 5 7"/>',
+       "delai": '<path d="M7 4h10M7 20h10M8 4c0 5 8 6 8 8s-8 3-8 8M16 4c0 5-8 6-8 8"/>', "fin": '<rect x="4" y="6" width="16" height="14" rx="3"/><path d="M8 3.5v4M16 3.5v4M4 10.5h16M10 15l2 2 3.5-3.5"/>'}
+
+
+def tuiles_outils():
+    return "".join(f'<li><a class="mdh-tile mdh-tool" href="{url(v[0])}"><i aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">{ICO[k]}</svg></i><b>{E(v[2])}</b><span>{E(v[3])}</span><em>{E(v[1])} →</em></a></li>' for k, v in OUTILS.items())
+
+
+def index_outils():
+    """Page /outils/ : index des 4 outils (maillage), sans script d'outil ni mesure d'audience."""
+    path = "/outils/"
+    A = OP.PARAMS["aah"]; AE = OP.PARAMS["aeeh"]
+    quand = [
+        ("delai", "Vous avez déposé un dossier et la MDPH ne répond pas", f"Sans décision 4 mois après le dépôt d'un dossier complet, la demande vaut refus implicite. L'outil donne cette date, la fin du délai de recours de 2 mois et la décision attendue selon le délai moyen de votre MDPH ({DP.fr(DP.nat('global'))} mois en France au {DP.tlab(DP.DERNIER)})."),
+        ("fin", "Vos droits arrivent à échéance", "La demande de renouvellement se dépose 6 mois avant la fin des droits, comme le recommandent les sites officiels. L'outil calcule cette date et crée un rappel pour votre agenda, enregistré seulement sur votre appareil."),
+        ("aah", "Vous voulez savoir combien d'AAH toucher", f"L'AAH est de {OP.eur(A['max'])} par mois au plus depuis le {A['date']}. L'outil tient compte d'un salaire, d'un travail en Ésat (règle trimestrielle depuis le 1er octobre 2026) ou de votre revenu net catégoriel."),
+        ("aeeh", "Vous élevez un enfant handicapé", f"L'AEEH de base est de {OP.eur(AE['base'])} par mois depuis le {AE['date']}. L'outil estime la catégorie de complément selon vos dépenses, votre temps de travail et l'aide d'une tierce personne."),
+    ]
+    blocs = "".join(f'<section aria-labelledby="o-{k}"><h2 id="o-{k}">{E(t)}</h2><p>{E(x)}</p><p><a class="mdh-btn mdh-alt" href="{url(OUTILS[k][0])}">{E(OUTILS[k][1])}</a></p></section>' for k, t, x in quand)
+    body = f"""<div class="mdh-w"><div class="mdh-art">
+{crumbs([("Outils", None)])}
+<header class="mdh-head"><span class="mdh-badge">Outils gratuits</span>
+<h1>Outils gratuits : délais MDPH, AAH, AEEH et renouvellement</h1>
+<p class="mdh-chapo">Quatre calculs simples, faits à partir des règles officielles. Tout se calcule dans votre navigateur : vos réponses ne sont ni envoyées ni enregistrées.</p>
+{trust(None, outil=True)}
+</header>
+<ul class="mdh-grid2">{tuiles_outils()}</ul>
+{blocs}
+<section aria-labelledby="limites"><h2 id="limites">Ce que ces outils ne font pas</h2>
+<p>Ils donnent une estimation ou des dates indicatives. La décision revient à la MDPH, et le montant à la CAF ou à la MSA. Pour un calcul complet de vos droits, le <a href="https://www.mesdroitssociaux.gouv.fr/" rel="noopener" target="_blank">simulateur officiel mesdroitssociaux.gouv.fr</a> reste la référence. Les règles sont expliquées dans <a href="/#guides">les guides pas à pas</a>.</p></section>
+</div></div>"""
+    schema = [{"@context": "https://schema.org", "@type": "ItemList", "name": "Outils gratuits de mes-droits-handicap.fr", "url": DOMAIN + path,
+               "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": v[2], "url": DOMAIN + url(v[0])} for i, v in enumerate(OUTILS.values())]},
+              bc_schema([("Outils", path)])]
+    return path, page("Outils gratuits : délais MDPH, AAH, AEEH, renouvellement", "Quatre outils gratuits : date de refus implicite de la MDPH, renouvellement, simulateur AAH et calcul de l'AEEH. Calcul dans votre navigateur.",
+                      path, body, schema, "accueil", "outils", None, "index-outils")
 
 
 # --------------------------------------------------------------------------- accueil
@@ -546,9 +631,7 @@ def accueil():
     rows = DP.classement_rows()
     data = [[r["nom"] + (" (" + r["code"] + ")" if r["code"].isdigit() else ""), r["code"], round(r["global"], 1), r["lien"] or "", DP.de(r["nom"])] for r in sorted(rows, key=lambda r: r["nom"])]
     dj = '<script type="application/json" id="mdh-deps">' + json.dumps(data, ensure_ascii=False) + "</script>"
-    ico = {"aah": '<path d="M15.5 8.5A5 5 0 1 0 15.5 15.5M7 10.5h6M7 13.5h6"/>', "aeeh": '<circle cx="12" cy="7" r="2.6"/><path d="M7 20c0-4 2.2-7 5-7s5 3 5 7"/>',
-           "delai": '<path d="M7 4h10M7 20h10M8 4c0 5 8 6 8 8s-8 3-8 8M16 4c0 5-8 6-8 8"/>', "fin": '<rect x="4" y="6" width="16" height="14" rx="3"/><path d="M8 3.5v4M16 3.5v4M4 10.5h16M10 15l2 2 3.5-3.5"/>'}
-    tools = "".join(f'<li><a class="mdh-tile mdh-tool" href="{url(v[0])}"><i aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">{ico[k]}</svg></i><b>{E(v[2])}</b><span>{E(v[3])}</span><em>{E(v[1])} →</em></a></li>' for k, v in OUTILS.items())
+    tools = tuiles_outils()
     guides = "".join(f'<li><a class="mdh-tile" href="{url(s)}"><b>{E(v[0])}</b><span>{E(CONTENUS[s].get("description", ""))}</span></a></li>' for s, v in GUIDES.items() if s in CONTENUS)
     deps = "".join(f'<li><a href="/delais-mdph/{DP.DEPS[c]["slug"]}/">{E(DP.DEPS[c]["nom"])} ({c})</a></li>' for c in sorted(DP.PAGES_DEP, key=lambda c: DP.DEPS[c]["nom"]))
     ico_s = '<svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5 20 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>'
@@ -584,7 +667,8 @@ def accueil():
 </section>
 <section class="mdh-sec" id="outils" aria-labelledby="h-outils"><h2 id="h-outils">Les outils</h2>
 <p>Tout se calcule dans votre navigateur : vos réponses ne sont ni envoyées ni enregistrées.</p>
-<ul class="mdh-grid2">{tools}</ul></section>
+<ul class="mdh-grid2">{tools}</ul>
+<p><a href="/outils/">Voir tous les outils et quand les utiliser</a></p></section>
 {produit_slot()}
 <section class="mdh-sec" id="guides" aria-labelledby="h-guides"><h2 id="h-guides">Les guides pas à pas</h2>
 <ul class="mdh-grid3">{guides}</ul></section>
@@ -609,7 +693,7 @@ def main():
     global FOOTER, CONTENUS
     CONTENUS = {}
     for f in sorted(glob.glob(os.path.join(ROOT, "contenu", "*.json"))):
-        d = json.load(open(f, encoding="utf-8"))
+        d = json.loads(SM.remplir(open(f, encoding="utf-8").read()))   # {{SMIC_MENSUEL}}, {{SEUIL_AAH}}… -> smic.py
         if d.get("slug") in GUIDES: CONTENUS[d["slug"]] = d
     FOOTER = footer()
     for p in glob.glob(os.path.join(OUT, "*")):
@@ -622,19 +706,20 @@ def main():
         os.makedirs(os.path.dirname(fp), exist_ok=True)
         open(fp, "w", encoding="utf-8").write(content)
     urls = []
-    write("/", accueil()); urls.append(("/", MAJ_DONNEES))
-    path, h = classement(); write(path, h); urls.append((path, MAJ_DONNEES))
+    write("/", accueil()); urls.append(("/", MODIFS.get("/", MAJ_DONNEES)))
+    path, h = classement(); write(path, h); urls.append((path, MODIFS.get(path, MAJ_DONNEES)))
     for c in DP.PAGES_DEP:
-        path, h = page_dep(c); write(path, h); urls.append((path, MAJ_DONNEES))
+        path, h = page_dep(c); write(path, h); urls.append((path, MODIF_DEPS))
     for s in GUIDES:
         if s in CONTENUS:
-            path, h = guide(CONTENUS[s]); write(path, h); urls.append((path, CONTENUS[s].get("date_verification", LANCEMENT)))
+            path, h = guide(CONTENUS[s]); write(path, h); urls.append((path, max(CONTENUS[s].get("date_verification", LANCEMENT), MODIFS.get(path, ""))))
+    path, h = index_outils(); write(path, h); urls.append((path, MODIFS.get(path, LANCEMENT)))
     for k in OUTILS:
         path, h = page_outil(k); write(path, h); urls.append((path, OP.PAGES[k]["verif"]))
-    for s, (t, dsc, h1, b, schema_extra) in CF.pages(SITE, AUTEUR, DOMAIN, KIT.actif(PRODUIT)).items():
+    for s, (t, dsc, h1, b, schema_extra) in CF.pages(SITE, AUTEUR, DOMAIN, KIT.actif(PRODUIT), CLARITY_ID).items():
         body = f'<div class="mdh-w mdh-prose">{crumbs([(h1, None)])}<h1>{E(h1)}</h1>{b}</div>'
         sch = [bc_schema([(h1, url(s))])] + schema_extra
-        write(url(s), page(t, dsc, url(s), body, sch, "accueil")); urls.append((url(s), LANCEMENT))
+        write(url(s), page(t, dsc, url(s), body, sch, "accueil")); urls.append((url(s), MODIFS.get(url(s), LANCEMENT)))
     if KIT.actif(PRODUIT):   # Kit dossier MDPH : rien de tout cela n'existe tant que PRODUIT vaut None
         KIT.extrait(ROOT, OUT)
         path, h = KIT.page_vente(sys.modules[__name__], KIT.apercus(ROOT, OUT)); write(path, h); urls.append((path, MAJ_DONNEES))
@@ -664,7 +749,7 @@ def main():
             "> Site d'information indépendant sur les droits liés au handicap en France : délais des MDPH par département (baromètre CNSA), AAH, PCH, AEEH, RQTH, carte mobilité inclusion, recours et renouvellement. Chiffres officiels datés et sourcés sur chaque page. Auteur : Louis Lardeux.", "",
             "## Données", "", f"- [Délais des MDPH en 2026, classement]({DOMAIN}/delais-mdph/): délai moyen par territoire au {DP.tlab(DP.DERNIER)}, CSV : {DOMAIN}/donnees/delais-mdph-{DP.DERNIER.lower()}.csv"]
     llms += [f"- [MDPH {DP.de(DP.DEPS[c]['nom'])}]({DOMAIN}/delais-mdph/{DP.DEPS[c]['slug']}/)" for c in DP.PAGES_DEP]
-    llms += ["", "## Outils (calcul dans le navigateur, rien n'est enregistré)", ""] + [f"- [{v[2]}]({DOMAIN}{url(v[0])}): {v[3]}" for v in OUTILS.values()]
+    llms += ["", "## Outils (calcul dans le navigateur, rien n'est enregistré)", "", f"- [Tous les outils]({DOMAIN}/outils/)"] + [f"- [{v[2]}]({DOMAIN}{url(v[0])}): {v[3]}" for v in OUTILS.values()]
     llms += ["", "## Guides", ""] + [f"- [{strip(CONTENUS[s]['h1'])}]({DOMAIN}{url(s)}): {strip(CONTENUS[s].get('chapo', ''))}" for s in GUIDES if s in CONTENUS]
     llms += ["", "## Le site", "", f"- [À propos]({DOMAIN}/a-propos/)", f"- [Méthode et sources]({DOMAIN}/methode-et-sources/)"]
     if KIT.actif(PRODUIT): llms += [f"- [Kit dossier MDPH, guide pratique payant (19 €)]({DOMAIN}/{KIT.SLUG}/)", f"- [Conditions de vente]({DOMAIN}/{KIT.CGV}/)"]

@@ -7,7 +7,7 @@
  "en_bref": [
   "Montant maximal : 1 041,59 € par mois pour les allocations dues à partir d'avril 2026.",
   "Plafond de ressources d'une personne seule : 12 499 € par an, majoré de la moitié par enfant à charge.",
-  "Avec un salaire en milieu ordinaire : rien n'est compté pendant 6 mois, puis 20 % de la part jusqu'à 560,11 € par mois et 60 % au-delà.",
+  "Avec un salaire en milieu ordinaire : rien n'est compté pendant 6 mois, puis 20 % de la part jusqu'à {{SEUIL_AAH}} par mois et 60 % au-delà (Smic en vigueur au {{SMIC_DATE}}).",
   "Si vous travaillez, l'AAH est recalculée chaque trimestre sur la base d'une déclaration de ressources.",
   "Durée : 1 à 10 ans, ou sans limite de durée à partir de 80 % si le handicap ne peut pas s'améliorer."
  ],
@@ -74,7 +74,7 @@
     {
      "type": "exemple",
      "titre": "Exemple",
-     "texte": "Vous touchez une pension d'invalidité de 700 € par mois et n'avez pas d'autre revenu. L'AAH complète jusqu'au maximum : 1 041,59 € moins 700 €, soit environ 341 € par mois."
+     "texte": "Votre avis d'impôt indique un revenu net catégoriel de 8 400 € pour 2024, par exemple une pension d'invalidité après la déduction fiscale de 10 %, soit 700 € par mois. Vous n'avez pas d'autre revenu. L'AAH complète jusqu'au maximum : 1 041,59 € moins 700 €, soit environ 341 € par mois. Notre [simulateur AAH](outils/simulateur-aah) donne le même résultat si vous y saisissez 8 400 €."
     }
    ],
    "sources": [
@@ -166,14 +166,14 @@
      "type": "etapes",
      "items": [
       "**Les 6 premiers mois ne comptent pas.** Si vous n'aviez aucun revenu d'activité le mois précédent et que vous commencez ou reprenez un travail, votre salaire n'est pas pris en compte pendant 6 mois au plus. Ce cumul intégral est limité à 6 mois par période de 12 mois glissants. Il ne joue pas pour une activité commencée avant l'ouverture du droit à l'AAH.",
-      "**Ensuite, un abattement réduit le salaire retenu.** Sur la part du salaire jusqu'à 30 % du Smic brut mensuel, soit **560,11 €** par mois avec le Smic de 1 867,02 €, 80 % sont retirés : seuls 20 % comptent. Sur la part au-delà, 40 % sont retirés : 60 % comptent. Le Smic retenu est celui en vigueur le dernier jour de la période de référence.",
+      "**Ensuite, un abattement réduit le salaire retenu.** Sur la part du salaire jusqu'à 30 % du Smic brut mensuel, soit **{{SEUIL_AAH}}** par mois avec le Smic en vigueur au {{SMIC_DATE}} ({{SMIC_MENSUEL}} par mois), 80 % sont retirés : seuls 20 % comptent. Sur la part au-delà, 40 % sont retirés : 60 % comptent. Le Smic retenu est celui en vigueur le dernier jour de la période de référence.",
       "**Le calcul est trimestriel.** Vous déclarez vos revenus à la CAF ou à la MSA tous les 3 mois. Les ressources des 3 mois civils qui précèdent servent à calculer l'AAH des 3 mois suivants. Le plafond trimestriel vaut 3 fois l'AAH, soit 3 124,77 €, et l'AAH mensuelle est égale au tiers de l'écart entre ce plafond et vos ressources du trimestre."
      ]
     },
     {
      "type": "exemple",
-     "titre": "Exemple (personne seule, au 1er avril 2026)",
-     "texte": "Vous travaillez depuis plus de 6 mois et gagnez 1 200 € nets imposables par mois. Part retenue : 20 % de 560,11 €, soit 112,02 €, plus 60 % des 639,89 € restants, soit 383,93 €. Total retenu : environ 496 € par mois. L'AAH estimée est d'environ 1 041,59 € moins 496 €, soit environ 545 € par mois. Votre CAF peut appliquer d'autres règles selon votre dossier : seule sa notification fait foi."
+     "titre": "Exemple (personne seule, valeurs au {{SMIC_DATE}})",
+     "texte": "Vous travaillez depuis plus de 6 mois et gagnez 1 200 € nets imposables par mois. Part retenue : 20 % de {{SEUIL_AAH}}, soit {{EX1200_P1}}, plus 60 % des {{EX1200_RESTE}} restants, soit {{EX1200_P2}}. Total retenu : environ {{EX1200_TOTAL}} par mois. L'AAH estimée est d'environ 1 041,59 € moins {{EX1200_TOTAL}}, soit environ {{EX1200_AAH}} par mois. Votre CAF peut appliquer d'autres règles selon votre dossier : seule sa notification fait foi."
     },
     {
      "type": "p",
@@ -198,15 +198,45 @@
    "blocs": [
     {
      "type": "p",
-     "texte": "En **Ésat** (établissement et service d'accompagnement par le travail), vous percevez une rémunération garantie comprise entre 55 % et 110 % du Smic horaire. L'AAH s'y ajoute, mais le total ne peut pas dépasser 100 % du Smic brut mensuel, soit 1 867,02 € pour une personne seule. Ce plafond est majoré de 15 % si vous avez un enfant ou un ascendant à charge."
+     "texte": "En **Ésat** (établissement et service d'accompagnement par le travail), vous percevez une rémunération garantie comprise entre 55 % et 110 % du Smic horaire. L'AAH s'y ajoute, mais le total ne peut pas dépasser 100 % du Smic brut mensuel, soit {{ESAT_CUMUL}} pour une personne seule avec le Smic en vigueur au {{SMIC_DATE}}. Ce plafond est majoré de 15 % si vous avez un enfant ou un ascendant à charge, soit {{ESAT_CUMUL_MAJ}}."
     },
     {
      "type": "p",
-     "texte": "La rémunération garantie est retenue après un petit abattement, de 3,5 % à 5 % selon la part financée par l'établissement. Depuis le 1er octobre 2026, avec une mise en place étalée jusqu'en décembre 2026 selon le mois d'ouverture de vos droits, l'AAH des travailleurs d'Ésat est elle aussi calculée sur les revenus du dernier trimestre, et non plus sur ceux de l'avant-dernière année. La CAF ou la MSA prévient chaque allocataire par courrier ou courriel de la date de sa première déclaration."
+     "texte": "Depuis le 1er octobre 2026, l'AAH des travailleurs d'Ésat est calculée sur les revenus du **dernier trimestre**, et non plus sur ceux de l'avant-dernière année. La mise en place est étalée : octobre, novembre ou décembre 2026 selon le mois d'ouverture de vos droits. La CAF ou la MSA prévient chaque allocataire par courrier ou courriel de la date de sa première déclaration."
+    },
+    {
+     "type": "tableau",
+     "entetes": [
+      "Part de la rémunération garantie payée par l'Ésat",
+      "Abattement sur la rémunération garantie"
+     ],
+     "lignes": [
+      [
+       "Plus de 5 % et moins de 10 % du Smic horaire",
+       "3,5 %"
+      ],
+      [
+       "De 10 % à moins de 15 %",
+       "4 %"
+      ],
+      [
+       "De 15 % à moins de 20 %",
+       "4,5 %"
+      ],
+      [
+       "De 20 % à 50 %",
+       "5 %"
+      ]
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "La rémunération garantie se compose de la part payée par l'Ésat et de l'aide au poste versée par l'État. Plus la part payée par l'Ésat est grande, plus l'abattement est élevé (article D821-10 du code de la sécurité sociale, en vigueur depuis le 28 juin 2026). Notre [simulateur AAH](outils/simulateur-aah) applique cette règle : il donne une estimation prudente, car la CAF peut appliquer d'autres déductions selon votre situation."
     }
    ],
    "sources": [
     1,
+    12,
     5
    ]
   },
@@ -350,7 +380,7 @@
   {
    "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F21615",
    "titre": "Peut-on travailler et percevoir l'allocation aux adultes handicapés (AAH) ?, Service Public",
-   "date": "vérifié le 1er octobre 2026, consulté le 2026-11-15"
+   "date": "vérifié le 1er octobre 2026, consulté le 2026-11-19"
   },
   {
    "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053734356",
@@ -401,15 +431,21 @@
    "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F12911",
    "titre": "Handicap : le complément de ressources existe-t-il toujours ?, Service Public",
    "date": "vérifié le 9 novembre 2026, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054339259",
+   "titre": "Article D821-10 du code de la sécurité sociale (abattement sur la rémunération garantie en Ésat), Légifrance",
+   "date": "version en vigueur depuis le 28 juin 2026, consulté le 2026-11-19"
   }
  ],
- "date_verification": "2026-11-15",
+ "date_verification": "2026-11-19",
  "a_verifier": [
   "Base exacte des revenus d'activité retenus : service-public parle de « revenus nets imposables », le code (R821-4-1 renvoyant à R532-3) parle de « revenus nets catégoriels », ce qui peut inclure la déduction fiscale de 10 % pour frais professionnels. L'exemple chiffré suit la formulation de service-public.",
   "L'exemple chiffré de service-public F21615 (salaire de 1 500 €) donne 109,38 € et 572,15 €, incohérents avec le seuil de 560,11 € qu'il affiche (calcul exact : 112,02 € et 563,93 €). Nous n'avons pas repris cet exemple.",
-  "Plafonds de cumul AAH et rémunération Ésat : service-public F21615 affiche 2 427,12 € (couple) et 2 707,17 € (couple avec enfant), alors que l'article D821-5 en vigueur depuis le 1er octobre 2023 fixe 100 % du Smic, majoré de 15 % avec un enfant ou un ascendant à charge. Le guide suit le texte réglementaire.",
-  "Date d'effet du Smic à 12,31 € de l'heure (1 867,02 € par mois) : non affichée sur la fiche service-public F2300 consultée.",
+  "Plafonds de cumul AAH et rémunération Ésat : service-public F21615 affiche 2 427,12 € (couple) et 2 707,17 € (couple avec enfant), alors que l'article D821-5 en vigueur depuis le 1er octobre 2023 fixe 100 % du Smic, majoré de 15 % avec un enfant ou un ascendant à charge. Le guide suit le texte réglementaire. Le simulateur suit aussi le texte réglementaire.",
+  "Date d'effet du Smic à 12,31 € de l'heure (1 867,02 € par mois) : non affichée sur la fiche service-public F2300 consultée. Le site affiche « Smic en vigueur au 1er novembre 2026 ». Hausse de 1,6 % annoncée au 1er décembre 2026 : valeurs centralisées dans _build/smic.py, à changer dès parution du décret.",
   "Abattement de 20 % sur les « pensions et rentes viagères à titre gratuit » (article R821-4) : service-public indique que l'AAH complète une pension d'invalidité ou de retraite jusqu'au maximum, sans mentionner cet abattement. L'exemple suit service-public.",
-  "Jour précis de versement mensuel de l'AAH par la CAF : non trouvé sur une source officielle lue."
+  "Jour précis de versement mensuel de l'AAH par la CAF : non trouvé sur une source officielle lue.",
+  "Calcul Ésat : la CAF et handicap.fr évoquent aussi un « abattement spécifique de 20 % » auquel « peuvent s'ajouter d'autres abattements ». L'article D821-10 en vigueur (lu le 19/11/2026) ne prévoit que 3,5 à 5 %, puis renvoie à R532-3. Le simulateur applique 3,5 à 5 % et présente le résultat comme une estimation prudente."
  ]
 }
