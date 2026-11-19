@@ -22,12 +22,13 @@
 - [MDPH du Val-d'Oise](https://mes-droits-handicap.fr/delais-mdph/val-d-oise-95/)
 - [MDPH de la Haute-Garonne](https://mes-droits-handicap.fr/delais-mdph/haute-garonne-31/)
 - [MDPH des Alpes-Maritimes](https://mes-droits-handicap.fr/delais-mdph/alpes-maritimes-06/)
-- [MDPH de la Hérault](https://mes-droits-handicap.fr/delais-mdph/herault-34/)
+- [MDPH de l'Hérault](https://mes-droits-handicap.fr/delais-mdph/herault-34/)
 - [MDPH de la Loire-Atlantique](https://mes-droits-handicap.fr/delais-mdph/loire-atlantique-44/)
 - [MDPH de l'Isère](https://mes-droits-handicap.fr/delais-mdph/isere-38/)
 
 ## Outils (calcul dans le navigateur, rien n'est enregistré)
 
+- [Tous les outils](https://mes-droits-handicap.fr/outils/)
 - [Simulateur AAH](https://mes-droits-handicap.fr/outils/simulateur-aah/): Votre AAH estimée selon vos ressources ou votre salaire.
 - [Calcul de l'AEEH](https://mes-droits-handicap.fr/outils/calcul-aeeh/): Montant de base et complément selon vos frais et votre temps de travail.
 - [Date de refus implicite](https://mes-droits-handicap.fr/outils/delai-reponse-mdph/): 4 mois sans réponse : la date exacte et vos délais de recours.
@@ -44,7 +45,7 @@
 - [AAH 2026 : montant, conditions et cumul avec un salaire](https://mes-droits-handicap.fr/aah/): L'allocation aux adultes handicapés (AAH) atteint au plus 1 041,59 € par mois depuis le 1er avril 2026. Elle est accordée par la MDPH à partir d'un taux d'incapacité de 80 %, ou de 50 à 79 % avec une restriction d'accès à l'emploi, puis versée par la CAF ou la MSA. Le montant baisse selon vos ressources personnelles : depuis octobre 2023, les revenus du conjoint ne comptent plus.
 - [RQTH : les avantages concrets et comment l'obtenir](https://mes-droits-handicap.fr/rqth/): La reconnaissance de la qualité de travailleur handicapé (RQTH) est une décision de la MDPH, pas une allocation. Elle ouvre l'accès à des aménagements de poste, à l'accompagnement de Cap emploi, aux aides de l'Agefiph ou du FIPHFP, à l'obligation d'emploi de 6 % et à un préavis doublé en cas de licenciement. Elle est accordée de 1 à 10 ans, ou à vie.
 - [AEEH : montant 2026, les 6 catégories de complément et la demande](https://mes-droits-handicap.fr/aeeh/): L'allocation d'éducation de l'enfant handicapé (AEEH) s'élève à 153,01 € par mois depuis le 1er avril 2026. Elle est versée pour un enfant de moins de 20 ans dont le taux d'incapacité atteint 80 %, ou 50 à 79 % avec un accompagnement adapté. Un complément de 114,76 € (catégorie 1) à 1 298,44 € (catégorie 6) peut s'y ajouter selon vos frais et votre temps de travail.
-- [PCH : ce que finance la prestation de compensation du handicap](https://mes-droits-handicap.fr/pch/): La prestation de compensation du handicap (PCH) rembourse des dépenses liées à la perte d'autonomie : aide humaine, matériel, aménagement du logement ou du véhicule, frais spécifiques, aide animalière. Au 1er juin 2026, l'aide humaine est prise en charge jusqu'à 19,92 € de l'heure en emploi direct et 25 € en service prestataire, et un aidant familial est dédommagé 4,93 € de l'heure. Elle est attribuée sans condition de ressources.
+- [PCH : ce que finance la prestation de compensation du handicap](https://mes-droits-handicap.fr/pch/): La prestation de compensation du handicap (PCH) rembourse des dépenses liées à la perte d'autonomie : aide humaine, matériel, aménagement du logement ou du véhicule, frais spécifiques, aide animalière. Au 1er novembre 2026, l'aide humaine est prise en charge jusqu'à 20,04 € de l'heure en emploi direct et 25 € en service prestataire, et un aidant familial est dédommagé 4,96 € de l'heure. Elle est attribuée sans condition de ressources.
 - [Carte mobilité inclusion (CMI) : les 3 mentions et leurs avantages](https://mes-droits-handicap.fr/carte-mobilite-inclusion/): La carte mobilité inclusion (CMI) est gratuite et existe en trois mentions. Invalidité : à partir de 80 % d'incapacité, priorité, réductions de transport et demi-part d'impôt. Priorité : moins de 80 % avec station debout pénible, place assise et passage prioritaire. Stationnement : déplacements à pied très limités, stationnement gratuit. Les anciennes cartes cessent d'être valables au 31 décembre 2026.
 
 ## Le site

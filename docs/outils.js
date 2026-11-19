@@ -126,10 +126,12 @@
       html: function () {
         return choice('sit', 'Votre situation', [['sans', 'Je ne travaille pas'], ['mo', 'Je travaille (entreprise, fonction publique)'], ['esat', 'Je travaille en ESAT']], 'sans') +
           choice('tx', 'Taux d’incapacité reconnu ou attendu', [['80', '80 % ou plus'], ['50', 'De 50 à 79 %'], ['0', 'Moins de 50 % ou inconnu']], '80') +
-          '<label class="mdh-eur" data-s="sans esat">Vos revenus imposables de ' + esc(P.aah.anneeRef) + '<small>salaires, pensions, rentes (hors AAH), montant annuel</small><input name="ran" inputmode="decimal" placeholder="ex. 3 000"></label>' +
+          '<label class="mdh-eur" data-s="sans">Votre revenu net catégoriel de ' + esc(P.aah.anneeRef) + '<small>ligne « revenu net catégoriel » de l’avis d’impôt sur les revenus de ' + esc(P.aah.anneeRef) + ' (pensions, rentes, hors AAH), montant annuel, déjà net de la déduction de 10 %</small><input name="ran" inputmode="decimal" placeholder="ex. 8 400"></label>' +
+          '<label class="mdh-eur" data-s="esat">Rémunération garantie mensuelle moyenne du dernier trimestre<small>montant net imposable de vos bulletins de l’Ésat</small><input name="rg" inputmode="decimal" placeholder="ex. 750"></label>' +
+          choice('esp', 'Part de la rémunération payée par l’Ésat <small>(elle figure sur le bulletin, à côté de l’aide au poste)</small>', [['0', 'Moins de 10 % du Smic'], ['1', 'De 10 à 15 %'], ['2', 'De 15 à 20 %'], ['3', '20 % ou plus'], ['x', 'Je ne sais pas']], 'x', ' data-s="esat"') +
           '<label class="mdh-eur" data-s="mo">Salaire net imposable mensuel moyen du dernier trimestre<input name="sal" inputmode="decimal" placeholder="ex. 900"></label>' +
           '<label class="mdh-chk mdh-full" data-s="mo"><input type="checkbox" name="rep"> J\u2019ai commencé ou repris ce travail il y a moins de 6 mois, alors que je touchais déjà l\u2019AAH</label>' +
-          '<label class="mdh-eur" data-s="mo">Autres revenus mensuels <small>(pension d’invalidité, rente…)</small><input name="aut" inputmode="decimal" placeholder="ex. 0"></label>' +
+          '<label class="mdh-eur" data-s="mo esat">Autres revenus mensuels <small>(pension d’invalidité, rente…)</small><input name="aut" inputmode="decimal" placeholder="ex. 0"></label>' +
           choice('enf', 'Enfants à votre charge', [['0', 'Aucun'], ['1', '1'], ['2', '2'], ['3', '3'], ['4', '4 ou plus']], '0');
       },
       init: function (f) {
@@ -139,27 +141,40 @@
       calc: function (f) {
         var A = P.aah, tx = +f.tx.value, enf = Math.min(4, +f.enf.value), sit = f.sit.value;
         if (tx === 0) return result('Pas d’AAH', '', 'L’AAH demande un taux d’incapacité d’au moins 80 %, ou de 50 à 79 % avec une restriction substantielle et durable d’accès à l’emploi. C’est la MDPH qui fixe ce taux.', '', '', '<a class="mdh-btn mdh-alt" href="/aah/">Les conditions de l’AAH</a>');
-        var plaf = A.max * 12 * (1 + A.majEnfant * enf), res, det = [];
+        var plaf = A.max * 12 * (1 + A.majEnfant * enf), res, det = [], cumul = null, rg = 0;
         if (sit === 'mo') {
-          var sal = num(f.sal.value), aut = num(f.aut.value), seuil = A.smicBrut * A.seuilPart;
+          var sal = num(f.sal.value), aut = num(f.aut.value), seuil = Math.round(A.smicBrut * A.seuilPart * 100) / 100;
           var ab = Math.min(sal, seuil) * (1 - A.ab1) + Math.max(0, sal - seuil) * (1 - A.ab2);
           if (f.rep.checked) { ab = 0; det.push('Reprise d\u2019activité depuis moins de 6 mois : le salaire n\u2019est pas pris en compte pendant cette période (6 mois au plus sur 12 mois glissants)'); }
           res = ab + aut;
           if (!f.rep.checked) det.push('Salaire retenu après abattement : ' + eur(ab) + ' par mois (' + Math.round(A.ab1 * 100) + ' % d’abattement jusqu’à ' + eur(seuil) + ', ' + Math.round(A.ab2 * 100) + ' % au-delà)');
           if (aut) det.push('Autres revenus retenus : ' + eur(aut) + ' par mois');
+        } else if (sit === 'esat') {
+          /* Depuis le 1er octobre 2026 : revenus du dernier trimestre, abattement de 3,5 à 5 % (D821-10), cumul plafonné (D821-5) */
+          rg = num(f.rg.value); var au2 = num(f.aut.value), k = f.esp.value, tab = k === 'x' ? A.esatAb[0] : A.esatAb[+k];
+          res = rg * (1 - tab) + au2;
+          det.push('Rémunération garantie retenue après l’abattement de ' + String(Math.round(tab * 1000) / 10).replace('.', ',') + ' % : ' + eur(rg * (1 - tab)) + ' par mois' + (k === 'x' ? ' (taux le plus bas, faute de connaître la part payée par l’Ésat : estimation prudente)' : ''));
+          if (au2) det.push('Autres revenus retenus : ' + eur(au2) + ' par mois');
+          cumul = A.smicBrut * A.esatCumul * (enf ? 1 + A.esatCumulMaj : 1);
         } else {
+          /* Revenu net catégoriel : déjà net de la déduction fiscale de 10 %, aucun abattement supplémentaire */
           var ran = num(f.ran.value);
-          res = Math.max(0, ran * (1 - A.abNet)) / 12;
-          det.push('Revenus de ' + esc(A.anneeRef) + ' retenus après l’abattement de ' + Math.round(A.abNet * 100) + ' % : ' + eur(res * 12) + ' par an, soit ' + eur(res) + ' par mois');
+          res = Math.max(0, ran) / 12;
+          det.push('Revenu net catégoriel de ' + esc(A.anneeRef) + ' retenu tel quel : ' + eur(res * 12) + ' par an, soit ' + eur(res) + ' par mois');
         }
         var plafM = plaf / 12, aah = Math.max(0, Math.min(A.max, plafM - res));
+        if (cumul !== null) {
+          var lim = Math.max(0, cumul - rg);
+          if (lim < aah) { aah = lim; }
+          det.push('Plafond de cumul en Ésat : rémunération garantie et AAH ensemble au plus ' + eur(cumul) + ' par mois' + (enf ? ' (majoré de ' + Math.round(A.esatCumulMaj * 100) + ' % avec un enfant à charge)' : '') + ', Smic au ' + esc(A.smicDate));
+        }
         if (aah < 0.01) aah = 0;
         det.push('Plafond de ressources : ' + eur(plaf) + ' par an' + (enf ? ' (majoré de ' + Math.round(A.majEnfant * 100) + ' % par enfant)' : ''));
         if (tx === 50) det.push('Entre 50 et 79 %, l’AAH suppose aussi une restriction substantielle et durable d’accès à l’emploi, reconnue par la MDPH.');
         return result(aah ? eur(aah) : 'Pas d’AAH à verser', aah ? 'par mois (estimation)' : '',
           aah ? 'Vous pourriez toucher jusqu’à ' + eur(aah) + ' par mois, d’après vos réponses.' : 'D’après vos réponses, vos ressources dépassent le plafond : l’AAH ne serait pas versée.', '',
           '<ul><li>' + det.join('</li><li>') + '</li></ul>' +
-          '<p class="mdh-note">Estimation simplifiée sur le barème officiel (AAH à taux plein : ' + eur(A.max) + ' par mois depuis le ' + esc(A.date) + '). Le calcul de la CAF tient compte d’autres éléments (abattements particuliers, pension d’invalidité, hospitalisation, ESAT). Pour un chiffre plus précis, utilisez le <a href="https://www.mesdroitssociaux.gouv.fr/" rel="noopener" target="_blank">simulateur officiel mesdroitssociaux.gouv.fr</a>.</p>',
+          '<p class="mdh-note">Estimation simplifiée sur le barème officiel (AAH à taux plein : ' + eur(A.max) + ' par mois depuis le ' + esc(A.date) + '). Seuils calculés avec le Smic en vigueur au ' + esc(A.smicDate) + '. Le calcul de la CAF tient compte d’autres éléments (abattements particuliers, hospitalisation, déductions propres aux Ésat). Pour un chiffre plus précis, utilisez le <a href="https://www.mesdroitssociaux.gouv.fr/" rel="noopener" target="_blank">simulateur officiel mesdroitssociaux.gouv.fr</a>.</p>',
           '<a class="mdh-btn mdh-alt" href="/aah/">Comprendre le calcul</a><a class="mdh-btn mdh-alt" href="/dossier-mdph/">Préparer mon dossier pas à pas</a><a class="mdh-btn mdh-alt" href="/delais-mdph/">Délai de ma MDPH</a>');
       }
     }
