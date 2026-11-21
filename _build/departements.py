@@ -28,6 +28,19 @@ VOISINS = {"93": ["75", "92", "94", "95", "77"], "13": ["84", "83", "30", "04"],
            "94": ["75", "92", "93", "77", "91"], "77": ["93", "94", "91", "95", "60", "02", "51", "10", "89", "45"], "78": ["92", "95", "91", "28", "27"],
            "95": ["92", "93", "78", "77", "60", "27"], "31": ["32", "82", "81", "11", "09", "65"], "06": ["83", "04"], "34": ["30", "12", "81", "11"],
            "44": ["35", "56", "49", "85"], "38": ["69M", "69D", "01", "73", "05", "26", "42"]}
+# Toutes les autres MDPH (21/11/2026) : voisins calculés sur les contours des départements (france-geojson), conservés dans _data/voisins-geo.json
+_GEO = json.load(open(os.path.join(ROOT, "_data", "voisins-geo.json"), encoding="utf-8"))
+_MAP = {"67": "6EA", "68": "6EA", "2A": "20", "2B": "20"}
+def _vois(code):
+    srcs = {"6EA": ["67", "68"], "20": ["2A", "2B"], "69": ["69"]}.get(code, [code])
+    out = []
+    for s0 in srcs:
+        for v in _GEO.get(s0, []):
+            v = _MAP.get(v, v)
+            vs = ["69M", "69D"] if v == "69" else [v]
+            for x in vs:
+                if x != code and x not in out and x not in srcs: out.append(x)
+    return out
 TRIM = ["2025T1", "2025T2", "2025T3", "2025T4", "2026T1", "2026T2"]
 DERNIER = "2026T2"
 TYPES = [("global", "toutes demandes"), ("aah", "AAH"), ("pch", "PCH"), ("enfants", "enfants"), ("adultes", "adultes")]
@@ -119,6 +132,11 @@ def territoires():
 
 
 TERR = territoires()
+# Extension du 21/11/2026 : une page par MDPH du baromètre CNSA (Rhône et Métropole de Lyon sur la page 69)
+for _c in TERR:
+    _p = "69" if _c in ("69M", "69D") else _c
+    if _p not in PAGES_DEP: PAGES_DEP.append(_p)
+    if _p not in VOISINS: VOISINS[_p] = _vois(_p)
 
 
 def rang(code, typ="global"):
@@ -163,7 +181,7 @@ def phr_rang(code, r, nom):
     if i <= 5: return V(code, "r", [f"C'est l'un des cinq délais les plus longs de France ({i}e sur {n}).", f"Seules {i - 1} MDPH font plus long en France : le département se classe {i}e sur {n}.", f"Au classement national, {nom} arrive {i}e sur {n}, dans le groupe des plus lents."]) if i > 1 else f"C'est le délai le plus long des {n} territoires classés."
     if i <= n // 4: return V(code, "r", [f"Le département se situe dans le quart des MDPH les plus lentes ({i}e sur {n}).", f"Avec ce chiffre, il pointe au {i}e rang sur {n}, du plus long au plus court.", f"Rang national : {i}e sur {n}, parmi les délais les plus longs."])
     if i > n - n // 4: return V(code, "r", [f"Ce délai le place parmi les MDPH les plus rapides du pays ({n - i + 1}e plus court sur {n}).", f"C'est le {n - i + 1}e délai le plus court sur {n} territoires.", f"Au classement, le département figure dans le quart le plus rapide : {i}e sur {n} du plus long au plus court."])
-    return V(code, "r", [f"Au classement national, il occupe le {i}e rang sur {n}, du plus long au plus court, donc dans la moitié {'haute' if i <= n / 2 else 'basse'}.", f"Le département se situe au milieu du classement : {i}e sur {n}.", f"Rang : {i}e sur {n} territoires classés par la CNSA."])
+    return V(code, "r", [f"Au classement national, il occupe le {i}e rang sur {n}, du plus long au plus court, donc dans la moitié {'haute' if i <= n / 2 else 'basse'}.", f"La MDPH {de(nom)} se situe au milieu du classement, {i}e sur {n}.", f"Rang : {i}e sur {n} territoires classés par la CNSA."])
 
 
 def bloc_delais(code, codes, nom):
@@ -242,7 +260,7 @@ def bloc_delais(code, codes, nom):
             s.append(V(code, typ, [f"pour {lab}, {mois_txt(v)} ({qual} la moyenne nationale de {mois_txt(vn)})",
                                    f"{mois_txt(v)} pour {lab}, {qual} les {mois_txt(vn)} observés en France",
                                    f"{lab} : {mois_txt(v)}, {qual} la moyenne ({mois_txt(vn)})"]))
-        intro = V(code, "d", ["Selon le type de demande, l'attente varie :", "Le délai dépend de ce que vous demandez :", "Dans le détail, au même trimestre :"])
+        intro = V(code, "d", [f"{cap(dans(nom))}, selon le type de demande, l'attente varie :", f"À la MDPH {de(nom)}, le délai dépend de ce que vous demandez :", f"Dans le détail, au même trimestre et {dans(nom)} :"])
         txt = intro + " " + " ; ".join(s) + "."
         ae, aa = D["enfants"].get(DERNIER), D["adultes"].get(DERNIER)
         if ae is not None and aa is not None:
@@ -258,7 +276,7 @@ def bloc_delais(code, codes, nom):
     if len(serie) >= 4:
         hi = max(serie, key=lambda x: x[1]); lo = min(serie, key=lambda x: x[1])
         if hi[1] - lo[1] >= 0.8:
-            out.append("<p>" + V(code, "pc", [f"Sur les six derniers trimestres, le délai a varié entre {mois_txt(lo[1])} ({tlab(lo[0])}) et {mois_txt(hi[1])} ({tlab(hi[0])}) : une moyenne trimestrielle peut bouger vite, d'où l'intérêt de déposer sans attendre.",
+            out.append("<p>" + V(code, "pc", [f"Sur les six derniers trimestres, le délai a varié entre {mois_txt(lo[1])} ({tlab(lo[0])}) et {mois_txt(hi[1])} ({tlab(hi[0])}), et une moyenne trimestrielle peut bouger vite, d'où l'intérêt de déposer sans attendre.",
                                                f"Le point haut des six derniers trimestres a été atteint au {tlab(hi[0])} ({mois_txt(hi[1])}), le point bas au {tlab(lo[0])} ({mois_txt(lo[1])}).",
                                                f"Entre {tlab(TRIM[0])} et {tlab(DERNIER)}, l'attente est allée de {mois_txt(lo[1])} au plus court à {mois_txt(hi[1])} au plus long."]) + "</p>")
     ser = [("Toutes demandes", G.C["brand"], [D["global"].get(t) for t in TRIM], False), ("AAH", G.C["alert"], [D["aah"].get(t) for t in TRIM], False),
@@ -271,7 +289,7 @@ def bloc_delais(code, codes, nom):
     out.append(f'<p class="mdh-note">Délais {de(nom)} en mois, du dépôt du dossier complet à la décision (n.c. : chiffre non transmis).</p>')
     out.append(src_line("delais", nom=nom))
     faq.append((f"Combien de temps met la MDPH {de(nom)} pour répondre ?", f"Au {tlab(DERNIER)}, le délai moyen de traitement était de {mois_txt(g)} {dans(nom)}, contre {mois_txt(gn)} en moyenne en France (baromètre de la CNSA)."
-                + (V(code, "fa", [f" Pour une demande d'AAH {dans(nom)}, il était de {mois_txt(D['aah'][DERNIER])}.", f" Les demandes d'AAH y ont pris {mois_txt(D['aah'][DERNIER])} en moyenne.", f" Délai propre à l'AAH : {mois_txt(D['aah'][DERNIER])}."]) if D["aah"].get(DERNIER) is not None else "") + V(code, "fz", [" Votre propre dossier peut s'en écarter.", " Un dossier complet dès le dépôt a plus de chances d'être dans la moyenne.", " Ce chiffre ne dit rien d'un dossier en particulier."])))
+                + (V(code, "fa", [f" Pour une demande d'AAH {dans(nom)}, il était de {mois_txt(D['aah'][DERNIER])}.", f" Les demandes d'AAH y ont pris {mois_txt(D['aah'][DERNIER])} en moyenne.", f" Délai propre à l'AAH : {mois_txt(D['aah'][DERNIER])}."]) if D["aah"].get(DERNIER) is not None else "") + V(code, "fz", [f" Votre propre dossier {de(nom)} peut s'en écarter.", f" Un dossier complet dès le dépôt a plus de chances d'être traité {dans(nom)} dans la moyenne.", f" Ce chiffre de la MDPH {de(nom)} ne dit rien d'un dossier en particulier."])))
     return out, faq, g
 
 
@@ -282,19 +300,19 @@ def bloc_attente(code, nom, g):
     implicite = dt.date(AUJ.year + (AUJ.month + 3) // 12, (AUJ.month + 3) % 12 + 1, AUJ.day)  # 4 mois de date à date
     out = []
     if g > 4:
-        out.append("<p>" + V(code, "w", [f"Un dossier complet déposé le {date_fr(AUJ)} obtiendrait sa décision vers le <b>{date_fr(dep)}</b> si le délai moyen restait le même. Or la loi prévoit qu'au bout de <b>4 mois</b> sans réponse, la demande est considérée comme refusée (refus implicite) : {dans(nom)}, ce cas de figure n'a rien d'exceptionnel.",
+        out.append("<p>" + V(code, "w", [f"Un dossier complet déposé le {date_fr(AUJ)} obtiendrait sa décision vers le <b>{date_fr(dep)}</b> si le délai moyen restait le même. Or la loi prévoit qu'au bout de <b>4 mois</b> sans réponse, la demande est considérée comme refusée (refus implicite), et {dans(nom)} ce cas de figure n'a rien d'exceptionnel.",
                                          f"Avec {mois_txt(g)} de délai moyen, on dépasse les 4 mois au-delà desquels le silence de l'administration vaut refus. Pour un dépôt le {date_fr(AUJ)}, ce refus implicite tomberait le {date_fr(implicite)}, alors que la décision ne viendrait en moyenne que vers le {date_fr(dep)}.",
-                                         f"Ce délai moyen dépasse la limite de 4 mois fixée par les textes. Concrètement, un dossier déposé aujourd'hui ({date_fr(AUJ)}) vaudrait refus implicite le {date_fr(implicite)}, et la réponse réelle arriverait plutôt autour du {date_fr(dep)}."]) + "</p>")
-        out.append("<p>" + V(code, "w2", ["Ce refus implicite n'empêche pas la MDPH de rendre ensuite sa décision. Il ouvre surtout la possibilité de contester si votre situation ne peut pas attendre.",
-                                          "La plupart des personnes attendent la vraie décision, qui arrive souvent après. Mais si l'attente vous met en difficulté, la date du refus implicite fait courir un délai de recours.",
-                                          "Ce silence n'est pas une décision sur le fond : la MDPH peut encore statuer. C'est un repère utile quand l'attente devient trop lourde."]) + f' <a href="/outils/delai-reponse-mdph/">Calculez vos dates exactes</a> et voyez <a href="/dossier-mdph-trop-long/">comment relancer la MDPH {de(nom)}</a>.</p>')
+                                         f"Le délai moyen {de(nom)} dépasse la limite de 4 mois fixée par les textes. Concrètement, un dossier déposé aujourd'hui ({date_fr(AUJ)}) vaudrait refus implicite le {date_fr(implicite)}, et la réponse réelle arriverait plutôt autour du {date_fr(dep)}."]) + "</p>")
+        out.append("<p>" + V(code, "w2", [f"Ce refus implicite n'empêche pas la MDPH {de(nom)} de rendre ensuite sa décision, et il ouvre surtout la possibilité de contester si votre situation ne peut pas attendre.",
+                                          f"La plupart des personnes attendent la vraie décision de la MDPH {de(nom)}, qui arrive souvent après, mais si l'attente vous met en difficulté, la date du refus implicite fait courir un délai de recours.",
+                                          f"Ce silence n'est pas une décision sur le fond, et la MDPH {de(nom)} peut encore statuer, mais c'est un repère utile quand l'attente devient trop lourde."]) + f' <a href="/outils/delai-reponse-mdph/">Calculez vos dates exactes</a> et voyez <a href="/dossier-mdph-trop-long/">comment relancer la MDPH {de(nom)}</a>.</p>')
     else:
         out.append("<p>" + V(code, "w", [f"Pour un dossier complet déposé le {date_fr(AUJ)}, la décision arriverait vers le <b>{date_fr(dep)}</b> si le délai moyen se maintenait, donc avant la limite de 4 mois prévue par les textes ({date_fr(implicite)}).",
-                                         f"À ce rythme, un dossier déposé aujourd'hui serait tranché autour du <b>{date_fr(dep)}</b>. La limite légale de 4 mois, au-delà de laquelle le silence vaut refus, tomberait le {date_fr(implicite)}.",
+                                         f"À ce rythme, un dossier déposé aujourd'hui serait tranché autour du <b>{date_fr(dep)}</b>. Pour ce dossier déposé {dans(nom)}, la limite légale de 4 mois, au-delà de laquelle le silence vaut refus, tomberait le {date_fr(implicite)}.",
                                          f"En moyenne, la MDPH {de(nom)} répond donc avant les 4 mois prévus par la loi : déposé le {date_fr(AUJ)}, un dossier recevrait sa décision vers le <b>{date_fr(dep)}</b>."]) + "</p>")
-        out.append("<p>" + V(code, "w2", ["Une moyenne cache des écarts : un dossier incomplet, une demande d'orientation ou une évaluation à domicile allongent l'attente.",
-                                          "Cela reste une moyenne : un certificat médical ancien ou une pièce manquante peuvent retarder votre dossier de plusieurs semaines.",
-                                          "Attention, c'est un délai moyen calculé sur tous les dossiers : les demandes complexes prennent plus de temps."]) + f' Pour limiter ce risque {dans(nom)}, <a href="/dossier-mdph/">préparez un dossier complet</a> et <a href="/outils/delai-reponse-mdph/">notez vos dates</a>.</p>')
+        out.append("<p>" + V(code, "w2", [f"Une moyenne cache des écarts {dans(nom)}, car un dossier incomplet, une demande d'orientation ou une évaluation à domicile allongent l'attente.",
+                                          f"Cela reste une moyenne, et {dans(nom)} comme ailleurs un certificat médical ancien ou une pièce manquante peuvent retarder votre dossier de plusieurs semaines.",
+                                          f"Attention, c'est un délai moyen calculé sur tous les dossiers {de(nom)}, et les demandes complexes prennent plus de temps."]) + f' Pour limiter ce risque {dans(nom)}, <a href="/dossier-mdph/">préparez un dossier complet</a> et <a href="/outils/delai-reponse-mdph/">notez vos dates</a>.</p>')
     return out
 
 
@@ -305,10 +323,10 @@ def bloc_droits_vie(code, nom):
     if a is None or an is None: return out, []
     c = (a - an) / an
     s = V(code, "v", [f"Au {tlab(DERNIER)}, <b>{pct(a)}</b> des AAH accordées {dans(nom)} aux personnes ayant un taux d'incapacité d'au moins 80 % l'ont été sans limitation de durée, ce qu'on appelle un droit à vie.",
-                      f"Les droits à vie progressent lentement : {dans(nom)}, {pct(a)} des AAH attribuées au {tlab(DERNIER)} à des personnes avec un taux d'au moins 80 % n'ont pas de date de fin.",
-                      f"Part des AAH (taux d'au moins 80 %) accordées sans limitation de durée au {tlab(DERNIER)} : <b>{pct(a)}</b> {dans(nom)}."])
-    s += " " + (f"La moyenne nationale est de {pct(an)} : la MDPH {de(nom)} {'en accorde nettement plus' if c > 0.12 else 'en accorde nettement moins' if c < -0.12 else 'est dans la moyenne'}."
-                if V(code, "v2", [0, 1]) else f"C'est {'plus' if c > 0.05 else 'moins' if c < -0.05 else 'à peu près autant'} qu'en France ({pct(an)}).")
+                      f"Les droits à vie progressent lentement {dans(nom)}, où {pct(a)} des AAH attribuées au {tlab(DERNIER)} à des personnes avec un taux d'au moins 80 % n'ont pas de date de fin.",
+                      f"{cap(dans(nom))}, la part des AAH (taux d'au moins 80 %) accordées sans limitation de durée au {tlab(DERNIER)} atteint <b>{pct(a)}</b>."])
+    s += " " + (f"La moyenne nationale est de {pct(an)}, et la MDPH {de(nom)} {'en accorde nettement plus' if c > 0.12 else 'en accorde nettement moins' if c < -0.12 else 'est dans la moyenne'}."
+                if V(code, "v2", [0, 1]) else f"C'est {'plus' if c > 0.05 else 'moins' if c < -0.05 else 'à peu près autant'} qu'en moyenne en France ({pct(an)}) pour la MDPH {de(nom)}.")
     if a1 is not None and abs(a - a1) >= 0.05:
         s += " " + V(code, "v4", [f"Deux ans plus tôt, au {tlab('2024T2')}, la part était de {pct(a1)} {dans(nom)}.", f"Au {tlab('2024T2')}, la MDPH {de(nom)} en était à {pct(a1)}.", f"La part était de {pct(a1)} deux ans plus tôt ({tlab('2024T2')})."])
     out.append(f"<p>{s}</p>")
@@ -317,11 +335,11 @@ def bloc_droits_vie(code, nom):
         v, vn = d[k].get(DERNIER), NAT["dsld"][k].get(DERNIER)
         if v is not None and vn is not None: autres.append(f"{pct(v)} pour {lab} (France : {pct(vn)})")
     if autres:
-        out.append("<p>" + V(code, "v3", ["Même indicateur pour les autres droits : ", "Pour les autres décisions, la part accordée sans limitation de durée est de ", "Ailleurs dans les décisions de la MDPH : "]) + ", ".join(autres) + f'. Pour un habitant {de(nom)} titulaire d\'un droit à vie, plus besoin de <a href="/renouvellement-mdph/">redéposer un dossier à chaque échéance</a>.</p>')
+        out.append("<p>" + V(code, "v3", [f"Même indicateur pour les autres droits {dans(nom)} : ", "Pour les autres décisions, la part accordée sans limitation de durée est de ", f"Ailleurs dans les décisions de la MDPH {de(nom)} : "]) + ", ".join(autres) + f'. Pour un habitant {de(nom)} titulaire d\'un droit à vie, plus besoin de <a href="/renouvellement-mdph/">redéposer un dossier à chaque échéance</a>.</p>')
     out.append(src_line("dsld", nom=nom))
     return out, [(f"La MDPH {de(nom)} accorde-t-elle l'AAH à vie ?", V(code, "fq", [f"Oui, pour les habitants {de(nom)} dont le taux d'incapacité atteint 80 % et dont la situation ne peut pas s'améliorer, soit {pct(a)} des AAH qui leur ont été accordées {dans(nom)} au {tlab(DERNIER)} l'ont été sans date de fin (France : {pct(an)}).",
                                                                                       f"La MDPH {de(nom)} le fait dans {pct(a)} des cas au {tlab(DERNIER)} pour les personnes ayant un taux d'au moins 80 %, contre {pct(an)} au niveau national, d'après la CNSA. Pour en bénéficier {dans(nom)} comme ailleurs, le handicap ne doit pas pouvoir évoluer favorablement.",
-                                                                                      f"D'après la CNSA, {pct(a)} des AAH attribuées {dans(nom)} au {tlab(DERNIER)} aux personnes avec un taux de 80 % ou plus n'ont pas de limite de durée ; la moyenne française est de {pct(an)}."]))]
+                                                                                      f"D'après la CNSA, {pct(a)} des AAH attribuées {dans(nom)} au {tlab(DERNIER)} aux personnes avec un taux de 80 % ou plus n'ont pas de limite de durée, quand la moyenne française est de {pct(an)}."]))]
 
 
 def bloc_caf(code, nom):
@@ -351,7 +369,7 @@ def bloc_caf(code, nom):
     if inca and (inca["80"] + inca["50_79"]):
         p80 = inca["80"] / (inca["80"] + inca["50_79"] + inca["autre"])
         out.append("<p>" + V(code, "i", [f"Parmi les allocataires {de(nom)}, {pct(p80)} ont un taux d'incapacité d'au moins 80 %, les autres un taux de 50 à 79 % avec une restriction substantielle et durable d'accès à l'emploi.",
-                                         f"{cap(dans(nom))}, {pct(p80)} de ces allocataires ont un taux d'incapacité de 80 % ou plus ; les autres relèvent du taux de 50 à 79 %, qui exige une restriction durable d'accès à l'emploi.",
+                                         f"{cap(dans(nom))}, {pct(p80)} de ces allocataires ont un taux d'incapacité de 80 % ou plus, et les autres relèvent du taux de 50 à 79 %, qui exige une restriction durable d'accès à l'emploi.",
                                          f"Taux d'incapacité : {n_(inca['80'])} allocataires à 80 % ou plus, {n_(inca['50_79'])} entre 50 et 79 %."]) + f' Le <a href="/aah/">guide de l\'AAH</a> détaille le montant 2026 et le cumul avec un salaire pour les allocataires {de(nom)}.</p>')
     if x.get("aeeh"):
         s = V(code, "e", [f"Côté enfants, <b>{n_(x['aeeh'])}</b> enfants {de(nom)} ouvraient droit à l'AEEH (allocation d'éducation de l'enfant handicapé) en {m}",
@@ -391,7 +409,7 @@ def bloc_pch(code, codes, nom):
         s += " " + V(code, "p2", [f"Ce nombre a {'progressé' if ev > 0 else 'reculé'} de {fr(abs(ev), 0)} % depuis fin 2019.", f"Depuis 2019, l'évolution est de {'+' if ev > 0 else ''}{fr(ev, 0)} %.", f"Il était de {n_(v19)} fin 2019."])
     if pay: s += " " + V(code, "p3", [f"En décembre 2024, {n_(pay)} personnes {de(nom)} ont effectivement reçu un paiement.", f"{cap(dans(nom))}, la PCH a été payée à {n_(pay)} personnes en décembre 2024.", f"Paiements réels en décembre 2024 : {n_(pay)} bénéficiaires {dans(nom)}."])
     if j: s += " " + V(code, "p4", [f"Les moins de 20 ans représentaient {n_(j)} droits ouverts.", f"Parmi ces droits, {n_(j)} concernaient des jeunes de moins de 20 ans {dans(nom)}.", f"{n_(j)} droits ouverts l'étaient pour des moins de 20 ans."])
-    return [f"<p>{s} " + f'Le <a href="/pch/">guide de la PCH</a> explique ce qu\'elle peut financer pour un habitant {de(nom)} : aide humaine, matériel, logement, véhicule.</p>', src_line("pch", "insee", nom=nom)]
+    return [f"<p>{s} " + f'Le <a href="/pch/">guide de la PCH</a> explique ce qu\'elle peut financer pour un habitant {de(nom)} (aide humaine, matériel, logement, véhicule).</p>', src_line("pch", "insee", nom=nom)]
 
 
 def bloc_activite(code, codes, nom):
@@ -416,7 +434,7 @@ def bloc_activite(code, codes, nom):
                           f"En 2025, <b>{pct(g25['taux'])}</b> des répondants {de(nom)} ont déclaré être satisfaits de leur MDPH"])
         if gn.get("taux"): s += f" (moyenne nationale : {pct(gn['taux'])})"
         s += f", sur {n_(nb)} réponses."
-        if nb < 100: s += " Le nombre de réponses est faible : ce chiffre est à lire avec prudence."
+        if nb < 100: s += f" Le nombre de réponses {dans(nom)} est faible, ce chiffre est donc à lire avec prudence."
         acc, bes = (sat["accueil"].get("2025") or {}).get("taux"), (sat["besoins"].get("2025") or {}).get("taux")
         if acc is not None and bes is not None and nb >= 100:
             s += " " + V(code, "s2", [f"L'accueil de la MDPH {de(nom)} recueille {pct(acc)} d'avis favorables, la prise en compte des besoins {pct(bes)}.", f"Dans le détail : {pct(acc)} de satisfaits pour l'accueil, {pct(bes)} pour l'écoute des besoins."])
@@ -484,7 +502,7 @@ def bloc_voisins(code, nom, g):
     v0 = DEPS[plus_rapide]["delais"]["global"][DERNIER]
     txt = V(code, "n", [f"Parmi les départements voisins, c'est {dans(DEPS[plus_rapide]['nom'])} que l'attente est la plus courte ({mois_txt(v0)}).",
                         f"Autour {de(nom)}, le délai le plus court revient à la MDPH {de(DEPS[plus_rapide]['nom'])}, avec {mois_txt(v0)}.",
-                        f"Chez les voisins, l'écart peut être important : de {mois_txt(v0)} {dans(DEPS[plus_rapide]['nom'])} à {mois_txt(DEPS[vs[-1]]['delais']['global'][DERNIER])} {dans(DEPS[vs[-1]]['nom'])}."])
+                        f"Chez les voisins {de(nom)}, l'écart peut être important, de {mois_txt(v0)} {dans(DEPS[plus_rapide]['nom'])} à {mois_txt(DEPS[vs[-1]]['delais']['global'][DERNIER])} {dans(DEPS[vs[-1]]['nom'])}."])
     return [f"<p>{txt} Si vous habitez {dans(nom)}, c'est la MDPH {de(nom)} qui reste compétente pour votre dossier, même si un département voisin répond plus vite.</p>",
             '<div class="mdh-tw"><table><thead><tr><th>Département voisin</th><th class="mdh-n">Délai global</th><th class="mdh-n">Délai AAH</th></tr></thead><tbody>' + "".join(rows) + "</tbody></table></div>",
             src_line("delais", nom=nom)]
@@ -498,14 +516,14 @@ def h2_varies(code, codes, nom, g):
     ev = None if g is None or an is None else g - an
     h = {}
     if g is None: h["delais"] = f"Combien de temps attendre une réponse de la MDPH {de(nom)} ?"
-    elif g > 4 and ev is not None and ev >= 0.3: h["delais"] = f"MDPH {de(nom)} : un délai en hausse, au-delà des 4 mois"
-    elif g > 4 and ev is not None and ev <= -0.3: h["delais"] = f"MDPH {de(nom)} : un délai en baisse, mais encore au-delà de 4 mois"
-    elif g > 4: h["delais"] = f"MDPH {de(nom)} : un délai moyen au-delà des 4 mois légaux"
-    elif ev is not None and ev <= -0.3: h["delais"] = f"MDPH {de(nom)} : un délai en baisse sur un an"
-    elif ev is not None and ev >= 0.3: h["delais"] = f"MDPH {de(nom)} : un délai en hausse, mais sous les 4 mois"
+    elif g > 4 and ev is not None and ev >= 0.3: h["delais"] = f"MDPH {de(nom)}, un délai en hausse au-delà des 4 mois"
+    elif g > 4 and ev is not None and ev <= -0.3: h["delais"] = f"MDPH {de(nom)}, un délai en baisse mais encore au-delà de 4 mois"
+    elif g > 4: h["delais"] = f"MDPH {de(nom)}, un délai moyen au-delà des 4 mois légaux"
+    elif ev is not None and ev <= -0.3: h["delais"] = f"MDPH {de(nom)}, un délai en baisse sur un an"
+    elif ev is not None and ev >= 0.3: h["delais"] = f"MDPH {de(nom)}, un délai en hausse, mais sous les 4 mois"
     else: h["delais"] = f"Combien de temps attendre une réponse de la MDPH {de(nom)} ?"
-    h["attente"] = (f"Déposer {dans(nom)} : le refus implicite arrive avant la décision moyenne" if g is not None and g > 4
-                    else f"Déposer {dans(nom)} : une décision attendue avant les 4 mois" if g is not None else f"Déposer {dans(nom)} : quelles dates retenir ?")
+    h["attente"] = (f"Déposer {dans(nom)}, quand le refus implicite arrive avant la décision moyenne" if g is not None and g > 4
+                    else f"Déposer {dans(nom)}, avec une décision attendue avant les 4 mois" if g is not None else f"Déposer {dans(nom)}, quelles dates retenir ?")
     dv = DEPS[codes[0] if len(codes) == 1 else "69M"]["dsld"]["aah"].get(DERNIER); dn = NAT["dsld"]["aah"].get(DERNIER)
     c = None if dv is None or not dn else (dv - dn) / dn
     h["vie"] = (f"Plus de droits à vie {dans(nom)} qu'en moyenne" if c is not None and c > 0.12

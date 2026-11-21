@@ -41,6 +41,8 @@ GUIDES = {  # slug -> (libellé court, image, outil associé)
     "renouvellement-mdph": ("Renouveler ses droits", "accueil", "fin"),
     "aah": ("AAH : montant et cumul avec un salaire", "travail", "aah"),
     "rqth": ("RQTH : les avantages", "travail", "aah"),
+    "rqth-delai-obtention": ("RQTH : délai pour l'obtenir", "demarches", "delai"),
+    "rqth-aides-financieres": ("RQTH : aides financières et CPF", "travail", "aah"),
     "aeeh": ("AEEH et compléments", "enfant", "aeeh"),
     "pch": ("PCH : ce qu'elle finance", "domicile", "aah"),
     "carte-mobilite-inclusion": ("Carte mobilité inclusion", "mobilite", "delai"),
@@ -520,7 +522,7 @@ def page_dep(code):
         r = DP.rang(cc)
         kp.append(f'<li><b>{r[0]}e sur {r[1]}</b><span>rang national, du plus long au plus court</span></li>')
         badge = '<span class="mdh-badge mdh-b-alert">Au-delà de 4 mois</span>' if g > 4 else '<span class="mdh-badge mdh-b-ok">Sous les 4 mois</span>'
-        urg = (f'<p class="mdh-local"><span>{badge}</span><span>{"Comptez " + DP.mois_txt(g) + " en moyenne " + DP.dans(nom) + ", plus que les 4 mois du refus implicite : déposez votre dossier dès qu" + chr(39) + "il est complet." if g > 4 else "Comptez " + DP.mois_txt(g) + " en moyenne " + DP.dans(nom) + ", sous la limite légale de 4 mois, si le dossier est complet dès le dépôt."}</span></p>'
+        urg = (f'<p class="mdh-local"><span>{badge}</span><span>{"Comptez " + DP.mois_txt(g) + " en moyenne " + DP.dans(nom) + ", plus que les 4 mois du refus implicite, donc déposez votre dossier dès qu" + chr(39) + "il est complet." if g > 4 else "Comptez " + DP.mois_txt(g) + " en moyenne " + DP.dans(nom) + ", sous la limite légale de 4 mois, si le dossier est complet dès le dépôt."}</span></p>'
                f'<ul class="mdh-kpis">{"".join(kp)}</ul>')
     corps = []
     toc = []

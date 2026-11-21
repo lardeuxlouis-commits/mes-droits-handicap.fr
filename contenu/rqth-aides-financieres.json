@@ -1,0 +1,205 @@
+{
+ "slug": "rqth-aides-financieres",
+ "title": "RQTH et aides financières : Agefiph, CPF et formation",
+ "description": "Avec la RQTH : CPF alimenté de 800 € par an jusqu'à 8 000 €, aides Agefiph (déplacements, aide technique, création d'entreprise) et formation.",
+ "h1": "RQTH : les aides financières et les formations auxquelles elle donne accès",
+ "chapo": "La RQTH ne verse pas d'argent. Mais elle ouvre la porte à des aides précises : un compte de formation mieux alimenté, des financements de l'Agefiph pour vos déplacements ou votre matériel, et un coup de pouce pour créer votre entreprise. Voici ce qui existe, avec les montants publiés par les organismes.",
+ "en_bref": [
+  "La RQTH n'est pas une allocation : pour un revenu, c'est l'AAH qui joue ce rôle, sous conditions.",
+  "Votre CPF est alimenté de 800 € par année de travail (au moins à mi-temps), jusqu'à 8 000 €, au lieu de 500 € et 5 000 € pour les autres salariés.",
+  "L'Agefiph finance par exemple les déplacements liés à l'emploi (jusqu'à 12 000 € sur 12 mois) ou une aide technique (jusqu'à 5 250 €).",
+  "Pour créer ou reprendre une entreprise, l'Agefiph peut verser jusqu'à 3 000 €.",
+  "Ces aides se demandent avec un conseiller : Cap emploi, France Travail ou votre employeur."
+ ],
+ "urgence": "Les aides de l'Agefiph se demandent en général avant la dépense : parlez-en à votre conseiller Cap emploi ou France Travail avant d'acheter un équipement ou de signer une formation.",
+ "sections": [
+  {
+   "h2": "La RQTH donne-t-elle droit à de l'argent ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "Non. La **RQTH** (reconnaissance de la qualité de travailleur handicapé) est une décision de la **CDAPH**, la commission de la MDPH. Elle ne s'accompagne d'aucun versement mensuel."
+    },
+    {
+     "type": "p",
+     "texte": "Elle sert de « clé » pour accéder à des aides ciblées sur l'emploi et la formation. Si vous cherchez un revenu de remplacement, c'est l'[AAH](aah) qu'il faut regarder : elle dépend d'un taux d'incapacité et de vos ressources, pas de la RQTH."
+    },
+    {
+     "type": "attention",
+     "texte": "Une demande d'AAH déclenche automatiquement une procédure de RQTH à la MDPH. Vous n'avez donc pas besoin de faire deux dossiers."
+    }
+   ]
+  },
+  {
+   "h2": "Un compte de formation (CPF) mieux alimenté",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "Le **compte personnel de formation** (CPF) finance des formations, des bilans de compétences ou la préparation du permis. Pour les travailleurs reconnus handicapés, il est alimenté plus vite que pour les autres salariés."
+    },
+    {
+     "type": "tableau",
+     "entetes": [
+      "",
+      "Salarié bénéficiaire de l'obligation d'emploi (RQTH)",
+      "Autre salarié"
+     ],
+     "lignes": [
+      [
+       "Alimentation par année de travail (au moins à mi-temps)",
+       "800 €",
+       "500 €"
+      ],
+      [
+       "Plafond du compte",
+       "8 000 €",
+       "5 000 €"
+      ]
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "Ces montants sont ceux indiqués par service-public.gouv.fr (page vérifiée le 27 juin 2026). Le solde de votre compte se consulte sur moncompteformation.gouv.fr, avec votre identité numérique."
+    },
+    {
+     "type": "p",
+     "texte": "Pour choisir une formation adaptée à votre handicap, un conseiller **Cap emploi** ou **France Travail** peut vous aider à monter le projet et à chercher un financement complémentaire si le CPF ne suffit pas."
+    }
+   ]
+  },
+  {
+   "h2": "Les aides de l'Agefiph pour les personnes handicapées",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "L'**Agefiph** finance une partie des frais destinés à compenser les conséquences du handicap dans l'emploi, surtout dans le secteur privé. Voici les aides affichées dans son catalogue pour les personnes, avec le montant maximum indiqué (consulté le 21 novembre 2026)."
+    },
+    {
+     "type": "tableau",
+     "entetes": [
+      "Aide de l'Agefiph",
+      "Montant maximum indiqué"
+     ],
+     "lignes": [
+      [
+       "Aide aux déplacements",
+       "12 000 € sur 12 mois"
+      ],
+      [
+       "Aide technique en compensation du handicap",
+       "5 250 €"
+      ],
+      [
+       "Aide humaine en compensation du handicap",
+       "4 200 €"
+      ],
+      [
+       "Aide à la création ou à la reprise d'une entreprise",
+       "3 000 €"
+      ],
+      [
+       "Aide aux prothèses auditives",
+       "1 700 €"
+      ],
+      [
+       "Aide au parcours vers l'emploi",
+       "530 €"
+      ]
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "Ce sont des plafonds : le montant réel dépend de votre situation et du reste à payer après les autres financements. Les conditions détaillées figurent sur chaque fiche du site de l'Agefiph."
+    },
+    {
+     "type": "attention",
+     "texte": "Dans la fonction publique, c'est le **FIPHFP** qui joue ce rôle : la demande passe en général par votre employeur public."
+    }
+   ]
+  },
+  {
+   "h2": "Comment demander ces aides",
+   "blocs": [
+    {
+     "type": "etapes",
+     "items": [
+      "Vérifiez que vous avez une décision de RQTH en cours de validité (ou déposez la demande avec le [dossier MDPH](dossier-mdph)).",
+      "Prenez rendez-vous avec un conseiller **Cap emploi** ou **France Travail** si vous cherchez un emploi, ou parlez-en à votre employeur et au médecin du travail si vous êtes salarié.",
+      "Préparez un devis ou un descriptif de la dépense (matériel, transport, formation) avant de l'engager.",
+      "Le conseiller ou l'employeur dépose la demande d'aide auprès de l'Agefiph (ou du FIPHFP dans le public) et vous informe de la décision."
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "Ces démarches sont gratuites. Si une décision de la MDPH vous paraît contestable, voyez notre guide pour [contester une décision de la MDPH](recours-mdph)."
+    }
+   ]
+  }
+ ],
+ "faq": [
+  {
+   "q": "Est-ce que la RQTH donne une aide financière mensuelle ?",
+   "r": "Non. La RQTH n'est pas une allocation. Elle ouvre des aides ponctuelles liées à l'emploi et à la formation, par exemple celles de l'Agefiph. Pour un revenu, c'est l'[AAH](aah) qui peut être demandée, sous conditions."
+  },
+  {
+   "q": "Combien vaut mon CPF avec la RQTH ?",
+   "r": "D'après service-public.gouv.fr, le compte d'un salarié reconnu travailleur handicapé est alimenté de 800 € par année de travail, au moins à mi-temps, jusqu'à 8 000 €."
+  },
+  {
+   "q": "Qui peut m'aider à obtenir une aide de l'Agefiph ?",
+   "r": "Un conseiller Cap emploi ou France Travail si vous cherchez un emploi, votre employeur et le médecin du travail si vous êtes salarié. Une association peut aussi vous orienter."
+  },
+  {
+   "q": "La RQTH aide-t-elle à créer son entreprise ?",
+   "r": "Oui, l'Agefiph affiche une aide à la création ou à la reprise d'entreprise allant jusqu'à 3 000 €, sous conditions décrites sur sa fiche."
+  }
+ ],
+ "liens_internes": [
+  {
+   "slug": "rqth",
+   "ancre": "les avantages de la RQTH"
+  },
+  {
+   "slug": "rqth-delai-obtention",
+   "ancre": "délai pour obtenir la RQTH"
+  },
+  {
+   "slug": "aah",
+   "ancre": "AAH"
+  },
+  {
+   "slug": "dossier-mdph",
+   "ancre": "dossier MDPH"
+  },
+  {
+   "slug": "recours-mdph",
+   "ancre": "contester une décision de la MDPH"
+  }
+ ],
+ "sources": [
+  {
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F1650",
+   "titre": "Reconnaissance de la qualité de travailleur handicapé (RQTH), Service Public",
+   "date": "vérifié le 24 mars 2026, consulté le 2026-11-21"
+  },
+  {
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F10705",
+   "titre": "Compte personnel de formation (CPF) : alimentation du compte, Service Public",
+   "date": "vérifié le 27 juin 2026, consulté le 2026-11-21"
+  },
+  {
+   "url": "https://www.agefiph.fr/aides-financieres?cible=1&mode=psh",
+   "titre": "Aides financières de l'Agefiph pour les personnes handicapées, Agefiph",
+   "date": "consulté le 2026-11-21"
+  },
+  {
+   "url": "https://www.monparcourshandicap.gouv.fr/aides/la-reconnaissance-de-la-qualite-de-travailleur-handicape-rqth",
+   "titre": "La reconnaissance de la qualité de travailleur handicapé (RQTH), Mon Parcours Handicap",
+   "date": "mis à jour le 15 avril 2025, consulté le 2026-11-21"
+  }
+ ],
+ "date_verification": "2026-11-21",
+ "a_verifier": [
+  "Conditions détaillées de chaque aide Agefiph (fiches individuelles non relues)."
+ ]
+}

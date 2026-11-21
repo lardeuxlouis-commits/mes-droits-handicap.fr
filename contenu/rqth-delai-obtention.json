@@ -1,0 +1,152 @@
+{
+ "slug": "rqth-delai-obtention",
+ "title": "Délai pour obtenir la RQTH : combien de temps attendre ?",
+ "description": "Délai moyen des MDPH pour les demandes d'adultes au 2e trimestre 2026, refus implicite à 4 mois, RQTH automatique avec l'AAH : ce qu'il faut savoir.",
+ "h1": "Délai pour obtenir la RQTH : combien de temps attendre et comment ne rien perdre",
+ "chapo": "La RQTH se demande à la MDPH, et le délai dépend beaucoup de votre département. Voici le délai moyen publié par la CNSA pour les demandes d'adultes, ce que prévoit la loi si la MDPH ne répond pas, et comment préparer un dossier qui avance.",
+ "en_bref": [
+  "Au 2e trimestre 2026, les MDPH ont mis en moyenne 4,5 mois pour traiter les demandes d'adultes (CNSA).",
+  "Sans réponse au bout de 4 mois, la demande est considérée comme refusée (refus implicite), ce qui permet de la contester.",
+  "Le délai varie fortement d'un département à l'autre : consultez le délai de votre MDPH.",
+  "Une demande d'AAH déclenche automatiquement une procédure de RQTH.",
+  "Un renouvellement demandé avant l'échéance prolonge la RQTH jusqu'à la nouvelle décision."
+ ],
+ "urgence": "Si vous renouvelez une RQTH, déposez la demande avant la date de fin : elle prolonge vos droits jusqu'à la nouvelle décision et évite une coupure.",
+ "sections": [
+  {
+   "h2": "Combien de temps met la MDPH pour accorder une RQTH ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "La CNSA ne publie pas de délai propre à la RQTH. Le chiffre le plus proche est celui des **demandes d'adultes**, dont la RQTH fait partie : au **2e trimestre 2026**, il était de **4,5 mois** en moyenne en France, contre 4,6 mois un an plus tôt."
+    },
+    {
+     "type": "p",
+     "texte": "C'est une moyenne nationale. Selon votre département, l'attente peut être nettement plus courte ou plus longue. Le [classement des délais des MDPH](delais-mdph) donne le délai de chaque département, avec une page détaillée pour chaque MDPH."
+    },
+    {
+     "type": "attention",
+     "texte": "Ces délais courent à partir d'un dossier complet. Une pièce manquante ou un certificat médical trop ancien peut rallonger l'attente de plusieurs semaines."
+    }
+   ]
+  },
+  {
+   "h2": "Que se passe-t-il si la MDPH ne répond pas ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "Le code de l'action sociale et des familles prévoit qu'au bout de **4 mois** sans décision, la demande est considérée comme **rejetée** : c'est le refus implicite."
+    },
+    {
+     "type": "p",
+     "texte": "Ce silence n'empêche pas la MDPH de rendre ensuite sa décision. Il vous permet surtout de contester si votre situation ne peut pas attendre. Notre guide [dossier MDPH sans réponse](dossier-mdph-trop-long) explique comment relancer, et l'outil de calcul donne vos dates exactes."
+    }
+   ]
+  },
+  {
+   "h2": "Les cas où la RQTH arrive sans demande séparée",
+   "blocs": [
+    {
+     "type": "liste",
+     "items": [
+      "**Avec une demande d'AAH** : toute demande ou tout renouvellement d'AAH déclenche automatiquement une procédure de RQTH.",
+      "**Pour les jeunes de 15 à 20 ans** : la procédure est engagée lorsqu'ils bénéficient notamment de l'AEEH, de la PCH, d'un projet personnalisé de scolarisation (PPS) ou d'une orientation vers un établissement de travail protégé."
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "Ces règles sont celles indiquées par service-public.gouv.fr (page vérifiée le 24 mars 2026). En dehors de ces cas, la RQTH se demande avec le formulaire Cerfa 15692 du [dossier MDPH](dossier-mdph), accompagné du [certificat médical](certificat-medical-mdph)."
+    }
+   ]
+  },
+  {
+   "h2": "Préparer un dossier qui avance plus vite",
+   "blocs": [
+    {
+     "type": "etapes",
+     "items": [
+      "Remplissez le formulaire Cerfa 15692 en entier, y compris la partie sur votre situation professionnelle.",
+      "Joignez un certificat médical (Cerfa 15695) récent, une pièce d'identité et un justificatif de domicile.",
+      "Expliquez concrètement dans le [projet de vie](projet-de-vie-mdph) en quoi votre santé gêne votre travail ou votre recherche d'emploi.",
+      "Gardez une copie du dossier et la preuve de la date de dépôt : c'est elle qui fait courir le délai de 4 mois."
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "La RQTH est accordée pour 1 à 10 ans, ou sans limite de durée si le handicap ne peut pas évoluer favorablement. Pour savoir ce qu'elle apporte une fois obtenue, voyez [les avantages de la RQTH](rqth) et [les aides financières liées à la RQTH](rqth-aides-financieres)."
+    }
+   ]
+  }
+ ],
+ "faq": [
+  {
+   "q": "Quel est le délai moyen pour obtenir la RQTH ?",
+   "r": "La CNSA publie le délai des demandes d'adultes, dont la RQTH fait partie : 4,5 mois en moyenne en France au 2e trimestre 2026. Le délai de votre MDPH peut être très différent."
+  },
+  {
+   "q": "La RQTH est-elle accordée automatiquement avec l'AAH ?",
+   "r": "Une demande d'AAH déclenche automatiquement une procédure de RQTH, selon service-public.gouv.fr. Il n'y a donc pas besoin de faire une demande séparée."
+  },
+  {
+   "q": "Que faire si la MDPH ne répond pas au bout de 4 mois ?",
+   "r": "Le silence vaut refus implicite, ce qui ouvre la possibilité de contester. Vous pouvez aussi relancer la MDPH : notre guide [dossier MDPH sans réponse](dossier-mdph-trop-long) détaille les démarches."
+  },
+  {
+   "q": "Peut-on travailler en attendant la RQTH ?",
+   "r": "Oui. La RQTH n'est pas obligatoire pour travailler ou se former. Elle donne accès à des mesures supplémentaires une fois accordée."
+  }
+ ],
+ "liens_internes": [
+  {
+   "slug": "delais-mdph",
+   "ancre": "le classement des délais des MDPH"
+  },
+  {
+   "slug": "dossier-mdph-trop-long",
+   "ancre": "dossier MDPH sans réponse"
+  },
+  {
+   "slug": "rqth",
+   "ancre": "les avantages de la RQTH"
+  },
+  {
+   "slug": "rqth-aides-financieres",
+   "ancre": "aides financières liées à la RQTH"
+  },
+  {
+   "slug": "dossier-mdph",
+   "ancre": "dossier MDPH"
+  }
+ ],
+ "sources": [
+  {
+   "url": "https://www.cnsa.fr/donnees/barometre-des-mdph",
+   "titre": "CNSA, baromètre des MDPH, délais moyens de traitement des demandes",
+   "date": "2e trimestre 2026, fichier daté du 05/10/2026, relevé le 2026-11-15"
+  },
+  {
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037551602",
+   "titre": "Article R241-33 du code de l'action sociale et des familles, Légifrance",
+   "date": "en vigueur depuis le 1er janvier 2019, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F1650",
+   "titre": "Reconnaissance de la qualité de travailleur handicapé (RQTH), Service Public",
+   "date": "vérifié le 24 mars 2026, consulté le 2026-11-21"
+  },
+  {
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/R19993",
+   "titre": "Demande ou renouvellement de prestations Handicap (formulaire Cerfa 15692), Service Public",
+   "date": "vérifié le 13 juillet 2026, consulté le 2026-11-15"
+  },
+  {
+   "url": "https://www.monparcourshandicap.gouv.fr/aides/la-reconnaissance-de-la-qualite-de-travailleur-handicape-rqth",
+   "titre": "La reconnaissance de la qualité de travailleur handicapé (RQTH), Mon Parcours Handicap",
+   "date": "mis à jour le 15 avril 2025, consulté le 2026-11-21"
+  }
+ ],
+ "date_verification": "2026-11-21",
+ "a_verifier": [
+  "Pas de délai spécifique RQTH publié par la CNSA : le délai des demandes d'adultes est utilisé et présenté comme tel."
+ ]
+}
