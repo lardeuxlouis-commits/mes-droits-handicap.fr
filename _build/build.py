@@ -14,8 +14,8 @@ SITE = "Mes droits handicap"
 LANCEMENT = "2026-11-15"
 MAJ_DONNEES = "2026-11-15"          # date du dernier relevé des sources (donnees.py)
 GOATCOUNTER = ""                    # ex. "https://mesdroitshandicap.goatcounter.com/count" ; vide = aucun compteur
-PRODUIT = None                      # lien Stripe du « Kit dossier MDPH, 19 € » (https://buy.stripe.com/...) ; None = rien n'est affiché (relecture avocat)
-KIT_PDF_URL = None                  # lien du PDF payant hébergé HORS GitHub (Drive, R2) ; None = /merci/ annonce un envoi par e-mail sous 24 h
+PRODUIT = "https://buy.stripe.com/00waEQbNa6M29lZ8nTcQU01"                      # lien Stripe du « Kit dossier MDPH, 19 € » (https://buy.stripe.com/...) ; None = rien n'est affiché (relecture avocat)
+KIT_PDF_URL = "https://187-124-173-12.sslip.io/pay/kit"                  # lien du PDF payant hébergé HORS GitHub (Drive, R2) ; None = /merci/ annonce un envoi par e-mail sous 24 h
 AUTEUR = "Louis Lardeux"
 INDEXNOW = "50f1cb133c1a8499537462019c5a94c2"             # clé IndexNow, servie à la racine dans <clé>.txt
 # Microsoft Clarity, PRÉPARÉ MAIS INACTIF. None = rien n'est chargé et la confidentialité dit qu'il n'y a aucune mesure d'audience.

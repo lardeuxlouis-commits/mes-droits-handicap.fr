@@ -10,7 +10,7 @@ EXTRAIT = "/telechargements/extrait-kit-dossier-mdph.pdf"
 PRIX = "19 €"
 CONTACT = "contact@mes-droits-handicap.fr"
 EDITEUR = "Louis Lardeux, entrepreneur individuel (micro-entreprise), SIREN 999 443 880, 63 rue Dostoïevski, A 307, 06560 Valbonne Sophia Antipolis"
-MEDIATEUR = "[médiateur à désigner]"   # obligatoire avant la mise en vente (art. L612-1 C. conso)
+MEDIATEUR = "désignation en cours ; en attendant, écrivez à contact@mes-droits-handicap.fr, réponse sous 48 h"   # obligatoire avant la mise en vente (art. L612-1 C. conso)
 CGV_DATE = "2026-11-16"
 APERCU = [(0, "Couverture", "Kit dossier MDPH, édition novembre 2026"), (1, "Mode d'emploi en 1 page", "Les 6 étapes du dépôt et le temps à prévoir"),
           (2, "Les pièces à réunir", "Checklists à cocher selon votre situation")]
@@ -119,6 +119,10 @@ def page_vente(B, wh):
 <p>Pour un accompagnement personnalisé, l'accueil de votre MDPH, une association ou un point-justice peuvent vous aider, souvent gratuitement. Leurs coordonnées sont dans le kit.</p></div>
 <h3>Vos données</h3>
 <p>Rien n'est collecté. Le kit est un PDF : vous le remplissez à la main ou sur votre ordinateur, et rien ne nous est envoyé. Le paiement est traité par Stripe ; nous ne voyons ni votre numéro de carte ni aucune information de santé.</p></section>
+<section class="mdh-sec" aria-labelledby="k-urg"><h2 id="k-urg">Pourquoi le préparer maintenant</h2>
+<ul class="mdh-kben"><li><b>Le délai ne commence qu'au dossier complet</b><span>Une pièce manquante et la MDPH vous la réclame : le traitement attend. Les MDPH mettent en moyenne autour de 4 à 5 mois pour une demande d'adulte (baromètre CNSA) : <a href="/delais-mdph/">voir le délai de votre département</a>.</span></li>
+<li><b>Sans réponse au bout de 4 mois, c'est un refus</b><span>Le silence de la MDPH pendant 4 mois vaut rejet. Un dossier clair et complet dès le premier dépôt vous évite de repartir de zéro.</span></li>
+<li><b>Un certificat médical a une durée de validité</b><span>Il doit dater de moins d'un an au dépôt : préparer le reste du dossier en parallèle évite de devoir le refaire.</span></li></ul></section>
 <section class="mdh-sec" aria-labelledby="prix-t"><h2 id="prix-t">Obtenir le kit</h2>
 <div class="mdh-kprix" id="prix">
 <div class="mdh-kprix-a"><p class="mdh-lab">Kit dossier MDPH 2026</p>
@@ -147,6 +151,77 @@ def page_vente(B, wh):
   c.addEventListener('invalid', function (e) {{ e.preventDefault(); m.hidden = false; l.classList.add('mdh-kerr'); c.focus(); }});
   f.addEventListener('submit', function (e) {{ e.preventDefault(); if (!c.checked) {{ c.dispatchEvent(new Event('invalid')); return; }} location.href = f.getAttribute('data-href'); }});
   maj();
+}})();
+</script>"""
+    path = f"/{SLUG}/"
+    D = B.DOMAIN
+    schema = [{"@context": "https://schema.org", "@type": "Product", "name": "Kit dossier MDPH 2026", "description": "Guide pratique PDF de 26 pages pour préparer une demande à la MDPH : checklists des pièces, Cerfa 15692 expliqué, grilles du projet de vie, fiche pour le médecin, délais et modèle vierge de recours.",
+               "image": f"{D}/{SLUG}/apercu-1.webp", "brand": {"@type": "Brand", "name": B.SITE},
+               "offers": {"@type": "Offer", "price": "19.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": D + path, "seller": {"@type": "Person", "name": B.AUTEUR}}},
+              B.bc_schema([("Kit dossier MDPH", path)]), B.faq_schema(FAQ)]
+    return path, B.page("Kit dossier MDPH 2026 : checklists, Cerfa et modèles", "Préparez votre dossier MDPH pas à pas : checklists des pièces, Cerfa expliqué, projet de vie, délais et recours. PDF de 26 pages, 19 €, remboursable.",
+                        path, body, schema, "demarches", None, None, "contenu", None, extra_head=B.KIT_STYLE)
+
+
+def page_cgv(B):
+    E = B.E
+    mail = f'<a href="mailto:{CONTACT}">{CONTACT}</a>'
+    b = f"""<p>Ces conditions s'appliquent à l'achat du <a href="/{SLUG}/">Kit dossier MDPH</a> sur mes-droits-handicap.fr. Version du {B.date_fr(CGV_DATE)}.</p>
+<h2>Le produit</h2><p>Le Kit dossier MDPH est un document numérique (PDF) d'information générale sur la demande à la MDPH, avec des modèles vierges à compléter par l'acheteur. Il ne constitue ni une consultation juridique ni la rédaction d'un acte pour autrui. Les démarches auprès de la MDPH sont gratuites ; seule la CDAPH décide de l'attribution des droits.</p>
+<h2>Prix et paiement</h2><p>{PRIX} TTC, paiement unique sans abonnement, par carte via Stripe. TVA non applicable, article 293 B du CGI.</p>
+<h2>Accès et droit de rétractation</h2><p>Le kit est téléchargeable immédiatement après le paiement. En cochant la case prévue avant le paiement, vous demandez cet accès immédiat et reconnaissez perdre votre droit de rétractation dès que le téléchargement est disponible (article L221-28 13° du code de la consommation). Une confirmation vous est adressée par e-mail.</p>
+<h2>Remboursement</h2><p>Si le kit ne vous convient pas, écrivez à {mail} dans les 14 jours suivant l'achat : nous vous remboursons, sans justification.</p>
+<h2>Usage</h2><p>Le kit est réservé à un usage personnel. Merci de ne pas le diffuser.</p>
+<h2>Vendeur</h2><p>{EDITEUR}. Contact : {mail}.</p>
+<h2>Médiation de la consommation</h2><p>En cas de litige non résolu, vous pouvez recourir gratuitement à un médiateur de la consommation. Médiateur : {E(MEDIATEUR)}.</p>"""
+    h1 = "Conditions de vente du Kit dossier MDPH"
+    path = f"/{CGV}/"
+    body = f'<div class="mdh-w mdh-prose">{B.crumbs([("Conditions de vente", None)])}<h1>{E(h1)}</h1>{b}</div>'
+    return path, B.page("Conditions de vente | Mes droits handicap", "Conditions de vente du Kit dossier MDPH : prix, paiement, accès immédiat, remboursement sous 14 jours, vendeur et médiation.",
+                        path, body, [B.bc_schema([("Conditions de vente", path)])], "accueil", None, None, "contenu", None, extra_head=B.KIT_STYLE)
+
+
+def page_merci(B):
+    pdf = B.KIT_PDF_URL if B.KIT_PDF_URL and str(B.KIT_PDF_URL).startswith("https://") else None
+    if pdf:
+        livr = (f'<p class="mdh-btns"><a id="dl" class="mdh-btn" href="#" download>Télécharger le Kit dossier MDPH (PDF, 26 pages)</a>'
+                f'<button class="mdh-btn mdh-alt" type="button" onclick="window.print()">Enregistrer cette confirmation</button></p>'
+                f'<p>Enregistrez le fichier sur votre appareil. Un reçu vous a été envoyé par e-mail. Un souci de téléchargement ? Écrivez à <a href="mailto:{CONTACT}">{CONTACT}</a> avec l\'adresse e-mail utilisée pour le paiement.</p>')
+    else:
+        livr = (f'<p class="mdh-kmerci-t">Votre kit vous est envoyé par e-mail sous 24 h</p>'
+                f'<p>Il arrive à l\'adresse utilisée pour le paiement, en pièce jointe (PDF, 26 pages). Un reçu vous a déjà été envoyé par Stripe. Rien reçu après 24 h ? Regardez dans les indésirables, puis écrivez à <a href="mailto:{CONTACT}">{CONTACT}</a>.</p>'
+                f'<p class="mdh-btns"><button class="mdh-btn mdh-alt" type="button" onclick="window.print()">Enregistrer cette confirmation</button></p>')
+    body = f"""<div class="mdh-w mdh-prose">
+<div id="ok" class="mdh-kok" hidden>
+<span class="mdh-badge mdh-b-ok">Paiement reçu</span>
+<h1>{"Merci, votre kit est prêt" if pdf else "Merci pour votre achat"}</h1>
+<div class="mdh-kmerci"><div class="mdh-kprix-a">{livr}
+<p class="mdh-kconf">Vous avez demandé l'accès immédiat au kit et reconnu perdre votre droit de rétractation (art. L221-28 13° du code de la consommation). Remboursement sous 14 jours sur simple demande à {CONTACT}.</p></div></div>
+<p>En attendant, les outils gratuits du site restent à votre disposition : <a href="/outils/delai-reponse-mdph/">date de refus implicite</a>, <a href="/outils/fin-de-droits-mdph/">calendrier de renouvellement</a>, <a href="/delais-mdph/">délai de votre MDPH</a>.</p>
+</div>
+<div id="ko"><h2>Cette page s'affiche après un achat</h2><p><a href="/{SLUG}/">Voir le Kit dossier MDPH</a>.</p></div>
+</div>
+<script>
+(function () {{
+  var K = 'mdh-kit', U = {json.dumps(pdf)};
+  var get = function () {{ try {{ return JSON.parse(localStorage.getItem(K) || 'null'); }} catch (e) {{ return null; }} }};
+  var set = function (v) {{ try {{ localStorage.setItem(K, JSON.stringify(v)); }} catch (e) {{}} }};
+  // Accès vérifié par le serveur (VPS, ~/Documents/paiements-sites/server.py) : session Stripe payée, venue du lien du kit.
+  var API = 'https://187-124-173-12.sslip.io/pay/verifier?p=kit';
+  var s = new URLSearchParams(location.search).get('s') || '', m = get();
+  var neuf = /^cs_(live|test)_/.test(s), sess = neuf ? s : (m && m.s), tok = m && m.s === sess ? m.k : '';
+  if (!sess) return;
+  fetch(API + '&s=' + encodeURIComponent(sess) + (tok ? '&t=' + tok : ''))
+    .then(function (r) {{ return r.json(); }})
+    .catch(function () {{ return {{ok: false}}; }})
+    .then(function (r) {{
+      if (!r.ok) {{ document.getElementById('ko').innerHTML = '<h2>Paiement non retrouvé</h2><p>Si vous venez de payer, rechargez la page dans une minute. Sinon, écrivez à <a href="mailto:{CONTACT}">{CONTACT}</a> avec l\'adresse e-mail utilisée pour le paiement.</p>'; return; }}
+      set({{s: sess, k: r.t, d: Date.now()}}); if (neuf) history.replaceState(null, '', '/merci/');
+      document.getElementById('ko').hidden = true;
+      document.getElementById('ok').hidden = false;
+      var dl = document.getElementById('dl'); if (dl && U) dl.href = U + '?s=' + encodeURIComponent(sess) + '&t=' + r.t;
+      if (neuf && window.goatcounter) {{ try {{ goatcounter.count({{path: 'achat-kit-mdph', event: true}}); }} catch (e) {{}} }}
+    }});
 }})();
 </script>"""
     path = f"/{SLUG}/"

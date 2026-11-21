@@ -18,7 +18,7 @@ infos = {}
 def texte_main(h):
     m = re.search(r"<main[^>]*>(.*)</main>", h, re.S)
     t = m.group(1) if m else h
-    t = re.sub(r"<script.*?</script>|<style.*?</style>|<svg.*?</svg>|<figure class=\"mdh-chart\".*?</figure>", " ", t, flags=re.S)
+    t = re.sub(r"<script.*?</script>|<style.*?</style>|<svg.*?</svg>|<figure class=\"mdh-chart\".*?</figure>|<aside class=\"mdh-offre\".*?</aside>", " ", t, flags=re.S)
     t = re.sub(r"<(p|li|h[1-6]|td|th|summary|div|section|aside|pre|caption)[^>]*>", "\n", t)
     t = html.unescape(re.sub(r"<[^>]+>", " ", t))
     return re.sub(r"[ \t ]+", " ", t)
