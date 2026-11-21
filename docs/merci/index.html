@@ -117,14 +117,22 @@
   var K = 'mdh-kit', U = "https://187-124-173-12.sslip.io/pay/kit";
   var get = function () { try { return JSON.parse(localStorage.getItem(K) || 'null'); } catch (e) { return null; } };
   var set = function (v) { try { localStorage.setItem(K, JSON.stringify(v)); } catch (e) {} };
-  var s = new URLSearchParams(location.search).get('s') || '';
-  var neuf = /^cs_(live|test)_/.test(s);
-  if (neuf) { set({s: s, t: Date.now()}); history.replaceState(null, '', '/merci/'); }
-  if (!neuf && !get()) return;
-  document.getElementById('ko').hidden = true;
-  document.getElementById('ok').hidden = false;
-  var dl = document.getElementById('dl'); if (dl && U) dl.href = U;
-  if (neuf && window.goatcounter) { try { goatcounter.count({path: 'achat-kit-mdph', event: true}); } catch (e) {} }
+  // Accès vérifié par le serveur (VPS, ~/Documents/paiements-sites/server.py) : session Stripe payée, venue du lien du kit.
+  var API = 'https://187-124-173-12.sslip.io/pay/verifier?p=kit';
+  var s = new URLSearchParams(location.search).get('s') || '', m = get();
+  var neuf = /^cs_(live|test)_/.test(s), sess = neuf ? s : (m && m.s), tok = m && m.s === sess ? m.k : '';
+  if (!sess) return;
+  fetch(API + '&s=' + encodeURIComponent(sess) + (tok ? '&t=' + tok : ''))
+    .then(function (r) { return r.json(); })
+    .catch(function () { return {ok: false}; })
+    .then(function (r) {
+      if (!r.ok) { document.getElementById('ko').innerHTML = '<h2>Paiement non retrouvé</h2><p>Si vous venez de payer, rechargez la page dans une minute. Sinon, écrivez à <a href="mailto:contact@mes-droits-handicap.fr">contact@mes-droits-handicap.fr</a> avec l'adresse e-mail utilisée pour le paiement.</p>'; return; }
+      set({s: sess, k: r.t, d: Date.now()}); if (neuf) history.replaceState(null, '', '/merci/');
+      document.getElementById('ko').hidden = true;
+      document.getElementById('ok').hidden = false;
+      var dl = document.getElementById('dl'); if (dl && U) dl.href = U + '?s=' + encodeURIComponent(sess) + '&t=' + r.t;
+      if (neuf && window.goatcounter) { try { goatcounter.count({path: 'achat-kit-mdph', event: true}); } catch (e) {} }
+    });
 })();
 </script>
 </main>
