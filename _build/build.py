@@ -744,7 +744,13 @@ def main():
     open(os.path.join(OUT, INDEXNOW + ".txt"), "w").write(INDEXNOW)
     open(os.path.join(OUT, ".nojekyll"), "w").write("")
     open(os.path.join(OUT, "googlea92d4a2fb22dcdea.html"), "w").write("google-site-verification: googlea92d4a2fb22dcdea.html")
-    open(os.path.join(OUT, "robots.txt"), "w").write(f"User-agent: *\nAllow: /\n\nSitemap: {DOMAIN}/sitemap.xml\n")
+    BOTS_IA = ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-SearchBot", "Claude-User", "PerplexityBot", "Perplexity-User",
+               "Google-Extended", "Applebot-Extended", "Bingbot", "CCBot", "Meta-ExternalAgent", "MistralAI-User", "DuckAssistBot"]
+    robots = "# Robots des moteurs de recherche et des assistants IA : bienvenus (citation des guides avec un lien).\n"
+    robots += "".join(f"User-agent: {b}\nAllow: /\n\n" for b in BOTS_IA)
+    robots += "User-agent: *\nContent-Signal: search=yes, ai-input=yes, ai-train=yes\nAllow: /\n\n"
+    robots += f"Sitemap: {DOMAIN}/sitemap.xml\n"
+    open(os.path.join(OUT, "robots.txt"), "w").write(robots)
     sm = "".join(f"<url><loc>{DOMAIN}{u}</loc><lastmod>{d}</lastmod></url>" for u, d in urls)
     open(os.path.join(OUT, "sitemap.xml"), "w").write(f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>\n')
     llms = [f"# {SITE} (mes-droits-handicap.fr)", "",
