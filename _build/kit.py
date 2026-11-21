@@ -215,7 +215,7 @@ def page_merci(B):
     .then(function (r) {{ return r.json(); }})
     .catch(function () {{ return {{ok: false}}; }})
     .then(function (r) {{
-      if (!r.ok) {{ document.getElementById('ko').innerHTML = '<h2>Paiement non retrouvé</h2><p>Si vous venez de payer, rechargez la page dans une minute. Sinon, écrivez à <a href="mailto:{CONTACT}">{CONTACT}</a> avec l\'adresse e-mail utilisée pour le paiement.</p>'; return; }}
+      if (!r.ok) {{ document.getElementById('ko').innerHTML = '<h2>Paiement non retrouvé</h2><p>Si vous venez de payer, rechargez la page dans une minute. Sinon, écrivez à <a href="mailto:{CONTACT}">{CONTACT}</a> avec l’adresse e-mail utilisée pour le paiement.</p>'; return; }}
       set({{s: sess, k: r.t, d: Date.now()}}); if (neuf) history.replaceState(null, '', '/merci/');
       document.getElementById('ko').hidden = true;
       document.getElementById('ok').hidden = false;
