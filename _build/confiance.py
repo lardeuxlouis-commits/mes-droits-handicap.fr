@@ -5,7 +5,7 @@ import departements as DP
 CONTACT = "contact@mes-droits-handicap.fr"
 # Téléphone de l'éditeur, exigé par la LCEN (art. 6 III) pour une personne physique : À COMPLÉTER PAR LOUIS.
 # None = la ligne n'est pas affichée (rien d'incomplet n'apparaît en ligne). Exemple : TEL_EDITEUR = "06 00 00 00 00"
-TEL_EDITEUR = None
+TEL_EDITEUR = "07 81 76 47 83"
 # Téléphone de GitHub, Inc. : numéro de l'équipe commerciale, seul numéro publié par GitHub (ancienne documentation
 # docs.github.com, Enterprise Server 3.0, « call +1 (877) 448-4820 »). GitHub précise ne pas faire de support par téléphone.
 TEL_HEBERGEUR = "+1 877 448 4820"
