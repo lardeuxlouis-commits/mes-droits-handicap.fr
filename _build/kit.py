@@ -17,8 +17,8 @@ APERCU = [(0, "Couverture", "Kit dossier MDPH, édition novembre 2026"), (1, "Mo
 MENTION = ("Guide d'information indépendant, ce n'est pas un service public. Le dépôt du dossier est gratuit auprès de votre MDPH et sur "
            '<a href="https://mdphenligne.cnsa.fr/" rel="noopener" target="_blank">mdphenligne.cnsa.fr</a>. '
            "Ce kit ne remplace pas le conseil d'un professionnel (assistante sociale, association, avocat).")
-RENONCE = ("Je demande l'accès immédiat au kit après le paiement et je reconnais perdre mon droit de rétractation dès que le téléchargement est disponible "
-           "(article L221-28 13° du code de la consommation). Cela ne change rien à l'engagement de remboursement sous 14 jours sur simple demande.")
+RENONCE = ("Je demande l'accès immédiat au kit et renonce à mon droit de rétractation dès que le téléchargement est disponible "
+           "(art. L221-28 13° du code de la consommation). Le remboursement sous 14 jours reste valable.")
 
 BENEF = [
     ("Gagner du temps", "Le mode d'emploi en 6 étapes vous dit quoi faire, dans quel ordre, et combien de temps prévoir."),
@@ -88,15 +88,21 @@ def page_vente(B, wh):
     pages = "".join(f'<li><figure>{img(i)}<figcaption><b>{E(t)}</b><br>{E(d)}</figcaption></figure></li>' for i, t, d in APERCU)
     outils = "".join(f'<li><a href="{B.url(v[0])}">{E(v[2])}</a></li>' for v in B.OUTILS.values())
     outils += '<li><a href="/delais-mdph/">Délais des MDPH par département</a></li><li><a href="/dossier-mdph/">Remplir le dossier MDPH</a></li>'
+    form = lambda n: (f'<form class="mdh-kform" action="{E(B.PRODUIT)}" method="get" data-href="{E(B.PRODUIT)}">'
+                      f'<label class="mdh-kchk" for="k-renonce{n}"><input type="checkbox" id="k-renonce{n}" required aria-describedby="k-msg{n}"><span>{E(RENONCE)}</span></label>'
+                      f'<p class="mdh-kmsg" id="k-msg{n}" role="alert" hidden>Cochez la case ci-dessus pour continuer vers le paiement.</p>'
+                      f'<button class="mdh-btn mdh-kpay" type="submit">Payer {PRIX} et télécharger le kit</button></form>')
     body = f"""<div class="mdh-w">
 {B.crumbs([("Kit dossier MDPH", None)])}
 <div class="mdh-kh">
 <div><span class="mdh-badge">Guide pratique · édition novembre 2026</span>
 <h1>Kit dossier MDPH 2026 : préparez votre demande pas à pas</h1>
-<p class="mdh-chapo">Un dossier MDPH, c'est une vingtaine de pages, un certificat médical, des pièces à rassembler et des mois d'attente. Ce kit vous guide étape par étape avec des checklists à cocher, des grilles à remplir et des modèles vierges, pour déposer un dossier complet et garder la main sur les délais.</p>
+<p class="mdh-chapo">Checklists à cocher, Cerfa expliqué, grilles et modèles vierges : tout pour déposer un dossier complet du premier coup.</p>
+<div class="mdh-kbuy"><p class="mdh-kbuy-p">{PRIX}<small>TTC · PDF A4 de 26 pages · paiement unique</small></p>
+{form(1)}
+<p class="mdh-ksous">Paiement sécurisé par Stripe · téléchargement immédiat · remboursé sous 14 jours sur simple demande · <a href="/{CGV}/">Conditions de vente</a></p></div>
+<p class="mdh-kext0">Pas encore sûr ? <a href="{EXTRAIT}">Lire l'extrait gratuit</a> (4 pages).</p>
 <p class="mdh-kmen">{MENTION}</p>
-<p class="mdh-btns"><a class="mdh-btn" href="#prix">Obtenir le kit, {PRIX}</a><a class="mdh-btn mdh-alt" href="{EXTRAIT}">Lire l'extrait gratuit</a></p>
-<ul class="mdh-kmeta"><li>PDF A4, 26 pages, imprimable</li><li>Téléchargement immédiat</li><li>Remboursé sous 14 jours sur simple demande</li></ul>
 </div>
 <div class="mdh-kvis"><div class="mdh-kstack">{img(1, "mdh-kback")}{img(0, "mdh-kfront", True)}</div>
 <div class="mdh-float mdh-float-a" aria-hidden="true"><p class="mdh-lab">Édition 2026</p><p class="mdh-fl-n"><b>26</b> pages</p><p class="mdh-fl-s">sources vérifiées le 15/11/2026</p></div>
@@ -131,11 +137,7 @@ def page_vente(B, wh):
 <li>Mises à jour de l'édition 2026 offertes : si une règle change, écrivez-nous et nous vous envoyons la version corrigée</li>
 <li>Remboursé sous 14 jours sur simple demande, sans justification</li></ul></div>
 <div class="mdh-kprix-b">
-<form class="mdh-kform" id="k-form" action="{E(B.PRODUIT)}" method="get" data-href="{E(B.PRODUIT)}">
-<label class="mdh-kchk" for="k-renonce"><input type="checkbox" id="k-renonce" required aria-describedby="k-msg"><span>{E(RENONCE)}</span></label>
-<p class="mdh-kmsg" id="k-msg" role="alert" hidden>Cochez la case ci-dessus pour continuer vers le paiement.</p>
-<button class="mdh-btn mdh-kpay" type="submit">Payer {PRIX} et télécharger le kit</button>
-</form>
+{form(2)}
 <p class="mdh-ksous">Paiement sécurisé par Stripe. TVA non applicable, article 293 B du CGI. <a href="/{CGV}/">Conditions de vente</a></p>
 <p class="mdh-kext">Pas encore sûr ? <a href="{EXTRAIT}">Téléchargez l'extrait gratuit</a> (4 pages : mode d'emploi et checklists).</p>
 </div></div></section>
@@ -144,14 +146,14 @@ def page_vente(B, wh):
 <p class="mdh-kfoot">Guide d'information indépendant, ce n'est pas un service public ; le dépôt du dossier est gratuit auprès de votre MDPH et sur mdphenligne.cnsa.fr ; ce kit ne remplace pas le conseil d'un professionnel (assistante sociale, association, avocat). Édité par Louis Lardeux, entrepreneur individuel, SIREN 999 443 880.</p>
 </div>
 <script>
-(function () {{
-  var f = document.getElementById('k-form'), c = document.getElementById('k-renonce'), m = document.getElementById('k-msg'), l = c.parentNode;
+document.querySelectorAll('.mdh-kform').forEach(function (f) {{
+  var c = f.querySelector('input[type=checkbox]'), m = f.querySelector('.mdh-kmsg'), l = c.parentNode;
   var maj = function () {{ f.classList.toggle('ok', c.checked); if (c.checked) {{ m.hidden = true; l.classList.remove('mdh-kerr'); }} }};
   c.addEventListener('change', maj);
   c.addEventListener('invalid', function (e) {{ e.preventDefault(); m.hidden = false; l.classList.add('mdh-kerr'); c.focus(); }});
   f.addEventListener('submit', function (e) {{ e.preventDefault(); if (!c.checked) {{ c.dispatchEvent(new Event('invalid')); return; }} location.href = f.getAttribute('data-href'); }});
   maj();
-}})();
+}});
 </script>"""
     path = f"/{SLUG}/"
     D = B.DOMAIN
@@ -160,7 +162,7 @@ def page_vente(B, wh):
                "offers": {"@type": "Offer", "price": "19.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": D + path, "seller": {"@type": "Person", "name": B.AUTEUR}}},
               B.bc_schema([("Kit dossier MDPH", path)]), B.faq_schema(FAQ)]
     return path, B.page("Kit dossier MDPH 2026 : checklists, Cerfa et modèles", "Préparez votre dossier MDPH pas à pas : checklists des pièces, Cerfa expliqué, projet de vie, délais et recours. PDF de 26 pages, 19 €, remboursable.",
-                        path, body, schema, "demarches", None, None, "contenu", None, extra_head=B.KIT_STYLE)
+                        path, body, schema, "demarches", "kit", None, "contenu", None, extra_head=B.KIT_STYLE)
 
 
 def page_cgv(B):

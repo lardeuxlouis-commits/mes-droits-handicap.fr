@@ -364,3 +364,22 @@ footer.mdh-foot{margin-top:96px;background:var(--nuit);color:#dfe7f1;padding:56p
 .mdh-art ul.mdh-trust,.mdh-art ul.mdh-toc,.mdh-art ul.mdh-kpis,.mdh-art ul.mdh-urg,.mdh-art ul.mdh-deps,.mdh-art .mdh-next ul,.mdh-art ul.mdh-leg{padding-left:0}
 .mdh-trust a{text-decoration:underline}
 .mdh-contact a,.mdh-prose a{overflow-wrap:anywhere}
+.mdh-nav a.mdh-nav-kit{background:var(--miel);color:#2b1a05}.mdh-nav a.mdh-nav-kit:hover{color:#2b1a05}
+@media (max-width:900px){.js .mdh-nav li.mdh-nav-kitli{order:-1}.js .mdh-nav a.mdh-nav-kit{margin:4px 0 8px}}
+.mdh-hkit{background:var(--blanc);border:1.5px solid var(--miel);border-radius:22px;padding:18px 22px 16px;margin:4px 0 20px;box-shadow:var(--om2);max-width:560px}
+.mdh-hkit .mdh-lab,.mdh-offre .mdh-lab{color:var(--miel-f)}
+.mdh-hkit-t{font:600 23px/1.2 var(--titre);color:var(--ink);margin:4px 0 8px}
+.mdh-hkit ul{list-style:none;padding:0;margin:0 0 12px}
+.mdh-hkit li{position:relative;padding-left:28px;margin:5px 0;font-size:16px;line-height:1.5}
+.mdh-hkit li:before{content:"";position:absolute;left:0;top:3px;width:18px;height:18px;border-radius:50%;background:var(--sauge-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6.5 12.5l3.5 3.5 7.5-8' fill='none' stroke='%232f6457' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/12px no-repeat}
+.mdh-hkit-pay{display:flex;align-items:center;gap:10px 18px;flex-wrap:wrap}
+.mdh-hkit-p{margin:0;font:600 34px/1 var(--titre);color:var(--nuit)}.mdh-hkit-p small{display:block;font:400 14px/1.4 var(--texte);color:var(--mut);margin-top:4px}
+.mdh-hkit-s{margin:10px 0 0;font-size:14px;line-height:1.5;color:var(--mut)}
+.mdh-offre .mdh-btn.mdh-sun{flex:none}
+.mdh-stk{position:fixed;left:10px;right:10px;bottom:10px;z-index:9;display:flex;align-items:center;gap:8px;background:var(--papier);border:1.5px solid var(--miel);border-radius:16px;padding:6px 4px 6px 14px;margin-bottom:env(safe-area-inset-bottom);box-shadow:0 10px 28px -12px rgba(29,39,53,.35)}
+.mdh-stk p{flex:1;margin:0;font-size:15px;line-height:1.3}.mdh-stk .mdh-btn{min-height:44px;padding:8px 16px;font-size:15px}
+.mdh-stk button{flex:none;width:44px;height:44px;background:none;border:0;color:var(--mut);font-size:26px;line-height:1;border-radius:10px;cursor:pointer}
+body.mdh-stk-on{padding-bottom:76px}
+@media (min-width:761px){.mdh-stk{display:none!important}}
+@media (max-width:560px){.mdh-hkit{padding:14px 16px 12px}.mdh-hkit-t{font-size:20px}.mdh-hkit-pay .mdh-btn{flex:1}.mdh-hero .mdh-badge{display:none}}
+@media print{.mdh-stk,.mdh-hkit{display:none!important}}

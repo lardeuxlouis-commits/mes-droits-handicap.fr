@@ -24,7 +24,7 @@ INDEXNOW = "50f1cb133c1a8499537462019c5a94c2"             # clé IndexNow, servi
 # jamais sur les outils, et seulement après un clic sur « Accepter » dans le bandeau.
 CLARITY_ID = None
 # Pages réellement modifiées (date de dernière modification du sitemap et du JSON-LD). Ne mettre une date que si la page a changé.
-MODIFS = {"/": "2026-11-19", "/delais-mdph/": "2026-11-19", "/outils/": "2026-11-19", "/dossier-mdph-trop-long/": "2026-11-19", "/recours-mdph/": "2026-11-19",
+MODIFS = {"/": "2026-11-22", "/delais-mdph/": "2026-11-19", "/outils/": "2026-11-19", "/dossier-mdph-trop-long/": "2026-11-19", "/recours-mdph/": "2026-11-19",
           "/mentions-legales/": "2026-11-19", "/confidentialite/": "2026-11-19", "/projet-de-vie-mdph/": "2026-11-22"}
 MODIF_DEPS = "2026-11-19"           # les 20 pages départements (accord « de l'Hérault », intertitres, doublon supprimé)
 
@@ -102,6 +102,8 @@ def header(actif=None):
         cur = ' aria-current="page"' if actif == s else ""
         lis += f'<li><a href="{href}"{cur}>{E(t)}</a></li>'
     lis += f'<li><a class="mdh-nav-cta" href="/outils/simulateur-aah/">Estimer mon AAH</a></li>'
+    if KIT.actif(PRODUIT):  # 22/11 : l'offre payante doit se voir partout (retour de Louis : « je n'ai même pas trouvé comment payer »)
+        lis += f'<li class="mdh-nav-kitli"><a class="mdh-nav-cta mdh-nav-kit" href="/{KIT.SLUG}/"{" aria-current=" + chr(34) + "page" + chr(34) if actif == "kit" else ""}>Le kit, 19 €</a></li>'
     return (f'<header class="mdh-top"><div class="mdh-w mdh-bar"><a class="mdh-logo" href="/">{LOGO}'
             f'<span><b>mes droits <i>handicap</i></b><small>Site d\'information indépendant</small></span></a>'
             f'<button class="mdh-menu" type="button" aria-expanded="false" aria-controls="mdh-nav"><span aria-hidden="true"></span>Menu</button>'
@@ -171,7 +173,9 @@ def page(title, desc, path, body, schema, image="accueil", actif=None, sticky=No
     canon = DOMAIN + path
     ld = "".join(f'<script type="application/ld+json">{json.dumps(s, ensure_ascii=False)}</script>' for s in schema)
     st = ""
-    if sticky:
+    if KIT.actif(PRODUIT) and kind in ("contenu", "classement", "outil") and path not in (f"/{KIT.SLUG}/", f"/{KIT.CGV}/", "/merci/", "/mentions-legales/", "/confidentialite/"):
+        st = STICKY_KIT
+    elif sticky:
         s_slug, s_txt = sticky
         st = f'<div class="mdh-sticky"><a href="{url(s_slug)}">{E(s_txt)}</a></div>'
     gc = f'<script data-goatcounter="{GOATCOUNTER}" async src="//gc.zgo.at/count.js"></script>' if GOATCOUNTER and kind == "contenu" else ""
@@ -214,6 +218,30 @@ def page(title, desc, path, body, schema, image="accueil", actif=None, sticky=No
 {st}{cl}
 </body>
 </html>"""
+
+
+STICKY_KIT = ('<div class="mdh-stk" id="mdh-stk" hidden><p><b>Kit dossier MDPH</b>, 19 €</p><a class="mdh-btn mdh-sun" href="/kit-dossier-mdph/">Voir le kit</a>'
+              '<button type="button" aria-label="Fermer ce bandeau">×</button></div>'
+              "<script>(function(){var b=document.getElementById('mdh-stk'),K='mdh-stk',f=0;if(!b)return;try{f=+localStorage.getItem(K)||0}catch(e){}if(Date.now()-f<6048e5)return;"
+              "function v(){if(scrollY>500&&innerWidth<=760){b.hidden=false;document.body.classList.add('mdh-stk-on');removeEventListener('scroll',v)}}addEventListener('scroll',v,{passive:true});"
+              "b.querySelector('button').addEventListener('click',function(){b.hidden=true;document.body.classList.remove('mdh-stk-on');try{localStorage.setItem(K,Date.now())}catch(e){}})})();</script>")
+
+
+def offre_ctx(titre, texte):
+    """Encart court après l'introduction (classe mdh-offre exacte : exclue de la mesure anti-gabarit de verif.py)."""
+    if not KIT.actif(PRODUIT): return ""
+    return (f'<aside class="mdh-offre" aria-label="Offre optionnelle"><div class="mdh-offre-t"><p class="mdh-lab">Kit dossier MDPH, 19 €</p><p class="mdh-ctat">{E(titre)}</p>'
+            f'<p>{E(texte)}</p></div><a class="mdh-btn mdh-sun" href="/{KIT.SLUG}/">Voir le kit</a></aside>')
+
+
+OFFRE_GUIDE = {
+    "dossier-mdph": ("Gagnez du temps sur votre dossier", "Checklists des pièces à cocher et Cerfa 15692 expliqué section par section, pour un dossier complet dès le dépôt."),
+    "projet-de-vie-mdph": ("Besoin d'aide pour écrire votre projet de vie ?", "Le kit donne une méthode en 5 questions, deux grilles vierges et 4 exemples fictifs."),
+    "certificat-medical-mdph": ("Préparez la consultation avec votre médecin", "Le kit contient une fiche à lui donner, pour que le certificat reflète votre quotidien."),
+    "dossier-mdph-trop-long": ("Pour le prochain dépôt, un dossier complet", "Checklists, fiche de suivi des relances et délais de chaque MDPH, dans un PDF de 26 pages."),
+    "recours-mdph": ("Préparez votre recours sans rien oublier", "Le kit explique les délais, le RAPO puis le tribunal, avec un modèle vierge de lettre à compléter."),
+    "renouvellement-mdph": ("Renouvelez sans coupure de droits", "Checklists des pièces, fiche rappel et Cerfa expliqué : tout pour redéposer à temps."),
+}
 
 
 def clarity_html():
@@ -330,6 +358,8 @@ def guide(d):
         if ss:
             sh += '<p class="mdh-src">Source : ' + " ; ".join(f'<a href="{E(x["url"])}" rel="noopener" target="_blank">{E(x.get("titre") or x["url"])}</a>' + (f" ({E(x['date'])})" if x.get("date") else "") for x in ss) + ".</p>"
         corps.append(f'<section aria-labelledby="{a}"><h2 id="{a}">{E(strip(s["h2"]))}</h2>{sh}</section>')
+        if i == 0 and len(secs) >= 3:
+            corps.append(offre_ctx(*OFFRE_GUIDE.get(slug, ("Gagnez du temps sur votre dossier MDPH", "Checklists des pièces, Cerfa expliqué, grilles pour le projet de vie et modèles vierges, dans un PDF de 26 pages."))))
         if i == 1: corps.append(cta(outil))
     toc = "".join(f'<li><a href="#{a}">{E(strip(s["h2"]))}</a></li>' for s, a in zip(secs, ids))
     faq = [(f["q"], f["r"]) for f in d.get("faq", [])]
@@ -458,6 +488,7 @@ def classement():
 <li><b>Mise à jour</b> : chaque trimestre, à la publication du baromètre. Dernier relevé le {date_fr(MAJ_DONNEES)}. Le fichier est <a href="/donnees/delais-mdph-{DP.DERNIER.lower()}.csv">téléchargeable en CSV</a>.</li>
 <li>Détail de la méthode : <a href="/methode-et-sources/">méthode et sources</a>.</li></ul></section>
 {urgences(["4mois", "2mois", "6mois"])}
+{produit_slot(True)}
 {faq_html([(q, r) for q, r in faq])}
 </div>"""
     path = "/delais-mdph/"
@@ -529,6 +560,9 @@ def page_dep(code):
     for i, (sid, h2, blocs) in enumerate(p["sections"]):
         corps.append(f'<section aria-labelledby="{sid}"><h2 id="{sid}">{E(h2)}</h2>{"".join(blocs)}</section>')
         toc.append(f'<li><a href="#{sid}">{E(h2)}</a></li>')
+        if i == 0:
+            corps.append(offre_ctx(f"Dossier pour la MDPH {DP.de(nom)} ?",
+                                   (f"Avec {DP.mois_txt(g)} d'attente en moyenne, une pièce oubliée coûte cher. " if g is not None else "") + "Le kit vous aide à déposer un dossier complet dès le premier envoi."))
         if i == 1: corps.append(cta("delai", DP.V(code, "cta", ["Calculez vos dates à partir de votre dépôt", f"Dossier déposé {DP.dans(nom)} ? Vos dates exactes", "Où en est votre dossier ?"]), f"Refus implicite à 4 mois, délais de recours et décision attendue selon le délai moyen {DP.de(nom)}."))
     autres = [c for c in DP.PAGES_DEP if c != code]
     proches = [c for c in DP.VOISINS.get(code, []) if c in DP.PAGES_DEP][:3]
@@ -578,6 +612,7 @@ def page_outil(cle):
 {o['avant']}
 {urgences(o['urg'])}
 {o['corps']}
+{produit_slot(True)}
 {faq_html(o['faq'])}
 <section class="mdh-next" aria-labelledby="suite"><h2 id="suite">Pour aller plus loin</h2><ul>{o['suite']}</ul></section>
 <section class="mdh-sources" aria-labelledby="sources"><h2 id="sources">Sources</h2><p>Paramètres vérifiés le {date_fr(o['verif'])}.</p><ul>{"".join(f'<li><a href="{E(u)}" rel="noopener" target="_blank">{E(t)}</a></li>' for t, u in o['sources'])}</ul></section>
@@ -628,6 +663,16 @@ def index_outils():
 
 
 # --------------------------------------------------------------------------- accueil
+def hero_kit():
+    """Bloc offre en haut de l'accueil, au-dessus de la ligne de flottaison (22/11/2026)."""
+    if not KIT.actif(PRODUIT): return ""
+    return (f'<div class="mdh-hkit"><p class="mdh-lab">Kit dossier MDPH 2026</p><p class="mdh-hkit-t">Le kit pour monter votre dossier MDPH sans erreur</p>'
+            '<ul><li>Les <b>checklists des pièces</b>, selon votre situation</li><li>Le <b>Cerfa 15692 expliqué</b> section par section</li>'
+            '<li>Le <b>projet de vie</b> : méthode, grilles et exemples</li></ul>'
+            f'<div class="mdh-hkit-pay"><p class="mdh-hkit-p">19 €<small>PDF de 26 pages</small></p><a class="mdh-btn mdh-sun" href="/{KIT.SLUG}/">Voir le kit</a></div>'
+            '<p class="mdh-hkit-s">Paiement sécurisé par Stripe · téléchargement immédiat · remboursé sous 14 jours sur simple demande</p></div>')
+
+
 def accueil():
     gn = DP.nat("global")
     rows = DP.classement_rows()
@@ -649,7 +694,8 @@ def accueil():
     body = f"""<section class="mdh-hero"><div class="mdh-w mdh-hgrid">
 <div class="mdh-hcopy"><span class="mdh-badge">AAH · PCH · AEEH · RQTH · CMI</span>
 <h1>Vos droits liés au handicap : délais des MDPH, outils et démarches</h1>
-<p class="mdh-lead">Le délai réel de votre MDPH, une estimation de votre AAH, les dates à ne pas manquer et des guides pas à pas pour un dossier complet. Gratuit, sans inscription, avec les chiffres officiels de la CNSA, de la CAF et de service-public.</p>
+{hero_kit()}
+<p class="mdh-lead">Le délai réel de votre MDPH, une estimation de votre AAH, les dates à ne pas manquer et des guides pas à pas. Gratuit, sans inscription, avec les chiffres officiels de la CNSA, de la CAF et de service-public.</p>
 <div class="mdh-hsearch"><label for="hq" class="mdh-hs-l">Votre département</label>{find("hq", "Nom ou numéro, par exemple Nord ou 59")}</div>
 <p class="mdh-btns"><a class="mdh-btn" href="/delais-mdph/">Voir le délai de ma MDPH</a><a class="mdh-btn mdh-sun" href="/outils/simulateur-aah/">Estimer mon AAH en 1 minute</a><a class="mdh-btn mdh-alt" href="/dossier-mdph/">Préparer mon dossier pas à pas</a></p>
 {trust(None, outil=True)}

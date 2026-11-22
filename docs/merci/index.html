@@ -20,8 +20,8 @@
 <link rel="preload" href="/fonts/lexend-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script>document.documentElement.classList.add("js")</script>
-<link rel="stylesheet" href="/style.css?v=3eda2e4c">
-<script src="/site.js?v=3eda2e4c" defer></script>
+<link rel="stylesheet" href="/style.css?v=fe016496">
+<script src="/site.js?v=fe016496" defer></script>
 <style>/* Kit dossier MDPH : page de vente, conditions de vente, page /merci/. Inséré dans le <head> de ces pages seulement (jamais dans style.css). */
 .mdh-kh{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center;padding:8px 0 10px}
 .mdh-kh h1{margin:.45em 0 .4em}
@@ -96,11 +96,19 @@
 @media (max-width:760px){.mdh-kprix{grid-template-columns:1fr}.mdh-kprix-a{border-right:0;border-bottom:1px solid var(--filet)}.mdh-kpages{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.mdh-kpages figcaption{font-size:13px}}
 @media (max-width:560px){.mdh-kvis{padding:12px 22px 36px 6px}.mdh-kvis:before{inset:0 0 10px 24px}.mdh-kstack{max-width:250px}.mdh-kprix-a,.mdh-kprix-b{padding:24px 20px 22px}.mdh-kprix-n{font-size:54px}.mdh-kpages{grid-template-columns:1fr 1fr}.mdh-kpages li:nth-child(3){display:none}.mdh-kh .mdh-btns .mdh-btn{width:100%}}
 @media print{.mdh-kmerci .mdh-btns{display:none}}
+.mdh-kbuy{background:var(--blanc);border:1.5px solid var(--miel);border-radius:22px;padding:18px 20px;box-shadow:var(--om2);margin:0 0 14px;max-width:560px}
+.mdh-kbuy-p{margin:0 0 10px;font:600 40px/1 var(--titre);color:var(--nuit);letter-spacing:-.02em}
+.mdh-kbuy-p small{display:block;font:400 14.5px/1.4 var(--texte);color:var(--mut);letter-spacing:0;margin-top:6px}
+.mdh-kbuy .mdh-kpay{margin-top:12px}
+.mdh-kext0{font-size:15.5px;margin:0 0 16px}
+@media (max-width:560px){.mdh-kh h1{font-size:28px;margin:.3em 0 .3em}.mdh-kh .mdh-chapo{font-size:17px}.mdh-kbuy{padding:14px}.mdh-kbuy-p{font-size:34px}.mdh-kh .mdh-badge{display:none}}
+@media (max-width:980px){.mdh-kh>div:first-child{display:flex;flex-direction:column}.mdh-kh>div:first-child>*{order:3}.mdh-kh>div:first-child>.mdh-badge,.mdh-kh>div:first-child>h1{order:0}.mdh-kh>div:first-child>.mdh-kbuy{order:1}.mdh-kh>div:first-child>.mdh-chapo{order:2}.mdh-kbuy{max-width:none}}
+@media (max-width:560px){.mdh-kbuy-p{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:8px}.mdh-kbuy-p small{display:inline;margin:0}.mdh-kbuy .mdh-kchk{padding:10px 12px;font-size:14px;line-height:1.45;gap:10px}.mdh-kbuy .mdh-kpay{margin-top:10px}}
 </style>
 </head>
 <body>
 <a class="mdh-skip" href="#contenu">Aller au contenu</a>
-<header class="mdh-top"><div class="mdh-w mdh-bar"><a class="mdh-logo" href="/"><svg width="40" height="40" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24" fill="#1f3b63"/><path d="M13.5 31.5c4-9 8-13 10.5-13s6.5 4 10.5 13" fill="none" stroke="#e8b06a" stroke-width="4.2" stroke-linecap="round"/><circle cx="24" cy="12.8" r="3.5" fill="#fbf7f0"/><path d="M13 36.5h22" stroke="#fbf7f0" stroke-width="2.8" stroke-linecap="round" opacity=".8"/></svg><span><b>mes droits <i>handicap</i></b><small>Site d'information indépendant</small></span></a><button class="mdh-menu" type="button" aria-expanded="false" aria-controls="mdh-nav"><span aria-hidden="true"></span>Menu</button><nav class="mdh-nav" id="mdh-nav" aria-label="Menu principal"><ul><li><a href="/delais-mdph/">Délais des MDPH</a></li><li><a href="/outils/">Outils</a></li><li><a href="/#guides">Guides</a></li><li><a href="/a-propos/">À propos</a></li><li><a class="mdh-nav-cta" href="/outils/simulateur-aah/">Estimer mon AAH</a></li></ul></nav></div></header>
+<header class="mdh-top"><div class="mdh-w mdh-bar"><a class="mdh-logo" href="/"><svg width="40" height="40" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24" fill="#1f3b63"/><path d="M13.5 31.5c4-9 8-13 10.5-13s6.5 4 10.5 13" fill="none" stroke="#e8b06a" stroke-width="4.2" stroke-linecap="round"/><circle cx="24" cy="12.8" r="3.5" fill="#fbf7f0"/><path d="M13 36.5h22" stroke="#fbf7f0" stroke-width="2.8" stroke-linecap="round" opacity=".8"/></svg><span><b>mes droits <i>handicap</i></b><small>Site d'information indépendant</small></span></a><button class="mdh-menu" type="button" aria-expanded="false" aria-controls="mdh-nav"><span aria-hidden="true"></span>Menu</button><nav class="mdh-nav" id="mdh-nav" aria-label="Menu principal"><ul><li><a href="/delais-mdph/">Délais des MDPH</a></li><li><a href="/outils/">Outils</a></li><li><a href="/#guides">Guides</a></li><li><a href="/a-propos/">À propos</a></li><li><a class="mdh-nav-cta" href="/outils/simulateur-aah/">Estimer mon AAH</a></li><li class="mdh-nav-kitli"><a class="mdh-nav-cta mdh-nav-kit" href="/kit-dossier-mdph/">Le kit, 19 €</a></li></ul></nav></div></header>
 <main id="contenu">
 <div class="mdh-w mdh-prose">
 <div id="ok" class="mdh-kok" hidden>
