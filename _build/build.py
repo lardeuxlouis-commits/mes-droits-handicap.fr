@@ -25,7 +25,7 @@ INDEXNOW = "50f1cb133c1a8499537462019c5a94c2"             # clé IndexNow, servi
 CLARITY_ID = None
 # Pages réellement modifiées (date de dernière modification du sitemap et du JSON-LD). Ne mettre une date que si la page a changé.
 MODIFS = {"/": "2026-11-19", "/delais-mdph/": "2026-11-19", "/outils/": "2026-11-19", "/dossier-mdph-trop-long/": "2026-11-19", "/recours-mdph/": "2026-11-19",
-          "/mentions-legales/": "2026-11-19", "/confidentialite/": "2026-11-19"}
+          "/mentions-legales/": "2026-11-19", "/confidentialite/": "2026-11-19", "/projet-de-vie-mdph/": "2026-11-22"}
 MODIF_DEPS = "2026-11-19"           # les 20 pages départements (accord « de l'Hérault », intertitres, doublon supprimé)
 
 E = lambda s: html.escape(str(s if s is not None else ""), quote=True)

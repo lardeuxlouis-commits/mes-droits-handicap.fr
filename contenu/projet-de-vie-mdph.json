@@ -143,7 +143,7 @@
       "blocs": [
         {
           "type": "p",
-          "texte": "Quand les troubles varient d'un jour à l'autre (sclérose en plaques, maladie chronique, troubles psychiques, troubles neurodéveloppementaux), le risque est de décrire seulement un bon jour. Le certificat médical demande d'ailleurs au médecin si les troubles sont permanents, réguliers ou ponctuels, et une perspective d'évolution."
+          "texte": "Quand les troubles varient d'un jour à l'autre (sclérose en plaques, maladie chronique, troubles psychiques, troubles neurodéveloppementaux), le risque est de décrire seulement un bon jour. Le certificat médical [Cerfa 15695*01](certificat-medical-mdph) demande d'ailleurs au médecin si les troubles sont permanents, réguliers ou ponctuels, et une perspective d'évolution."
         },
         {
           "type": "modele",
