@@ -532,17 +532,36 @@ def page_dep(code):
     path = f"/delais-mdph/{d['slug']}/"
     g = p["g"]
     nomc = "Rhône" if code == "69" else nom
-    titre = f"MDPH {DP.de(nomc)} ({code}) : délais 2026 et contacts"
-    if len(titre) > 60: titre = f"MDPH {nomc} ({code}) : délais 2026 et contacts"
+    an = (d.get("annuaire") or [{}])[0] if d.get("annuaire") else {}
+    an = {k: (v.replace(" – ", "-").replace("–", "-").replace("—", ",") if isinstance(v, str) else v) for k, v in an.items()}
+    # 23/11/2026 : la Search Console montre « mdph 91 », « mdph 93 », « horaires mdph evry » : l'intention est le contact, pas le délai.
+    for t in (f"MDPH {DP.de(nomc)} ({code}) : adresse, téléphone et délais 2026",
+              f"MDPH {nomc} ({code}) : adresse, téléphone et délais 2026",
+              f"MDPH {nomc} ({code}) : téléphone, adresse, délais",
+              f"MDPH {nomc} ({code}) : contact et délais 2026"):
+        titre = t
+        if len(titre) <= 60: break
     h1 = f"MDPH {DP.de(nom)} ({code}) : délais 2026, contacts et chiffres clés"
     if g is not None:
         r = DP.rang("69M" if code == "69" else code)
         chapo = (f"{DP.cap(DP.dans(nom))}, la MDPH a mis en moyenne <b>{DP.mois_txt(g)}</b> à traiter une demande au {DP.tlab(DP.DERNIER)}" + (" (territoire le plus lent des deux)" if code == "69" else "") +
                  f", contre {DP.mois_txt(DP.nat('global'))} en France. " + DP.V(code, "ch", [f"Détail pour l'AAH et la PCH, droits à vie, allocataires et coordonnées de la MDPH {DP.de(nom)}.", f"Vous trouverez ici l'évolution sur six trimestres, les droits à vie, les allocataires {DP.de(nom)} et les contacts officiels.", f"La page reprend aussi les droits à vie, le nombre d'allocataires de l'AAH et de l'AEEH {DP.dans(nom)} et les coordonnées utiles."]))
-        desc = f"Délai moyen de la MDPH {DP.de(nomc)} au {DP.tlab(DP.DERNIER)} : {DP.mois_txt(g)} (France {DP.mois_txt(DP.nat('global'))}). AAH, PCH, droits à vie, allocataires, contacts."
+        lieu = f" à {an['commune'].replace(' Cedex', '')}" if an.get("commune") else ""
+        tel = f" : {an['tel']}" if an.get("tel") else ""
+        desc = f"MDPH {DP.de(nomc)}{lieu}{tel}, adresse et horaires (annuaire officiel). Délai moyen {DP.mois_txt(g)} au {DP.tlab(DP.DERNIER)}, France {DP.mois_txt(DP.nat('global'))}."
+        if len(desc) > 158: desc = f"MDPH {DP.de(nomc)}{tel}, adresse et horaires. Délai moyen {DP.mois_txt(g)} au {DP.tlab(DP.DERNIER)} (France {DP.mois_txt(DP.nat('global'))})."
     else:
         chapo = desc = f"Délais, allocataires et contacts de la MDPH {DP.de(nom)}."
     if len(desc) > 155: desc = desc[:152].rsplit(" ", 1)[0] + "…"
+    contact_top = ""
+    if an.get("adresse") or an.get("tel"):
+        li = []
+        if an.get("tel"): li.append(f'<li><b>Téléphone</b> <a href="tel:{E(an["tel"].replace(" ", ""))}">{E(an["tel"])}</a></li>')
+        if an.get("adresse"): li.append(f'<li><b>Adresse</b> {E(an["adresse"])}</li>')
+        if not an.get("tel") and an.get("courriel"): li.append(f'<li><b>Courriel</b> <a href="mailto:{E(an["courriel"])}">{E(an["courriel"])}</a></li>')
+        contact_top = (f'<div class="mdh-contact mdh-contact-top"><b>Contacter la MDPH {E(DP.de(nom))}</b><ul>{"".join(li)}</ul>'
+                       f'<p class="mdh-note">D\u2019après la fiche {E((an.get("commune") or "").replace(" Cedex", ""))} de l\u2019annuaire officiel de l\u2019administration (lannuaire.service-public.gouv.fr){", mise à jour le " + E(an["maj"]) if an.get("maj") else ""}. '
+                       f'<a href="#contact">Horaires d\u2019accueil de la MDPH {E(DP.de(nom))}, courriel et site</a></p></div>')
     urg = ""
     if g is not None:
         kp = [f'<li><b>{DP.fr(g)} mois</b><span>délai moyen, toutes demandes</span></li>']
@@ -576,6 +595,7 @@ def page_dep(code):
 <p class="mdh-chapo">{chapo}</p>
 {trust(5, lieu=DP.de(nom))}
 </header>
+{contact_top}
 {urg}
 {DP.repartition(("69M", "69D") if code == "69" else (code,), nomc) if g is not None else ""}
 <nav aria-label="Sommaire"><p class="mdh-lab">Sur cette page</p><ul class="mdh-toc">{"".join(toc)}<li><a href="#faq">Questions fréquentes</a></li></ul></nav>
