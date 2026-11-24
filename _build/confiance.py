@@ -5,13 +5,13 @@ import departements as DP
 CONTACT = "contact@mes-droits-handicap.fr"
 # Téléphone de l'éditeur, exigé par la LCEN (art. 6 III) pour une personne physique : À COMPLÉTER PAR LOUIS.
 # None = la ligne n'est pas affichée (rien d'incomplet n'apparaît en ligne). Exemple : TEL_EDITEUR = "06 00 00 00 00"
-TEL_EDITEUR = "07 81 76 47 83"
+TEL_EDITEUR = "07 56 80 68 54"
 # Téléphone de GitHub, Inc. : numéro de l'équipe commerciale, seul numéro publié par GitHub (ancienne documentation
 # docs.github.com, Enterprise Server 3.0, « call +1 (877) 448-4820 »). GitHub précise ne pas faire de support par téléphone.
 TEL_HEBERGEUR = "+1 877 448 4820"
 
 
-def pages(SITE, AUTEUR, DOMAIN, kit=False, clarity=None):
+def pages(SITE, AUTEUR, DOMAIN, kit=False, clarity=None, gc=False):
     """kit=True seulement quand le Kit dossier MDPH est en vente (PRODUIT renseigné dans build.py) : sinon les textes restent identiques."""
     S = DP.SRC
     mail = f'<a href="mailto:{CONTACT}">{CONTACT}</a>'
@@ -70,6 +70,11 @@ def pages(SITE, AUTEUR, DOMAIN, kit=False, clarity=None):
                     "Microsoft Clarity mesure la navigation (clics, défilement) pour améliorer les guides. Tout le texte des pages est masqué et aucune saisie n'est enregistrée. "
                     "Clarity n'est jamais chargé sur les pages des outils. Si vous refusez, rien n'est chargé. Votre choix est gardé 6 mois dans votre navigateur.</p>")
         intro = "<p>Ce site n'affiche aucune publicité et ne vous demande aucune donnée pour être consulté. Il ne dépose de cookie de mesure d'audience que si vous l'acceptez.</p>"
+    elif gc:
+        audience = ("<h2>Mesure d'audience</h2><p>Sur les pages d'information (guides, délais), un compteur de visites, GoatCounter, compte les pages vues, "
+                    "le site d'où vous venez, le type d'appareil et le pays. Il ne dépose aucun cookie, n'enregistre pas votre adresse IP en clair et ne permet pas de vous identifier : "
+                    "aucun accord n'est donc nécessaire. Il n'est jamais chargé sur les pages des outils.</p>")
+        intro = "<p>Ce site ne dépose aucun cookie, n'affiche aucune publicité et ne vous demande aucune donnée pour être consulté.</p>"
     else:
         audience = ("<h2>Mesure d'audience</h2><p>Aujourd'hui, aucune mesure d'audience n'est installée : aucun compteur, aucun outil de statistiques, aucun cookie. "
                     "Si cela change un jour, cette page sera mise à jour avant, et tout outil qui en aurait besoin ne serait chargé qu'avec votre accord.</p>")

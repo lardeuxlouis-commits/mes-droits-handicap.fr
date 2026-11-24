@@ -13,7 +13,7 @@ DOMAIN = "https://mes-droits-handicap.fr"
 SITE = "Mes droits handicap"
 LANCEMENT = "2026-11-15"
 MAJ_DONNEES = "2026-11-15"          # date du dernier relevé des sources (donnees.py)
-GOATCOUNTER = ""                    # ex. "https://mesdroitshandicap.goatcounter.com/count" ; vide = aucun compteur
+GOATCOUNTER = "https://mesdroitshandicap.goatcounter.com/count"                    # ex. "https://mesdroitshandicap.goatcounter.com/count" ; vide = aucun compteur
 PRODUIT = "https://buy.stripe.com/7sY7sMgiC9mlbV95q4ebu00"                      # lien Stripe du « Kit dossier MDPH, 19 € » (https://buy.stripe.com/...) ; None = rien n'est affiché (relecture avocat)
 KIT_PDF_URL = "https://187-124-173-12.sslip.io/pay/kit"                  # lien du PDF payant hébergé HORS GitHub (Drive, R2) ; None = /merci/ annonce un envoi par e-mail sous 24 h
 AUTEUR = "Louis Lardeux"
@@ -784,7 +784,7 @@ def main():
     path, h = index_outils(); write(path, h); urls.append((path, MODIFS.get(path, LANCEMENT)))
     for k in OUTILS:
         path, h = page_outil(k); write(path, h); urls.append((path, OP.PAGES[k]["verif"]))
-    for s, (t, dsc, h1, b, schema_extra) in CF.pages(SITE, AUTEUR, DOMAIN, KIT.actif(PRODUIT), CLARITY_ID).items():
+    for s, (t, dsc, h1, b, schema_extra) in CF.pages(SITE, AUTEUR, DOMAIN, KIT.actif(PRODUIT), CLARITY_ID, bool(GOATCOUNTER)).items():
         body = f'<div class="mdh-w mdh-prose">{crumbs([(h1, None)])}<h1>{E(h1)}</h1>{b}</div>'
         sch = [bc_schema([(h1, url(s))])] + schema_extra
         write(url(s), page(t, dsc, url(s), body, sch, "accueil")); urls.append((url(s), MODIFS.get(url(s), LANCEMENT)))
