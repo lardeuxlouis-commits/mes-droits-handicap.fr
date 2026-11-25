@@ -555,14 +555,21 @@ def page_dep(code):
     pc = bloc_pch(code, codes, nom)
     if pc: sections.append(("pch", f"La PCH {dans(nom)}", pc))
     ac = bloc_activite(code, codes, nom)
-    if ac: sections.append(("activite", f"Activité et satisfaction : la MDPH {de(nom)} en chiffres", ac))
+    if ac: sections.append(("activite", f"Avis des usagers et activité : la MDPH {de(nom)} en chiffres", ac))
+    dsat = DEPS["69" if len(codes) > 1 else code]["satisfaction"]
+    g25, gn = (dsat["globale"].get("2025") or {}), (NAT["satisfaction"]["globale"].get("2025") or {})
+    if g25.get("taux") is not None and g25.get("repondants"):
+        r = (f"Dans l'enquête nationale « Ma MDPH, mon avis compte » de 2025 (CNSA), {pct(g25['taux'])} des usagers qui ont répondu se disent satisfaits de la MDPH {de(nom)}"
+             + ((f", comme la moyenne nationale ({pct(gn['taux'])})" if pct(gn['taux']) == pct(g25['taux']) else f", contre {pct(gn['taux'])} en moyenne en France") if gn.get("taux") else "") + f", sur {n_(g25['repondants'])} réponses.")
+        if g25["repondants"] < 100: r += " Avec moins de 100 réponses, ce chiffre est à lire avec prudence."
+        faq.append((f"Quel avis les usagers donnent-ils sur la MDPH {de(nom)} ?", r))
     vo = bloc_voisins(code, nom, g)
     if vo: sections.append(("voisins", h["voisins"], vo))
     ct = bloc_contacts(code, nom)
     if ct: sections.append(("contact", f"Contacter la MDPH {de(nom)}", ct))
     an = (DEPS[code].get("annuaire") or [{}])[0] if DEPS[code].get("annuaire") else {}
     if an.get("tel"):
-        faq.append((f"Quel est le numéro de téléphone de la MDPH {de(nom)} ?", f"Selon l'annuaire officiel de l'administration, la MDPH {de(nom)} est joignable au {an['tel']}" + (f" ({'; '.join(an['horaires'])})" if an.get("horaires") else "") + f". Avant de vous déplacer à {an.get('commune') or 'l’accueil'}, vérifiez les horaires sur le site de la MDPH."))
+        faq.append((f"Quels sont le téléphone et les horaires de la MDPH {de(nom)} ?" if an.get("horaires") else f"Quel est le numéro de téléphone de la MDPH {de(nom)} ?", f"Selon l'annuaire officiel de l'administration, la MDPH {de(nom)} est joignable au {an['tel']}" + (f" ({'; '.join(an['horaires'])})" if an.get("horaires") else "") + f". Avant de vous déplacer à {an.get('commune') or 'l’accueil'}, vérifiez les horaires sur le site de la MDPH."))
     return {"code": code, "nom": nom, "codes": codes, "g": g, "sections": sections, "faq": faq}
 
 
