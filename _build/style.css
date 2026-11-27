@@ -365,7 +365,7 @@ footer.mdh-foot{margin-top:96px;background:var(--nuit);color:#dfe7f1;padding:56p
 .mdh-trust a{text-decoration:underline}
 .mdh-contact a,.mdh-prose a{overflow-wrap:anywhere}
 .mdh-nav a.mdh-nav-kit{background:var(--miel);color:#2b1a05}.mdh-nav a.mdh-nav-kit:hover{color:#2b1a05}
-@media (max-width:900px){.js .mdh-nav li.mdh-nav-kitli{order:-1}.js .mdh-nav a.mdh-nav-kit{margin:4px 0 8px}}
+@media (max-width:900px){.js .mdh-nav a.mdh-nav-kit{margin:4px 0 8px}}
 .mdh-hkit{background:var(--blanc);border:1.5px solid var(--miel);border-radius:22px;padding:18px 22px 16px;margin:4px 0 20px;box-shadow:var(--om2);max-width:560px}
 .mdh-hkit .mdh-lab,.mdh-offre .mdh-lab{color:var(--miel-f)}
 .mdh-hkit-t{font:600 23px/1.2 var(--titre);color:var(--ink);margin:4px 0 8px}

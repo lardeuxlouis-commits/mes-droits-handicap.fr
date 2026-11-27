@@ -173,7 +173,8 @@ def page(title, desc, path, body, schema, image="accueil", actif=None, sticky=No
     canon = DOMAIN + path
     ld = "".join(f'<script type="application/ld+json">{json.dumps(s, ensure_ascii=False)}</script>' for s in schema)
     st = ""
-    if KIT.actif(PRODUIT) and kind in ("contenu", "classement", "outil") and path not in (f"/{KIT.SLUG}/", f"/{KIT.CGV}/", "/merci/", "/mentions-legales/", "/confidentialite/"):
+    # 27/11 : barre collante retirée (« if False »)
+    if False and KIT.actif(PRODUIT) and kind in ("contenu", "classement", "outil") and path not in (f"/{KIT.SLUG}/", f"/{KIT.CGV}/", "/merci/", "/mentions-legales/", "/confidentialite/"):
         st = STICKY_KIT
     elif sticky:
         s_slug, s_txt = sticky
@@ -358,7 +359,7 @@ def guide(d):
         if ss:
             sh += '<p class="mdh-src">Source : ' + " ; ".join(f'<a href="{E(x["url"])}" rel="noopener" target="_blank">{E(x.get("titre") or x["url"])}</a>' + (f" ({E(x['date'])})" if x.get("date") else "") for x in ss) + ".</p>"
         corps.append(f'<section aria-labelledby="{a}"><h2 id="{a}">{E(strip(s["h2"]))}</h2>{sh}</section>')
-        if i == 0 and len(secs) >= 3:
+        if False and i == 0 and len(secs) >= 3:  # 27/11 : plus d'encart après l'introduction, l'offre reste en fin de page
             corps.append(offre_ctx(*OFFRE_GUIDE.get(slug, ("Gagnez du temps sur votre dossier MDPH", "Checklists des pièces, Cerfa expliqué, grilles pour le projet de vie et modèles vierges, dans un PDF de 26 pages."))))
         if i == 1: corps.append(cta(outil))
     toc = "".join(f'<li><a href="#{a}">{E(strip(s["h2"]))}</a></li>' for s, a in zip(secs, ids))
@@ -579,7 +580,7 @@ def page_dep(code):
     for i, (sid, h2, blocs) in enumerate(p["sections"]):
         corps.append(f'<section aria-labelledby="{sid}"><h2 id="{sid}">{E(h2)}</h2>{"".join(blocs)}</section>')
         toc.append(f'<li><a href="#{sid}">{E(h2)}</a></li>')
-        if i == 0:
+        if False and i == 0:  # 27/11 : idem, l'offre reste en fin de page
             corps.append(offre_ctx(f"Dossier pour la MDPH {DP.de(nom)} ?",
                                    (f"Avec {DP.mois_txt(g)} d'attente en moyenne, une pièce oubliée coûte cher. " if g is not None else "") + "Le kit vous aide à déposer un dossier complet dès le premier envoi."))
         if i == 1: corps.append(cta("delai", DP.V(code, "cta", ["Calculez vos dates à partir de votre dépôt", f"Dossier déposé {DP.dans(nom)} ? Vos dates exactes", "Où en est votre dossier ?"]), f"Refus implicite à 4 mois, délais de recours et décision attendue selon le délai moyen {DP.de(nom)}."))
@@ -714,7 +715,6 @@ def accueil():
     body = f"""<section class="mdh-hero"><div class="mdh-w mdh-hgrid">
 <div class="mdh-hcopy"><span class="mdh-badge">AAH · PCH · AEEH · RQTH · CMI</span>
 <h1>Vos droits liés au handicap : délais des MDPH, outils et démarches</h1>
-{hero_kit()}
 <p class="mdh-lead">Le délai réel de votre MDPH, une estimation de votre AAH, les dates à ne pas manquer et des guides pas à pas. Gratuit, sans inscription, avec les chiffres officiels de la CNSA, de la CAF et de service-public.</p>
 <div class="mdh-hsearch"><label for="hq" class="mdh-hs-l">Votre département</label>{find("hq", "Nom ou numéro, par exemple Nord ou 59")}</div>
 <p class="mdh-btns"><a class="mdh-btn" href="/delais-mdph/">Voir le délai de ma MDPH</a><a class="mdh-btn mdh-sun" href="/outils/simulateur-aah/">Estimer mon AAH en 1 minute</a><a class="mdh-btn mdh-alt" href="/dossier-mdph/">Préparer mon dossier pas à pas</a></p>
