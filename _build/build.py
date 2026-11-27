@@ -266,7 +266,8 @@ def img_html(nom, sizes="(max-width: 860px) 100vw, 780px", prio=False):
 
 
 def person():
-    return {"@type": "Person", "name": AUTEUR, "url": DOMAIN + "/a-propos/"}
+    return {"@type": "Person", "name": AUTEUR, "url": DOMAIN + "/a-propos/", "image": DOMAIN + "/img/louis-lardeux.jpg",
+            "sameAs": ["https://www.linkedin.com/in/louis-lardeux-96b600254/"]}
 
 
 def org():
@@ -388,7 +389,7 @@ def guide(d):
 <header class="mdh-head"><span class="mdh-badge">Guide pratique</span>
 <h1>{E(strip(d['h1']))}</h1>
 <p class="mdh-chapo">{inline(d.get('chapo'))}</p>
-<div class="mdh-author"><span class="mdh-ini" aria-hidden="true">LL</span><span>Par <b>{AUTEUR}</b>, <a href="/a-propos/">auteur du site</a> · vérifié le {date_fr(verif)} · {len(srcs)} sources officielles</span></div>
+<div class="mdh-author"><img class="mdh-ava" src="/img/louis-lardeux-128.jpg" width="42" height="42" alt="Photo de {AUTEUR}" loading="lazy"><span>Par <b>{AUTEUR}</b>, <a href="/a-propos/">auteur du site</a> · vérifié le {date_fr(verif)} · {len(srcs)} sources officielles</span></div>
 </header>
 {urg_html}
 <div class="mdh-answer"><p class="mdh-lab">La réponse courte</p><ul>{bref}</ul></div>
