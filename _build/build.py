@@ -188,6 +188,7 @@ def page(title, desc, path, body, schema, image="accueil", actif=None, sticky=No
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="msvalidate.01" content="AF248781106582FE1BFC28DA6DBB0B45">
 <title>{E(title)}</title>
 <meta name="description" content="{E(desc)}">
 {rob}<link rel="canonical" href="{canon}">
