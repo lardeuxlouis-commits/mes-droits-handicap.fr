@@ -24,8 +24,9 @@ INDEXNOW = "50f1cb133c1a8499537462019c5a94c2"             # clé IndexNow, servi
 # jamais sur les outils, et seulement après un clic sur « Accepter » dans le bandeau.
 CLARITY_ID = None
 # Pages réellement modifiées (date de dernière modification du sitemap et du JSON-LD). Ne mettre une date que si la page a changé.
-MODIFS = {"/": "2026-11-22", "/delais-mdph/": "2026-11-19", "/outils/": "2026-11-19", "/dossier-mdph-trop-long/": "2026-11-19", "/recours-mdph/": "2026-11-19",
-          "/mentions-legales/": "2026-11-19", "/confidentialite/": "2026-11-19", "/projet-de-vie-mdph/": "2026-11-22"}
+MODIFS = {"/": "2026-11-28", "/delais-mdph/": "2026-11-19", "/outils/": "2026-11-19", "/dossier-mdph-trop-long/": "2026-11-19", "/recours-mdph/": "2026-11-19",
+          "/mentions-legales/": "2026-11-19", "/confidentialite/": "2026-11-19", "/projet-de-vie-mdph/": "2026-11-22",
+          "/aah/": "2026-11-28", "/carte-mobilite-inclusion/": "2026-11-28", "/rqth/": "2026-11-28"}
 MODIF_DEPS = "2026-11-19"           # les 20 pages départements (accord « de l'Hérault », intertitres, doublon supprimé)
 
 E = lambda s: html.escape(str(s if s is not None else ""), quote=True)
@@ -40,6 +41,8 @@ GUIDES = {  # slug -> (libellé court, image, outil associé)
     "recours-mdph": ("Contester une décision", "demarches", "delai"),
     "renouvellement-mdph": ("Renouveler ses droits", "accueil", "fin"),
     "aah": ("AAH : montant et cumul avec un salaire", "travail", "aah"),
+    "aah-retraite": ("AAH et retraite à 62 ans", "domicile", "aah"),
+    "taux-incapacite-mdph": ("Taux d'incapacité : 50 % et 80 %", "demarches", "aah"),
     "rqth": ("RQTH : les avantages", "travail", "aah"),
     "rqth-delai-obtention": ("RQTH : délai pour l'obtenir", "demarches", "delai"),
     "rqth-aides-financieres": ("RQTH : aides financières et CPF", "travail", "aah"),

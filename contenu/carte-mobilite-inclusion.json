@@ -43,7 +43,7 @@
     },
     {
      "type": "p",
-     "texte": "Le taux d'incapacité est fixé par la **CDAPH** (commission des droits et de l'autonomie des personnes handicapées) de la MDPH, à l'aide d'un guide barème national. La mention priorité et la mention invalidité ne se cumulent pas. En revanche, la mention stationnement peut s'ajouter à l'une ou à l'autre : vous recevez alors **deux cartes**, une à placer derrière le pare-brise et une à garder sur vous."
+     "texte": "Le taux d'incapacité est fixé par la **CDAPH** (commission des droits et de l'autonomie des personnes handicapées) de la MDPH, à l'aide d'un guide barème national : notre guide du [taux d'incapacité](taux-incapacite-mdph) explique ce que recouvrent les seuils de 50 % et de 80 %. La mention priorité et la mention invalidité ne se cumulent pas. En revanche, la mention stationnement peut s'ajouter à l'une ou à l'autre : vous recevez alors **deux cartes**, une à placer derrière le pare-brise et une à garder sur vous."
     },
     {
      "type": "p",
@@ -277,6 +277,10 @@
   }
  ],
  "liens_internes": [
+  {
+   "slug": "taux-incapacite-mdph",
+   "ancre": "taux d'incapacité"
+  },
   {
    "slug": "rqth",
    "ancre": "RQTH"

@@ -1,0 +1,382 @@
+{
+ "slug": "taux-incapacite-mdph",
+ "title": "Taux d'incapacité MDPH : 50 %, 80 %, quels droits ?",
+ "description": "Le taux d'incapacité est fixé par la CDAPH avec un guide-barème national. Ce que veulent dire 50 % et 80 %, et les aides ouvertes à chaque seuil.",
+ "h1": "Taux d'incapacité MDPH : ce que changent les seuils de 50 % et de 80 %",
+ "chapo": "Le taux d'incapacité est fixé par la **CDAPH**, la commission qui décide au sein de la MDPH, à l'aide d'un **guide-barème national**. Il ne dépend pas de votre diagnostic, mais des conséquences du handicap sur votre vie quotidienne. Deux seuils comptent : **50 %**, une gêne notable dans la vie sociale, et **80 %**, une atteinte de l'autonomie pour les gestes essentiels. Chacun ouvre des droits différents.",
+ "en_bref": [
+  "Le guide-barème ne donne pas un taux précis, mais des fourchettes : moins de 50 %, de 50 à 79 %, 80 % et plus.",
+  "50 % : troubles importants et gêne notable dans la vie sociale, mais autonomie conservée pour les gestes essentiels.",
+  "80 % : aide totale ou partielle, surveillance, ou plus grandes difficultés pour les actes essentiels de la vie quotidienne.",
+  "À 80 % : AAH sans condition d'emploi, CMI invalidité, MVA possible. De 50 à 79 % : AAH seulement avec une restriction d'accès à l'emploi.",
+  "La PCH et la RQTH ne dépendent pas d'un taux d'incapacité."
+ ],
+ "urgence": "Si le taux retenu vous prive d'un droit, le recours administratif préalable obligatoire (RAPO) se dépose auprès de la MDPH dans les **2 mois** qui suivent la réception de la décision. Sans réponse de la CDAPH pendant plus de 2 mois, le recours est considéré comme rejeté.",
+ "sections": [
+  {
+   "h2": "Qui fixe le taux, et sur quelle base ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "Le taux est fixé par la **CDAPH** (commission des droits et de l'autonomie des personnes handicapées), après l'évaluation de l'équipe pluridisciplinaire de la MDPH. Elle s'appuie sur le **guide-barème pour l'évaluation des déficiences et incapacités des personnes handicapées**, publié à l'annexe 2-4 du code de l'action sociale et des familles."
+    },
+    {
+     "type": "p",
+     "texte": "Le texte est clair sur un point : le taux se fixe à partir de l'analyse de vos **déficiences et de leurs conséquences dans votre vie quotidienne**, et non sur la seule nature médicale de la maladie. Deux personnes avec le même diagnostic peuvent donc avoir des taux différents. L'évaluation croise trois dimensions : la déficience (ce qui est atteint), l'incapacité (ce que vous ne pouvez plus faire) et le désavantage (ce que cela vous coûte dans la vie sociale, scolaire ou professionnelle)."
+    },
+    {
+     "type": "p",
+     "texte": "C'est pourquoi le [certificat médical](certificat-medical-mdph) et la partie « vie quotidienne » du dossier, le [projet de vie](projet-de-vie-mdph), pèsent autant. Une gêne décrite précisément, avec des exemples concrets, aide l'équipe à situer votre taux."
+    }
+   ],
+   "sources": [
+    0,
+    1
+   ]
+  },
+  {
+   "h2": "Les fourchettes du guide-barème",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "Le guide-barème **ne fixe pas de taux précis**. Il indique des fourchettes, selon la gravité des troubles."
+    },
+    {
+     "type": "tableau",
+     "entetes": [
+      "Forme des troubles",
+      "Fourchette de taux"
+     ],
+     "lignes": [
+      [
+       "Légère",
+       "1 à 15 %"
+      ],
+      [
+       "Modérée",
+       "20 à 45 %"
+      ],
+      [
+       "Importante",
+       "50 à 75 %"
+      ],
+      [
+       "Sévère ou majeure",
+       "80 à 95 %"
+      ]
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "Dans la pratique, ce qui compte pour vos droits, ce sont surtout trois zones : **moins de 50 %**, **de 50 à 79 %**, et **80 % ou plus**. Votre notification de décision indique dans laquelle vous vous trouvez."
+    }
+   ],
+   "sources": [
+    0
+   ]
+  },
+  {
+   "h2": "Que veut dire un taux de 50 % ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "Selon le guide-barème, un taux de 50 % correspond à des **troubles importants entraînant une gêne notable dans la vie sociale** de la personne."
+    },
+    {
+     "type": "p",
+     "texte": "Cette gêne peut se voir concrètement dans votre vie. Elle peut aussi être compensée, mais **au prix d'efforts importants** ou grâce à une aide spécifique. Par exemple, vous gardez une vie sociale ou un emploi, mais avec des aménagements lourds ou une fatigue qui vous oblige à renoncer à d'autres activités. En revanche, à ce niveau, **l'autonomie est conservée** pour les actes élémentaires de la vie quotidienne."
+    }
+   ],
+   "sources": [
+    0
+   ]
+  },
+  {
+   "h2": "Que veut dire un taux de 80 % ?",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "Un taux d'au moins 80 % correspond à des **troubles graves entraînant une entrave majeure dans la vie quotidienne**, avec une **atteinte de l'autonomie individuelle**."
+    },
+    {
+     "type": "p",
+     "texte": "Le guide-barème donne un repère précis : le taux de 80 % est atteint dès que la personne doit être **aidée totalement ou partiellement**, ou **surveillée**, pour accomplir les actes essentiels de la vie quotidienne, ou ne les assure **qu'avec les plus grandes difficultés**. C'est aussi le cas en cas de déficience sévère avec abolition d'une fonction."
+    },
+    {
+     "type": "p",
+     "texte": "Les actes de la vie quotidienne cités par le guide-barème sont notamment :"
+    },
+    {
+     "type": "liste",
+     "items": [
+      "se comporter de façon logique et sensée ;",
+      "se repérer dans le temps et les lieux ;",
+      "assurer son hygiène corporelle ;",
+      "s'habiller et se déshabiller de façon adaptée ;",
+      "manger des aliments préparés ;",
+      "assumer l'hygiène de l'élimination urinaire et fécale ;",
+      "effectuer les mouvements et les déplacements."
+     ]
+    },
+    {
+     "type": "attention",
+     "texte": "« Avec les plus grandes difficultés » compte autant que « avec une aide ». Si vous faites seul une activité mais au prix de douleurs, d'un temps très long ou de chutes, décrivez-le précisément dans le dossier et faites-le noter par votre médecin."
+    }
+   ],
+   "sources": [
+    0
+   ]
+  },
+  {
+   "h2": "Les droits ouverts à partir de 80 %",
+   "blocs": [
+    {
+     "type": "tableau",
+     "entetes": [
+      "Droit",
+      "Ce que dit la règle"
+     ],
+     "lignes": [
+      [
+       "[AAH](aah)",
+       "Ouverte à partir de 80 %, sans autre condition liée à l'emploi. Durée de 1 à 10 ans, ou sans limitation de durée si le handicap ne peut pas évoluer favorablement."
+      ],
+      [
+       "Majoration pour la vie autonome (MVA)",
+       "104,77 € par mois avec l'AAH, si vous vivez dans un logement indépendant, touchez une aide au logement et n'avez pas de revenu d'activité."
+      ],
+      [
+       "[Carte mobilité inclusion](carte-mobilite-inclusion) invalidité",
+       "Attribuée à partir de 80 %, ou avec une pension d'invalidité de 3e catégorie. Elle donne aussi droit à une demi-part fiscale."
+      ],
+      [
+       "[AEEH](aeeh) pour un enfant",
+       "Ouverte à partir de 80 %, sans autre condition."
+      ],
+      [
+       "AAH au moment de la retraite",
+       "L'AAH continue après 62 ans et complète une petite retraite. Voir [AAH et retraite](aah-retraite)."
+      ]
+     ]
+    }
+   ],
+   "sources": [
+    1,
+    5,
+    4,
+    2
+   ]
+  },
+  {
+   "h2": "Les droits possibles entre 50 et 79 %",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "Dans cette zone, le taux seul ne suffit pas. Une condition supplémentaire s'ajoute, qui dépend de l'aide demandée."
+    },
+    {
+     "type": "liste",
+     "items": [
+      "**AAH** : il faut en plus une **restriction substantielle et durable d'accès à l'emploi**, reconnue par la CDAPH. Substantielle veut dire que vos difficultés d'accès à un emploi ne peuvent pas être compensées par des aménagements, comme un poste adapté. L'AAH est alors accordée pour 1 à 2 ans, ou jusqu'à 5 ans si le handicap ne peut pas évoluer favorablement. Elle s'arrête à 62 ans.",
+      "**AEEH** : l'enfant doit être accompagné par un établissement ou un service médico-social, un dispositif de scolarisation adapté, ou recevoir des soins ou des rééducations liés au handicap, préconisés par la CDAPH.",
+      "**Retraite** : une incapacité d'au moins 50 % pendant vos années de travail peut ouvrir la retraite anticipée des travailleurs handicapés dès 55 ans, sous conditions de trimestres. À l'âge minimum de départ, un taux d'au moins 50 % vous fait aussi considérer d'office comme inapte au travail, donc à taux plein."
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "En dessous de 80 %, la CMI invalidité n'est pas accordée. La **CMI priorité** est possible si votre incapacité, inférieure à 80 %, rend la station debout pénible."
+    }
+   ],
+   "sources": [
+    1,
+    2,
+    3,
+    6
+   ]
+  },
+  {
+   "h2": "Les aides qui ne dépendent pas du taux",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "Plusieurs aides de la MDPH ne regardent pas le taux d'incapacité. Un taux inférieur à 50 % ne vous ferme donc pas toutes les portes."
+    },
+    {
+     "type": "liste",
+     "items": [
+      "**[PCH](pch)** (prestation de compensation du handicap) : elle dépend d'une **difficulté absolue** pour au moins une activité importante du quotidien, ou d'une **difficulté grave** pour au moins deux, dans un référentiel d'activités. Elle est attribuée sans condition de ressources.",
+      "**[RQTH](rqth)** (reconnaissance de la qualité de travailleur handicapé) : elle concerne les personnes dont les possibilités d'obtenir ou de garder un emploi sont réduites par l'altération d'au moins une fonction physique, sensorielle, mentale ou psychique. Une demande d'AAH déclenche automatiquement une procédure de RQTH."
+     ]
+    }
+   ],
+   "sources": [
+    7,
+    8
+   ]
+  },
+  {
+   "h2": "Taux d'incapacité et invalidité de la Sécurité sociale : deux choses différentes",
+   "blocs": [
+    {
+     "type": "p",
+     "texte": "On confond souvent les deux. Le **taux d'incapacité** est fixé par la MDPH et ouvre les droits liés au handicap (AAH, AEEH, CMI). L'**invalidité** est reconnue par l'Assurance maladie quand votre capacité de travail ou de gain est réduite **d'au moins deux tiers** après une maladie ou un accident d'origine non professionnelle. Elle ouvre une pension d'invalidité, classée en 3 catégories."
+    },
+    {
+     "type": "tableau",
+     "entetes": [
+      "Catégorie d'invalidité",
+      "Situation"
+     ],
+     "lignes": [
+      [
+       "1re catégorie",
+       "Invalide capable d'exercer une activité rémunérée"
+      ],
+      [
+       "2e catégorie",
+       "Invalide absolument incapable d'exercer une profession quelconque"
+      ],
+      [
+       "3e catégorie",
+       "Invalide incapable d'exercer une profession et qui doit en plus avoir recours à une tierce personne pour les actes ordinaires de la vie"
+      ]
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "Une pension d'invalidité ne donne donc pas automatiquement un taux de 80 %, et inversement. Une passerelle existe : la pension d'invalidité de 3e catégorie suffit pour obtenir la CMI invalidité. Si vous touchez une pension d'invalidité inférieure au montant de l'AAH et que la MDPH vous reconnaît un taux suffisant, l'AAH peut compléter la pension jusqu'à 1 041,59 € par mois (au 1er avril 2026)."
+    }
+   ],
+   "sources": [
+    9,
+    1,
+    4
+   ]
+  },
+  {
+   "h2": "Votre taux ne vous semble pas juste : que faire ?",
+   "blocs": [
+    {
+     "type": "etapes",
+     "items": [
+      "**Relisez la notification.** Elle indique le taux retenu et les droits accordés ou refusés.",
+      "**Déposez un RAPO dans les 2 mois** qui suivent la réception de la décision, auprès de la MDPH, en joignant la décision. C'est obligatoire avant tout recours au tribunal. La démarche est détaillée dans [contester une décision de la MDPH](recours-mdph).",
+      "**Complétez votre dossier** avec des éléments récents : un certificat médical à jour, des comptes rendus de spécialistes, une description précise des gestes que vous ne faites plus seul.",
+      "**Si votre état s'aggrave plus tard**, vous pouvez déposer une nouvelle demande, sans attendre la fin de vos droits. Voir [renouveler ses droits](renouvellement-mdph)."
+     ]
+    },
+    {
+     "type": "p",
+     "texte": "Pour une situation précise, une association (APF France handicap, UNAFAM, Unapei…), un point-justice ou un avocat peut vous aider."
+    }
+   ],
+   "sources": [
+    1
+   ]
+  }
+ ],
+ "faq": [
+  {
+   "q": "Comment savoir quel est mon taux d'incapacité ?",
+   "r": "Il figure dans la décision de la CDAPH, la notification que la MDPH vous envoie après l'examen de votre demande. Si vous l'avez perdue, la MDPH peut vous fournir un duplicata de ses décisions."
+  },
+  {
+   "q": "Le taux d'incapacité est-il donné à vie ?",
+   "r": "Le taux accompagne des décisions qui ont une durée. Pour l'AAH, une attribution sans limitation de durée est possible à partir de 80 %, quand le handicap ne peut pas évoluer favorablement. Dans les autres cas, votre situation est réévaluée au moment du renouvellement."
+  },
+  {
+   "q": "Peut-on avoir un taux de 80 % avec un handicap invisible ?",
+   "r": "Oui. Le guide-barème évalue les conséquences sur la vie quotidienne, pas le type de maladie. Parmi les actes essentiels, il cite par exemple « se comporter de façon logique et sensée » et « se repérer dans le temps et les lieux ». Un trouble psychique ou cognitif peut donc atteindre 80 % si vous avez besoin d'aide ou de surveillance pour ces actes."
+  },
+  {
+   "q": "Faut-il un taux d'incapacité pour obtenir la RQTH ?",
+   "r": "Non. La RQTH concerne les personnes dont les possibilités d'obtenir ou de conserver un emploi sont réduites par l'altération d'au moins une fonction physique, sensorielle, mentale ou psychique. Aucun taux minimum n'est exigé. Une demande d'AAH déclenche d'ailleurs automatiquement une procédure de RQTH."
+  },
+  {
+   "q": "Un enfant peut-il avoir un taux d'incapacité ?",
+   "r": "Oui. Le guide-barème s'applique quel que soit l'âge. Pour un enfant, le taux conditionne notamment l'AEEH : au moins 80 %, ou entre 50 et 79 % avec un accompagnement, une scolarisation adaptée ou des soins préconisés par la CDAPH."
+  }
+ ],
+ "liens_internes": [
+  {
+   "slug": "aah",
+   "ancre": "AAH"
+  },
+  {
+   "slug": "aah-retraite",
+   "ancre": "AAH et retraite"
+  },
+  {
+   "slug": "carte-mobilite-inclusion",
+   "ancre": "carte mobilité inclusion"
+  },
+  {
+   "slug": "certificat-medical-mdph",
+   "ancre": "certificat médical"
+  },
+  {
+   "slug": "recours-mdph",
+   "ancre": "contester une décision de la MDPH"
+  },
+  {
+   "slug": "outils/simulateur-aah",
+   "ancre": "simulateur AAH"
+  }
+ ],
+ "sources": [
+  {
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000027037614/",
+   "titre": "Code de l'action sociale et des familles, annexe 2-4 : guide-barème pour l'évaluation des déficiences et incapacités des personnes handicapées, Légifrance",
+   "date": "version en vigueur, consultée le 2026-11-28"
+  },
+  {
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F12242",
+   "titre": "Allocation aux adultes handicapés (AAH), Service Public",
+   "date": "vérifié le 14 septembre 2026, consulté le 2026-11-28"
+  },
+  {
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F14809",
+   "titre": "Allocation d'éducation de l'enfant handicapé (AEEH), Service Public",
+   "date": "vérifié le 1er juin 2026, consulté le 2026-11-28"
+  },
+  {
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F34049",
+   "titre": "Carte mobilité inclusion (CMI), Service Public",
+   "date": "vérifié le 28 avril 2026, consulté le 2026-11-28"
+  },
+  {
+   "url": "https://www.monparcourshandicap.gouv.fr/aides/la-carte-mobilite-inclusion-mention-invalidite",
+   "titre": "CMI invalidité, Mon Parcours Handicap",
+   "date": "mis à jour le 9 octobre 2026, consulté le 2026-11-28"
+  },
+  {
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F12903",
+   "titre": "Handicap : majoration pour la vie autonome (MVA), Service Public",
+   "date": "vérifié le 22 avril 2026, consulté le 2026-11-28"
+  },
+  {
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F16337",
+   "titre": "Retraite du salarié handicapé, Service Public",
+   "date": "vérifié le 21 août 2025, consulté le 2026-11-28"
+  },
+  {
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F14202",
+   "titre": "Prestation de compensation du handicap (PCH), Service Public",
+   "date": "vérifié le 1er juillet 2026, consulté le 2026-11-28"
+  },
+  {
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F1650",
+   "titre": "Qu'est-ce que la reconnaissance de la qualité de travailleur handicapé (RQTH) ?, Service Public",
+   "date": "vérifié le 24 mars 2026, consulté le 2026-11-28"
+  },
+  {
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F672",
+   "titre": "Pension d'invalidité de la Sécurité sociale, Service Public",
+   "date": "vérifié le 1er avril 2026, consulté le 2026-11-28"
+  }
+ ],
+ "date_verification": "2026-11-28",
+ "a_verifier": [
+  "Mon Parcours Handicap écrit « supérieur à 80 % » dans un encadré et « supérieur ou égal à 80 % » dans les critères de la CMI invalidité : le guide suit « au moins 80 % »."
+ ]
+}

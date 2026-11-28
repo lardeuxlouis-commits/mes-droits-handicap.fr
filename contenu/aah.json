@@ -23,7 +23,7 @@
     {
      "type": "liste",
      "items": [
-      "**Taux d'incapacité** : il est fixé par la **CDAPH** (commission des droits et de l'autonomie des personnes handicapées, qui décide au sein de la MDPH) à l'aide d'un guide barème national. Il faut au moins 80 %, ou entre 50 et 79 % avec une **restriction substantielle et durable d'accès à l'emploi**.",
+      "**Taux d'incapacité** : il est fixé par la **CDAPH** (commission des droits et de l'autonomie des personnes handicapées, qui décide au sein de la MDPH) à l'aide d'un guide barème national (voir [ce que changent les seuils de 50 % et 80 %](taux-incapacite-mdph)). Il faut au moins 80 %, ou entre 50 et 79 % avec une **restriction substantielle et durable d'accès à l'emploi**.",
       "**Âge** : au moins 20 ans, ou 16 ans si vous n'êtes plus à la charge de vos parents pour les prestations familiales (par exemple si vous avez quitté le domicile familial).",
       "**Résidence** : vivre en France métropolitaine ou dans un département d'outre-mer. Les ressortissants européens et étrangers doivent y résider depuis plus de 3 mois, sauf s'ils travaillent. Les étrangers hors Union européenne doivent avoir un titre de séjour valable ou un récépissé de renouvellement.",
       "**Ressources** : ne pas dépasser un plafond annuel (voir plus bas)."
@@ -310,7 +310,7 @@
  "faq": [
   {
    "q": "Est-ce que l'AAH continue à la retraite ?",
-   "r": "À partir de 80 % d'incapacité, oui : si votre pension de retraite est inférieure à 1 041,59 €, l'AAH verse la différence. Entre 50 et 79 %, l'AAH s'arrête à l'âge légal de départ à la retraite. Si vous n'avez jamais cotisé, elle est alors remplacée par l'allocation de solidarité aux personnes âgées (Aspa)."
+   "r": "À partir de 80 % d'incapacité, oui : si votre pension de retraite est inférieure à 1 041,59 €, l'AAH verse la différence. Entre 50 et 79 %, l'AAH s'arrête à l'âge légal de départ à la retraite. Si vous n'avez jamais cotisé, elle est alors remplacée par l'allocation de solidarité aux personnes âgées (Aspa). Le calendrier et les démarches sont détaillés dans [AAH et retraite](aah-retraite)."
   },
   {
    "q": "Peut-on cumuler l'AAH et le RSA ?",
@@ -338,6 +338,14 @@
   }
  ],
  "liens_internes": [
+  {
+   "slug": "aah-retraite",
+   "ancre": "AAH et retraite"
+  },
+  {
+   "slug": "taux-incapacite-mdph",
+   "ancre": "taux d'incapacité"
+  },
   {
    "slug": "outils/simulateur-aah",
    "ancre": "simulateur AAH"

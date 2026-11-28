@@ -207,7 +207,7 @@
  "faq": [
   {
    "q": "Est-ce que la RQTH donne droit à une retraite anticipée ?",
-   "r": "Non, pas à elle seule. L'accès à la retraite anticipée des travailleurs handicapés dépend de l'évaluation du handicap, notamment du taux d'incapacité reconnu. La RQTH ne suffit donc pas pour partir plus tôt."
+   "r": "Non, pas à elle seule. L'accès à la retraite anticipée des travailleurs handicapés dépend de l'évaluation du handicap, notamment du taux d'incapacité reconnu. La RQTH ne suffit donc pas pour partir plus tôt. Voir [AAH et retraite](aah-retraite), qui détaille aussi la retraite anticipée dès 55 ans."
   },
   {
    "q": "Est-ce que la RQTH donne de l'argent ?",
@@ -231,6 +231,10 @@
   }
  ],
  "liens_internes": [
+  {
+   "slug": "aah-retraite",
+   "ancre": "AAH et retraite"
+  },
   {
    "slug": "rqth-delai-obtention",
    "ancre": "délai pour obtenir la RQTH"
